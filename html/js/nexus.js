@@ -1133,8 +1133,10 @@ function requestNodeTexture(context, node) {
 
 	var tex = m.patches[m.nfirstpatch[n]*3+2];
 	m.texref[tex]++;
-	if(m.texids[tex])
+	if(m.texids[tex]) {
+		console.warn("Reusing already-decoded texture " + tex + " for node " + n + "; nsize keeps the estimated size");
 		return;
+	}
 
 	m.status[n]++; //pending
 
