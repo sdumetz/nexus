@@ -1312,22 +1312,37 @@ function loadNodeTexture(request, context, node, texid) {
 
 	var blob = request.response;
 
-	var urlCreator = window.URL || window.webkitURL;
-	var img = document.createElement('img');
-	img.onerror = function(e) { console.log("Texture loading error!"); };
-	img.src = urlCreator.createObjectURL(blob);
-
 	var gl = context.gl;
-	img.onload = function() {
-		urlCreator.revokeObjectURL(img.src);
 
-		var flip = gl.getParameter(gl.UNPACK_FLIP_Y_WEBGL);
-		gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+	//Decode the JPEG off the main thread. createImageBitmap returns a
+	//Promise<ImageBitmap> that texImage2D accepts directly, so the heavy decode
+	//no longer blocks the main thread the way an <img> + texImage2D upload did.
+	//The vertical flip is baked into the decode (imageOrientation:'flipY')
+	//instead of UNPACK_FLIP_Y_WEBGL, which is unreliable for ImageBitmap
+	//sources across browsers; premultiplyAlpha:'none' matches the previous
+	//default WebGL unpack state.
+	createImageBitmap(blob, { imageOrientation: 'flipY', premultiplyAlpha: 'none' }).then(function(bitmap) {
+		//The node may have been evicted (removeNode) while we were decoding.
+		if(m.status[n] == 0) { bitmap.close(); return; }
+
+		var __tprof = performance.now();
+
 		var tex = m.texids[texid] = gl.createTexture();
 		gl.bindTexture(gl.TEXTURE_2D, tex);
 
+		//Orientation is already baked into the bitmap (imageOrientation:'flipY'),
+		//so force the unpack flags to their defaults for this ImageBitmap upload.
+		//A non-default y-flip/premultiply on a non-DOM source both triggers a
+		//browser deprecation warning and would re-flip the already-flipped
+		//bitmap -- e.g. three.js leaves UNPACK_FLIP_Y_WEBGL enabled from the last
+		//texture.flipY upload. Save and restore so we don't disturb the host.
+		var flip = gl.getParameter(gl.UNPACK_FLIP_Y_WEBGL);
+		var premult = gl.getParameter(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL);
+		gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
+		gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, false);
+
 //TODO some textures might be alpha only! save space
-		var s = gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
+		gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, bitmap);
 		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
 		gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
@@ -1341,6 +1356,9 @@ function loadNodeTexture(request, context, node, texid) {
 		}
 
 		gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, flip);
+		gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, premult);
+
+		bitmap.close(); //decoded pixels now live in the GPU texture
 
 		//We now know the decoded resolution: replace the guess baked into nsize[n]
 		//at parse time with the exact RGBA8 GPU footprint (plus ~1/3 for the mipmap
@@ -1348,7 +1366,7 @@ function loadNodeTexture(request, context, node, texid) {
 		//A node reusing an already-decoded texture keeps the estimate (the decoded
 		//dimensions are gone by then); shared textures are rare enough not to bother.
 		if(m.status[n] != 0) {
-			var realtexsize = img.width * img.height * 4;
+			var realtexsize = bitmap.width * bitmap.height * 4;
 			if(mipmapped) realtexsize = Math.floor(realtexsize * 4/3);
 			var size = m.vsize*m.nvertices[n] + m.fsize*m.nfaces[n] + realtexsize;
 			context.cacheSize += size - m.nsize[n];
@@ -1364,7 +1382,7 @@ function loadNodeTexture(request, context, node, texid) {
 			node.instance.onUpdate && node.instance.onUpdate();
 			updateCache(gl);
 		}
-	}
+	}).catch(function(e) { console.log("Texture loading error!", e); });
 }
 
 function scramble(n, coords, normals, colors) {
