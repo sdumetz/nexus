@@ -1100,7 +1100,11 @@ function removeNode(context, node) {
 	m.texref[tex]--;
 
 	if(m.texref[tex] == 0 && m.texids[tex]) {
-		context.gl.deleteTexture(m.texids[tex]);
+		if(m.tex3d && m.tex3d[tex]) { //three owns the GPU handle; dispose frees it
+			m.tex3d[tex].dispose();
+			m.tex3d[tex] = null;
+		} else
+			context.gl.deleteTexture(m.texids[tex]);
 		m.texids[tex] = null;
 	}
 }
@@ -1305,12 +1309,75 @@ function powerOf2(n) {
 	return n && (n & (n - 1)) === 0;
 }
 
+//KTX2 supercompressed textures start with this 12-byte identifier; anything
+//else (JPEG/PNG) takes the createImageBitmap path unchanged.
+var KTX2_MAGIC = [0xAB, 0x4B, 0x54, 0x58, 0x20, 0x32, 0x30, 0xBB, 0x0D, 0x0A, 0x1A, 0x0A];
+
+function isKTX2(bytes) {
+	for(var i = 0; i < KTX2_MAGIC.length; i++)
+		if(bytes[i] !== KTX2_MAGIC[i]) return false;
+	return true;
+}
+
 function loadNodeTexture(request, context, node, texid) {
+	var m = node.mesh;
+	if(m.status[node.id] == 0) return;
+	var blob = request.response;
+	//KTX2 decoding needs an injected THREE KTX2Loader (context.ktx2, set by the
+	//THREE wrapper). Without it, or for non-KTX2 blobs, use the image decode.
+	if(context.ktx2) {
+		blob.slice(0, KTX2_MAGIC.length).arrayBuffer().then(function(head) {
+			if(isKTX2(new Uint8Array(head)))
+				loadNodeTextureKTX2(blob, context, node, texid);
+			else
+				loadNodeTextureImage(blob, context, node, texid);
+		});
+	} else {
+		loadNodeTextureImage(blob, context, node, texid);
+	}
+}
+
+//Transcode a KTX2 blob with three's KTX2Loader and adopt the GPU texture it
+//creates: initTexture forces the upload so __webglTexture exists, then that raw
+//handle is bound like any other node texture. The THREE texture object is kept
+//on m.tex3d[texid] so three keeps ownership of (and can free) the GPU resource.
+function loadNodeTextureKTX2(blob, context, node, texid) {
+	var n = node.id;
+	var m = node.mesh;
+	var gl = context.gl;
+	var ktx2 = context.ktx2;
+	blob.arrayBuffer().then(function(buffer) {
+		return new Promise(function(resolve, reject) { ktx2.loader.parse(buffer, resolve, reject); });
+	}).then(function(texture) {
+		if(m.status[n] == 0) { texture.dispose(); return; } //node evicted while transcoding
+
+		ktx2.renderer.initTexture(texture);
+		m.texids[texid] = ktx2.renderer.properties.get(texture).__webglTexture;
+		if(!m.tex3d) m.tex3d = {};
+		m.tex3d[texid] = texture;
+
+		if(texture.image) { //replace the parse-time nsize guess with the real footprint
+			var realtexsize = Math.floor(texture.image.width * texture.image.height * 4 * 4/3);
+			var size = m.vsize*m.nvertices[n] + m.fsize*m.nfaces[n] + realtexsize;
+			context.cacheSize += size - m.nsize[n];
+			m.nsize[n] = size;
+		}
+
+		m.status[n]--;
+		if(m.status[n] == 2) {
+			m.status[n]--;
+			node.reqAttempt = 0;
+			node.context.pending--;
+			node.instance.onUpdate && node.instance.onUpdate();
+			updateCache(gl);
+		}
+	}).catch(function(e) { console.log("KTX2 texture loading error!", e); });
+}
+
+function loadNodeTextureImage(blob, context, node, texid) {
 	var n = node.id;
 	var m = node.mesh;
 	if(m.status[n] == 0) return;
-
-	var blob = request.response;
 
 	var gl = context.gl;
 

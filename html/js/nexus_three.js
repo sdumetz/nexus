@@ -25,7 +25,7 @@ THE SOFTWARE.
 function nocenter() { throw "Centering and in general applying matrix to geometry is unsupported."; }
 
 class NexusObject extends THREE.Mesh {
-constructor(url, onLoad, onUpdate, renderer, material) {
+constructor(url, onLoad, onUpdate, renderer, material, options) {
 
 	var geometry = new THREE.BufferGeometry();
 	geometry.center = nocenter;
@@ -58,6 +58,12 @@ function() {
 	var mesh = this;
 	var instance = this.geometry.instance = new Nexus.Instance(gl);
 	instance.open(url);
+
+	//Inject the THREE KTX2Loader so nexus.js can decode KTX2 node textures.
+	//The renderer is needed both to transcode (detectSupport) and to upload
+	//(initTexture); the per-gl context carries it down to loadNodeTexture.
+	if(options && options.ktx2Loader)
+		instance.context.ktx2 = { renderer: renderer, loader: options.ktx2Loader };
 	instance.onLoad = function() {
 		var c = instance.mesh.sphere.center;
 		var center = new THREE.Vector3(c[0], c[1], c[2]);
