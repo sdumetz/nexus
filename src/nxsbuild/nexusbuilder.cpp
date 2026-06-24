@@ -23,6 +23,7 @@ for more details.
 #include <QImage>
 #include <QDir>
 #include <QImageWriter>
+#include <QBuffer>
 #include "vertex_cache_optimizer.h"
 
 #include "nexusbuilder.h"
@@ -631,26 +632,38 @@ void NexusBuilder::processBlock(KDTreeSoup *input, StreamSoup *output, uint bloc
 
 			Texture t;
 
+			//Encode the jpeg outside of any lock (encoding is the expensive part).
+			QByteArray texdata;
 			{
-				QMutexLocker locker(&m_textures);
-				t.offset = nodeTex.size()/NEXUS_PADDING;
-
-				output_pixels += nodetex.width()*nodetex.height();
-
-				QImageWriter writer(&nodeTex, "jpg");
+				QBuffer texbuffer(&texdata);
+				texbuffer.open(QIODevice::WriteOnly);
+				QImageWriter writer(&texbuffer, "jpg");
 				writer.setQuality(tex_quality);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 5, 0)
 				writer.setOptimizedWrite(true);
 				writer.setProgressiveScanWrite(true);
 #endif
 				writer.write(nodetex);
+			}
+
+			//Assigning the offset (position in nodeTex), appending the bytes and
+			//inserting into the textures array must happen under a SINGLE lock, so
+			//that the textures array order matches the nodeTex byte order. Otherwise
+			//the two orderings can diverge under concurrency and the texture offsets
+			//stop being monotonically increasing, which every reader relies on
+			//(texture size is derived as textures[i+1].offset - textures[i].offset).
+			{
+				QMutexLocker locker(&m_textures);
+				t.offset = nodeTex.size()/NEXUS_PADDING;
+
+				output_pixels += nodetex.width()*nodetex.height();
+
+				nodeTex.write(texdata);
 
 				quint64 size = pad(nodeTex.size());
 				nodeTex.resize(size);
 				nodeTex.seek(size);
-			}
-			{
-				QMutexLocker locker(&m_builder);
+
 				textures.push_back(t);
 				for(Patch &patch: node_patches)
 					patch.texture = textures.size()-1; //last texture inserted
