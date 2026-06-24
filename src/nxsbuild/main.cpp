@@ -66,6 +66,7 @@ int main(int argc, char *argv[]) {
 	bool no_texcoords = false;
 	bool useOrigTex = false;
 	bool create_pow_two_tex = false;
+	bool create_multiple_of_4_tex = false;
 	bool deepzoom = false;
 
 	//BTREE options
@@ -96,6 +97,9 @@ int main(int argc, char *argv[]) {
 	opt.addOption('m', "mtl file", "mtl for a single obj file", &mtl);
 	opt.addSwitch('k', "pow 2 textures", "create textures to be power of 2\n"
 				  "Allows mipmaps, it will increase GPU memory required.", &create_pow_two_tex);
+	opt.addSwitch('4', "multiple of 4 textures", "round texture sizes up to a multiple of 4\n"
+				  "Required to later transcode textures to block-compressed formats (KTX, DDS, ...).\n"
+				  "Much less wasteful than -k. Ignored when -k is set (power of 2 already implies a multiple of 4).", &create_multiple_of_4_tex);
 	opt.addSwitch('D', "deepzoom", "save each node and texture to a separated file\n"
 				  "Used for server which do not support http range requests (206). Will generate MANY files.", &deepzoom);
 
@@ -308,6 +312,7 @@ int main(int argc, char *argv[]) {
 		builder.setScaling(scaling);
 		builder.useNodeTex = !useOrigTex;
 		builder.createPowTwoTex = create_pow_two_tex;
+		builder.createMultipleOf4Tex = create_multiple_of_4_tex;
 		if(deepzoom)
 			builder.header.signature.flags |= nx::Signature::Flags::DEEPZOOM;
 		builder.tex_quality = tex_quality;

@@ -343,6 +343,9 @@ QImage NexusBuilder::extractNodeTex(TMesh &mesh, int level, float &error, float 
 	if (createPowTwoTex) {
 		finalSize[ 0 ] = (int) nextPowerOf2( finalSize[ 0 ] );
 		finalSize[ 1 ] = (int) nextPowerOf2( finalSize[ 1 ] );
+	} else if (createMultipleOf4Tex) {
+		finalSize[ 0 ] = (finalSize[ 0 ] + 3) & ~3;
+		finalSize[ 1 ] = (finalSize[ 1 ] + 3) & ~3;
 	}
 
 	QImage image(finalSize[0], finalSize[1], QImage::Format_RGB32);

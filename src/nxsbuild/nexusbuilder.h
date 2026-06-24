@@ -139,6 +139,7 @@ public:
 	int tex_quality;
 	int max_node_triangles = 32000;
 	bool createPowTwoTex;
+	bool createMultipleOf4Tex = false; //round texture sizes up to a multiple of 4 (for block-compressed/KTX transcoding)
 	bool deepzoom = false; //use deepzoom style where each node is in a different file.
 	
 	//if too many texel per edge, simplification is inhibited, but don't quit prematurely

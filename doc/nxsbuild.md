@@ -25,4 +25,6 @@ If you need compression or streaming capabilities a pass through nxscompress/nxs
 **-C**  save colors
 **-c**  do not store per vertex colors
 **-u**  do not store per vertex texture coordinates
+**-k**  round texture sizes up to the next power of 2 (allows mipmaps, increases GPU memory)
+**-4**  round texture sizes up to a multiple of 4, required to later transcode textures to block-compressed formats (KTX, DDS, ...). Much less wasteful than -k. Ignored when -k is set.
 **-r <val>**  max ram used (in MegaBytes), default 2000 (WARNING: not a hard limit, increase at your risk)
