@@ -49,6 +49,7 @@ public:
 	TextureFormat texture_format = TextureFormat::JPEG; // Texture compression format
 	int texture_quality = 95;         // Quality for lossy formats [0-100]
 	int texture_padding = 2;
+	float texture_error_ratio = 1.0f; // Export texel error / saturated geometric error; 0 disables resizing.
 
 	// Format options
 	bool normals = false;            // Force per-vertex normals

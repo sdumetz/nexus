@@ -4,6 +4,7 @@
 #include <QDir>
 #include <QFileInfo>
 #include <iostream>
+#include <cmath>
 
 namespace nx {
 
@@ -33,6 +34,7 @@ bool BuildParameters::parse(int argc, char* argv[]) {
 	parser.addOption({{"T", "texture-format"}, "Texture format: jpeg|webp|basis|bc7|etc2 [jpeg]", "format", "jpeg"});
 	parser.addOption({{"Q", "texture-quality"}, "Quality for lossy formats [95]", "n", "95"});
 	parser.addOption({{"P", "texture-padding"}, "Padding between charts in pixels", "n", "2"});
+	parser.addOption({"texture-error-ratio", "Target texel/geometric error ratio [1]; 0 keeps baked sizes", "f", "1"});
 
 	// Format options
 	parser.addOption({{"n", "normals"}, "Force per-vertex normals"});
@@ -94,6 +96,12 @@ bool BuildParameters::parse(int argc, char* argv[]) {
 	texel_weight = parser.value("texel-weight").toFloat();
 	triangle_texel_ratio = parser.value("triangle-texel-ratio").toFloat();
 	scaling = parser.value("scaling").toFloat();
+	bool valid_ratio = false;
+	texture_error_ratio = parser.value("texture-error-ratio").toFloat(&valid_ratio);
+	if(!valid_ratio) {
+		std::cerr << "Error: texture-error-ratio must be a number\n";
+		return false;
+	}
 
 	use_greedy = parser.isSet("greedy");
 
@@ -202,6 +210,10 @@ bool BuildParameters::parse(int argc, char* argv[]) {
 }
 
 bool BuildParameters::validate() const {
+	if(!std::isfinite(texture_error_ratio) || texture_error_ratio < 0) {
+		std::cerr << "Error: texture-error-ratio must be finite and nonnegative\n";
+		return false;
+	}
 	// Validate node_faces range
 	if (faces_per_cluster < 64 || faces_per_cluster > 8192) {
 		std::cerr << "Error: faces per cluster must be between 64 and 8192\n";
@@ -253,6 +265,7 @@ void BuildParameters::printUsage() {
 	std::cout << "Texture format:\n";
 	std::cout << "  -T, --texture-format <format>  Texture format: jpeg|png|webp|basis|bc7|astc|etc2 [jpeg]\n";
 	std::cout << "  -Q, --texture-quality <n>      Quality for lossy formats 0-100 [95]\n\n";
+	std::cout << "      --texture-error-ratio <f> Target texel/geometric error ratio [1]; 0 keeps baked sizes\n";
 
 	std::cout << "Format options:\n";
 	std::cout << "  -n, --normals             Force per-vertex normals\n";
@@ -287,6 +300,7 @@ void BuildParameters::print() const {
 	nx::log << "  Scaling: " << scaling << "\n";
 	nx::log << "  Texel weight: " << texel_weight << "\n";
 	nx::log << "  Triangle/texel ratio: " << triangle_texel_ratio << "\n";
+	nx::log << "  Texture error ratio: " << texture_error_ratio << "\n";
 
 	// Print texture format
 	nx::log << "  Texture format: ";

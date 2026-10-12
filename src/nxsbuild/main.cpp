@@ -27,8 +27,8 @@ int main(int argc, char *argv[]) {
 	if (!params.parse(argc, argv)) {
 		return 1;
 	}
-
 	nx::setVerbosity(params.verbosity);
+
 	// Print configuration
 	params.print();
 
@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) {
 		hierarchy.build_hierarchy(params);
 
 		nx::ExportNxs exporter;
-		exporter.export_nxs(hierarchy, "test.nxs");
+		exporter.export_nxs(hierarchy, "test.nxs", params.texture_error_ratio);
 
 	} catch (const std::exception &e) {
 		std::cerr << "Error: " << e.what() << std::endl;

@@ -4,6 +4,7 @@
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
+#include <QImage>
 
 static void near(float actual, float expected) {
 	if(!std::isfinite(actual) || std::abs(actual - expected) > 1e-6f)
@@ -58,21 +59,26 @@ static nx::MappedMesh* level(bool textured, bool coarse) {
 		node.id = i;
 		node.cluster_ids = coarse ? std::vector<nx::Index>{0,1} : std::vector<nx::Index>{i};
 		node.center = {0,0,0}; node.radius = 3;
-		node.error = !coarse && i == 0 ? 0.1f : 0.001f;
+		node.error = coarse ? 0.0f : (i == 0 ? 0.1f : 0.001f);
 	}
 	if(textured) {
 		mesh->allocate_node_textures_and_texels(256, 3);
-		std::fill(mesh->texels.data(), mesh->texels.data() + mesh->texels.size(), 127);
+		for(const nx::NodeTexture &texture: mesh->node_textures) {
+			for(int y = 0; y < 256; ++y) for(int x = 0; x < 256; ++x) {
+				auto *pixel = mesh->texels.data() + texture.offset + (y*256+x)*3;
+				pixel[0] = x; pixel[1] = y; pixel[2] = 128;
+			}
+		}
 	}
 	return mesh;
 }
 
-static void export_checks(bool textured) {
+static void export_checks(bool textured, float ratio = 0) {
 	nx::MeshHierarchy hierarchy;
 	hierarchy.levels = {level(textured, false), level(textured, true)};
 	nx::ExportNxs exporter;
 	const std::string name = textured ? "textured.nxs" : "geometry.nxs";
-	exporter.export_nxs(hierarchy, name);
+	exporter.export_nxs(hierarchy, name, ratio);
 	std::ifstream file(name, std::ios::binary);
 	nx::Header header;
 	file.read(reinterpret_cast<char*>(&header), sizeof(header));
@@ -89,9 +95,92 @@ static void export_checks(bool textured) {
 	std::cout << name << ": geometry/texture maximum and ancestor saturation passed\n";
 }
 
+static void sizing_checks() {
+	nx::MeshHierarchy hierarchy;
+	hierarchy.levels = {level(true, false), level(true, true)};
+	std::vector<std::vector<char>> baseline_geometry;
+	for(float ratio: {0.0f, 1.0f, 0.5f}) {
+		nx::ExportNxs exporter;
+		// Exercise the API default as well as explicitly configured ratios.
+		if(ratio == 1) exporter.export_nxs(hierarchy, "sizing.nxs");
+		else exporter.export_nxs(hierarchy, "sizing.nxs", ratio);
+		std::ifstream file("sizing.nxs", std::ios::binary);
+		nx::Header header;
+		file.read(reinterpret_cast<char*>(&header), sizeof(header));
+		std::vector<nx::Node> nodes(header.n_nodes);
+		file.read(reinterpret_cast<char*>(nodes.data()), nodes.size()*sizeof(nx::Node));
+		if(header.version != 2 || header.n_nodes != 4 || header.n_textures != 4)
+			throw std::runtime_error("Sizing changed container layout");
+		near(nodes[0].error, 0.101f);
+		near(nodes[1].error, 0.1f);
+		near(nodes[2].error, 2.0f/256);
+		near(nodes[3].error, 0);
+		std::vector<nx::Texture> textures(header.n_textures);
+		file.seekg(sizeof(nx::Header) + nodes.size()*sizeof(nx::Node) + header.n_patches*sizeof(nx::Patch));
+		file.read(reinterpret_cast<char*>(textures.data()), textures.size()*sizeof(nx::Texture));
+		for(size_t i = 0; i < 3; ++i) {
+			std::vector<char> blob(textures[i].getSize());
+			file.seekg(textures[i].getBeginOffset());
+			file.read(blob.data(), blob.size());
+			QImage image;
+			if(!image.loadFromData(reinterpret_cast<const uchar*>(blob.data()), blob.size(), "JPEG"))
+				throw std::runtime_error("Exported texture cannot be decoded");
+			const int expected = i == 2 || ratio == 0 ? 256 : (ratio == 1 ? 32 : 64);
+			if(image.width() != expected || image.height() != expected)
+				throw std::runtime_error("Unexpected texture dimensions");
+			if(i < 2 && ratio > 0) {
+				// This resolution meets the target, but one step coarser would not.
+				const float target = ratio*(i == 0 ? 0.101f : 0.1f);
+				if(2.0f/expected > target || 4.0f/expected <= target)
+					throw std::runtime_error("Texture was not sized to the coarsest allowed resolution");
+			}
+			const auto top = image.pixelColor(0,0), bottom = image.pixelColor(expected-1,expected-1);
+			if(top.red() > 12 || top.green() < 240 || bottom.red() < 240 || bottom.green() > 12)
+				throw std::runtime_error("Downsampled texture gradient/orientation changed");
+			const size_t geometry_size = nodes[i].nvert*header.signature.vertex.size()
+				+ nodes[i].nface*header.signature.face.size();
+			std::vector<char> geometry(geometry_size);
+			file.seekg(nodes[i].getBeginOffset());
+			file.read(geometry.data(), geometry.size());
+			if(!file) throw std::runtime_error("Truncated export");
+			if(ratio == 0) baseline_geometry.push_back(geometry);
+			else if(geometry != baseline_geometry[i])
+				throw std::runtime_error("Sizing changed geometry/UV payloads");
+		}
+		for(const auto *mesh: hierarchy.levels) {
+			for(const nx::NodeTexture &texture: mesh->node_textures)
+				if(texture.width != 256 || texture.height != 256)
+					throw std::runtime_error("Sizing modified baked textures");
+		}
+	}
+	// Without a positive geometric target, preserve baked detail.
+	for(auto *mesh: hierarchy.levels)
+		for(auto &node: mesh->micronodes) node.error = 0;
+	nx::ExportNxs exporter;
+	exporter.export_nxs(hierarchy, "zero-target.nxs");
+	std::ifstream file("zero-target.nxs", std::ios::binary);
+	nx::Header header;
+	file.read(reinterpret_cast<char*>(&header), sizeof(header));
+	file.seekg(sizeof(nx::Header) + header.n_nodes*sizeof(nx::Node) + header.n_patches*sizeof(nx::Patch));
+	std::vector<nx::Texture> textures(header.n_textures);
+	file.read(reinterpret_cast<char*>(textures.data()), textures.size()*sizeof(nx::Texture));
+	for(size_t i = 0; i + 1 < textures.size(); ++i) {
+		std::vector<char> blob(textures[i].getSize());
+		file.seekg(textures[i].getBeginOffset());
+		file.read(blob.data(), blob.size());
+		QImage image;
+		if(!image.loadFromData(reinterpret_cast<const uchar*>(blob.data()), blob.size(), "JPEG")
+			|| image.width() != 256 || image.height() != 256)
+			throw std::runtime_error("Zero geometric target lost texture detail");
+	}
+	std::cout << "Round 2 sizing, zero-error root, JPEG decode, and geometry preservation passed\n";
+}
+
 int main() {
 	metric_checks();
 	export_checks(true);
 	export_checks(false);
-	std::cout << "Round 1 checks passed\n";
+	export_checks(false, 1);
+	sizing_checks();
+	std::cout << "Round 1 and round 2 checks passed\n";
 }

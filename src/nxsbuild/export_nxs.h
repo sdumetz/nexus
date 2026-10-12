@@ -17,7 +17,7 @@ class MicroNode;
 class ExportNxs {
 public:
 	// Export mesh hierarchy to the given path. Returns true on success.
-	void export_nxs(MeshHierarchy& hierarchy, const std::string& path);
+	void export_nxs(MeshHierarchy& hierarchy, const std::string& path, float texture_error_ratio = 1.0f);
 private:
 
 	FILE *out = nullptr;
@@ -27,6 +27,8 @@ private:
 	std::vector<Texture> textures;
 	std::vector<std::vector<uint8_t>> texture_payloads;
 	std::vector<int> level_node_offset;
+	std::vector<float> geometric_errors;
+	float texture_error_ratio = 1.0f;
 
 	//from per level node and cluster ids to global
 	void computeGlobalIndexing(MeshHierarchy &hierarchy);
@@ -37,7 +39,8 @@ private:
 	void saturateNode(uint32_t n);
 	void printDag(MeshHierarchy &hierarchy);
 	void printDagHierarchy(MeshHierarchy &hierarchy);
-	std::vector<uint8_t> encodeBaseColorJpeg(const MappedMesh& mesh, std::uint32_t  micronode_id, int quality = 92);
+	std::vector<uint8_t> encodeBaseColorJpeg(const MappedMesh& mesh, std::uint32_t micronode_id,
+		int width, int height, int quality = 92);
  
 	void alignFile() {
 		uint64_t pos = static_cast<uint64_t>(ftell(out));

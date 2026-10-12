@@ -1,4 +1,4 @@
-"""Run analytical and binary-export checks using a completed Unix Makefiles build.
+"""Run round 1/2 analytical and binary-export checks using a Unix Makefiles build.
 
 Usage: python3 tests/run_round1.py /path/to/nxsbuild-build-directory
 Reuses builder objects so tests exercise the actual exporter without rebuilding

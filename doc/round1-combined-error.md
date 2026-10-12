@@ -1,5 +1,9 @@
 # Round 1: combined geometry and texture error
 
+Round 2 now enables export-time texture sizing by default. Use
+`--texture-error-ratio 0` to reproduce the round 1 behavior described here;
+see [round 2](round2-texture-sizing.md) for the new default.
+
 The builder exports `Node.error = max(geometric_error, texel_error)` before the
 existing ancestor saturation pass. It uses the existing version 2 container and
 viewer traversal. Texture dimensions, JPEG encoding, geometry simplification

@@ -31,7 +31,31 @@ For our stub/first version:
 
 namespace nx {
 
-void ExportNxs::export_nxs(MeshHierarchy& hierarchy, const std::string& path) {
+namespace {
+float nodeTexelError(const MappedMesh &mesh, const MicroNode &node, int width, int height) {
+	float error = 0;
+	for(Index c: node.cluster_ids) {
+		const Cluster &cluster = mesh.clusters[c];
+		for(size_t t = cluster.triangle_offset; t < cluster.triangle_offset + cluster.triangle_count; ++t) {
+			const Triangle &triangle = mesh.triangles[t];
+			Vector3f positions[3];
+			Vector2f uvs[3];
+			for(int k = 0; k < 3; ++k) {
+				const Wedge &w = mesh.wedges[triangle.w[k]];
+				positions[k] = mesh.positions[w.p];
+				uvs[k] = mesh.texcoords[w.t];
+			}
+			error = std::max(error, triangle_texel_error(positions, uvs, width, height));
+		}
+	}
+	return error;
+}
+}
+
+void ExportNxs::export_nxs(MeshHierarchy& hierarchy, const std::string& path, float ratio) {
+	if(!std::isfinite(ratio) || ratio < 0)
+		throw std::invalid_argument("Texture error ratio must be finite and nonnegative");
+	texture_error_ratio = ratio;
 
 	out = fopen(path.c_str(), "wb");
 	if (!out) {
@@ -69,6 +93,24 @@ void ExportNxs::export_nxs(MeshHierarchy& hierarchy, const std::string& path) {
 		const MappedMesh &mesh = *hierarchy.levels[level];
 		header.n_nodes += mesh.micronodes.size();
 		header.n_patches += mesh.clusters.size();
+	}
+	// Propagate geometry alone before texture sizing. In particular, the final
+	// root has no local simplification error but inherits its children's error.
+	geometric_errors.assign(header.n_nodes, 0.0f);
+	for(size_t level = 0; level < hierarchy.levels.size(); ++level) {
+		const MappedMesh &mesh = *hierarchy.levels[level];
+		for(size_t m = 0; m < mesh.micronodes.size(); ++m) {
+			const MicroNode &node = mesh.micronodes[m];
+			float error = node.error;
+			for(Index c: node.cluster_ids) {
+				const Index child = mesh.clusters[c].node;
+				if(child == NONE) continue;
+				assert(level > 0);
+				const float child_error = geometric_errors[level_node_offset[level-1] + child];
+				if(error <= child_error) error = child_error*1.01f;
+			}
+			geometric_errors[level_node_offset[level] + m] = error;
+		}
 	}
 	if(signature.vertex.hasTextures())
 		header.n_textures = header.n_nodes + 1; // +1 sentinel texture entry
@@ -141,7 +183,8 @@ void ExportNxs::export_nxs(MeshHierarchy& hierarchy, const std::string& path) {
 	fclose(out);
 }
 
-std::vector<uint8_t> ExportNxs::encodeBaseColorJpeg(const MappedMesh& mesh, uint32_t micronode_id, int quality) {
+std::vector<uint8_t> ExportNxs::encodeBaseColorJpeg(const MappedMesh& mesh, uint32_t micronode_id,
+		int width, int height, int quality) {
 	assert(mesh.has_textures);
 	assert(micronode_id < mesh.node_textures.size());
 	const NodeTexture& node_texture = mesh.node_textures[micronode_id];
@@ -161,6 +204,8 @@ std::vector<uint8_t> ExportNxs::encodeBaseColorJpeg(const MappedMesh& mesh, uint
 		const std::size_t row_offset = static_cast<std::size_t>(y) * static_cast<std::size_t>(node_texture.width) * 3;
 		std::memcpy(dst_row, src + row_offset, static_cast<std::size_t>(node_texture.width) * 3);
 	}
+	if(width != image.width() || height != image.height())
+		image = image.scaled(width, height, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
 
 	QByteArray encoded;
 	QBuffer buffer(&encoded);
@@ -242,14 +287,30 @@ void ExportNxs::exportMicronode(int level, std::uint32_t micronode_id, MappedMes
 	nx::Node node;
 	node.first_patch = patches.size();
 	Index texture_index = NONE;
+	float texel_error = 0;
+	const float geometric_error = texture_error_ratio > 0 ? geometric_errors[nodes.size()] : micronode.error;
 	if(mesh.has_textures) {
+		const NodeTexture &texture = mesh.node_textures[micronode_id];
+		int width = texture.width, height = texture.height;
+		texel_error = nodeTexelError(mesh, micronode, width, height);
+		const double target = double(texture_error_ratio)*geometric_error;
+		// Ratio zero preserves round 1 as a control. Never enlarge baked images.
+		while(texture_error_ratio > 0 && target > 0 && (width > 1 || height > 1)) {
+			const int next_width = std::max(1, width/2), next_height = std::max(1, height/2);
+			const float next_error = nodeTexelError(mesh, micronode, next_width, next_height);
+			if(next_error > target) break;
+			width = next_width;
+			height = next_height;
+			texel_error = next_error;
+		}
 		texture_index = static_cast<Index>(textures.size());
 		textures.push_back(Texture());
-		texture_payloads.push_back(encodeBaseColorJpeg(mesh, micronode_id));
+		texture_payloads.push_back(encodeBaseColorJpeg(mesh, micronode_id, width, height));
+		nx::debug << "Node " << nodes.size() << " texture_size=" << texture.width << "x" << texture.height
+			<< "->" << width << "x" << height << " texture_error_target=" << target << std::endl;
 	}
 
 	std::map<Index, Index> wedges_ids; //this are the local wedges.
-	float texel_error = 0.0f;
 	size_t n_triangles = 0;
 	int count = 0;
 	for(Index c: micronode.cluster_ids) {
@@ -259,18 +320,6 @@ void ExportNxs::exportMicronode(int level, std::uint32_t micronode_id, MappedMes
 		for(size_t t = cluster.triangle_offset; t < end; t++) {
 			assert(t < mesh.triangles.size());
 			const Triangle &tri = mesh.triangles[t];
-			if(mesh.has_textures) {
-				Vector3f positions[3];
-				Vector2f uvs[3];
-				for(int k = 0; k < 3; ++k) {
-					const Wedge &w = mesh.wedges[tri.w[k]];
-					positions[k] = mesh.positions[w.p];
-					uvs[k] = mesh.texcoords[w.t];
-				}
-				const NodeTexture &texture = mesh.node_textures[micronode_id];
-				texel_error = std::max(texel_error, triangle_texel_error(
-					positions, uvs, texture.width, texture.height));
-			}
 			for(int k = 0; k < 3; k++) {
 				if(!wedges_ids.count(tri.w[k]))
 					wedges_ids[tri.w[k]] = count++;
@@ -339,8 +388,8 @@ void ExportNxs::exportMicronode(int level, std::uint32_t micronode_id, MappedMes
 	node.offset = ftell(out)/NEXUS_PADDING;
 	// Round 1: one existing error field drives both geometry and texture detail.
 	// Ancestor saturation below still enforces monotonic refinement errors.
-	node.error = std::max(micronode.error, texel_error);
-	nx::debug << "Node " << nodes.size() << " geometric_error=" << micronode.error
+	node.error = std::max(geometric_error, texel_error);
+	nx::debug << "Node " << nodes.size() << " geometric_error=" << geometric_error
 		<< " texel_error=" << texel_error << " combined_error=" << node.error << std::endl;
 
 	vcg::Point3f center(micronode.center.x, micronode.center.y, micronode.center.z);
