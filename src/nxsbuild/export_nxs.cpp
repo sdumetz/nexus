@@ -125,8 +125,10 @@ void ExportNxs::export_nxs(MeshHierarchy& hierarchy, const std::string& path) {
 	header.n_nodes = nodes.size();
 	header.n_patches = patches.size();
 	header.n_textures = textures.size();
-	vcg::Point3f center(nodes[0].sphere.Center());
-	header.sphere = vcg::Sphere3f(center, nodes[0].tight_radius);
+	//there is more than one root when the simplification stalled.
+	header.sphere = nodes[0].tightSphere();
+	for(size_t i = 1; i < hierarchy.levels.back()->micronodes.size(); i++)
+		header.sphere.Add(nodes[i].tightSphere());
 
 	fseek(out, 0, SEEK_SET);
 	fwrite((char *)&header, sizeof(Header), 1, out);

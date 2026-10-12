@@ -925,9 +925,26 @@ void MeshHierarchy::build_hierarchy(const BuildParameters& params) {
 		if(current.micronodes.size() == 1)
 			break;
 		
+		//process_level stores in the micronodes the error of their simplification.
+		std::vector<float> errors(current.micronodes.size());
+		for(size_t i = 0; i < errors.size(); i++)
+			errors[i] = current.micronodes[i].error;
+
 		MappedMesh *next_level = new MappedMesh();
 		process_level(current, *next_level, params);
-		
+
+		//Simplification can stall (locked boundaries) and would repeat the same level forever:
+		//drop a level that removed less than half of the smallest step we ask for (10%)
+		//and keep the micronodes of the current level as the roots of the dag.
+		if(next_level->micronodes.size() >= current.micronodes.size() &&
+				next_level->triangles.size() > current.triangles.size() * 0.95) {
+			nx::log << "Could not simplify further: keeping " << current.micronodes.size() << " root micronodes" << std::endl;
+			for(size_t i = 0; i < errors.size(); i++)
+				current.micronodes[i].error = errors[i];
+			delete next_level;
+			break;
+		}
+
 		levels.push_back(next_level);
 
 		// Save state for the newly created level
