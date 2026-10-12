@@ -28,6 +28,7 @@ int main(int argc, char *argv[]) {
 		return 1;
 	}
 
+	nx::setVerbosity(params.verbosity);
 	// Print configuration
 	params.print();
 

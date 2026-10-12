@@ -79,7 +79,7 @@ struct MicroNode {
     Vector3f centroid;                  // Weighted spatial center
     Vector3f center;                    // Bounding sphere center
     float radius;                       // Bounding sphere radius
-    float error;
+    float error = 0.0f;                 // Geometry estimate; final roots may never be simplified.
 };
 
 //the material defines how many components and which textures are stored here.

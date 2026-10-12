@@ -2,6 +2,7 @@
 #include "../core/mesh_hierarchy.h"
 #include "../common/dag.h"
 #include "../core/log.h"
+#include "../texture/texel_error.h"
 #include <fstream>
 #include <set>
 #include <map>
@@ -248,6 +249,7 @@ void ExportNxs::exportMicronode(int level, std::uint32_t micronode_id, MappedMes
 	}
 
 	std::map<Index, Index> wedges_ids; //this are the local wedges.
+	float texel_error = 0.0f;
 	size_t n_triangles = 0;
 	int count = 0;
 	for(Index c: micronode.cluster_ids) {
@@ -257,6 +259,18 @@ void ExportNxs::exportMicronode(int level, std::uint32_t micronode_id, MappedMes
 		for(size_t t = cluster.triangle_offset; t < end; t++) {
 			assert(t < mesh.triangles.size());
 			const Triangle &tri = mesh.triangles[t];
+			if(mesh.has_textures) {
+				Vector3f positions[3];
+				Vector2f uvs[3];
+				for(int k = 0; k < 3; ++k) {
+					const Wedge &w = mesh.wedges[tri.w[k]];
+					positions[k] = mesh.positions[w.p];
+					uvs[k] = mesh.texcoords[w.t];
+				}
+				const NodeTexture &texture = mesh.node_textures[micronode_id];
+				texel_error = std::max(texel_error, triangle_texel_error(
+					positions, uvs, texture.width, texture.height));
+			}
 			for(int k = 0; k < 3; k++) {
 				if(!wedges_ids.count(tri.w[k]))
 					wedges_ids[tri.w[k]] = count++;
@@ -323,7 +337,11 @@ void ExportNxs::exportMicronode(int level, std::uint32_t micronode_id, MappedMes
 	node.nvert = n_wedges;
 	node.nface = n_triangles;
 	node.offset = ftell(out)/NEXUS_PADDING;
-	node.error = micronode.error;
+	// Round 1: one existing error field drives both geometry and texture detail.
+	// Ancestor saturation below still enforces monotonic refinement errors.
+	node.error = std::max(micronode.error, texel_error);
+	nx::debug << "Node " << nodes.size() << " geometric_error=" << micronode.error
+		<< " texel_error=" << texel_error << " combined_error=" << node.error << std::endl;
 
 	vcg::Point3f center(micronode.center.x, micronode.center.y, micronode.center.z);
 	node.sphere = vcg::Sphere3f(center, micronode.radius);

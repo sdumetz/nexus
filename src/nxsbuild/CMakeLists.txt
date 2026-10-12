@@ -47,6 +47,7 @@ set(HEADERS
 	merge_simplify_split.h
 	export_nxs.h
 	../texture/parametrization.h
+	../texture/texel_error.h
 	../texture/xatlas.h
 	../texture/pyramid.h
 	../texture/texture.h

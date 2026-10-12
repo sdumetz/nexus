@@ -782,7 +782,6 @@ void reparametrize_clusters(MappedMesh& mesh,
 				mesh, next_mesh, destination_micronode, micro_id, materials);
 
 			NodeMesh destination = merge_micronode_clusters(next_mesh, destination_micronode);
-			destination_micronode.error *= sqrt(2.0f*destination.triangles.size()/float(tex_res*tex_res));
 			TileMap &tilemap = destination.tilemap;
 			tilemap.width = tex_res;
 			tilemap.height = tex_res;
