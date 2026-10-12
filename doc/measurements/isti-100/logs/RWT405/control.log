@@ -1,0 +1,74 @@
+QCommandLineOption: Option names cannot be empty
+
+Build Parameters:
+  Input files: 1 file(s)
+  Output: model.nxs
+  Faces per cluster: 128
+  Clusters per node: 8
+  Faces per macro-node: 32768
+  Scaling: 0.5
+  Texel weight: 0.05
+  Triangle/texel ratio: 6
+  Texture format: JPEG (quality: 95)
+  Threads: 4
+  Translate: (0, 0, 0)
+  Scale: (1, 1, 1)
+
+Mapped normals check initial: checked=66994 opposite=8
+Building mesh hierarchy...
+Building initial clusters and micronodes...
+Saved post-initialization state to "/tmp/nexus-isti-100/work/RWT405/control/nxs_cache_90f8c8b8/state.json"
+
+--- Level 1 ---
+Micronodes: 66
+Triangles: 66994
+Tex res: 128
+Saved state for level 1 to "/tmp/nexus-isti-100/work/RWT405/control/nxs_cache_0045abde/state.json"
+
+--- Level 2 ---
+Micronodes: 57
+Triangles: 60296
+Tex res: 64
+Saved state for level 2 to "/tmp/nexus-isti-100/work/RWT405/control/nxs_cache_f35a414c/state.json"
+
+--- Level 3 ---
+Micronodes: 50
+Triangles: 54266
+Tex res: 64
+Saved state for level 3 to "/tmp/nexus-isti-100/work/RWT405/control/nxs_cache_7eb347e1/state.json"
+
+--- Level 4 ---
+Micronodes: 25
+Triangles: 27120
+Tex res: 64
+Saved state for level 4 to "/tmp/nexus-isti-100/work/RWT405/control/nxs_cache_b475b9df/state.json"
+
+--- Level 5 ---
+Micronodes: 12
+Triangles: 13548
+Tex res: 64
+Saved state for level 5 to "/tmp/nexus-isti-100/work/RWT405/control/nxs_cache_30747b5f/state.json"
+
+--- Level 6 ---
+Micronodes: 6
+Triangles: 6816
+Tex res: 64
+Saved state for level 6 to "/tmp/nexus-isti-100/work/RWT405/control/nxs_cache_fd0a2e06/state.json"
+
+--- Level 7 ---
+Micronodes: 4
+Triangles: 3578
+Tex res: 64
+Saved state for level 7 to "/tmp/nexus-isti-100/work/RWT405/control/nxs_cache_23b21099/state.json"
+
+--- Level 8 ---
+Micronodes: 3
+Triangles: 2622
+Tex res: 64
+Saved state for level 8 to "/tmp/nexus-isti-100/work/RWT405/control/nxs_cache_58f8aef5/state.json"
+
+--- Level 9 ---
+Micronodes: 3
+Triangles: 2474
+Tex res: 64
+Could not simplify further: keeping 3 root micronodes

@@ -1,0 +1,51 @@
+QCommandLineOption: Option names cannot be empty
+Mapped normals check initial: checked=100000 opposite=139
+Building initial clusters and micronodes...
+Saved post-initialization state to "/tmp/nexus-isti-100/work/RWT432/pair/nxs_cache_fe4fe766/state.json"
+
+--- Level 1 ---
+Micronodes: 98
+Triangles: 100000
+Tex res: 64
+Saved state for level 1 to "/tmp/nexus-isti-100/work/RWT432/pair/nxs_cache_102d00b8/state.json"
+
+--- Level 2 ---
+Micronodes: 43
+Triangles: 49962
+Tex res: 64
+Saved state for level 2 to "/tmp/nexus-isti-100/work/RWT432/pair/nxs_cache_a2a3abbb/state.json"
+
+--- Level 3 ---
+Micronodes: 22
+Triangles: 24968
+Tex res: 64
+Saved state for level 3 to "/tmp/nexus-isti-100/work/RWT432/pair/nxs_cache_796084a0/state.json"
+
+--- Level 4 ---
+Micronodes: 11
+Triangles: 12484
+Tex res: 64
+Saved state for level 4 to "/tmp/nexus-isti-100/work/RWT432/pair/nxs_cache_57ab513e/state.json"
+
+--- Level 5 ---
+Micronodes: 6
+Triangles: 6240
+Tex res: 64
+Saved state for level 5 to "/tmp/nexus-isti-100/work/RWT432/pair/nxs_cache_8bd142bc/state.json"
+
+--- Level 6 ---
+Micronodes: 3
+Triangles: 3118
+Tex res: 64
+Saved state for level 6 to "/tmp/nexus-isti-100/work/RWT432/pair/nxs_cache_10cc0988/state.json"
+
+--- Level 7 ---
+Micronodes: 2
+Triangles: 1560
+Tex res: 64
+Saved state for level 7 to "/tmp/nexus-isti-100/work/RWT432/pair/nxs_cache_e4ff31c2/state.json"
+
+--- Level 8 ---
+Micronodes: 1
+Triangles: 780
+Exported /tmp/nexus-isti-100/work/RWT432/pair/model.round{1,2}.nxs from one hierarchy

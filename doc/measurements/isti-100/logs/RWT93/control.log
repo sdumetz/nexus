@@ -1,0 +1,78 @@
+QCommandLineOption: Option names cannot be empty
+
+Build Parameters:
+  Input files: 1 file(s)
+  Output: model.nxs
+  Faces per cluster: 128
+  Clusters per node: 8
+  Faces per macro-node: 32768
+  Scaling: 0.5
+  Texel weight: 0.05
+  Triangle/texel ratio: 6
+  Texture format: JPEG (quality: 95)
+  Threads: 4
+  Translate: (0, 0, 0)
+  Scale: (1, 1, 1)
+
+Mapped normals check initial: checked=115410 opposite=65
+Building mesh hierarchy...
+Building initial clusters and micronodes...
+Saved post-initialization state to "/tmp/nexus-isti-100/work/RWT93/control/nxs_cache_3bd16749/state.json"
+
+--- Level 1 ---
+Micronodes: 113
+Triangles: 115410
+Tex res: 128
+Saved state for level 1 to "/tmp/nexus-isti-100/work/RWT93/control/nxs_cache_6ff29738/state.json"
+
+--- Level 2 ---
+Micronodes: 97
+Triangles: 103840
+Tex res: 64
+Saved state for level 2 to "/tmp/nexus-isti-100/work/RWT93/control/nxs_cache_0e8af2e8/state.json"
+
+--- Level 3 ---
+Micronodes: 86
+Triangles: 93454
+Tex res: 64
+Saved state for level 3 to "/tmp/nexus-isti-100/work/RWT93/control/nxs_cache_6dad24e2/state.json"
+
+--- Level 4 ---
+Micronodes: 42
+Triangles: 46698
+Tex res: 64
+Saved state for level 4 to "/tmp/nexus-isti-100/work/RWT93/control/nxs_cache_19863d04/state.json"
+
+--- Level 5 ---
+Micronodes: 21
+Triangles: 23344
+Tex res: 64
+Saved state for level 5 to "/tmp/nexus-isti-100/work/RWT93/control/nxs_cache_e3b4b425/state.json"
+
+--- Level 6 ---
+Micronodes: 11
+Triangles: 11670
+Tex res: 64
+Saved state for level 6 to "/tmp/nexus-isti-100/work/RWT93/control/nxs_cache_38a6c424/state.json"
+
+--- Level 7 ---
+Micronodes: 6
+Triangles: 5830
+Tex res: 64
+Saved state for level 7 to "/tmp/nexus-isti-100/work/RWT93/control/nxs_cache_1ae10253/state.json"
+
+--- Level 8 ---
+Micronodes: 3
+Triangles: 2912
+Tex res: 64
+Saved state for level 8 to "/tmp/nexus-isti-100/work/RWT93/control/nxs_cache_637b10b0/state.json"
+
+--- Level 9 ---
+Micronodes: 2
+Triangles: 1582
+Tex res: 64
+Saved state for level 9 to "/tmp/nexus-isti-100/work/RWT93/control/nxs_cache_c8f55aaf/state.json"
+
+--- Level 10 ---
+Micronodes: 1
+Triangles: 1208

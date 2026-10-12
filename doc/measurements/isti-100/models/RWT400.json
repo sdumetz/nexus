@@ -1,0 +1,1751 @@
+{
+  "status": "ok",
+  "started": "2026-10-12T13:21:30Z",
+  "conversion": {
+    "status": "ok",
+    "exit_code": 0
+  },
+  "control": {
+    "status": "ok",
+    "exit_code": 0
+  },
+  "pair": {
+    "status": "ok",
+    "exit_code": 0
+  },
+  "artifacts": {
+    "control": {
+      "file_bytes": 4335104,
+      "sha256": "1ac3085e0a99436bfce1dd6272e6f178827351115c1eb0a60a1fd2712ef42ec2",
+      "geometry_sha256": "9a7e90333cd2dccb025b4b89d7fba6ac6b156a22f8b24c0ef25992d9a5b3373f",
+      "texture_sha256": "25d03f54cf40b0efc0a31655258b6705c91db1709a11516da97a62e41c3f7e37",
+      "export_nodes": 91,
+      "export_textures": 91,
+      "export_base_texels": 7696384,
+      "export_mip_texels": 10261815,
+      "texture_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ]
+    },
+    "round1": {
+      "file_bytes": 4335104,
+      "sha256": "2328844bf928a4a8f7c5dfb9eddaa411ffc4b1b3c7243f7c0df89410ba2640aa",
+      "geometry_sha256": "9a7e90333cd2dccb025b4b89d7fba6ac6b156a22f8b24c0ef25992d9a5b3373f",
+      "texture_sha256": "25d03f54cf40b0efc0a31655258b6705c91db1709a11516da97a62e41c3f7e37",
+      "export_nodes": 91,
+      "export_textures": 91,
+      "export_base_texels": 7696384,
+      "export_mip_texels": 10261815,
+      "texture_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ]
+    },
+    "round2": {
+      "file_bytes": 3965440,
+      "sha256": "573ac5f47020add005cd9bd367370d89659df9f563d901b346ac80ef7eb2c71b",
+      "geometry_sha256": "9a7e90333cd2dccb025b4b89d7fba6ac6b156a22f8b24c0ef25992d9a5b3373f",
+      "texture_sha256": "349baa6e7ff41fd1948f595576cdb7d68c4bcc62c7c36c878c350fdc6bf29150",
+      "export_nodes": 91,
+      "export_textures": 91,
+      "export_base_texels": 5926912,
+      "export_mip_texels": 7902519,
+      "texture_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          256,
+          256
+        ]
+      ]
+    }
+  },
+  "render": {
+    "status": "ok",
+    "exit_code": 0
+  },
+  "measurement": {
+    "created": "2026-10-12T13:21:56.690Z",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "poses": [
+      {
+        "distanceRadii": 2.5,
+        "position": [
+          35.73199650844725,
+          29.27833929800415,
+          96.72942346904372
+        ],
+        "target": [
+          2.167771816253662,
+          5.303893089294434,
+          0.8316386342048645
+        ],
+        "near": 0.041756851196289066,
+        "far": 4175.685119628906
+      }
+    ],
+    "taus": [
+      2,
+      0.1
+    ],
+    "accounting": "Logical live Nexus WebGL buffers and RGBA8 textures including every generated mip; excludes driver overhead, CPU heap, and renderer shell allocations.",
+    "models": [
+      {
+        "label": "control",
+        "path": "/tmp/nexus-isti-100/work/RWT400/control/test.nxs",
+        "fileBytes": 4335104,
+        "sha256": "1ac3085e0a99436bfce1dd6272e6f178827351115c1eb0a60a1fd2712ef42ec2"
+      },
+      {
+        "label": "round1",
+        "path": "/tmp/nexus-isti-100/work/RWT400/pair/model.round1.nxs",
+        "fileBytes": 4335104,
+        "sha256": "2328844bf928a4a8f7c5dfb9eddaa411ffc4b1b3c7243f7c0df89410ba2640aa"
+      },
+      {
+        "label": "round2",
+        "path": "/tmp/nexus-isti-100/work/RWT400/pair/model.round2.nxs",
+        "fileBytes": 3965440,
+        "sha256": "573ac5f47020add005cd9bd367370d89659df9f563d901b346ac80ef7eb2c71b"
+      }
+    ],
+    "runs": [
+      {
+        "label": "source",
+        "view": 0,
+        "tau": 0,
+        "source": true,
+        "threeRevision": "186",
+        "fetchedHttpBytes": 0,
+        "modelRequests": 0,
+        "logs": []
+      },
+      {
+        "label": "control",
+        "view": 0,
+        "tau": 2,
+        "residentNodes": 18,
+        "totalNodes": 91,
+        "requestedNodes": 18,
+        "liveTextures": 18,
+        "baseTexels": 73728,
+        "mipTexels": 98298,
+        "geometryBytes": 531966,
+        "textureBytes": 393192,
+        "gpuBytes": 925158,
+        "legacyEstimatedCacheBytes": 941566,
+        "allocationAuditPassed": true,
+        "residentEncodedRangeBytes": 592992,
+        "indexBytes": 17760,
+        "drawCalls": 12,
+        "drawnTriangles": 10086,
+        "suppressedCandidates": 48,
+        "threeRevision": "186",
+        "unboundedCache": true,
+        "prefetchBelowTarget": false,
+        "loadingMode": "traverse",
+        "fetchedHttpBytes": 603248,
+        "modelRequests": 38,
+        "logs": []
+      },
+      {
+        "label": "round1",
+        "view": 0,
+        "tau": 2,
+        "residentNodes": 46,
+        "totalNodes": 91,
+        "requestedNodes": 46,
+        "liveTextures": 46,
+        "baseTexels": 520192,
+        "mipTexels": 693574,
+        "geometryBytes": 1273550,
+        "textureBytes": 2774296,
+        "gpuBytes": 4047846,
+        "legacyEstimatedCacheBytes": 3316430,
+        "allocationAuditPassed": true,
+        "residentEncodedRangeBytes": 1501280,
+        "indexBytes": 17760,
+        "drawCalls": 26,
+        "drawnTriangles": 18564,
+        "suppressedCandidates": 45,
+        "threeRevision": "186",
+        "unboundedCache": true,
+        "prefetchBelowTarget": false,
+        "loadingMode": "traverse",
+        "fetchedHttpBytes": 1526713,
+        "modelRequests": 94,
+        "logs": []
+      },
+      {
+        "label": "round2",
+        "view": 0,
+        "tau": 2,
+        "residentNodes": 46,
+        "totalNodes": 91,
+        "requestedNodes": 46,
+        "liveTextures": 46,
+        "baseTexels": 520192,
+        "mipTexels": 693574,
+        "geometryBytes": 1273550,
+        "textureBytes": 2774296,
+        "gpuBytes": 4047846,
+        "legacyEstimatedCacheBytes": 3316430,
+        "allocationAuditPassed": true,
+        "residentEncodedRangeBytes": 1501280,
+        "indexBytes": 17760,
+        "drawCalls": 26,
+        "drawnTriangles": 18564,
+        "suppressedCandidates": 45,
+        "threeRevision": "186",
+        "unboundedCache": true,
+        "prefetchBelowTarget": false,
+        "loadingMode": "traverse",
+        "fetchedHttpBytes": 1526713,
+        "modelRequests": 94,
+        "logs": []
+      },
+      {
+        "label": "control",
+        "view": 0,
+        "tau": 0.1,
+        "residentNodes": 91,
+        "totalNodes": 91,
+        "requestedNodes": 91,
+        "liveTextures": 91,
+        "baseTexels": 7696384,
+        "mipTexels": 10261815,
+        "geometryBytes": 2386854,
+        "textureBytes": 41047260,
+        "gpuBytes": 43434114,
+        "legacyEstimatedCacheBytes": 21579174,
+        "allocationAuditPassed": true,
+        "residentEncodedRangeBytes": 4334944,
+        "indexBytes": 17760,
+        "drawCalls": 23,
+        "drawnTriangles": 23274,
+        "suppressedCandidates": 0,
+        "threeRevision": "186",
+        "unboundedCache": true,
+        "prefetchBelowTarget": false,
+        "loadingMode": "traverse",
+        "fetchedHttpBytes": 6304082,
+        "modelRequests": 184,
+        "logs": []
+      },
+      {
+        "label": "round1",
+        "view": 0,
+        "tau": 0.1,
+        "residentNodes": 91,
+        "totalNodes": 91,
+        "requestedNodes": 91,
+        "liveTextures": 91,
+        "baseTexels": 7696384,
+        "mipTexels": 10261815,
+        "geometryBytes": 2386854,
+        "textureBytes": 41047260,
+        "gpuBytes": 43434114,
+        "legacyEstimatedCacheBytes": 21579174,
+        "allocationAuditPassed": true,
+        "residentEncodedRangeBytes": 4334944,
+        "indexBytes": 17760,
+        "drawCalls": 23,
+        "drawnTriangles": 23274,
+        "suppressedCandidates": 0,
+        "threeRevision": "186",
+        "unboundedCache": true,
+        "prefetchBelowTarget": false,
+        "loadingMode": "traverse",
+        "fetchedHttpBytes": 6304082,
+        "modelRequests": 184,
+        "logs": []
+      },
+      {
+        "label": "round2",
+        "view": 0,
+        "tau": 0.1,
+        "residentNodes": 91,
+        "totalNodes": 91,
+        "requestedNodes": 91,
+        "liveTextures": 91,
+        "baseTexels": 5926912,
+        "mipTexels": 7902519,
+        "geometryBytes": 2386854,
+        "textureBytes": 31610076,
+        "gpuBytes": 33996930,
+        "legacyEstimatedCacheBytes": 17882534,
+        "allocationAuditPassed": true,
+        "residentEncodedRangeBytes": 3965280,
+        "indexBytes": 17760,
+        "drawCalls": 23,
+        "drawnTriangles": 23274,
+        "suppressedCandidates": 0,
+        "threeRevision": "186",
+        "unboundedCache": true,
+        "prefetchBelowTarget": false,
+        "loadingMode": "traverse",
+        "fetchedHttpBytes": 5564754,
+        "modelRequests": 184,
+        "logs": []
+      }
+    ],
+    "comparisons": [
+      {
+        "label": "control",
+        "reference": "source",
+        "view": 0,
+        "tau": 2,
+        "mode": "textured",
+        "modelPixels": 58937,
+        "mse": 173.82632867864555,
+        "psnrDb": 25.729648031749996,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 9.418367635497791,
+        "changedPixelsOver8Fraction": 0.4847549077828868,
+        "silhouetteIoU": 0.9986256511189915,
+        "diff": "control-v0-t2-textured-vs-source-diff.png"
+      },
+      {
+        "label": "control",
+        "reference": "source",
+        "view": 0,
+        "tau": 2,
+        "mode": "shaded",
+        "modelPixels": 58937,
+        "mse": 83.57442693045115,
+        "psnrDb": 28.910069535488155,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 5.238192193924586,
+        "changedPixelsOver8Fraction": 0.17769822013336276,
+        "silhouetteIoU": 0.9986426183891274,
+        "diff": "control-v0-t2-shaded-vs-source-diff.png"
+      },
+      {
+        "label": "round1",
+        "reference": "control",
+        "view": 0,
+        "tau": 2,
+        "mode": "textured",
+        "modelPixels": 58932,
+        "mse": 169.16582954365484,
+        "psnrDb": 25.847677181184064,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 9.229575329758593,
+        "changedPixelsOver8Fraction": 0.46266883866150815,
+        "silhouetteIoU": 0.998812190321048,
+        "diff": "round1-v0-t2-textured-vs-control-diff.png"
+      },
+      {
+        "label": "round1",
+        "reference": "source",
+        "view": 0,
+        "tau": 2,
+        "mode": "textured",
+        "modelPixels": 58908,
+        "mse": 72.07750503610148,
+        "psnrDb": 29.552806157466122,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 6.0603370227020665,
+        "changedPixelsOver8Fraction": 0.29520608406328513,
+        "silhouetteIoU": 0.9997114144089088,
+        "diff": "round1-v0-t2-textured-vs-source-diff.png"
+      },
+      {
+        "label": "round1",
+        "reference": "control",
+        "view": 0,
+        "tau": 2,
+        "mode": "shaded",
+        "modelPixels": 58933,
+        "mse": 28.991493164554097,
+        "psnrDb": 33.50809777233272,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 2.0019626807843935,
+        "changedPixelsOver8Fraction": 0.05404442332818624,
+        "silhouetteIoU": 0.9988291788980707,
+        "diff": "round1-v0-t2-shaded-vs-control-diff.png"
+      },
+      {
+        "label": "round1",
+        "reference": "source",
+        "view": 0,
+        "tau": 2,
+        "mode": "shaded",
+        "modelPixels": 58908,
+        "mse": 49.45734025938752,
+        "psnrDb": 31.18849603911997,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 4.24161404223535,
+        "changedPixelsOver8Fraction": 0.13353025056019555,
+        "silhouetteIoU": 0.9997453656549196,
+        "diff": "round1-v0-t2-shaded-vs-source-diff.png"
+      },
+      {
+        "label": "round2",
+        "reference": "control",
+        "view": 0,
+        "tau": 2,
+        "mode": "textured",
+        "modelPixels": 58932,
+        "mse": 169.16582954365484,
+        "psnrDb": 25.847677181184064,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 9.229575329758593,
+        "changedPixelsOver8Fraction": 0.46266883866150815,
+        "silhouetteIoU": 0.998812190321048,
+        "diff": "round2-v0-t2-textured-vs-control-diff.png"
+      },
+      {
+        "label": "round2",
+        "reference": "round1",
+        "view": 0,
+        "tau": 2,
+        "mode": "textured",
+        "modelPixels": 58900,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "round2-v0-t2-textured-vs-round1-diff.png"
+      },
+      {
+        "label": "round2",
+        "reference": "source",
+        "view": 0,
+        "tau": 2,
+        "mode": "textured",
+        "modelPixels": 58908,
+        "mse": 72.07750503610148,
+        "psnrDb": 29.552806157466122,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 6.0603370227020665,
+        "changedPixelsOver8Fraction": 0.29520608406328513,
+        "silhouetteIoU": 0.9997114144089088,
+        "diff": "round2-v0-t2-textured-vs-source-diff.png"
+      },
+      {
+        "label": "round2",
+        "reference": "control",
+        "view": 0,
+        "tau": 2,
+        "mode": "shaded",
+        "modelPixels": 58933,
+        "mse": 28.991493164554097,
+        "psnrDb": 33.50809777233272,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 2.0019626807843935,
+        "changedPixelsOver8Fraction": 0.05404442332818624,
+        "silhouetteIoU": 0.9988291788980707,
+        "diff": "round2-v0-t2-shaded-vs-control-diff.png"
+      },
+      {
+        "label": "round2",
+        "reference": "round1",
+        "view": 0,
+        "tau": 2,
+        "mode": "shaded",
+        "modelPixels": 58902,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "round2-v0-t2-shaded-vs-round1-diff.png"
+      },
+      {
+        "label": "round2",
+        "reference": "source",
+        "view": 0,
+        "tau": 2,
+        "mode": "shaded",
+        "modelPixels": 58908,
+        "mse": 49.45734025938752,
+        "psnrDb": 31.18849603911997,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 4.24161404223535,
+        "changedPixelsOver8Fraction": 0.13353025056019555,
+        "silhouetteIoU": 0.9997453656549196,
+        "diff": "round2-v0-t2-shaded-vs-source-diff.png"
+      },
+      {
+        "label": "control",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "textured",
+        "modelPixels": 58899,
+        "mse": 23.57651233467461,
+        "psnrDb": 34.406008003901206,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.3995427200235433,
+        "changedPixelsOver8Fraction": 0.09589296932036198,
+        "silhouetteIoU": 1,
+        "diff": "control-v0-t0.1-textured-vs-source-diff.png"
+      },
+      {
+        "label": "control",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "shaded",
+        "modelPixels": 58899,
+        "mse": 41.20334244497643,
+        "psnrDb": 31.981479131228802,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.8869420533455576,
+        "changedPixelsOver8Fraction": 0.11820234638958217,
+        "silhouetteIoU": 1,
+        "diff": "control-v0-t0.1-shaded-vs-source-diff.png"
+      },
+      {
+        "label": "round1",
+        "reference": "control",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "textured",
+        "modelPixels": 58899,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "round1-v0-t0.1-textured-vs-control-diff.png"
+      },
+      {
+        "label": "round1",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "textured",
+        "modelPixels": 58899,
+        "mse": 23.57651233467461,
+        "psnrDb": 34.406008003901206,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.3995427200235433,
+        "changedPixelsOver8Fraction": 0.09589296932036198,
+        "silhouetteIoU": 1,
+        "diff": "round1-v0-t0.1-textured-vs-source-diff.png"
+      },
+      {
+        "label": "round1",
+        "reference": "control",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "shaded",
+        "modelPixels": 58899,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "round1-v0-t0.1-shaded-vs-control-diff.png"
+      },
+      {
+        "label": "round1",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "shaded",
+        "modelPixels": 58899,
+        "mse": 41.20334244497643,
+        "psnrDb": 31.981479131228802,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.8869420533455576,
+        "changedPixelsOver8Fraction": 0.11820234638958217,
+        "silhouetteIoU": 1,
+        "diff": "round1-v0-t0.1-shaded-vs-source-diff.png"
+      },
+      {
+        "label": "round2",
+        "reference": "control",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "textured",
+        "modelPixels": 58899,
+        "mse": 1.4497246699151656,
+        "psnrDb": 46.517948315229624,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 0.7192425451479085,
+        "changedPixelsOver8Fraction": 3.395643389531232e-05,
+        "silhouetteIoU": 1,
+        "diff": "round2-v0-t0.1-textured-vs-control-diff.png"
+      },
+      {
+        "label": "round2",
+        "reference": "round1",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "textured",
+        "modelPixels": 58899,
+        "mse": 1.4497246699151656,
+        "psnrDb": 46.517948315229624,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 0.7192425451479085,
+        "changedPixelsOver8Fraction": 3.395643389531232e-05,
+        "silhouetteIoU": 1,
+        "diff": "round2-v0-t0.1-textured-vs-round1-diff.png"
+      },
+      {
+        "label": "round2",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "textured",
+        "modelPixels": 58899,
+        "mse": 24.498916223818174,
+        "psnrDb": 34.23933488275872,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.5085655104500924,
+        "changedPixelsOver8Fraction": 0.10034126216064788,
+        "silhouetteIoU": 1,
+        "diff": "round2-v0-t0.1-textured-vs-source-diff.png"
+      },
+      {
+        "label": "round2",
+        "reference": "control",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "shaded",
+        "modelPixels": 58899,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "round2-v0-t0.1-shaded-vs-control-diff.png"
+      },
+      {
+        "label": "round2",
+        "reference": "round1",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "shaded",
+        "modelPixels": 58899,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "round2-v0-t0.1-shaded-vs-round1-diff.png"
+      },
+      {
+        "label": "round2",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "shaded",
+        "modelPixels": 58899,
+        "mse": 41.20334244497643,
+        "psnrDb": 31.981479131228802,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.8869420533455576,
+        "changedPixelsOver8Fraction": 0.11820234638958217,
+        "silhouetteIoU": 1,
+        "diff": "round2-v0-t0.1-shaded-vs-source-diff.png"
+      }
+    ],
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/150.0.7871.181",
+      "revision": "@24b04c927b23c39cf9c5227cc8dc6f64a744c8e9",
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36",
+      "jsVersion": "15.0.245.21"
+    },
+    "threePackageVersion": "0.186.1"
+  },
+  "finished": true,
+  "ended": "2026-10-12T13:22:18Z"
+}

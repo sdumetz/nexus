@@ -1,0 +1,9 @@
+QCommandLineOption: Option names cannot be empty
+Mapped normals check initial: checked=119560 opposite=39
+Building initial clusters and micronodes...
+Saved post-initialization state to "/tmp/nexus-isti-100/work/RWT494/pair/nxs_cache_31b83504/state.json"
+
+--- Level 1 ---
+Micronodes: 117
+Triangles: 119560
+Tex res: 64

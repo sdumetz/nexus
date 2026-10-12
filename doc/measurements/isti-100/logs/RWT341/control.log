@@ -1,0 +1,74 @@
+QCommandLineOption: Option names cannot be empty
+
+Build Parameters:
+  Input files: 1 file(s)
+  Output: model.nxs
+  Faces per cluster: 128
+  Clusters per node: 8
+  Faces per macro-node: 32768
+  Scaling: 0.5
+  Texel weight: 0.05
+  Triangle/texel ratio: 6
+  Texture format: JPEG (quality: 95)
+  Threads: 4
+  Translate: (0, 0, 0)
+  Scale: (1, 1, 1)
+
+Mapped normals check initial: checked=21876 opposite=115
+Building mesh hierarchy...
+Building initial clusters and micronodes...
+Saved post-initialization state to "/tmp/nexus-isti-100/work/RWT341/control/nxs_cache_2db0976e/state.json"
+
+--- Level 1 ---
+Micronodes: 22
+Triangles: 21876
+Tex res: 256
+Saved state for level 1 to "/tmp/nexus-isti-100/work/RWT341/control/nxs_cache_bec1919a/state.json"
+
+--- Level 2 ---
+Micronodes: 18
+Triangles: 19690
+Tex res: 128
+Saved state for level 2 to "/tmp/nexus-isti-100/work/RWT341/control/nxs_cache_2ed4cdbe/state.json"
+
+--- Level 3 ---
+Micronodes: 17
+Triangles: 17722
+Tex res: 64
+Saved state for level 3 to "/tmp/nexus-isti-100/work/RWT341/control/nxs_cache_9e731d8d/state.json"
+
+--- Level 4 ---
+Micronodes: 15
+Triangles: 15946
+Tex res: 64
+Saved state for level 4 to "/tmp/nexus-isti-100/work/RWT341/control/nxs_cache_ebbaa045/state.json"
+
+--- Level 5 ---
+Micronodes: 7
+Triangles: 7968
+Tex res: 64
+Saved state for level 5 to "/tmp/nexus-isti-100/work/RWT341/control/nxs_cache_6b1f1481/state.json"
+
+--- Level 6 ---
+Micronodes: 4
+Triangles: 3984
+Tex res: 64
+Saved state for level 6 to "/tmp/nexus-isti-100/work/RWT341/control/nxs_cache_dcf6e4aa/state.json"
+
+--- Level 7 ---
+Micronodes: 2
+Triangles: 1990
+Tex res: 64
+Saved state for level 7 to "/tmp/nexus-isti-100/work/RWT341/control/nxs_cache_ff688d13/state.json"
+
+--- Level 8 ---
+Micronodes: 2
+Triangles: 1328
+Tex res: 32
+Saved state for level 8 to "/tmp/nexus-isti-100/work/RWT341/control/nxs_cache_0a1bcdaa/state.json"
+
+--- Level 9 ---
+Micronodes: 2
+Triangles: 1252
+Tex res: 32
+Could not simplify further: keeping 2 root micronodes

@@ -1,0 +1,80 @@
+QCommandLineOption: Option names cannot be empty
+
+Build Parameters:
+  Input files: 1 file(s)
+  Output: model.nxs
+  Faces per cluster: 128
+  Clusters per node: 8
+  Faces per macro-node: 32768
+  Scaling: 0.5
+  Texel weight: 0.05
+  Triangle/texel ratio: 6
+  Texture format: JPEG (quality: 95)
+  Threads: 4
+  Translate: (0, 0, 0)
+  Scale: (1, 1, 1)
+
+Mapped normals check initial: checked=90130 opposite=172
+Building mesh hierarchy...
+Building initial clusters and micronodes...
+Saved post-initialization state to "/tmp/nexus-isti-100/work/RWT148/control/nxs_cache_e45717e2/state.json"
+
+--- Level 1 ---
+Micronodes: 89
+Triangles: 90130
+Tex res: 128
+Saved state for level 1 to "/tmp/nexus-isti-100/work/RWT148/control/nxs_cache_ed4f0839/state.json"
+
+--- Level 2 ---
+Micronodes: 75
+Triangles: 81132
+Tex res: 64
+Saved state for level 2 to "/tmp/nexus-isti-100/work/RWT148/control/nxs_cache_e431f08b/state.json"
+
+--- Level 3 ---
+Micronodes: 67
+Triangles: 73008
+Tex res: 64
+Saved state for level 3 to "/tmp/nexus-isti-100/work/RWT148/control/nxs_cache_52577a0c/state.json"
+
+--- Level 4 ---
+Micronodes: 33
+Triangles: 36484
+Tex res: 64
+Saved state for level 4 to "/tmp/nexus-isti-100/work/RWT148/control/nxs_cache_50fc5ae7/state.json"
+
+--- Level 5 ---
+Micronodes: 17
+Triangles: 18238
+Tex res: 64
+Saved state for level 5 to "/tmp/nexus-isti-100/work/RWT148/control/nxs_cache_5c30ab33/state.json"
+
+--- Level 6 ---
+Micronodes: 8
+Triangles: 9116
+Tex res: 64
+Saved state for level 6 to "/tmp/nexus-isti-100/work/RWT148/control/nxs_cache_89a6f6c1/state.json"
+
+--- Level 7 ---
+Micronodes: 4
+Triangles: 4554
+Tex res: 64
+Saved state for level 7 to "/tmp/nexus-isti-100/work/RWT148/control/nxs_cache_d5b3b137/state.json"
+
+--- Level 8 ---
+Micronodes: 3
+Triangles: 2610
+Tex res: 64
+Saved state for level 8 to "/tmp/nexus-isti-100/work/RWT148/control/nxs_cache_ee772bca/state.json"
+
+--- Level 9 ---
+Micronodes: 3
+Triangles: 2262
+Tex res: 64
+Saved state for level 9 to "/tmp/nexus-isti-100/work/RWT148/control/nxs_cache_48d7ebf2/state.json"
+
+--- Level 10 ---
+Micronodes: 2
+Triangles: 2180
+Tex res: 64
+Could not simplify further: keeping 2 root micronodes

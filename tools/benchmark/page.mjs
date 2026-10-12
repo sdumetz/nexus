@@ -20,6 +20,7 @@ const shaded = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 1, m
 let nx, source, frozen = false, drawCalls = 0, drawnTriangles = 0;
 const ownedBuffers = new Set(), ownedTextures = new Set(), textureSizes = new Map();
 let requestedNodes = 0, suppressedCandidates = 0;
+const capturedPixels = new Map();
 
 const draw = gl.drawElements.bind(gl);
 gl.drawElements = (mode, count, ...args) => {
@@ -43,6 +44,16 @@ function render() {
   // Reconcile that cache every frame; timing is deliberately outside scope.
   renderer.resetState();
   renderer.render(scene, camera);
+}
+function traverseForLoading() {
+  // Run the same view update and cache traversal without repeatedly rasterizing
+  // transient cuts. Final residency and captures still use the actual renderer.
+  scene.updateMatrixWorld(true);
+  nx.modelViewMatrix.multiplyMatrices(camera.matrixWorldInverse, nx.matrixWorld);
+  Cache.beginFrame(30);
+  nx.traversal.updateView([0, 0, innerWidth, innerHeight], camera.projectionMatrix.elements, nx.modelViewMatrix.elements);
+  nx.instance_errors = nx.traversal.traverse(nx.mesh, Cache);
+  Cache.endFrame();
 }
 function capture() {
   render();
@@ -98,7 +109,7 @@ function stats() {
 }
 
 window.bench = {
-  async run({ url, kind = 'nexus', pose, tau = 2, timeoutMs = 120000 }) {
+  async run({ url, kind = 'nexus', pose, tau = 2, timeoutMs = 120000, loadingMode = 'render' }) {
     camera.position.fromArray(pose.position); camera.up.fromArray(pose.up ?? [0, 1, 0]);
     camera.near = pose.near; camera.far = pose.far; camera.fov = pose.fov ?? 45;
     camera.lookAt(new THREE.Vector3().fromArray(pose.target)); camera.updateProjectionMatrix(); camera.updateMatrixWorld();
@@ -142,7 +153,7 @@ window.bench = {
     const start = performance.now();
     let signature = '', quiet = 0;
     while (quiet < 12) {
-      render();
+      if (loadingMode === 'traverse') traverseForLoading(); else render();
       const m = nx.mesh, t = nx.traversal;
       let complete = !!t.visited;
       for (let id = 0; id < m.nodesCount - 1; ++id) {
@@ -157,17 +168,23 @@ window.bench = {
     }
     frozen = true;
     render();
-    return { ...stats(), threeRevision: THREE.REVISION, unboundedCache: true, prefetchBelowTarget: false };
+    return { ...stats(), threeRevision: THREE.REVISION, unboundedCache: true, prefetchBelowTarget: false, loadingMode };
   },
-  capture(mode) { shade(mode); return capture(); },
+  capture(mode) {
+    shade(mode);
+    const png = capture();
+    const canvas = document.createElement('canvas'); canvas.width = innerWidth; canvas.height = innerHeight;
+    const ctx = canvas.getContext('2d'); ctx.drawImage(renderer.domElement, 0, 0);
+    capturedPixels.set(mode, ctx.getImageData(0, 0, innerWidth, innerHeight).data);
+    return png;
+  },
   async compare(reference, mode) {
-    shade(mode); render();
+    const current = capturedPixels.get(mode);
+    if (!current) throw new Error('Capture the current mode before comparing it');
     const image = new Image(); image.src = `data:image/png;base64,${reference}`; await image.decode();
     const canvas = document.createElement('canvas'); canvas.width = innerWidth; canvas.height = innerHeight;
     const ctx = canvas.getContext('2d'); ctx.drawImage(image, 0, 0);
     const previous = ctx.getImageData(0, 0, innerWidth, innerHeight).data;
-    ctx.drawImage(renderer.domElement, 0, 0);
-    const current = ctx.getImageData(0, 0, innerWidth, innerHeight).data;
     const { metrics, heat } = imageDiff(previous, current);
     ctx.putImageData(new ImageData(new Uint8ClampedArray(heat), innerWidth, innerHeight), 0, 0);
     return { ...metrics, heatPng: canvas.toDataURL('image/png').split(',')[1] };

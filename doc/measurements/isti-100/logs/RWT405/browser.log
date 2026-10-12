@@ -1,0 +1,8 @@
+source view 0 tau 0: reference captured
+control view 0 tau 2: 15/226 nodes, 0.790 MiB audited GPU cache
+round1 view 0 tau 2: 28/226 nodes, 1.422 MiB audited GPU cache
+round2 view 0 tau 2: 28/226 nodes, 1.406 MiB audited GPU cache
+control view 0 tau 0.1: 226/226 nodes, 34.016 MiB audited GPU cache
+round1 view 0 tau 0.1: 226/226 nodes, 34.016 MiB audited GPU cache
+round2 view 0 tau 0.1: 226/226 nodes, 34.000 MiB audited GPU cache
+Results: /tmp/nexus-isti-100/work/RWT405/browser/results.json

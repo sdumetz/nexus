@@ -1,0 +1,74 @@
+QCommandLineOption: Option names cannot be empty
+
+Build Parameters:
+  Input files: 1 file(s)
+  Output: model.nxs
+  Faces per cluster: 128
+  Clusters per node: 8
+  Faces per macro-node: 32768
+  Scaling: 0.5
+  Texel weight: 0.05
+  Triangle/texel ratio: 6
+  Texture format: JPEG (quality: 95)
+  Threads: 4
+  Translate: (0, 0, 0)
+  Scale: (1, 1, 1)
+
+Mapped normals check initial: checked=28095 opposite=80
+Building mesh hierarchy...
+Building initial clusters and micronodes...
+Saved post-initialization state to "/tmp/nexus-isti-100/work/RWT68/control/nxs_cache_bc1ecdbc/state.json"
+
+--- Level 1 ---
+Micronodes: 28
+Triangles: 28095
+Tex res: 256
+Saved state for level 1 to "/tmp/nexus-isti-100/work/RWT68/control/nxs_cache_09294255/state.json"
+
+--- Level 2 ---
+Micronodes: 24
+Triangles: 25283
+Tex res: 128
+Saved state for level 2 to "/tmp/nexus-isti-100/work/RWT68/control/nxs_cache_3053cd4e/state.json"
+
+--- Level 3 ---
+Micronodes: 22
+Triangles: 22747
+Tex res: 64
+Saved state for level 3 to "/tmp/nexus-isti-100/work/RWT68/control/nxs_cache_c72c7c05/state.json"
+
+--- Level 4 ---
+Micronodes: 19
+Triangles: 20471
+Tex res: 64
+Saved state for level 4 to "/tmp/nexus-isti-100/work/RWT68/control/nxs_cache_cf46bb5a/state.json"
+
+--- Level 5 ---
+Micronodes: 9
+Triangles: 10231
+Tex res: 64
+Saved state for level 5 to "/tmp/nexus-isti-100/work/RWT68/control/nxs_cache_a2e45ff0/state.json"
+
+--- Level 6 ---
+Micronodes: 5
+Triangles: 5113
+Tex res: 64
+Saved state for level 6 to "/tmp/nexus-isti-100/work/RWT68/control/nxs_cache_e430dbd3/state.json"
+
+--- Level 7 ---
+Micronodes: 3
+Triangles: 2759
+Tex res: 64
+Saved state for level 7 to "/tmp/nexus-isti-100/work/RWT68/control/nxs_cache_dfecfdd0/state.json"
+
+--- Level 8 ---
+Micronodes: 2
+Triangles: 1931
+Tex res: 64
+Saved state for level 8 to "/tmp/nexus-isti-100/work/RWT68/control/nxs_cache_72937812/state.json"
+
+--- Level 9 ---
+Micronodes: 2
+Triangles: 1565
+Tex res: 64
+Could not simplify further: keeping 2 root micronodes

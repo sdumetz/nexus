@@ -1,0 +1,71 @@
+QCommandLineOption: Option names cannot be empty
+Mapped normals check initial: checked=74589 opposite=193
+Building initial clusters and micronodes...
+Saved post-initialization state to "/tmp/nexus-isti-100/work/RWT415/pair/nxs_cache_83041b7b/state.json"
+
+--- Level 1 ---
+Micronodes: 73
+Triangles: 74589
+Tex res: 256
+Saved state for level 1 to "/tmp/nexus-isti-100/work/RWT415/pair/nxs_cache_fd5e861a/state.json"
+
+--- Level 2 ---
+Micronodes: 64
+Triangles: 67113
+Tex res: 128
+Saved state for level 2 to "/tmp/nexus-isti-100/work/RWT415/pair/nxs_cache_c77718ab/state.json"
+
+--- Level 3 ---
+Micronodes: 56
+Triangles: 60399
+Tex res: 64
+Saved state for level 3 to "/tmp/nexus-isti-100/work/RWT415/pair/nxs_cache_cc461e90/state.json"
+
+--- Level 4 ---
+Micronodes: 49
+Triangles: 54357
+Tex res: 64
+Saved state for level 4 to "/tmp/nexus-isti-100/work/RWT415/pair/nxs_cache_88cc1c0a/state.json"
+
+--- Level 5 ---
+Micronodes: 24
+Triangles: 27159
+Tex res: 64
+Saved state for level 5 to "/tmp/nexus-isti-100/work/RWT415/pair/nxs_cache_cff5262a/state.json"
+
+--- Level 6 ---
+Micronodes: 12
+Triangles: 13575
+Tex res: 64
+Saved state for level 6 to "/tmp/nexus-isti-100/work/RWT415/pair/nxs_cache_813f579d/state.json"
+
+--- Level 7 ---
+Micronodes: 6
+Triangles: 6785
+Tex res: 64
+Saved state for level 7 to "/tmp/nexus-isti-100/work/RWT415/pair/nxs_cache_136ae244/state.json"
+
+--- Level 8 ---
+Micronodes: 4
+Triangles: 3525
+Tex res: 64
+Saved state for level 8 to "/tmp/nexus-isti-100/work/RWT415/pair/nxs_cache_aba7036a/state.json"
+
+--- Level 9 ---
+Micronodes: 2
+Triangles: 2187
+Tex res: 64
+Saved state for level 9 to "/tmp/nexus-isti-100/work/RWT415/pair/nxs_cache_2e82cf32/state.json"
+
+--- Level 10 ---
+Micronodes: 2
+Triangles: 1615
+Tex res: 64
+Saved state for level 10 to "/tmp/nexus-isti-100/work/RWT415/pair/nxs_cache_c77704bd/state.json"
+
+--- Level 11 ---
+Micronodes: 2
+Triangles: 1493
+Tex res: 64
+Could not simplify further: keeping 2 root micronodes
+Exported /tmp/nexus-isti-100/work/RWT415/pair/model.round{1,2}.nxs from one hierarchy

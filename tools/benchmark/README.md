@@ -41,6 +41,14 @@ remain resident and count toward cache usage. The view must have all required
 nodes ready, no pending request or texture decode, and an unchanged allocation
 signature for twelve frames. Timeouts and browser/WebGL errors fail the run.
 
+The default loading mode is `traverse`: it runs the same view update, traversal
+and cache scheduler without repeatedly rasterizing temporary cuts while data
+loads. The settled view and all captures use the real renderer. Use
+`--loading-mode render` to rasterize every loading frame as in the original
+two-model experiment. Both targets were validated against the original path:
+node IDs, cache bytes, triangle counts and PNGs match exactly. Timing remains
+outside the benchmark's scope.
+
 The authoritative number is **logical live Nexus GPU allocation bytes**, with
 geometry and textures reported separately:
 

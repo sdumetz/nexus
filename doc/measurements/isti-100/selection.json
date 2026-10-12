@@ -1,0 +1,3751 @@
+{
+  "dataset": "/home/sebastien/Documents/3DModels/ISTI_dataset",
+  "count": 100,
+  "seed": 20261012,
+  "eligible_count": 116,
+  "eligibility": "10k\u2013150k triangles, one atlas <=4096 on each side, UVs",
+  "control_commit": "1fe489d",
+  "experiment_commit": "f763879",
+  "builder_defaults": true,
+  "control_binary_sha256": "5e944168bd5e1823929158b286e4b09d1500f6d95351e6b584df74075d2bd2d3",
+  "pair_binary_sha256": "21dc2dfa6c3261619ccac4be77881b3136ee471f2a4dda6f9aeb8d598409cfbe",
+  "quality_targets": [
+    2,
+    0.1
+  ],
+  "camera_distance_radii": 2.5,
+  "viewport": [
+    1280,
+    800
+  ],
+  "models": [
+    {
+      "model_id": "RWT14",
+      "name": "3D Scan - Real Rock 001",
+      "category": "Nature",
+      "author": "MGD Films",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/08e021c9407048dfb1022dfb6c13834a",
+      "input_triangles": 31152,
+      "input_texture_width": 4096,
+      "input_texture_height": 2048,
+      "input_texels": 8388608,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT14/mesh.gltf",
+      "source_sha256": "8d47c199ca928c4e8647871cd0f3497281e89a4b6cefd241b96795598a500165",
+      "texture_sha256": "9c7a35776276af94a155410b5a8c4082a98d5a69594126200f464dd2067cfbdc",
+      "buffer_sha256": {
+        "mesh.bin": "3f0a17f8be165900d2592f3d736187528b235ce5dbbeccb5b87e7673c7d15c00"
+      }
+    },
+    {
+      "model_id": "RWT16",
+      "name": "Diane V - Louvre Museum (Low Definition)",
+      "category": "Sculptures",
+      "author": "Benjamin Bardou",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/0a2ff627a48a479582559fb678132854",
+      "input_triangles": 33467,
+      "input_texture_width": 1024,
+      "input_texture_height": 1024,
+      "input_texels": 1048576,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT16/COLOMBE.gltf",
+      "source_sha256": "817e35bfe8f44dbc7585ad01ce660f0a7abc55f0c5543f7732faee823e07d812",
+      "texture_sha256": "96f35aaf1918a1c809eeadc4f4e3f24c25fb6b3382ae3c71437feaf552f12895",
+      "buffer_sha256": {
+        "COLOMBE.bin": "f683389ff25c86fc8ae7901fbb2c6e17edf6727a8b458bb2a746a044b4d08fe6"
+      }
+    },
+    {
+      "model_id": "RWT18",
+      "name": "Wood Stick 02",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/0ab534c493e14f67bac01ee94f20e43f",
+      "input_triangles": 29988,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT18/wood_stick_02.gltf",
+      "source_sha256": "4c7ddcda7b03b60b3e53f43385690d13cbc6f8a59260d411064f7e0f440ec75b",
+      "texture_sha256": "ea29b5ea2f5a6bdcff16b89c5d3aece40fd4b042cc5b5f5633d1f38689c24876",
+      "buffer_sha256": {
+        "wood_stick_02.bin": "0efae8c8ab9dad300bd5bd7f880aaab2d520c303274e5c057126019d0156e155"
+      }
+    },
+    {
+      "model_id": "RWT24",
+      "name": "Granite stone brown 03",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/0f76dec1147543188ba05e98c0785cfd",
+      "input_triangles": 28176,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT24/sutr08.gltf",
+      "source_sha256": "bca3f5edd7a0813ccd49535505a460d89cd325726a67d301f10192dd2e81f037",
+      "texture_sha256": "b6808fd57c366ecfcb6af315407f0892fa39aee86146d558b163bfa8c1f5eacd",
+      "buffer_sha256": {
+        "sutr08.bin": "ee59dda0a5975a72a67fd4b6d475860150b5fb89ad14aef70f57dcbcfad82230"
+      }
+    },
+    {
+      "model_id": "RWT47",
+      "name": "Wood Stick 03",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/1c3f0b7635e342f2bf3789a6bae48b1d",
+      "input_triangles": 29962,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT47/wood_stick_03.gltf",
+      "source_sha256": "2e99c821d0c4aae6b3663977ce3d621c80acb09909301292841cd8a09146728f",
+      "texture_sha256": "ce97a618e60e5ffa2b3c453aa7ccaac89d991e26842f227bea846d66e48b68ec",
+      "buffer_sha256": {
+        "wood_stick_03.bin": "8f52957900b4f7ea866e6eb5b876748e7f6671853a7eebf4f56e5d1c655a0614"
+      }
+    },
+    {
+      "model_id": "RWT50",
+      "name": "Huge Rocks Las Piedrotas, Tapalpa, Mexico",
+      "category": "Nature",
+      "author": "GSXNet",
+      "license": "CC Attribution-NonCommercial",
+      "source_url": "https://api.sketchfab.com/v3/models/1d9c63abeaf14643bf67c76f3cbcabf7",
+      "input_triangles": 65518,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT50/LasPedrotas.gltf",
+      "source_sha256": "6e8834d82191fcc4474074b06a871b4d521386337ec67680919c7263b655712f",
+      "texture_sha256": "afa15f96fee94ecc3871e20b06fe1b8e02548a57cf0aa81646cd8306de241a5c",
+      "buffer_sha256": {
+        "LasPedrotas.bin": "37bc510b94b9763429896dd7c241081da939a8963c4a8b0201f30200e4c3a080"
+      }
+    },
+    {
+      "model_id": "RWT55",
+      "name": "Harlech Castle Wales - UNESCO World Heritage",
+      "category": "Buildings",
+      "author": "GSXNet",
+      "license": "CC Attribution-NonCommercial",
+      "source_url": "https://api.sketchfab.com/v3/models/201f29ff3c1a49adb3d97bb7dd7ff043",
+      "input_triangles": 131629,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT55/HarlechCastle.gltf",
+      "source_sha256": "8198f36d8f6fc9c9b33d75b6361078a7e7ece3beed06769d89b29f23dac5725a",
+      "texture_sha256": "48e35a6c0cd0e0b1af87b0251718f03ef2ccf518a0ba94c21b6d6344c708170d",
+      "buffer_sha256": {
+        "HarlechCastle.bin": "b4ea53a1e1f7d6cd2d3697e59bb0de5f8efa849096a85720d06cf5fb512bb1e6"
+      }
+    },
+    {
+      "model_id": "RWT65",
+      "name": "3D Scan - Griffon Statue",
+      "category": "Sculptures",
+      "author": "MGD Films",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/24cea165ed4347f28d7bd6162952ec2a",
+      "input_triangles": 49134,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT65/griffon_statue.gltf",
+      "source_sha256": "234ad68a0ce812cf96d40ca7b5c1c65125eb5d9316ad134e9c42be6a76421d7f",
+      "texture_sha256": "b4838edff761a6bb572c9f895afcd5163bda6cbde8909bb66a79f87fac102629",
+      "buffer_sha256": {
+        "griffon_statue.bin": "a9974cb205c1297403be7be84d22629c51e6a5e22719f6e9f2caff9257eb7e14"
+      }
+    },
+    {
+      "model_id": "RWT68",
+      "name": "Glarus Thrust - UNESCO world heritage site",
+      "category": "Nature",
+      "author": "GSXNet",
+      "license": "CC Attribution-NonCommercial",
+      "source_url": "https://api.sketchfab.com/v3/models/262e54cd17b644c39a1073a74179242d",
+      "input_triangles": 28095,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT68/Glarus_thrust.gltf",
+      "source_sha256": "71b910428b44e95d1780402dd4ec92e78730046ccca3fd419b9d9e64543ba14d",
+      "texture_sha256": "28698b782d3989f7b6a49d74d4efcfb7eef097c1d29e7c84bf9bdf1a866a2a86",
+      "buffer_sha256": {
+        "Glarus_thrust.bin": "f72b16e479bec8472e3c449777dd56821c3ac33fbaae3b8006b28c5a1b194383"
+      }
+    },
+    {
+      "model_id": "RWT70",
+      "name": "Church of St. Michael, Prague",
+      "category": "Buildings",
+      "author": "VR3D.CZ | Libor Telupil",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/267f3298460f475d85e62e8f7d7e8863",
+      "input_triangles": 98238,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT70/Kostel_Samyang.gltf",
+      "source_sha256": "04b6ee0cac81b1ad71076f6f1591a2c212a8e1b67fdee823a367bd921747592f",
+      "texture_sha256": "5a65ee479e2aaa8c4ea340122d3016432218db517c589612b7bd241234ca3332",
+      "buffer_sha256": {
+        "Kostel_Samyang.bin": "7905615546a181b5743b47deeb56bccd2594756f65c0ee7ee647daa6cb00101f"
+      }
+    },
+    {
+      "model_id": "RWT75",
+      "name": "Leucopholis irrorata",
+      "category": "Other",
+      "author": "Thomas Flynn",
+      "license": "CC Attribution-ShareAlike",
+      "source_url": "https://api.sketchfab.com/v3/models/2a20442dca0843409111f0fc6dedb78b",
+      "input_triangles": 68782,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT75/Leucopholis_irrorata.gltf",
+      "source_sha256": "6bc183245510b8f0edbfb2a936254df9dedba2ae198fb75d07df988ba427db5c",
+      "texture_sha256": "2a0e820da2d81c4cf87796d431738937454e7106e990402b779f65fb605911d7",
+      "buffer_sha256": {
+        "Leucopholis_irrorata.bin": "3379690747fbb56bfe80b70a8fbeadda5dfcc16fa11f3a7817eee9d3f291936b"
+      }
+    },
+    {
+      "model_id": "RWT76",
+      "name": "Mossy wet stone 1",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/2a8274b2560c4c679891ff6db496877e",
+      "input_triangles": 56356,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT76/sutr21.gltf",
+      "source_sha256": "252d4374132979e729d335d0a21730a8f2f97d7a94fe659f34eb9f61042ecd9e",
+      "texture_sha256": "80bcaba5be1b69eeda657d96d91a06dacff4ce9194a6f5057da0b75836db556b",
+      "buffer_sha256": {
+        "sutr21.bin": "88b10baec90bd0eae4b96b3b64cba7eecb908dd8687c164e6bcaa330a3d3f7ff"
+      }
+    },
+    {
+      "model_id": "RWT79",
+      "name": "Ufo Crashste Brno",
+      "category": "Other",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/2c2c9220513d425789991a002d918c26",
+      "input_triangles": 72651,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT79/ufo_crashste_brno.gltf",
+      "source_sha256": "4da2b145a7dd46378b3fbfedcf9181a892c93e09925ec9306209673e59fd2c29",
+      "texture_sha256": "976a6888f0463750a2b1b62b7db106b7c89958ee6aa34467863ee852d725dc17",
+      "buffer_sha256": {
+        "ufo_crashste_brno.bin": "940ff73e930ed518fef5ef75048297af13e080e8c7a69eaa80dbad2f6d642944"
+      }
+    },
+    {
+      "model_id": "RWT89",
+      "name": "25,000 years abandoned hut",
+      "category": "Buildings",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/31aff0c4500f466797e30133e399b1c0",
+      "input_triangles": 105762,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT89/doupe.gltf",
+      "source_sha256": "9ef20bd9a0ed79948aa31ef8624d175af12cde451cbaf14cf0317658e2601e30",
+      "texture_sha256": "270181440ba7eceb6377b8c4a595a6d55c7e1c2dccabb2dae3a6eb18753d5a1f",
+      "buffer_sha256": {
+        "doupe.bin": "32fd6776341f529409717cf406e12d0723bf47c9d2f9f4b1b7d6d32bdbecdba0"
+      }
+    },
+    {
+      "model_id": "RWT93",
+      "name": "Rocks Photogrammetry Scan",
+      "category": "Nature",
+      "author": "GSXNet",
+      "license": "CC Attribution-NonCommercial",
+      "source_url": "https://api.sketchfab.com/v3/models/34022df84eb04b8a96606e5c58b0fa3b",
+      "input_triangles": 115410,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT93/Rocks.gltf",
+      "source_sha256": "b9f89f279dbd9eea736fd385dedeb002672eadd5fc53fbbd67a80f05c36e7166",
+      "texture_sha256": "f114e594772266096441d3b4524efaee585eb6fe4dabdb1faa76b1a2375f6355",
+      "buffer_sha256": {
+        "Rocks.bin": "52aae2481728b384cf234e1438faaf1a3fbf8c3f55c70a3c95bad48fee39dbc9"
+      }
+    },
+    {
+      "model_id": "RWT99",
+      "name": "Stone black 2",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/357eec738391460dac2567eb27461b26",
+      "input_triangles": 29998,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT99/sutr14.gltf",
+      "source_sha256": "ae5f830815cae79baac7db200d25567b1d1fd6d83413d201b34b91d39a04ea5c",
+      "texture_sha256": "1707cf93eaca8db1e9ee0b370d1b4f9761495c78c3009521ccdd326bd8ea343f",
+      "buffer_sha256": {
+        "sutr14.bin": "979ee76920641675ba488979e8ba43418e16915ba1f81a9f8ad95e858161e89f"
+      }
+    },
+    {
+      "model_id": "RWT103",
+      "name": "Ornate amphora, Italian Gardens, Hyde Park",
+      "category": "Sculptures",
+      "author": "Thomas Flynn",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/366b610049b14b9a9f94762574e0ff84",
+      "input_triangles": 65463,
+      "input_texture_width": 4092,
+      "input_texture_height": 4092,
+      "input_texels": 16744464,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT103/hyde-part-stone-jar.gltf",
+      "source_sha256": "e8e42dd2cb5547516180c3b2dcdb3d68b3280dd4ab44310aeadd844a1fe9a3d9",
+      "texture_sha256": "c5fedc9036957e453c291bc91139668a10b73b599a48986c2a7d877a16838dc0",
+      "buffer_sha256": {
+        "hyde-part-stone-jar.bin": "a40370bf804de9df0d11d242350aeb67217c0f4346a9b4549ec7c2107cae03a7"
+      }
+    },
+    {
+      "model_id": "RWT115",
+      "name": "Ton Roosendaal from Blender",
+      "category": "People",
+      "author": "3D selfie",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/3d7612819ee744109db50f8050145df1",
+      "input_triangles": 50000,
+      "input_texture_width": 2048,
+      "input_texture_height": 2048,
+      "input_texels": 4194304,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT115/model_mesh.gltf",
+      "source_sha256": "5e42d4db1e1552311cc3261a6f8d1b04b240edb5c0dd9dc16a3088f497cc3b08",
+      "texture_sha256": "0da2a7b502fa1512c896bd03480b937d0b6c9ec6d850bfb4e135b6d29b4075a5",
+      "buffer_sha256": {
+        "model_mesh.bin": "7e9596249f3a7283d0387c64704cb61d00eee968bd5f6c96091fe115be524d5e"
+      }
+    },
+    {
+      "model_id": "RWT116",
+      "name": "Granite stone brown 01",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/3d7dce01d833444a84359bca3d4bcd23",
+      "input_triangles": 28444,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT116/sutr07.gltf",
+      "source_sha256": "4feaec11eb5a6f89393beebebcf4027d34ddae12ef6e8cacc1ea95b81483025f",
+      "texture_sha256": "248350008a0be553ecf7408e60cee4080b75f1a8a09e230358244b9eae804360",
+      "buffer_sha256": {
+        "sutr07.bin": "da54179dabc1042a47d308cbea60d059338635cfa7b7ee972d11530fa0facf23"
+      }
+    },
+    {
+      "model_id": "RWT120",
+      "name": "Plastic cow - statue",
+      "category": "Sculptures",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/3f89ba2899194ed2beb521e637e9a0a1",
+      "input_triangles": 27975,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT120/plastova_krava.gltf",
+      "source_sha256": "c0b6e6b57a39a9adfeb9ca59b19259250ed8def2619a752dd222cbec751e6756",
+      "texture_sha256": "858de2a6b53952cabc857552d4dd5a2cec609e476f421a489e0ad92c09d0b47d",
+      "buffer_sha256": {
+        "plastova_krava.bin": "928e14cdb91de857279610db6f23739e7fe1233d834fb89596e5b7b34fb3e35c"
+      }
+    },
+    {
+      "model_id": "RWT132",
+      "name": "[Public Test Scan] Apollo 10 Capsule",
+      "category": "Vehicles",
+      "author": "Thomas Flynn",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/4581bf090daa400a81156eef3936a981",
+      "input_triangles": 41717,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT132/apollo-10-capsule.gltf",
+      "source_sha256": "058f5deebdc667652b3f29121a74b97c665e9a9cba9dd964dfb696999747c2fd",
+      "texture_sha256": "8560fc7a28e42a0a8245bc912cb83fb587a7909b975c6a32d804ae48028743c9",
+      "buffer_sha256": {
+        "apollo-10-capsule.bin": "0c6866f9f907c27948f257c5a8513aae8b5cde1d7090f73b2620ae4f242d7ea8"
+      }
+    },
+    {
+      "model_id": "RWT146",
+      "name": "Scanned Benches on Cobble",
+      "category": "Landscapes",
+      "author": "NNihad",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/4d619759515f4958a8a2ea3aafc4ddc8",
+      "input_triangles": 15641,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT146/benches_export.gltf",
+      "source_sha256": "91ca08178a988b556313aaf797872ce52ef53809e42d1929957250445176d8af",
+      "texture_sha256": "8833e097f53653ea9b5a8fc8b6d0f808d78bcd92584aa1f066011489fac89540",
+      "buffer_sha256": {
+        "benches_export.bin": "f8a3f5e95d2a0aab630544d3cedc8f4a7b66b213ced77369cd5f46c9660a19ab"
+      }
+    },
+    {
+      "model_id": "RWT148",
+      "name": "Facade Stankova 3, Brno",
+      "category": "Buildings",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/4e20a4da0af146318d8c4d38b0266949",
+      "input_triangles": 90130,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT148/fasada_b.gltf",
+      "source_sha256": "3c8015b979055864214e4a606da871e6771b38d01c665303e61dba2b4581ca64",
+      "texture_sha256": "b6177fb0244479d90493600c6fd6f6a3124da220b826dca072ddc265d87567b2",
+      "buffer_sha256": {
+        "fasada_b.bin": "6ecad8e762cadd6611f3d3ec9f408414e4a7afda86c48da9fcab47ba6303711a"
+      }
+    },
+    {
+      "model_id": "RWT149",
+      "name": "Dunga Stone",
+      "category": "Landscapes",
+      "author": "Francesco Coldesina",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/506e4d2755cb4c64bb9d863636c41486",
+      "input_triangles": 57878,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT149/Dunga.gltf",
+      "source_sha256": "dca74f5461c102c48c46224beef70c1797c1531af81c5ccb6cba5ff25ce048df",
+      "texture_sha256": "aa48f8464d2bf01a4113fd68ed938ca401d2d612285bbf90f918fee137e5b2e1",
+      "buffer_sha256": {
+        "Dunga.bin": "922ff5b48743f35777d64e31f07640913e07b462a62c5acf4a1247ffd2b95037"
+      }
+    },
+    {
+      "model_id": "RWT152",
+      "name": "Steam engine - slide distribution system Rider",
+      "category": "Objects",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/518cc68fbf0e4aad946286150c8f88bc",
+      "input_triangles": 97759,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT152/engine1.gltf",
+      "source_sha256": "00ee2c1a014a171ac2273d4271ccfd2c5cff2a900222f642599eb10ac6bb3277",
+      "texture_sha256": "e31e3cb49d056bbba68e16d434041e4bdb1521d013491aaa84be56ffa24defd8",
+      "buffer_sha256": {
+        "engine1.bin": "6a3fb85f204e131ad207c5722f13f83b93ee2865489f249fd878cf78b46b588e"
+      }
+    },
+    {
+      "model_id": "RWT158",
+      "name": "Granite stone yello/white/black",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/52c12a233107445889eea9e996984b60",
+      "input_triangles": 29990,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT158/sutr13.gltf",
+      "source_sha256": "637ef17bffa36a57d0a16703e92caeb1320fad353d32cad1242f5417b9b0bde8",
+      "texture_sha256": "1ce980c9c5973fd6920f36cc9ba923a5d4c10c7393f637d483f69c2d2763b8ee",
+      "buffer_sha256": {
+        "sutr13.bin": "fbae7f0871e7ab4f38a1a5f0c9bff47389137574bbc4ec8f5f63620e68ac8f88"
+      }
+    },
+    {
+      "model_id": "RWT160",
+      "name": "Vase from the park in Konopi\u0161t\u011b chateau",
+      "category": "Sculptures",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/5399495e7f1842ee9cd0987cc363854f",
+      "input_triangles": 29591,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT160/konopiste_vase.gltf",
+      "source_sha256": "4b75cf22c425b7e964605168133528e73caab1261cc2d72ccd9b0d5690270977",
+      "texture_sha256": "231e915313348d23c686195e86cc7dce9b5844ea9c5ef0f4a4f3553f8d7a829f",
+      "buffer_sha256": {
+        "konopiste_vase.bin": "5400cb41802028be48c0899b9afffd553220684ef8d94676329acf562164e65e"
+      }
+    },
+    {
+      "model_id": "RWT171",
+      "name": "Twix",
+      "category": "Objects",
+      "author": "Qlone",
+      "license": "CC Attribution-NoDerivs",
+      "source_url": "https://api.sketchfab.com/v3/models/56cbc6a05359462cb2783f2e3f357ffb",
+      "input_triangles": 68900,
+      "input_texture_width": 2048,
+      "input_texture_height": 2048,
+      "input_texels": 4194304,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT171/model_Twix_20171114_152709134.gltf",
+      "source_sha256": "585f9b22978538c578b3aa6b62ee909af1a2a13950afe6dea32a0c2605023422",
+      "texture_sha256": "47e5175f2aa1b1deea274a302c589e2d676eb1c0fc0a69a06f9b13c809d4ffc1",
+      "buffer_sha256": {
+        "model_Twix_20171114_152709134.bin": "c31017f773ab77ef32a5e724ca4274b0fe0e487e959fb8ba098d6e247f8bc770"
+      }
+    },
+    {
+      "model_id": "RWT173",
+      "name": "Sprouted Potato",
+      "category": "Objects",
+      "author": "Semblance",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/57f085f4ff1642fd92e11194076605f9",
+      "input_triangles": 44724,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT173/Sprouted_Potato.gltf",
+      "source_sha256": "0329991e56292359bd1127d1be1e2b7ad7667b9abe0e9a6712c939a2ab0f100a",
+      "texture_sha256": "24e7812f006aac73136bedb83c4dc9a9562fa43b32131b35d8ef8b1f8cd83be5",
+      "buffer_sha256": {
+        "Sprouted_Potato.bin": "422b50bd38e9cd0baa256b9d63314bf96bf64fa6e879653a4769b94f98e52b4b"
+      }
+    },
+    {
+      "model_id": "RWT174",
+      "name": "Granite stone brown 02",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/585b09b796e745be960f80fdb6bcd4a0",
+      "input_triangles": 34188,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT174/sutr09.gltf",
+      "source_sha256": "bfb79f91b8759ca74616e099b7108559ae206ce0031fcdc95167f0a3f3fdbb46",
+      "texture_sha256": "73be87429033c0719fdc5539734e09138555b74eb4b2d25463c48f7db8f513f2",
+      "buffer_sha256": {
+        "sutr09.bin": "1902ff7c685ecb80571130253e91bc2d0960304631b8a91f958c22ea5c743611"
+      }
+    },
+    {
+      "model_id": "RWT188",
+      "name": "Wood Stick 05",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/60b02734e3c545bd9a66e5d42e6eee54",
+      "input_triangles": 30000,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT188/wood_stick_05.gltf",
+      "source_sha256": "a4228bd947ef5cef3593cae6c291b03bad1cd81035b766f280bcac6430edeadb",
+      "texture_sha256": "0a43c30b1494dbd22c4455e7e9efc289b3baa8426b0d40e273e9f0c1db24fc03",
+      "buffer_sha256": {
+        "wood_stick_05.bin": "2bff5b1f247c6284013b7757ddb8a2d8b08c773736318ec865d958fd7c464215"
+      }
+    },
+    {
+      "model_id": "RWT189",
+      "name": "Diane III - Louvre Museum (Low Definition)",
+      "category": "Sculptures",
+      "author": "Benjamin Bardou",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/617876d75ccc4cb1b1c6703f1d060ea4",
+      "input_triangles": 34445,
+      "input_texture_width": 1024,
+      "input_texture_height": 1024,
+      "input_texels": 1048576,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT189/DIANE4.gltf",
+      "source_sha256": "6a2aedd0de218b16b343c0ccfd8f4a6acb6aea0f5eb629838ac37ecf795bb2d2",
+      "texture_sha256": "1f8ba84b90dd02918c9928b1bda19884ff1f380be6ed623460e5e208b93ac378",
+      "buffer_sha256": {
+        "DIANE4.bin": "3a7ac56ee0125c0f20e59638208c1fabb36593b46ce1b218b9204df4aa7789e9"
+      }
+    },
+    {
+      "model_id": "RWT201",
+      "name": "Vase - Louvre Museum (Low Definition)",
+      "category": "Sculptures",
+      "author": "Benjamin Bardou",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/660fb742a5ff4580862cf5f9eb690d92",
+      "input_triangles": 38281,
+      "input_texture_width": 1024,
+      "input_texture_height": 1024,
+      "input_texels": 1048576,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT201/VASE.gltf",
+      "source_sha256": "71648e4b7cdb6f9ff5e9096d8f4bf4aa3e4bcdfcef7481cde128394ee085cf84",
+      "texture_sha256": "1cd88b79b398dd392c1cc64d42754566885a5025aa8620d28c5940cbdcfc34b1",
+      "buffer_sha256": {
+        "VASE.bin": "586498cd151b8b2008a1eb37befe8636aeabc42ea80aaf76a824a1413f3f3856"
+      }
+    },
+    {
+      "model_id": "RWT223",
+      "name": "Girl With Amphora - Statue",
+      "category": "Sculptures",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/71edd9efc26548758924ec455ac4a197",
+      "input_triangles": 15913,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT223/socha_04_Kampa_divka_s_amforou_30k.gltf",
+      "source_sha256": "5a232fde155ebde60bc158fd72905cc889872a055013b55d645100c87bee7d19",
+      "texture_sha256": "ec9cd113e5ead96223632b9023892ea7d64ec9f6b509eb0df7dcd93eb0f2378d",
+      "buffer_sha256": {
+        "socha_04_Kampa_divka_s_amforou_30k.bin": "d2d796807c597eee71893b072fb97c9e6044b04a191701f1335472e4dbd66e71"
+      }
+    },
+    {
+      "model_id": "RWT224",
+      "name": "Stone black 1",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/738c91671bf2440e9b4e15477874cbc1",
+      "input_triangles": 30000,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT224/sutr15.gltf",
+      "source_sha256": "68e162334b5d010da4113fee28b12ff08ac089a52c549f90ce39d97d67e40618",
+      "texture_sha256": "042072d002a11ecb88e2eaa2a49b994b09b5fee42ce4f3f6aa22ff0d09423938",
+      "buffer_sha256": {
+        "sutr15.bin": "aeefa22fa0d98cc692acafa2ba62eb4bcc4053db94aa58af8eef6707be955f42"
+      }
+    },
+    {
+      "model_id": "RWT252",
+      "name": "Cardboard transport shipping box",
+      "category": "Objects",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/7ec06f3b181c47149d31b521b87ed799",
+      "input_triangles": 29998,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT252/krabice.gltf",
+      "source_sha256": "622fb13a06abd13c32f20ee8d671101d3278121ab4e4baf332ff966a27019102",
+      "texture_sha256": "f6a7c773459f881478823b3f5fc97d94244bfbd0a73a8a10b221b7e768f7be8d",
+      "buffer_sha256": {
+        "krabice.bin": "888856be278978d25ccb72ec705918ee88504cc22ee6fc5409c156a4521a5781"
+      }
+    },
+    {
+      "model_id": "RWT255",
+      "name": "Tombstone Familie Laurenz",
+      "category": "Sculptures",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/805187f02f8e424cb11b4f7c3a63a1c3",
+      "input_triangles": 72315,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT255/divka_v_kapi.gltf",
+      "source_sha256": "8b4efd7cb5c14907f09543207be3c118ae92a9087e5cc03ca3de1cfa56e843e4",
+      "texture_sha256": "55a228409a4ae9fb72f1b29760b7abfeb70c5763adbcc4e2dfb092573eb72693",
+      "buffer_sha256": {
+        "divka_v_kapi.bin": "0563f7938aad3f7d486d394d98a1ff5da3a8534b747acded935b6f5a7af23fed"
+      }
+    },
+    {
+      "model_id": "RWT256",
+      "name": "Architectural Ornament, Shaftsbury Av., London",
+      "category": "Sculptures",
+      "author": "Thomas Flynn",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/810cab0dbe70487e8d94791c7f4ff0e6",
+      "input_triangles": 65834,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT256/plant-head.gltf",
+      "source_sha256": "a0f735af8d0952f1fe570f3fbeda70e22cbf1d086546a8aceac0a6d445b28d39",
+      "texture_sha256": "94aa302c5cdcf5bab0ccac6f68c24c6c245a18d2e105a4999b6f9d1c41d853c4",
+      "buffer_sha256": {
+        "plant-head.bin": "75b68970f43afb5ee9c99caf057b645c154db5987a0684448e01010ebf44af31"
+      }
+    },
+    {
+      "model_id": "RWT257",
+      "name": "Beautiful fresh pomegranate",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution-NonCommercial",
+      "source_url": "https://api.sketchfab.com/v3/models/819821e4c9544080b4c75b2ff7f51a74",
+      "input_triangles": 30000,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT257/g_jabko.gltf",
+      "source_sha256": "c2270001fb94f7e7c787a2223019aac5f02b713a39aa185f7d02ccc8ceee23eb",
+      "texture_sha256": "e0d9e0205de31065adc87450dcc3f1b9b7e6a8386c964a66946cce3960e10e05",
+      "buffer_sha256": {
+        "g_jabko.bin": "f9300f48c4cdb45cdce42f5d373ba29b5cbe5b68c4930caff0d6f5a34d3df0c2"
+      }
+    },
+    {
+      "model_id": "RWT259",
+      "name": "Red Big Stone",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/82ed6e8d09b140b9816c39dc17946932",
+      "input_triangles": 36001,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT259/cerveny_sutr.gltf",
+      "source_sha256": "cfc66350da53f3d837b65bf8ba4496cb11dbc0faf6398c2ee6a09cb29704c7b3",
+      "texture_sha256": "d59c30b4d67fba26a17f636b90992a8a1e80f95264a9abc5bf6d4ecc546794c2",
+      "buffer_sha256": {
+        "cerveny_sutr.bin": "3137c98dea148130d221296febc254d8810d57b757ed18960fe63f5e205f521f"
+      }
+    },
+    {
+      "model_id": "RWT263",
+      "name": "Rock Photogrammetry Scan",
+      "category": "Nature",
+      "author": "GSXNet",
+      "license": "CC Attribution-NonCommercial",
+      "source_url": "https://api.sketchfab.com/v3/models/8480e05a6ad74d21aa9c2b9d62f57ac1",
+      "input_triangles": 88866,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT263/RockScan.gltf",
+      "source_sha256": "214bfaf57bbb5d5900a86c4d77c9c696f6ef3a94847ed51f68b82e548affbb0b",
+      "texture_sha256": "a73d891394d6d4f5d3412a55eb60e1d126c8b6e3884059d1b789d4a6c9875afd",
+      "buffer_sha256": {
+        "RockScan.bin": "f81ab5c1c0c128aefa0fe2a2a43db4c62c681aa2ec65886296e4bd2cdaad48be"
+      }
+    },
+    {
+      "model_id": "RWT264",
+      "name": "Diane IV - Louvre Museum (Low Definition)",
+      "category": "Sculptures",
+      "author": "Benjamin Bardou",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/84dbfc59f41a4ceaa71be6cce3bc3899",
+      "input_triangles": 31026,
+      "input_texture_width": 1024,
+      "input_texture_height": 1024,
+      "input_texels": 1048576,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT264/DIANE5.gltf",
+      "source_sha256": "2cb878d5f8da05a456eecb59d559258ec818a86c1d3114c8d0851f88b8976946",
+      "texture_sha256": "09f14aff41bc61f33c87c591a8e66dee6b03e31191278558bedf28dd146b2ae9",
+      "buffer_sha256": {
+        "DIANE5.bin": "15abf672fcd1e7696c0d39c37e7e4d22c458d658de055e42767e9f063681aff4"
+      }
+    },
+    {
+      "model_id": "RWT271",
+      "name": "Rock Photogrammetry Scan",
+      "category": "Nature",
+      "author": "GSXNet",
+      "license": "CC Attribution-NonCommercial",
+      "source_url": "https://api.sketchfab.com/v3/models/872fa4d23b04436ba476041bae68b46d",
+      "input_triangles": 47171,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT271/Rock.gltf",
+      "source_sha256": "59340e90b802186cd1190aeccf0a6f87418162e43e45ab7e82cc1145f4b540b0",
+      "texture_sha256": "e61dd4f8b4d247b3e58a90ce064bddc9975c420b9bc968d1a4b029abe4ce3732",
+      "buffer_sha256": {
+        "Rock.bin": "136cc155bc00b4e777531582f0fb1b5aa153401d13e74b8ad46165cadbcb3157"
+      }
+    },
+    {
+      "model_id": "RWT276",
+      "name": "Heteroptera - macro photogrammetry",
+      "category": "Objects",
+      "author": "3dhdscan",
+      "license": "CC Attribution-NonCommercial",
+      "source_url": "https://api.sketchfab.com/v3/models/8796a7146675464fbf2d3fec3b384096",
+      "input_triangles": 93434,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT276/brouk01.gltf",
+      "source_sha256": "1bb7f796cc7f09d12739b0bb5482e2d18ac52f9b9fde88d0663b6dbb970d68e5",
+      "texture_sha256": "ab4de9ac0a74d1446cda4635e7c9a32437a0aefa61a5b6aa9f076f125476178a",
+      "buffer_sha256": {
+        "brouk01.bin": "999dedf376a8798a69e49fa461d849a49a5cab0a6de923a43d5651a2b809013d"
+      }
+    },
+    {
+      "model_id": "RWT280",
+      "name": "Stump in the meadow 2",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/883f0b0cba374545a11f807d1146c990",
+      "input_triangles": 21377,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT280/parez_02.gltf",
+      "source_sha256": "bf14846f4dd27f0a7abad8dbfd98146710a2470b5294355a048fb41a1f6c9aab",
+      "texture_sha256": "4a254f82b61fcd2ac551baea34ba370c4b7a98b05132ac82175e9ac4f2849fe4",
+      "buffer_sha256": {
+        "parez_02.bin": "7fedb73e58fd61853af33fbcf3ecad6344ceef92257ebd3c73914fa40e7dca0d"
+      }
+    },
+    {
+      "model_id": "RWT285",
+      "name": "Stone black 3",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/8a08e2306d4341998760a80bde04a099",
+      "input_triangles": 30002,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT285/sutr16.gltf",
+      "source_sha256": "58d7128085980e40bdf5a725c38c218e873be40b870841b22a581f65392860d4",
+      "texture_sha256": "15c041b51cd79011492a610e91d34a30d9378cb15e212f467c7ac92966eefd47",
+      "buffer_sha256": {
+        "sutr16.bin": "3fb68535f6653827c7ccd77e367149ca63748e8178bd376e8141f5012734ea0a"
+      }
+    },
+    {
+      "model_id": "RWT292",
+      "name": "Old Cherub Vase",
+      "category": "Sculptures",
+      "author": "Marcelo Rivera",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/8c1daf56753d46a0844f7f6385cab7a6",
+      "input_triangles": 33360,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT292/Cherub_Vase.gltf",
+      "source_sha256": "5a5dfc57d5681512c8efccd1ed54c9936f61df255f542b2b44310a172e0f9b91",
+      "texture_sha256": "1216d90d8cba5db8180de6a56ed368efc0c13291e7fd174cc41feb1a1da38df6",
+      "buffer_sha256": {
+        "Cherub_Vase.bin": "643661c38632129d7bf573414c3b93bfe50a8768e6f3dfb84355d08ed28476d7"
+      }
+    },
+    {
+      "model_id": "RWT296",
+      "name": "bananas with a surprise",
+      "category": "Nature",
+      "author": "Mantas Talmantas",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/8f591ee93e2f4690b896b14f2b2a5202",
+      "input_triangles": 46255,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT296/b3.gltf",
+      "source_sha256": "50458dae5e13068b7d96912a2cbccd7cf7dedea32b15e00ea51d9a445f7cc25f",
+      "texture_sha256": "2f615c6fafb13dfc4243baed42db9517c34a3eb60d5579f8331b680b7e274af5",
+      "buffer_sha256": {
+        "b3.bin": "c9d347faa51f0dd8cc57e7e9d8588bb7579944f9b62d60807f8a60d6ef4c88b5"
+      }
+    },
+    {
+      "model_id": "RWT301",
+      "name": "Stone ball on pillar",
+      "category": "Sculptures",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/90a636233fba4ff4b155f7d13f4e991f",
+      "input_triangles": 24386,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT301/kamenna_koule.gltf",
+      "source_sha256": "4f0c32a3b09328bb662bf75c39a827faad4886981463aed1c1375020f5825bdf",
+      "texture_sha256": "9927c5a6266b47c369c4f19f18004ffdd5f05f2765b449a55d8acd4425d58d23",
+      "buffer_sha256": {
+        "kamenna_koule.bin": "167642794c678725bbc19834b65484e0b2d1485e83f7cd0d45ed4aa3e27b61e2"
+      }
+    },
+    {
+      "model_id": "RWT303",
+      "name": "Channel hatch",
+      "category": "Other",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/90cdaeb807dd46efb7b481a34c396fb3",
+      "input_triangles": 28304,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT303/poklopik.gltf",
+      "source_sha256": "964f9e2dd4e32f54eba01d1218801c1c8dbb59c55a4785a37cd7d51441d9cece",
+      "texture_sha256": "9c6f689b34ae8d084a029563dcfe50ae40e620da5dd471f1e1f37add786186ca",
+      "buffer_sha256": {
+        "poklopik.bin": "d9bf20e2f0884ce126b03b1fc3258da12aa064ba1c76f38c38fe4a82e297831b"
+      }
+    },
+    {
+      "model_id": "RWT304",
+      "name": "Stone vase 1",
+      "category": "Objects",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/90d1bb1a3b524c269b920b5da61a8f68",
+      "input_triangles": 26212,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT304/k_vaza_1.gltf",
+      "source_sha256": "ca123ae50535ee5b4160c416d399ef994a43c040413d53012640a440063f73b9",
+      "texture_sha256": "ed0845cb75ae413513762a68ca5ff260e997dda30de08e517c931b3edcfb2e30",
+      "buffer_sha256": {
+        "k_vaza_1.bin": "5469c6b2d106f56a465b35d49bcae8822b856faf1abada4bd123d8a4d31aff80"
+      }
+    },
+    {
+      "model_id": "RWT305",
+      "name": "Boat \"Josefa\"",
+      "category": "Vehicles",
+      "author": "Alexandre Gonz\u00e1lez Rivas",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/90f8077289544059b03f974efeda6093",
+      "input_triangles": 62336,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT305/barco_con_low_test.gltf",
+      "source_sha256": "a79d6710255b6b848a7db961da0bb79163090e0a318bd14957273bf0e8c215f3",
+      "texture_sha256": "2b9deac07fb5bf68f8c05426ef65aaf27cb91f4fbd3116b917890c2b8eb6261b",
+      "buffer_sha256": {
+        "barco_con_low_test.bin": "e64bceaf772080d3a8ee9a1afdf310bdc1bddca556c0e830f822c7d7c86423e0"
+      }
+    },
+    {
+      "model_id": "RWT310",
+      "name": "Colossal marble bust of Zeus",
+      "category": "Sculptures",
+      "author": "The British Museum",
+      "license": "CC Attribution-NonCommercial-ShareAlike",
+      "source_url": "https://api.sketchfab.com/v3/models/9246efe1279543a784a08be62e6b96a8",
+      "input_triangles": 107610,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT310/zeus-2.gltf",
+      "source_sha256": "4224d21979b5aec2b69930ebea1c3b83809f79293b88e53d1b09cfca1bb57fc1",
+      "texture_sha256": "3440ad770f5399955ae5b4d9dd9d1099eef28ba50250306dc74695c8e72e8316",
+      "buffer_sha256": {
+        "zeus-2.bin": "ca976af8ed5313cfcb3ca2d8ccdac8a7f9ae25799c8ac8f51606c3419edfc018"
+      }
+    },
+    {
+      "model_id": "RWT317",
+      "name": "Stump in the meadow 1",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/95023859e97f44ddb654037c1932f65c",
+      "input_triangles": 40272,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT317/parez_01.gltf",
+      "source_sha256": "610ed6d19fed0fe35c8ceb0137ec16ec5b589463d713c8fa73f476bcc5ff0719",
+      "texture_sha256": "6f43a43b2f5ed9e4ef065f61d3ec7dffe1aaf18d17077806c6f5aa31b51b992f",
+      "buffer_sha256": {
+        "parez_01.bin": "2357451244b7966b346d0ce19d683d34feb57eea00a4edd55a4d10ba4ab98447"
+      }
+    },
+    {
+      "model_id": "RWT319",
+      "name": "Kake Low Resolution",
+      "category": "Other",
+      "author": "Francesco Coldesina",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/97707a40e6974bc0b30418b7ca9ad8ac",
+      "input_triangles": 11884,
+      "input_texture_width": 2048,
+      "input_texture_height": 2048,
+      "input_texels": 4194304,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT319/Kake.gltf",
+      "source_sha256": "94003913bfb2ec948ad818772500fbd7348adaf5837695a7de8b9c71c5e7823d",
+      "texture_sha256": "5b3d9ed918df75d085b473cfdac709b36c5618cd7de75da7650085b68e458556",
+      "buffer_sha256": {
+        "Kake.bin": "a6dc2cf0ec621df9b8154d0f8a0a12d5e7c0f9f05527addf950c2c758079d37e"
+      }
+    },
+    {
+      "model_id": "RWT330",
+      "name": "\"Wounded Amazon\"",
+      "category": "Sculptures",
+      "author": "Thomas Flynn",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/9b7f0e8397f2490987820020b091c6e1",
+      "input_triangles": 59004,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT330/amazon.gltf",
+      "source_sha256": "f9d3f530e729ca195551959bbb77fae26fc28bd7d75ae3a8ada0d33573098c5b",
+      "texture_sha256": "9b62df97bac692cdf6682dcfb111dd72836cfc0180609acbd9c9282492b911ca",
+      "buffer_sha256": {
+        "amazon.bin": "97c0e01b3ac1c5bd95b39cae7545979f40cd92c47aa69c32ac74ae8366107c00"
+      }
+    },
+    {
+      "model_id": "RWT341",
+      "name": "Stump - video tutorial",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/a067f040a59145a9800994fb6b382b41",
+      "input_triangles": 21876,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT341/stump.gltf",
+      "source_sha256": "b9d85b532b4a84956618e06814345c042d8b77e8a2b6b4475b27043b39dca5b2",
+      "texture_sha256": "07611197928fd05dbe72817ad50f5ec18a7991155a3d24af5fa3a9e57a3ea906",
+      "buffer_sha256": {
+        "stump.bin": "a700f24c90e0981b624dbd22b6ea2e1626db1246dde9eba8a75a5c817d2cfbe7"
+      }
+    },
+    {
+      "model_id": "RWT347",
+      "name": "3D Scan - Crucifixion",
+      "category": "Sculptures",
+      "author": "MGD Films",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/a434b68c430f49eca7aa12944818c850",
+      "input_triangles": 49995,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT347/crucifixion.50k.uv.gltf",
+      "source_sha256": "ba6b6bec8f669ac90109f4aa3538deec266b2254c0eef76ebca091bbaccd90c1",
+      "texture_sha256": "55decf3dd33989861389ff65a59b01de3649258a6d2035235e7122c8dd98db1b",
+      "buffer_sha256": {
+        "crucifixion.50k.uv.bin": "723c7c39c71ec390b9dbd3d221452842f026f9d55013a7d5231b9b0c98646127"
+      }
+    },
+    {
+      "model_id": "RWT363",
+      "name": "Sk\u0159\u00edtek - wooden statue",
+      "category": "Other",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/ad0c5e3cd1c542159138a861b1146f67",
+      "input_triangles": 79609,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT363/prigl_skritek.gltf",
+      "source_sha256": "43508f101005f442c71585b151d1ea5d86e63c33d94c200fa647cd4b839501e3",
+      "texture_sha256": "bf9c7e096d98376331e1bc0322975ec1764a6a632bf8fa98b0c581f9332e560a",
+      "buffer_sha256": {
+        "prigl_skritek.bin": "6610181f841d0c1b23801959b6d3a1eb3b7d78ccc1c8c47353c4189b421d2de3"
+      }
+    },
+    {
+      "model_id": "RWT365",
+      "name": "Circular hatch of the channel",
+      "category": "Other",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/ade690522d9f4be6b553b17f85737c54",
+      "input_triangles": 48184,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT365/polop_kruhovy.gltf",
+      "source_sha256": "e279c83ba66fcda013df68168eaa61e118bd270906dd3edfaa2e378a96fade1b",
+      "texture_sha256": "f21f8f2b484f6fe1c20d29299c09d53d32c2b7c1539cd51f52bdcbd78ce25680",
+      "buffer_sha256": {
+        "polop_kruhovy.bin": "fa1183bbbf1cf4be207ee40b69d079edadf96a4c7724af76d334e289621e9922"
+      }
+    },
+    {
+      "model_id": "RWT373",
+      "name": "Tolerance Statue",
+      "category": "Sculptures",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/b12d71ae2cab4b3eb6e76cb2dc11a7fd",
+      "input_triangles": 26720,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT373/socha_tolerance.gltf",
+      "source_sha256": "a917916f5fa03759b74349176838f32f3d63caeca9f5dd3607a8216c6d04344b",
+      "texture_sha256": "31746d57d72d45312345da4cbdfd59a3db779fbb967dec2774834b42cb04a0c2",
+      "buffer_sha256": {
+        "socha_tolerance.bin": "0966049f25b00c411758eac3d3501630a260ffb4b60b82b87d4077f811dead57"
+      }
+    },
+    {
+      "model_id": "RWT378",
+      "name": "Granite stone pink 02",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/b3386ea8925a4af2b052a9124ba89321",
+      "input_triangles": 31886,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT378/sutr02.gltf",
+      "source_sha256": "5ba08e9895d9c5c9d3daaa88a354a537f792916e4884976e87399c532ebcfc48",
+      "texture_sha256": "f7dfc6acc0a1e97f7d061e7fa339fdc98b1bb3ba511b88ce353f82aa431c1f92",
+      "buffer_sha256": {
+        "sutr02.bin": "9e74448e9f9662537c3d8ef7a48238abbb2e5a54227cfde9803ed98591fe68f8"
+      }
+    },
+    {
+      "model_id": "RWT383",
+      "name": "Yello rock 2",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/b50074c7ae6f4b30931c5d3f45f34f4a",
+      "input_triangles": 30000,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT383/sutr27.gltf",
+      "source_sha256": "175f26fd75c549a73cd6b169812c4522c24416b6bf0bcd0bb06988f8a508bfa9",
+      "texture_sha256": "29ac76bf1603de4ef9496b34c822ecd79b1ba596858a0e7b00fbc4819dddb29d",
+      "buffer_sha256": {
+        "sutr27.bin": "8b1e7b3e9d428cf501696df310838936d80bcf0c09e13b08fe9216bcb98b0fe9"
+      }
+    },
+    {
+      "model_id": "RWT384",
+      "name": "Vertical Rock Garden, Brighton, UK",
+      "category": "Nature",
+      "author": "Thomas Flynn",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/b5c9d5eac9c94a3fb6c350a5cdb1f29c",
+      "input_triangles": 75177,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT384/vertical-rock-garden.gltf",
+      "source_sha256": "af0165a9acdea3829cd2dd564a6b761f0b30c0ddf276e5ac908fca17678a07eb",
+      "texture_sha256": "7e11304c1e28a068c96f2b62b3f1d1bc4ab77753029cc9a772644cb314161e2d",
+      "buffer_sha256": {
+        "vertical-rock-garden.bin": "815f81a3fea5157d28bc8639da5a307b1d1a6ad8da368dd8d70c3047e1bc7b0c"
+      }
+    },
+    {
+      "model_id": "RWT389",
+      "name": "Wood Stick 04",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/b7fe8a4a3c2f4f038662ae47cfbfa6a7",
+      "input_triangles": 30000,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT389/wood_stick_04.gltf",
+      "source_sha256": "537702811e705ba95325f627137d91b7a3da2103a40915dcb64a462c5f3e73b5",
+      "texture_sha256": "723cea874ad0679ad71cdec31322672f1481cc2f7420bc22807b9c2f74b4c6ab",
+      "buffer_sha256": {
+        "wood_stick_04.bin": "75b0d3fdf0c7c29b216ad329f1bdb13350c5d556b9285394ecbe1781743157d6"
+      }
+    },
+    {
+      "model_id": "RWT394",
+      "name": "Boub\u00edn Stump",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/b968b5dc462148989cb87b072885da85",
+      "input_triangles": 23581,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT394/boubin_stump.gltf",
+      "source_sha256": "893b3e7174ec17d1eb3172b3699a4fc3773deb13959485a0f4adbec52a4afb76",
+      "texture_sha256": "a84b382a4489f68dad5f7bb82cf185918b0ef8ffd84a001f8f5b980cb0f88ba4",
+      "buffer_sha256": {
+        "boubin_stump.bin": "6a3cf794fef39527e3390996b21a583f2d03d0c182a18c859b90c04f26115ca4"
+      }
+    },
+    {
+      "model_id": "RWT400",
+      "name": "Borderstone - Lion",
+      "category": "Sculptures",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/bc6f833fe3b440058b967375c25f28c1",
+      "input_triangles": 23274,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT400/olsiak_lev.gltf",
+      "source_sha256": "faa9d1e2f875560abd1398e9ecfa003bb9b77ec216f0b3f6bb1de28ce2f680a4",
+      "texture_sha256": "86cef36dbb48336660e460dc3bde3c762f65276313a04576f9b2cd594c5f345a",
+      "buffer_sha256": {
+        "olsiak_lev.bin": "a9a6cae176d165e44a395270754c1fd2e94495b84abf8cef26e87ec209279f9c"
+      }
+    },
+    {
+      "model_id": "RWT404",
+      "name": "Diane VI - Louvre Museum (Low Definition)",
+      "category": "Sculptures",
+      "author": "Benjamin Bardou",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/bd823ea0bc4a49d2afc76ecb36ccabdd",
+      "input_triangles": 38172,
+      "input_texture_width": 1024,
+      "input_texture_height": 1024,
+      "input_texels": 1048576,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT404/POMONE.gltf",
+      "source_sha256": "ac28952e3b5dd86f68d881507e2636d4c30e2981521bd3475df909f110d25e7f",
+      "texture_sha256": "88d49f1b39561206b50a5bc8706b4a19754f4da28dda98b14ff14e892ed513cd",
+      "buffer_sha256": {
+        "POMONE.bin": "0d5c0e565455383536c0f510ce4258d84a5bb85f8087e23be4227a4ec5265a1d"
+      }
+    },
+    {
+      "model_id": "RWT405",
+      "name": "Dead Sea Qumran",
+      "category": "Landscapes",
+      "author": "GSXNet",
+      "license": "CC Attribution-NonCommercial",
+      "source_url": "https://api.sketchfab.com/v3/models/bf4bd5df05134faea2c86bc85cb90a3d",
+      "input_triangles": 66994,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT405/Dead Sea Qumran.gltf",
+      "source_sha256": "4abe58f12380778c95ea9514f2064836519e89875096be61c9fe16e06d7909ed",
+      "texture_sha256": "462191b93c1238907534cd4e172ab27d74cfd40082c9e3720baf9058d2f0b92a",
+      "buffer_sha256": {
+        "Dead Sea Qumran.bin": "443661036073a1c4026f5fe811fdc593a645fc579c1fd818ea37bd4e8eca4334"
+      }
+    },
+    {
+      "model_id": "RWT408",
+      "name": "Lion Skull",
+      "category": "Other",
+      "author": "Auckland Museum",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/c2016a3161954a00be97929750d55174",
+      "input_triangles": 110188,
+      "input_texture_width": 2048,
+      "input_texture_height": 2048,
+      "input_texels": 4194304,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT408/Scull.gltf",
+      "source_sha256": "89f50ed4426727545dabc28355ab4c25d37ffd84453bc02acdff9dd308c90771",
+      "texture_sha256": "18d95b616353fb4a81ac3645832dd7ddfdccb7696a9552e2cdb58e29bd114b90",
+      "buffer_sha256": {
+        "Scull.bin": "96116cc702cbc70f578654d26aecfb7d4b330da830f712920ee7fa5c76361ea8"
+      }
+    },
+    {
+      "model_id": "RWT412",
+      "name": "Big tool container",
+      "category": "Objects",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/c2f121f5f1ea4a7291ab6416c56a6d78",
+      "input_triangles": 85936,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT412/kontis_kohoutky.gltf",
+      "source_sha256": "7da9bbd6885cff59efd3cd62bec0ebfadf0db400f93d5228a5864d0410ce72ef",
+      "texture_sha256": "6e30a47eae75858c1f3cf3130cdd7bdaa93426c22b7c7c8314cc36a72358e158",
+      "buffer_sha256": {
+        "kontis_kohoutky.bin": "988967916a71b5d3ac68f80c07a113030af4c75ef394571496eadfc5746494cf"
+      }
+    },
+    {
+      "model_id": "RWT414",
+      "name": "A pile of clay",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/c356e6679e8242659adee7f6c6304c37",
+      "input_triangles": 24497,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT414/hromada_hlina_01_30k_f.gltf",
+      "source_sha256": "9e030946473c1acdbeb932cc39aaf3afff990e528663bad44bc84c6c0e868158",
+      "texture_sha256": "4091c7b290785325773b075cc0b5ef7aee816490b5311b9331868af3b8f696ee",
+      "buffer_sha256": {
+        "hromada_hlina_01_30k_f.bin": "7c6dbac2a10bd3cd1b311c1bc798e777359ebb9672d7cd737e921a416b76725c"
+      }
+    },
+    {
+      "model_id": "RWT415",
+      "name": "Main gas shut-off valve",
+      "category": "Objects",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/c47c7182ae444548854a0d50e580a1d1",
+      "input_triangles": 74589,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT415/hup_kohoutovice.gltf",
+      "source_sha256": "d75db6f2e5264549cb6a5ccb091364a8f17fff71450ab42625e06808b83a40aa",
+      "texture_sha256": "ff1684771515d98078fbab714a795cf6c2f063bf8d94ac7f5fba5b91a8593f40",
+      "buffer_sha256": {
+        "hup_kohoutovice.bin": "20039e8f23234f6ecb234d533706441e80ac0da5778c2b24623d871b224c7482"
+      }
+    },
+    {
+      "model_id": "RWT421",
+      "name": "Dog stick toy",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/c4fab2a59fcb4c9daa575faf0bae8e44",
+      "input_triangles": 100000,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT421/klacek_hi_100k_uw.gltf",
+      "source_sha256": "a246278038fd9b521565f49adcce7b70609b344906481c9b33b8bafb9a8d155c",
+      "texture_sha256": "8d7c2086d0777ba5c678d6e6a3b1595cfdb78467ebd8d0fd86ede3c72e8088fe",
+      "buffer_sha256": {
+        "klacek_hi_100k_uw.bin": "4e03e82c2388ca816a008e5bfeaa7fd5517e793e9a6f5410a3d18b7d47f55a1f"
+      }
+    },
+    {
+      "model_id": "RWT424",
+      "name": "Heavy Metal 01",
+      "category": "Objects",
+      "author": "John Greenstone",
+      "license": "CC Attribution-NonCommercial",
+      "source_url": "https://api.sketchfab.com/v3/models/c59a91e62e2148c7bb491f4eeb5cf105",
+      "input_triangles": 54499,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT424/scan3.gltf",
+      "source_sha256": "a14a1062c875c52ab5a239bafb8ca17391781aa7792812ba4564344030bef2e7",
+      "texture_sha256": "92f57072ee7dbd45dc3e02d1b6480346d1eb2415a7d90c48c9efe997fb0d5845",
+      "buffer_sha256": {
+        "scan3.bin": "2eaa13b42150d415dd1debd12c67f9f820a40a00f85b357dead94b2b553af426"
+      }
+    },
+    {
+      "model_id": "RWT427",
+      "name": "Concrete hatch with iron inputs",
+      "category": "Objects",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/c89f1e5311914840a5e777d548301e29",
+      "input_triangles": 92015,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT427/dvojpoklop.gltf",
+      "source_sha256": "d9ffc1e83fc15723b83f7dcf27b413c658f032069630ace949ce7bf4d3b2013e",
+      "texture_sha256": "08a4f9f2d8da1aaf4c79959f47fedc910ffbf581ed1df3db82bafc02be319753",
+      "buffer_sha256": {
+        "dvojpoklop.bin": "4ba1103e4ec650fbf841b68aa67b300e37d94669873da5b0f03117b8f238e282"
+      }
+    },
+    {
+      "model_id": "RWT428",
+      "name": "Giant sculpture of a scarab beetle (update '16)",
+      "category": "Sculptures",
+      "author": "Thomas Flynn",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/c8a568f1c1a746d4b2939b2f9a46f3d9",
+      "input_triangles": 116257,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT428/v2.gltf",
+      "source_sha256": "5c23f94a8d72c95a8a743efc0e4ba391e1f3abe3dc34276fc38c13488beac974",
+      "texture_sha256": "6c0ae451e981d77abd29c78ef5a945c0c985c1976481cafb36f954c82571a954",
+      "buffer_sha256": {
+        "v2.bin": "a0865683b9c20a198c6e0cabdabb3d560be3578fa318fdce355132bb98879a97"
+      }
+    },
+    {
+      "model_id": "RWT432",
+      "name": "Nefertiti's bust (like in the museum)",
+      "category": "Sculptures",
+      "author": "C. Yamahata",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/ce5b14926e494558ab584375a8d63ca7",
+      "input_triangles": 100000,
+      "input_texture_width": 1024,
+      "input_texture_height": 1024,
+      "input_texels": 1048576,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT432/nefertiti_HQ2.gltf",
+      "source_sha256": "75d8e5ead1e353564b32760b58c659101278c3650f6d97d0c5180f789f56dff3",
+      "texture_sha256": "c5b704970ca4d7445ad87d5bba07e014424c2e25270045ebd89b21b944aff9e9",
+      "buffer_sha256": {
+        "nefertiti_HQ2.bin": "231ffbf3eca0642f9a125e48aab6808f3a0d241fa129aca3fd65ee6ca347d71d"
+      }
+    },
+    {
+      "model_id": "RWT435",
+      "name": "Red Box of Fruit #3DST41",
+      "category": "Objects",
+      "author": "James",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/d008478f173345abab6f5e339f907a8c",
+      "input_triangles": 50000,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT435/mesh.gltf",
+      "source_sha256": "53716cb5e185c44e7b1768612d5790db35e7bed61fd779f610b602ac5abd6b90",
+      "texture_sha256": "5b3e5ecd3cde5b75f2d75775785750a095d553f5d7260e9b883cfb63a216f3ab",
+      "buffer_sha256": {
+        "mesh.bin": "db771f86f6f39e8fea95f9a169185e03f85057522ac75093b822b74faedc7a11"
+      }
+    },
+    {
+      "model_id": "RWT443",
+      "name": "Market Stock",
+      "category": "Objects",
+      "author": "Francesco Coldesina",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/d3959e2a0b6448c6b339cc0545af3d9b",
+      "input_triangles": 33738,
+      "input_texture_width": 2048,
+      "input_texture_height": 2048,
+      "input_texels": 4194304,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT443/Cesta_B1.gltf",
+      "source_sha256": "25f7dd430d3aea31cee0d0301195998bd3a2c3ad7f20c811cb0ff634474ccbb1",
+      "texture_sha256": "f3cb3da029c167bcbcf891798ceb2690d5d67450c9549358783a4638accba2d8",
+      "buffer_sha256": {
+        "Cesta_B1.bin": "040d402c4b857c3096afc7dbbf026180a21c6531f5e629870d5faca4b7ce7314"
+      }
+    },
+    {
+      "model_id": "RWT448",
+      "name": "Granite stone pink 01",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/d5d3a5a60ddf459783614b9b73c2895a",
+      "input_triangles": 29862,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT448/sutr01.gltf",
+      "source_sha256": "2ed7c75003c0a2c58f564457613bfc2d25c330f58e64031eecad3834b03f2f3d",
+      "texture_sha256": "754e7ac05c28d7b806388d8141fec7e06531bad41f68e4891f999dc4942d67d2",
+      "buffer_sha256": {
+        "sutr01.bin": "4019e8172d077d8dbd7e347829d2edb9fb09a63c3ad69cfdf7a1da3f009960e2"
+      }
+    },
+    {
+      "model_id": "RWT453",
+      "name": "Tom\u00e1\u0161 Garrigue Masaryk - bust Vsetin",
+      "category": "Sculptures",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/d6f6acfc71fb4b48960d384cbccf4d82",
+      "input_triangles": 29718,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT453/masaryk_vsetin.gltf",
+      "source_sha256": "c8a8b0ac6625b0053e4cbf1991e412f06a6be72a60a6418fa7d48e3be1032d4c",
+      "texture_sha256": "c8f16628cf035f0e4b125e36327a85be9fee3922f72aa0b4f1aa39e86555989b",
+      "buffer_sha256": {
+        "masaryk_vsetin.bin": "90f3d771a5e8d7525938d04cfd3fb9925336ffc8c994c1ecf27ee7343e4b4135"
+      }
+    },
+    {
+      "model_id": "RWT459",
+      "name": "Diane I - Louvre Museum (Low Definition)",
+      "category": "Sculptures",
+      "author": "Benjamin Bardou",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/da84d976429f46b0ab4d2bfd9b6704e6",
+      "input_triangles": 30766,
+      "input_texture_width": 1024,
+      "input_texture_height": 1024,
+      "input_texels": 1048576,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT459/DIANE2.gltf",
+      "source_sha256": "c94ebe48296e9da56e0609fcf66d329e625eaf64ab6acb7727b3c7c6aa6b94aa",
+      "texture_sha256": "f40a70a033d04ff0fbf52fa95be78972163a6322db401052fc4e552b5b150a44",
+      "buffer_sha256": {
+        "DIANE2.bin": "8c5f25622abc4174c18c7b6029ba66f52207ef1c104d4819f540488e99cf2a32"
+      }
+    },
+    {
+      "model_id": "RWT461",
+      "name": "Chateau Slavkov u Brna - statue 1",
+      "category": "Sculptures",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/dbcc498ff4644e4fbbe41768f9893b6a",
+      "input_triangles": 28432,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT461/socha_slavkov_01_30k.gltf",
+      "source_sha256": "1d00a75fccdecb8e585bb5fe6222af31a9dde3ef47179dcab5ac84ad8249c033",
+      "texture_sha256": "d09553ec2b59940c3310105b400edce08f2f0dbbbf2e7179e2faeaa97774f767",
+      "buffer_sha256": {
+        "socha_slavkov_01_30k.bin": "e1691c66f6796a9b36904d70a3a028faf6e7ca7762c1ea7bb568e40757e53d95"
+      }
+    },
+    {
+      "model_id": "RWT463",
+      "name": "Passage - Cinema Art in the day",
+      "category": "Buildings",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/dcdb1d8d4619406ebb9b6f64a0fe1755",
+      "input_triangles": 58972,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT463/pruchod_art_den.gltf",
+      "source_sha256": "23d5894735e4faf17beb58ec36df0a2a42d03dfe6ff8ecbdfc71ef23bba9da27",
+      "texture_sha256": "b7c94ada9412a0f336ff8ab5f56859a7ef1a060ed080f257f6fe647a524c6a23",
+      "buffer_sha256": {
+        "pruchod_art_den.bin": "701d2ef7667f50ce1331d589f38bebb7a5a9e0ad395e7f7d1423e3cfd37c0985"
+      }
+    },
+    {
+      "model_id": "RWT468",
+      "name": "M\u00e9l\u00e9agre - Louvre Museum (Low Definition)",
+      "category": "Sculptures",
+      "author": "Benjamin Bardou",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/e0440050957b41738dccb58c80dd898e",
+      "input_triangles": 135192,
+      "input_texture_width": 1024,
+      "input_texture_height": 1024,
+      "input_texels": 1048576,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT468/MELEAGRE.gltf",
+      "source_sha256": "5428d1d7fbf8f5f43d3ce71b3944f9528139ceac3263945d6f4e5a99a602b392",
+      "texture_sha256": "0dd90ca2dc4f0c50637851f61e7dc4c9772cec7137af9729b8e11de14c1b2bc9",
+      "buffer_sha256": {
+        "MELEAGRE.bin": "c3c63ee720009e10e5fa91bc89ccf3a7d9e684bc7b6c86857debae5eefb79f34"
+      }
+    },
+    {
+      "model_id": "RWT471",
+      "name": "#3DST6 Tarte au citron meringu\u00e9e",
+      "category": "Other",
+      "author": "Maurice Svay",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/e20c3851d52c4261891b692a1dfc18c6",
+      "input_triangles": 12546,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT471/tarte-03.gltf",
+      "source_sha256": "f443cb3fead0f2e81e9fcd4c118e59f4a8d2fabf3ebbbeb387d95f75371e950d",
+      "texture_sha256": "bd4938b65458072b3d3431512f85909566a2724f1ecf10540a2ff8bcde8f819f",
+      "buffer_sha256": {
+        "tarte-03.bin": "427f64bc8bf247721c145625725e96f1874f2a4b5bab92f184e2b4d892a37507"
+      }
+    },
+    {
+      "model_id": "RWT472",
+      "name": "Muta Gen 5943 - fractal photogrammetry",
+      "category": "Other",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/e21b8bc964d4471f9d44ab160b39b68f",
+      "input_triangles": 99972,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT472/MutaGen5943083BB9B.gltf",
+      "source_sha256": "b026defb798f1c1e9b7e582410cb159840c8ba2b737f21835186be26fe7aea27",
+      "texture_sha256": "adc4c13433a70c247891e4be8305f1734f90046d30ecc1fd9645bf090321ba78",
+      "buffer_sha256": {
+        "MutaGen5943083BB9B.bin": "94393bf90fc2d906a897bd7dcf54eb7786cc598188330c098392ad96af158901"
+      }
+    },
+    {
+      "model_id": "RWT482",
+      "name": "Stump in the meadow 3",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/e5317637f57d48b6ba0668cc7c074498",
+      "input_triangles": 18196,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT482/parez_03.gltf",
+      "source_sha256": "e0b829b0702d140a9ac150e170a3bef597d7a7d018642349533249c9167e3a19",
+      "texture_sha256": "898e45b5b83810ccd391aa2bfc26ca61b1ddee4e503bc888a8d9464791f86ba0",
+      "buffer_sha256": {
+        "parez_03.bin": "9d5aa7c8c92ddb3b87b24bd01a19f4a7a57ce8e1bb7956a418ec6412264fe980"
+      }
+    },
+    {
+      "model_id": "RWT484",
+      "name": "Optimised Barrow",
+      "category": "Objects",
+      "author": "Z3D",
+      "license": "CC Attribution-NonCommercial",
+      "source_url": "https://api.sketchfab.com/v3/models/e5becdb8a3ce477483245a51e6363855",
+      "input_triangles": 13838,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT484/optimisedBarrowAUVSP.gltf",
+      "source_sha256": "ff516fd372a9dcec7093e77b28b8d877fcba09609674c009c98aa0b721c739ae",
+      "texture_sha256": "6f1e2f5a72363a7a0cbe60995605894f621c1e51edb4229c9d0836b6b6115f07",
+      "buffer_sha256": {
+        "optimisedBarrowAUVSP.bin": "984685b079ccb98deff360cbd041240df7025e95b9920ca1e3d4d49c899894e8"
+      }
+    },
+    {
+      "model_id": "RWT492",
+      "name": "Grafiti Jaselska1",
+      "category": "Other",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/ea0129787e9a4a88bfe56d4ecd016c50",
+      "input_triangles": 92357,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT492/grafiti_jaselska1.gltf",
+      "source_sha256": "bf5e445178cbeac7618abb9f5170c9ad45f09ee331127f9d96a19fa57b27f68f",
+      "texture_sha256": "b3629f76cbca41d4cb0d2af8e1c8e79eafd4e48b18890651fc379ebff34398b5",
+      "buffer_sha256": {
+        "grafiti_jaselska1.bin": "6cb3b9a02388543e12dd8ec8bd1920301309e1525df2d18f21a47549c86dbf83"
+      }
+    },
+    {
+      "model_id": "RWT494",
+      "name": "Snail race",
+      "category": "Sculptures",
+      "author": "Michael Vogt",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/ea96fd4bf6e644d0a5fb7fef88df80c1",
+      "input_triangles": 119560,
+      "input_texture_width": 2048,
+      "input_texture_height": 2048,
+      "input_texels": 4194304,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT494/snail6.gltf",
+      "source_sha256": "601f53f4a1f6ba302a63378d9f50f1df520a3aa025265ecd27d6755ea1271207",
+      "texture_sha256": "ae209d0e4f6a622b7c4de2189629bef0bf4fe6e642af812efa007f10236045c7",
+      "buffer_sha256": {
+        "snail6.bin": "c0f5e0c547fba197fff067304f0e17189b6a1b2d2fe130df307a7106f96d98bd"
+      }
+    },
+    {
+      "model_id": "RWT500",
+      "name": "Graffiti Wall Mendlak Brno",
+      "category": "Other",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/ecdce375f02e48ffbb4db3ce2720e526",
+      "input_triangles": 49651,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT500/grafiti_mendlak.gltf",
+      "source_sha256": "adf9226400c713682913ca252b53c2778ccec2595b8801c8d5f5623e2c4b34fd",
+      "texture_sha256": "0fa7dbf1afec6111f0d597d585205b1e44f3cf61983e419736dbb99ea1dc6650",
+      "buffer_sha256": {
+        "grafiti_mendlak.bin": "953b8e43021215a042b1b2dadb160ecca1461b36e68f1894f0744eb852791dd6"
+      }
+    },
+    {
+      "model_id": "RWT514",
+      "name": "Scanned Tree Trunk",
+      "category": "Nature",
+      "author": "NNihad",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/f26e87592c724abd92fffa6e3615ba9e",
+      "input_triangles": 30052,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT514/trunk_section_2_export.gltf",
+      "source_sha256": "439184065bef757ed5496d99bd6eb0015f51ab5847db423acdfdccabc76a8944",
+      "texture_sha256": "84b7bd63db406b3e9a907e2b498c9c10043ccbe756534fe6d221f88420b87277",
+      "buffer_sha256": {
+        "trunk_section_2_export.bin": "62499a759e921107fcf4b057bc88f1761ae3953f8e4488e1554a21617712d9c6"
+      }
+    },
+    {
+      "model_id": "RWT517",
+      "name": "Lion Head Photogrammetry scan",
+      "category": "Sculptures",
+      "author": "GSXNet",
+      "license": "CC Attribution-NonCommercial",
+      "source_url": "https://api.sketchfab.com/v3/models/f3b47ab10bc745418ebe694aab4c07e6",
+      "input_triangles": 79093,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT517/LionHead.gltf",
+      "source_sha256": "1779a0f14acd858b9945fc91e4590ec59a985e44aa5e8c471d76ca110cec98df",
+      "texture_sha256": "b35b14f9609332cd4bc25c52f83c0a24c78d35ee5ed019eeaa2dc958859dc214",
+      "buffer_sha256": {
+        "LionHead.bin": "ac56ae2b6c0d983968725234117c03613310158c8cc16210593c48d0cd873642"
+      }
+    },
+    {
+      "model_id": "RWT523",
+      "name": "Amphitrite - Louvre Museum (Low Definition)",
+      "category": "Sculptures",
+      "author": "Benjamin Bardou",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/f7d231fd7e19452c8671f0b024646deb",
+      "input_triangles": 146863,
+      "input_texture_width": 1024,
+      "input_texture_height": 1024,
+      "input_texels": 1048576,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT523/AMPHITRITE2.gltf",
+      "source_sha256": "bc1467fe27d9ba09a82b2950bf8fab74245b1a4aa56c8fdcb08e928d1302289f",
+      "texture_sha256": "6028b6ba818f3e1c3a543b379c5ced5f2f8d614123a5f112084bca4eb782165a",
+      "buffer_sha256": {
+        "AMPHITRITE2.bin": "be3efd089d3a1f3bf84012ef9a69e1f849c57b197cd0a70772d75326efb31abf"
+      }
+    },
+    {
+      "model_id": "RWT524",
+      "name": "Human-headed winged bull",
+      "category": "Sculptures",
+      "author": "Beno\u00eet Rogez",
+      "license": "CC Attribution-NonCommercial",
+      "source_url": "https://api.sketchfab.com/v3/models/f8f47bd0ad794baa961b709a81f0454f",
+      "input_triangles": 91738,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT524/taureau.gltf",
+      "source_sha256": "892845616c0309b808149fb2eb773641608193ff923c2539355fe2b59f64e2fa",
+      "texture_sha256": "7384cf15760bb6bf60ce49da4512f4203dc8a0df8d6ccf00791326dc8f54fa3e",
+      "buffer_sha256": {
+        "taureau.bin": "08a2d74ebe49af0b91074abdf10c6c3717b39b29728039f9038e371cd687ca51"
+      }
+    },
+    {
+      "model_id": "RWT527",
+      "name": "Fromages de No\u00ebl",
+      "category": "Other",
+      "author": "Leon Denise",
+      "license": "CC Attribution-NonCommercial",
+      "source_url": "https://api.sketchfab.com/v3/models/fa7d11a19a574c73b152159d3c4462fc",
+      "input_triangles": 60000,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT527/Fromages2.gltf",
+      "source_sha256": "4f507dce7ba3f087f0791f1703c9a892bdc2c31c1b4299e5991ddd889adae8c5",
+      "texture_sha256": "8cdf37045af9e3eb8e607482908562ff21930fb1dcaefec608cd0d9400e4af42",
+      "buffer_sha256": {
+        "Fromages2.bin": "dfc80ae95456dd85a899bc520c4fd904bbfb8d248bcf3c8c3b666b0f76057fa3"
+      }
+    },
+    {
+      "model_id": "RWT529",
+      "name": "Pliers for electricians",
+      "category": "Objects",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/fcfb0a7fa8b1410488c801ff591fdddf",
+      "input_triangles": 99960,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT529/kleste.gltf",
+      "source_sha256": "1fc145aa28589903952c0c0c00bca7156d59d36731ab85fefc1217d2c82ddd4e",
+      "texture_sha256": "00e8edd92950c5b57992ce57b1c354de13d01b6bd787d31f0b448435a9ed82fc",
+      "buffer_sha256": {
+        "kleste.bin": "93ed06db6d43cbb8ad5a80816e4d9e6ac273de299ad1ec4230681bb405790cc2"
+      }
+    },
+    {
+      "model_id": "RWT550",
+      "name": "USNM 346 Seriatopora Hystrix",
+      "category": "Biology",
+      "author": "Smithsonian 3D Program",
+      "license": "Smithsonian ToU",
+      "source_url": "https://3d.si.edu/explorer/usnm-346-seriatopora-hystrix",
+      "input_triangles": 99772,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT550/usnm_346_mesh.gltf",
+      "source_sha256": "da75ce5ee507dff9eaa70ffb18f67da51846d60ed994af895b91686a7a2afbbd",
+      "texture_sha256": "204004ebd101742c5913a92fa0656502f7e0b763595613fc82d84afec0c79a1b",
+      "buffer_sha256": {
+        "usnm_346_mesh.bin": "2cdf56437a0f7cec3c8415a545f4c4c93bb1abeefa2acef5b1b794ddbd95cf63"
+      }
+    }
+  ],
+  "eligible_model_ids": [
+    "RWT14",
+    "RWT16",
+    "RWT18",
+    "RWT24",
+    "RWT47",
+    "RWT50",
+    "RWT55",
+    "RWT65",
+    "RWT68",
+    "RWT70",
+    "RWT75",
+    "RWT76",
+    "RWT79",
+    "RWT86",
+    "RWT89",
+    "RWT93",
+    "RWT99",
+    "RWT100",
+    "RWT103",
+    "RWT115",
+    "RWT116",
+    "RWT120",
+    "RWT126",
+    "RWT132",
+    "RWT139",
+    "RWT146",
+    "RWT148",
+    "RWT149",
+    "RWT152",
+    "RWT158",
+    "RWT160",
+    "RWT171",
+    "RWT173",
+    "RWT174",
+    "RWT188",
+    "RWT189",
+    "RWT196",
+    "RWT201",
+    "RWT220",
+    "RWT223",
+    "RWT224",
+    "RWT252",
+    "RWT253",
+    "RWT255",
+    "RWT256",
+    "RWT257",
+    "RWT259",
+    "RWT263",
+    "RWT264",
+    "RWT271",
+    "RWT276",
+    "RWT280",
+    "RWT285",
+    "RWT292",
+    "RWT296",
+    "RWT301",
+    "RWT303",
+    "RWT304",
+    "RWT305",
+    "RWT310",
+    "RWT315",
+    "RWT317",
+    "RWT319",
+    "RWT326",
+    "RWT329",
+    "RWT330",
+    "RWT341",
+    "RWT347",
+    "RWT363",
+    "RWT365",
+    "RWT373",
+    "RWT378",
+    "RWT380",
+    "RWT383",
+    "RWT384",
+    "RWT386",
+    "RWT389",
+    "RWT394",
+    "RWT400",
+    "RWT404",
+    "RWT405",
+    "RWT408",
+    "RWT412",
+    "RWT414",
+    "RWT415",
+    "RWT421",
+    "RWT424",
+    "RWT427",
+    "RWT428",
+    "RWT432",
+    "RWT435",
+    "RWT443",
+    "RWT448",
+    "RWT453",
+    "RWT459",
+    "RWT461",
+    "RWT463",
+    "RWT468",
+    "RWT471",
+    "RWT472",
+    "RWT482",
+    "RWT484",
+    "RWT492",
+    "RWT493",
+    "RWT494",
+    "RWT500",
+    "RWT505",
+    "RWT508",
+    "RWT514",
+    "RWT517",
+    "RWT523",
+    "RWT524",
+    "RWT527",
+    "RWT529",
+    "RWT541",
+    "RWT550"
+  ],
+  "excluded": [
+    {
+      "id": "RWT1",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT2",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT3",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT4",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT5",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT6",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT7",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT8",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT9",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT10",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT11",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT12",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT13",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT15",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT17",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT19",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT20",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT21",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT22",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT23",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT25",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT26",
+      "reason": "Image size (268435456 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack."
+    },
+    {
+      "id": "RWT27",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT28",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT29",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT30",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT31",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT32",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT33",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT34",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT35",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT36",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT37",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT38",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT39",
+      "reason": "Image size (268435456 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack."
+    },
+    {
+      "id": "RWT40",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT41",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT42",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT43",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT44",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT45",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT46",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT48",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT49",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT51",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT52",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT53",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT54",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT56",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT57",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT58",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT59",
+      "reason": "Image size (268435456 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack."
+    },
+    {
+      "id": "RWT60",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT61",
+      "reason": "Image size (268435456 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack."
+    },
+    {
+      "id": "RWT62",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT63",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT64",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT66",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT67",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT69",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT71",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT72",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT73",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT74",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT77",
+      "reason": "Image size (268435456 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack."
+    },
+    {
+      "id": "RWT78",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT80",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT81",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT82",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT83",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT84",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT85",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT87",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT88",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT90",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT91",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT92",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT94",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT95",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT96",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT97",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT98",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT101",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT102",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT104",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT105",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT106",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT107",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT108",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT109",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT110",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT111",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT112",
+      "reason": "Image size (400000000 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack."
+    },
+    {
+      "id": "RWT113",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT114",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT117",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT118",
+      "reason": "Image size (268435456 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack."
+    },
+    {
+      "id": "RWT119",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT121",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT122",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT123",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT124",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT125",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT127",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT128",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT129",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT130",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT131",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT133",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT134",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT135",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT136",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT137",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT138",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT140",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT141",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT142",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT143",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT144",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT145",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT147",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT150",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT151",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT153",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT154",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT155",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT156",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT157",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT159",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT161",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT162",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT163",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT164",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT165",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT166",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT167",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT168",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT169",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT170",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT172",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT175",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT176",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT177",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT178",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT179",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT180",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT181",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT182",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT183",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT184",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT185",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT186",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT187",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT190",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT191",
+      "reason": "Image size (268435456 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack."
+    },
+    {
+      "id": "RWT192",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT193",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT194",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT195",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT197",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT198",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT199",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT200",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT202",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT203",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT204",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT205",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT206",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT207",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT208",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT209",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT210",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT211",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT212",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT213",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT214",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT215",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT216",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT217",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT218",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT219",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT221",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT222",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT225",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT226",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT227",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT228",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT229",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT230",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT231",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT232",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT233",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT234",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT235",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT236",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT237",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT238",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT239",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT240",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT241",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT242",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT243",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT244",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT245",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT246",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT247",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT248",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT249",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT250",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT251",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT254",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT258",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT260",
+      "reason": "Image size (268435456 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack."
+    },
+    {
+      "id": "RWT261",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT262",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT265",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT266",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT267",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT268",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT269",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT270",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT272",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT273",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT274",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT275",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT277",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT278",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT279",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT281",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT282",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT283",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT284",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT286",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT287",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT288",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT289",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT290",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT291",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT293",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT294",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT295",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT297",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT298",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT299",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT300",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT302",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT306",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT307",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT308",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT309",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT311",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT312",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT313",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT314",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT316",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT318",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT320",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT321",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT322",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT323",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT324",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT325",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT327",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT328",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT331",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT332",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT333",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT334",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT335",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT336",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT337",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT338",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT339",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT340",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT342",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT343",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT344",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT345",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT346",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT348",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT349",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT350",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT351",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT352",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT353",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT354",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT355",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT356",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT357",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT358",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT359",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT360",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT361",
+      "reason": "Image size (268435456 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack."
+    },
+    {
+      "id": "RWT362",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT364",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT366",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT367",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT368",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT369",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT370",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT371",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT372",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT374",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT375",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT376",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT377",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT379",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT381",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT382",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT385",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT387",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT388",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT390",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT391",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT392",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT393",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT395",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT396",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT397",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT398",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT399",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT401",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT402",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT403",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT406",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT407",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT409",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT410",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT411",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT413",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT416",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT417",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT418",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT419",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT420",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT422",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT423",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT425",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT426",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT429",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT430",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT431",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT433",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT434",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT436",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT437",
+      "reason": "Image size (400000000 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack."
+    },
+    {
+      "id": "RWT438",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT439",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT440",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT441",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT442",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT444",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT445",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT446",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT447",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT449",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT450",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT451",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT452",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT454",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT455",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT456",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT457",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT458",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT460",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT462",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT464",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT465",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT466",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT467",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT469",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT470",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT473",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT474",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT475",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT476",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT477",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT478",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT479",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT480",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT481",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT483",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT485",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT486",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT487",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT488",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT489",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT490",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT491",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT495",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT496",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT497",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT498",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT499",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT501",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT502",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT503",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT504",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT506",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT507",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT509",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT510",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT511",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT512",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT513",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT515",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT516",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT518",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT519",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT520",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT521",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT522",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT525",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT526",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT528",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT530",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT531",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT532",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT533",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT534",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT535",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT536",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT537",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT538",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT539",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT540",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT542",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT543",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT544",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT545",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT546",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT547",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT548",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT549",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT551",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT552",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT553",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT554",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT555",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT556",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT557",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT558",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT559",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT560",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT561",
+      "reason": "outside 10k\u2013150k triangles / maximum 4K atlas"
+    },
+    {
+      "id": "RWT562",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT563",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT564",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT565",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT566",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT567",
+      "reason": "requires one source atlas and UVs on all primitives"
+    },
+    {
+      "id": "RWT568",
+      "reason": "requires one source atlas and UVs on all primitives"
+    }
+  ]
+}

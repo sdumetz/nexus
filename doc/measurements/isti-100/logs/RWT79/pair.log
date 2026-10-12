@@ -1,0 +1,71 @@
+QCommandLineOption: Option names cannot be empty
+Mapped normals check initial: checked=72651 opposite=155
+Building initial clusters and micronodes...
+Saved post-initialization state to "/tmp/nexus-isti-100/work/RWT79/pair/nxs_cache_476f36f6/state.json"
+
+--- Level 1 ---
+Micronodes: 71
+Triangles: 72651
+Tex res: 256
+Saved state for level 1 to "/tmp/nexus-isti-100/work/RWT79/pair/nxs_cache_f6df5e53/state.json"
+
+--- Level 2 ---
+Micronodes: 62
+Triangles: 65373
+Tex res: 128
+Saved state for level 2 to "/tmp/nexus-isti-100/work/RWT79/pair/nxs_cache_310d49f8/state.json"
+
+--- Level 3 ---
+Micronodes: 54
+Triangles: 58827
+Tex res: 64
+Saved state for level 3 to "/tmp/nexus-isti-100/work/RWT79/pair/nxs_cache_c0b1032a/state.json"
+
+--- Level 4 ---
+Micronodes: 48
+Triangles: 52945
+Tex res: 64
+Saved state for level 4 to "/tmp/nexus-isti-100/work/RWT79/pair/nxs_cache_9e9e55e2/state.json"
+
+--- Level 5 ---
+Micronodes: 24
+Triangles: 26453
+Tex res: 64
+Saved state for level 5 to "/tmp/nexus-isti-100/work/RWT79/pair/nxs_cache_e3ceb20f/state.json"
+
+--- Level 6 ---
+Micronodes: 12
+Triangles: 13219
+Tex res: 64
+Saved state for level 6 to "/tmp/nexus-isti-100/work/RWT79/pair/nxs_cache_0c5556a1/state.json"
+
+--- Level 7 ---
+Micronodes: 6
+Triangles: 6607
+Tex res: 64
+Saved state for level 7 to "/tmp/nexus-isti-100/work/RWT79/pair/nxs_cache_1a297ecd/state.json"
+
+--- Level 8 ---
+Micronodes: 3
+Triangles: 3447
+Tex res: 64
+Saved state for level 8 to "/tmp/nexus-isti-100/work/RWT79/pair/nxs_cache_178f2f48/state.json"
+
+--- Level 9 ---
+Micronodes: 2
+Triangles: 2245
+Tex res: 64
+Saved state for level 9 to "/tmp/nexus-isti-100/work/RWT79/pair/nxs_cache_043f61b5/state.json"
+
+--- Level 10 ---
+Micronodes: 2
+Triangles: 1669
+Tex res: 64
+Saved state for level 10 to "/tmp/nexus-isti-100/work/RWT79/pair/nxs_cache_921899e7/state.json"
+
+--- Level 11 ---
+Micronodes: 2
+Triangles: 1501
+Tex res: 64
+Could not simplify further: keeping 2 root micronodes
+Exported /tmp/nexus-isti-100/work/RWT79/pair/model.round{1,2}.nxs from one hierarchy

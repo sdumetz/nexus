@@ -1,0 +1,20 @@
+{
+  "status": "failed",
+  "started": "2026-10-12T13:38:47Z",
+  "conversion": {
+    "status": "ok",
+    "exit_code": 0
+  },
+  "control": {
+    "status": "failed",
+    "exit_code": -11
+  },
+  "pair": {
+    "status": "failed",
+    "exit_code": -11
+  },
+  "artifacts": {},
+  "error": "Both v4-fixes control and paired prototype builders terminated with SIGSEGV (exit -11) during level 1; no render/cache measurements.",
+  "finished": true,
+  "ended": "2026-10-12T13:39:25Z"
+}

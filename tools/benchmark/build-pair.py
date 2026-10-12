@@ -9,6 +9,7 @@ import shlex
 import subprocess
 import sys
 import tempfile
+import shutil
 
 build = Path(sys.argv[1]).resolve()
 target = build / "CMakeFiles/nxsbuild.dir"
@@ -28,4 +29,7 @@ with tempfile.TemporaryDirectory(prefix="nexus-build-pair-") as directory:
     link = [str(obj) if arg.endswith("/main.cpp.o") else arg for arg in link]
     link[link.index("-o") + 1] = str(executable)
     subprocess.run(link, cwd=build, check=True)
-    subprocess.run([str(executable), *sys.argv[2:]], check=True)
+    if len(sys.argv) == 4 and sys.argv[2] == "--compile-only":
+        shutil.copy2(executable, sys.argv[3])
+    else:
+        subprocess.run([str(executable), *sys.argv[2:]], check=True)

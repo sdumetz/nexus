@@ -1,0 +1,7 @@
+{
+  "models": 100,
+  "status_counts": {
+    "failed": 2,
+    "ok": 98
+  }
+}

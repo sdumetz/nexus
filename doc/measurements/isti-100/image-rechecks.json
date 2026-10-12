@@ -1,0 +1,30 @@
+[
+  {
+    "model_id": "RWT256",
+    "full_file_hashes_equal": false,
+    "geometry_and_texture_payload_hashes_equal": true,
+    "allocations_equal": true,
+    "image_metrics_equal": true
+  },
+  {
+    "model_id": "RWT292",
+    "full_file_hashes_equal": false,
+    "geometry_and_texture_payload_hashes_equal": true,
+    "allocations_equal": true,
+    "image_metrics_equal": true
+  },
+  {
+    "model_id": "RWT319",
+    "full_file_hashes_equal": false,
+    "geometry_and_texture_payload_hashes_equal": true,
+    "allocations_equal": true,
+    "image_metrics_equal": true
+  },
+  {
+    "model_id": "RWT471",
+    "full_file_hashes_equal": false,
+    "geometry_and_texture_payload_hashes_equal": true,
+    "allocations_equal": true,
+    "image_metrics_equal": true
+  }
+]

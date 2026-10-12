@@ -1,0 +1,66 @@
+QCommandLineOption: Option names cannot be empty
+
+Build Parameters:
+  Input files: 1 file(s)
+  Output: model.nxs
+  Faces per cluster: 128
+  Clusters per node: 8
+  Faces per macro-node: 32768
+  Scaling: 0.5
+  Texel weight: 0.05
+  Triangle/texel ratio: 6
+  Texture format: JPEG (quality: 95)
+  Threads: 4
+  Translate: (0, 0, 0)
+  Scale: (1, 1, 1)
+
+Mapped normals check initial: checked=135192 opposite=165
+Building mesh hierarchy...
+Building initial clusters and micronodes...
+Saved post-initialization state to "/tmp/nexus-isti-100/work/RWT468/control/nxs_cache_ca886b88/state.json"
+
+--- Level 1 ---
+Micronodes: 133
+Triangles: 135192
+Tex res: 64
+Saved state for level 1 to "/tmp/nexus-isti-100/work/RWT468/control/nxs_cache_ea57ea00/state.json"
+
+--- Level 2 ---
+Micronodes: 58
+Triangles: 67560
+Tex res: 64
+Saved state for level 2 to "/tmp/nexus-isti-100/work/RWT468/control/nxs_cache_25fba7f6/state.json"
+
+--- Level 3 ---
+Micronodes: 29
+Triangles: 33756
+Tex res: 64
+Saved state for level 3 to "/tmp/nexus-isti-100/work/RWT468/control/nxs_cache_fc7477a4/state.json"
+
+--- Level 4 ---
+Micronodes: 15
+Triangles: 16870
+Tex res: 64
+Saved state for level 4 to "/tmp/nexus-isti-100/work/RWT468/control/nxs_cache_d4bd3089/state.json"
+
+--- Level 5 ---
+Micronodes: 8
+Triangles: 8432
+Tex res: 64
+Saved state for level 5 to "/tmp/nexus-isti-100/work/RWT468/control/nxs_cache_1b3d0035/state.json"
+
+--- Level 6 ---
+Micronodes: 4
+Triangles: 4216
+Tex res: 64
+Saved state for level 6 to "/tmp/nexus-isti-100/work/RWT468/control/nxs_cache_6de844c0/state.json"
+
+--- Level 7 ---
+Micronodes: 2
+Triangles: 2132
+Tex res: 64
+Saved state for level 7 to "/tmp/nexus-isti-100/work/RWT468/control/nxs_cache_8b318d77/state.json"
+
+--- Level 8 ---
+Micronodes: 1
+Triangles: 1114

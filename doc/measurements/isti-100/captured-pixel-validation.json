@@ -1,0 +1,7 @@
+{
+  "model": "RWT139 Lion Sculpture",
+  "target_pixels": 0.1,
+  "textured_and_shaded_pngs_byte_identical": true,
+  "all_comparison_metrics_identical": true,
+  "description": "Comparing captured pixels directly versus rendering again before each comparison"
+}

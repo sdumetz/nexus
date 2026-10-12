@@ -1,0 +1,74 @@
+QCommandLineOption: Option names cannot be empty
+
+Build Parameters:
+  Input files: 1 file(s)
+  Output: model.nxs
+  Faces per cluster: 128
+  Clusters per node: 8
+  Faces per macro-node: 32768
+  Scaling: 0.5
+  Texel weight: 0.05
+  Triangle/texel ratio: 6
+  Texture format: JPEG (quality: 95)
+  Threads: 4
+  Translate: (0, 0, 0)
+  Scale: (1, 1, 1)
+
+Mapped normals check initial: checked=97759 opposite=608
+Building mesh hierarchy...
+Building initial clusters and micronodes...
+Saved post-initialization state to "/tmp/nexus-isti-100/work/RWT152/control/nxs_cache_9301e887/state.json"
+
+--- Level 1 ---
+Micronodes: 96
+Triangles: 97759
+Tex res: 128
+Saved state for level 1 to "/tmp/nexus-isti-100/work/RWT152/control/nxs_cache_8a1fb64f/state.json"
+
+--- Level 2 ---
+Micronodes: 82
+Triangles: 87989
+Tex res: 64
+Saved state for level 2 to "/tmp/nexus-isti-100/work/RWT152/control/nxs_cache_b01cf12d/state.json"
+
+--- Level 3 ---
+Micronodes: 73
+Triangles: 79181
+Tex res: 64
+Saved state for level 3 to "/tmp/nexus-isti-100/work/RWT152/control/nxs_cache_9c1fd8ae/state.json"
+
+--- Level 4 ---
+Micronodes: 36
+Triangles: 39567
+Tex res: 64
+Saved state for level 4 to "/tmp/nexus-isti-100/work/RWT152/control/nxs_cache_ba72ab19/state.json"
+
+--- Level 5 ---
+Micronodes: 18
+Triangles: 19777
+Tex res: 64
+Saved state for level 5 to "/tmp/nexus-isti-100/work/RWT152/control/nxs_cache_1eebce2d/state.json"
+
+--- Level 6 ---
+Micronodes: 9
+Triangles: 10273
+Tex res: 64
+Saved state for level 6 to "/tmp/nexus-isti-100/work/RWT152/control/nxs_cache_12ae911b/state.json"
+
+--- Level 7 ---
+Micronodes: 5
+Triangles: 5717
+Tex res: 64
+Saved state for level 7 to "/tmp/nexus-isti-100/work/RWT152/control/nxs_cache_2ca1bfc0/state.json"
+
+--- Level 8 ---
+Micronodes: 4
+Triangles: 4323
+Tex res: 64
+Saved state for level 8 to "/tmp/nexus-isti-100/work/RWT152/control/nxs_cache_93cea2b3/state.json"
+
+--- Level 9 ---
+Micronodes: 4
+Triangles: 4007
+Tex res: 64
+Could not simplify further: keeping 4 root micronodes

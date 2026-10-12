@@ -1,0 +1,35 @@
+{
+  "description": "Traversal-only loading compared with previous render-every-frame loading, same Lion Sculpture camera and viewport",
+  "checks": [
+    {
+      "variant": "control",
+      "target": 2,
+      "cache_and_node_ids_equal": true,
+      "textured_and_shaded_pngs_byte_identical": true
+    },
+    {
+      "variant": "round1",
+      "target": 2,
+      "cache_and_node_ids_equal": true,
+      "textured_and_shaded_pngs_byte_identical": true
+    },
+    {
+      "variant": "round2",
+      "target": 2,
+      "cache_and_node_ids_equal": true,
+      "textured_and_shaded_pngs_byte_identical": true
+    },
+    {
+      "variant": "round1",
+      "target": 0.1,
+      "cache_and_node_ids_equal": true,
+      "textured_and_shaded_pngs_byte_identical": true
+    },
+    {
+      "variant": "round2",
+      "target": 0.1,
+      "cache_and_node_ids_equal": true,
+      "textured_and_shaded_pngs_byte_identical": true
+    }
+  ]
+}

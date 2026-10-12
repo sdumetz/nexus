@@ -11,6 +11,7 @@ import { writeReport } from './report.mjs';
 const repo = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const args = process.argv.slice(2), models = [];
 let out = 'benchmark-results', three, source, poses;
+let loadingMode = 'traverse';
 let views = [6, 2.5, 1.2, 0.6], taus = [2], width = 1280, height = 800, chrome = '/usr/bin/chromium', timeoutMs = 120000;
 for (let i = 0; i < args.length; ++i) {
   const key = args[i], value = args[++i];
@@ -31,9 +32,11 @@ for (let i = 0; i < args.length; ++i) {
   else if (key === '--height') height = Number(value);
   else if (key === '--chrome') chrome = value;
   else if (key === '--timeout-ms') timeoutMs = Number(value);
+  else if (key === '--loading-mode') loadingMode = value;
   else throw new Error(`Unknown option ${key}`);
 }
 if (!models.length) throw new Error('Supply at least one --model label=file.nxs (the first is the comparison baseline)');
+if (!['render', 'traverse'].includes(loadingMode)) throw new Error('--loading-mode must be render or traverse');
 if (![...views, ...taus, width, height, timeoutMs].every(n => Number.isFinite(n) && n > 0)) throw new Error('Dimensions, views, taus, and timeout must be positive');
 if (!three) for (const candidate of [path.join(repo, 'node_modules/three'), path.join(repo, 'nexus3d/node_modules/three'), path.resolve(repo, '../not-voyager/experiments/LOD/node_modules/three')]) {
   try { await fs.access(path.join(candidate, 'build/three.module.js')); three = candidate; break; } catch {}
@@ -90,7 +93,7 @@ try {
     // A fresh document/context clears the singleton cache and any leaked GPU state.
     await browser.goto(`${server.url}/benchmark/page.html?job=${report.runs.length}`);
     fetchedHttpBytes = modelRequests = 0; logs.length = 0; requests.clear();
-    const options = { url: job.url, kind: job.kind, tau: job.tau, pose: poses[job.view], timeoutMs };
+    const options = { url: job.url, kind: job.kind, tau: job.tau, pose: poses[job.view], timeoutMs, loadingMode };
     const result = await browser.evaluate(`bench.run(${JSON.stringify(options)})`);
     const row = { label: job.label, view: job.view, tau: job.tau, ...result, fetchedHttpBytes, modelRequests, logs: [...logs] };
     if (logs.length) throw new Error(`Browser errors: ${logs.join('\n')}`);
