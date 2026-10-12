@@ -977,8 +977,8 @@ void MeshHierarchy::process_level(MappedMesh& mesh, MappedMesh& next_mesh, const
 	for(Index micro_id = 0; micro_id < mesh.micronodes.size(); micro_id++) {
 
 
-		// add tasks, in this case without caring about results of individual tasks
-		pool.enqueue_detach([this, &mesh, &next_mesh, &params, &next_mesh_lock, high_triangle_texel_ratio](Index micro_id) {
+		// add tasks: the future is only used to report what the task threw.
+		std::future<void> task = pool.enqueue([this, &mesh, &next_mesh, &params, &next_mesh_lock, high_triangle_texel_ratio](Index micro_id) {
 			MicroNode& micronode = mesh.micronodes[micro_id];
 
 
@@ -1017,6 +1017,7 @@ void MeshHierarchy::process_level(MappedMesh& mesh, MappedMesh& next_mesh, const
 			}
 		}, micro_id);
 		pool.wait_for_tasks();
+		task.get();
 
 	}
 

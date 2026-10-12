@@ -65,10 +65,7 @@ float simplify_mesh(NodeMesh& merged, Index target_triangle_count) {
 		tf::protect_vertices(pinned_vertices), tf::return_index_map);
 	(void)half_edges;
 
-	if(result.faces().size() > target_triangle_count*1.05) {
-		int triangle_count = result.faces().size();
-		throw std::string("Failed to simplify cluster");
-	}
+	//the target might not be reached (locked boundaries): keep what we got, as the vcg simplifier does.
 
 	const std::vector<Index> original_position_remap = merged.position_remap;
 	const std::vector<Rgba8> original_colors = merged.colors;

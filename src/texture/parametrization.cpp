@@ -703,10 +703,11 @@ void reparametrize_initial_clusters(MappedMesh& mesh, std::vector<Material> &mat
 	open_temp_reparam_buffers(max_entries, temp_wedges, temp_texcoords);
 
 	dp::thread_pool pool;
+	std::vector<std::future<void>> tasks;
 
 	mesh.node_textures.resize(mesh.micronodes.size());
 	for (Index micro_id = 0; micro_id < mesh.micronodes.size(); micro_id++) {
-		pool.enqueue_detach([&mesh, &temp_wedges, &temp_texcoords, &materials, &texture_cache, &active_slots, options, tex_res, components](Index micro_id) {
+		tasks.push_back(pool.enqueue([&mesh, &temp_wedges, &temp_texcoords, &materials, &texture_cache, &active_slots, options, tex_res, components](Index micro_id) {
 			MicroNode& micronode = mesh.micronodes[micro_id];
 			NodeMesh merged = merge_micronode_clusters(mesh, micronode);
 			NodeMesh original = merged;
@@ -733,9 +734,12 @@ void reparametrize_initial_clusters(MappedMesh& mesh, std::vector<Material> &mat
 					temp_wedges,
 					temp_texcoords);
 			}
-		}, micro_id);
+		}, micro_id));
 	}
 	pool.wait_for_tasks();
+	//report what a task threw.
+	for(std::future<void> &task: tasks)
+		task.get();
 
 	finalize_reparam_buffers(mesh, temp_wedges, temp_texcoords);
 }
@@ -768,9 +772,10 @@ void reparametrize_clusters(MappedMesh& mesh,
 
 	std::mutex write_lock;
 	dp::thread_pool pool;
+	std::vector<std::future<void>> tasks;
 
 	for(Index micro_id = 0; micro_id < next_mesh.micronodes.size(); micro_id++) {
-		pool.enqueue_detach([&mesh, &next_mesh, &temp_wedges, &temp_texcoords, &write_lock, &active_slots, &materials, options, tex_res, components](Index micro_id) {
+		tasks.push_back(pool.enqueue([&mesh, &next_mesh, &temp_wedges, &temp_texcoords, &write_lock, &active_slots, &materials, options, tex_res, components](Index micro_id) {
 			MicroNode& destination_micronode = next_mesh.micronodes[micro_id];
 
 			std::vector<std::pair<Index, Index>> source_clusters = collect_source_clusters_for_projection(
@@ -813,9 +818,12 @@ void reparametrize_clusters(MappedMesh& mesh,
 					assert(w.n < next_mesh.normals.size());
 				}
 			}
-		}, micro_id);
+		}, micro_id));
 	}
 	pool.wait_for_tasks();
+	//report what a task threw.
+	for(std::future<void> &task: tasks)
+		task.get();
 
 	for(size_t i = 0; i < temp_wedges.size(); i++) {
 		Wedge &w = temp_wedges[i];
