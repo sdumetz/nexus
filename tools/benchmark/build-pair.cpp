@@ -21,10 +21,11 @@ int main(int argc, char **argv) {
     nx::load_mesh(std::filesystem::path(params.inputs.first().toStdString()), *mesh, materials);
     hierarchy.initialize(mesh, materials);
     hierarchy.build_hierarchy(params);
-    nx::ExportNxs round1, round2;
+    nx::ExportNxs round1, round2, fine;
     const auto prefix = std::filesystem::path(params.output.toStdString()).replace_extension().string();
     round1.export_nxs(hierarchy, prefix + ".round1.nxs", 0);
-    round2.export_nxs(hierarchy, prefix + ".round2.nxs", params.texture_error_ratio);
+    round2.export_nxs(hierarchy, prefix + ".round2.nxs", params.texture_error_ratio, true);
+    fine.export_nxs(hierarchy, prefix + ".fine.nxs", params.texture_error_ratio);
     std::cout << "Exported " << prefix << ".round{1,2}.nxs from one hierarchy\n";
   } catch (const std::exception &error) { std::cerr << error.what() << '\n'; return 1; }
 }

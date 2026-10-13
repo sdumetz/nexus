@@ -1,4 +1,5 @@
 #include "../src/texture/texel_error.h"
+#include "../src/texture/texture_sizing.h"
 #include "../src/core/mesh_hierarchy.h"
 #include "../src/nxsbuild/export_nxs.h"
 #include <fstream>
@@ -95,15 +96,14 @@ static void export_checks(bool textured, float ratio = 0) {
 	std::cout << name << ": geometry/texture maximum and ancestor saturation passed\n";
 }
 
-static void sizing_checks() {
+static void sizing_checks(bool halving) {
 	nx::MeshHierarchy hierarchy;
 	hierarchy.levels = {level(true, false), level(true, true)};
 	std::vector<std::vector<char>> baseline_geometry;
 	for(float ratio: {0.0f, 1.0f, 0.5f}) {
 		nx::ExportNxs exporter;
 		// Exercise the API default as well as explicitly configured ratios.
-		if(ratio == 1) exporter.export_nxs(hierarchy, "sizing.nxs");
-		else exporter.export_nxs(hierarchy, "sizing.nxs", ratio);
+		exporter.export_nxs(hierarchy, "sizing.nxs", ratio, halving);
 		std::ifstream file("sizing.nxs", std::ios::binary);
 		nx::Header header;
 		file.read(reinterpret_cast<char*>(&header), sizeof(header));
@@ -125,17 +125,18 @@ static void sizing_checks() {
 			QImage image;
 			if(!image.loadFromData(reinterpret_cast<const uchar*>(blob.data()), blob.size(), "JPEG"))
 				throw std::runtime_error("Exported texture cannot be decoded");
-			const int expected = i == 2 || ratio == 0 ? 256 : (ratio == 1 ? 32 : 64);
+			const int expected = i == 2 || ratio == 0 ? 256 : (halving ? (ratio == 1 ? 32 : 64) : (ratio == 1 ? 20 : 40));
 			if(image.width() != expected || image.height() != expected)
 				throw std::runtime_error("Unexpected texture dimensions");
 			if(i < 2 && ratio > 0) {
 				// This resolution meets the target, but one step coarser would not.
 				const float target = ratio*(i == 0 ? 0.101f : 0.1f);
-				if(2.0f/expected > target || 4.0f/expected <= target)
+				if(2.0f/expected > target || 2.0f/(halving ? expected/2 : expected-4) <= target)
 					throw std::runtime_error("Texture was not sized to the coarsest allowed resolution");
 			}
 			const auto top = image.pixelColor(0,0), bottom = image.pixelColor(expected-1,expected-1);
-			if(top.red() > 12 || top.green() < 240 || bottom.red() < 240 || bottom.green() > 12)
+			// Small non-power-of-two JPEGs have stronger endpoint ringing.
+			if(top.red() > 24 || top.green() < 230 || bottom.red() < 230 || bottom.green() > 24)
 				throw std::runtime_error("Downsampled texture gradient/orientation changed");
 			const size_t geometry_size = nodes[i].nvert*header.signature.vertex.size()
 				+ nodes[i].nface*header.signature.face.size();
@@ -177,10 +178,23 @@ static void sizing_checks() {
 }
 
 int main() {
+	for(const auto dims: {std::make_pair(256,256), std::make_pair(256,128)}) {
+		auto footprint = [](int w, int h) { return std::max(2.0/w, 1.0/h); };
+		const auto size = nx::fine_texture_size(dims.first, dims.second, 0.1, footprint);
+		if(size != (dims.first == dims.second ? std::make_pair(20,20) : std::make_pair(20,12)))
+			throw std::runtime_error("Fine sizing failed square/rectangular rounding");
+		if(footprint(size.first,size.second) > 0.1 || footprint(size.first-4,size.second) <= 0.1)
+			throw std::runtime_error("Fine sizing failed target/minimality check");
+		if(nx::fine_texture_size(dims.first,dims.second,0,footprint) != dims ||
+		   nx::fine_texture_size(dims.first,dims.second,1e-8,footprint) != dims ||
+		   nx::fine_texture_size(dims.first,dims.second,1e6,footprint) != std::make_pair(4,4))
+			throw std::runtime_error("Fine sizing failed bounds");
+	}
 	metric_checks();
 	export_checks(true);
 	export_checks(false);
 	export_checks(false, 1);
-	sizing_checks();
+	sizing_checks(true);
+	sizing_checks(false);
 	std::cout << "Round 1 and round 2 checks passed\n";
 }

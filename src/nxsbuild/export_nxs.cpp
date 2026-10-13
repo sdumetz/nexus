@@ -3,6 +3,7 @@
 #include "../common/dag.h"
 #include "../core/log.h"
 #include "../texture/texel_error.h"
+#include "../texture/texture_sizing.h"
 #include <fstream>
 #include <set>
 #include <map>
@@ -52,10 +53,11 @@ float nodeTexelError(const MappedMesh &mesh, const MicroNode &node, int width, i
 }
 }
 
-void ExportNxs::export_nxs(MeshHierarchy& hierarchy, const std::string& path, float ratio) {
+void ExportNxs::export_nxs(MeshHierarchy& hierarchy, const std::string& path, float ratio, bool halve) {
 	if(!std::isfinite(ratio) || ratio < 0)
 		throw std::invalid_argument("Texture error ratio must be finite and nonnegative");
 	texture_error_ratio = ratio;
+	halve_textures = halve;
 
 	out = fopen(path.c_str(), "wb");
 	if (!out) {
@@ -295,13 +297,21 @@ void ExportNxs::exportMicronode(int level, std::uint32_t micronode_id, MappedMes
 		texel_error = nodeTexelError(mesh, micronode, width, height);
 		const double target = double(texture_error_ratio)*geometric_error;
 		// Ratio zero preserves round 1 as a control. Never enlarge baked images.
-		while(texture_error_ratio > 0 && target > 0 && (width > 1 || height > 1)) {
+		while(halve_textures && texture_error_ratio > 0 && target > 0 && (width > 1 || height > 1)) {
 			const int next_width = std::max(1, width/2), next_height = std::max(1, height/2);
 			const float next_error = nodeTexelError(mesh, micronode, next_width, next_height);
 			if(next_error > target) break;
 			width = next_width;
 			height = next_height;
 			texel_error = next_error;
+		}
+		if(!halve_textures && texture_error_ratio > 0) {
+			const auto size = fine_texture_size(width, height, target, [&](int w, int h) {
+				return nodeTexelError(mesh, micronode, w, h);
+			});
+			width = size.first;
+			height = size.second;
+			texel_error = nodeTexelError(mesh, micronode, width, height);
 		}
 		texture_index = static_cast<Index>(textures.size());
 		textures.push_back(Texture());

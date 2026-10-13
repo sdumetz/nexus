@@ -1,0 +1,11 @@
+source view 0 tau 0: reference captured
+round1 view 0 tau 2: 74/217 nodes, 4.608 MiB audited GPU cache
+round2 view 0 tau 2: 74/217 nodes, 3.811 MiB audited GPU cache
+fine view 0 tau 2: 74/217 nodes, 3.500 MiB audited GPU cache
+round1 view 0 tau 0.5: 152/217 nodes, 15.114 MiB audited GPU cache
+round2 view 0 tau 0.5: 152/217 nodes, 12.005 MiB audited GPU cache
+fine view 0 tau 0.5: 152/217 nodes, 10.038 MiB audited GPU cache
+round1 view 0 tau 0.1: 217/217 nodes, 33.129 MiB audited GPU cache
+round2 view 0 tau 0.1: 217/217 nodes, 29.020 MiB audited GPU cache
+fine view 0 tau 0.1: 217/217 nodes, 22.331 MiB audited GPU cache
+Results: /home/sebastien/repositories/nexus-decoupled/doc/measurements/isti-fine-10/screenshots/RWT256/results.json

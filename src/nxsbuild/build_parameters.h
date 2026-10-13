@@ -50,6 +50,7 @@ public:
 	int texture_quality = 95;         // Quality for lossy formats [0-100]
 	int texture_padding = 2;
 	float texture_error_ratio = 1.0f; // Export texel error / saturated geometric error; 0 disables resizing.
+	bool halve_textures = false;
 
 	// Format options
 	bool normals = false;            // Force per-vertex normals

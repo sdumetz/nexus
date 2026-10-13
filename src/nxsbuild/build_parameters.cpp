@@ -35,6 +35,7 @@ bool BuildParameters::parse(int argc, char* argv[]) {
 	parser.addOption({{"Q", "texture-quality"}, "Quality for lossy formats [95]", "n", "95"});
 	parser.addOption({{"P", "texture-padding"}, "Padding between charts in pixels", "n", "2"});
 	parser.addOption({"texture-error-ratio", "Target texel/geometric error ratio [1]; 0 keeps baked sizes", "f", "1"});
+	parser.addOption({"texture-sizing", "Texture sizing: fine (multiples of 4) or halving [fine]", "mode", "fine"});
 
 	// Format options
 	parser.addOption({{"n", "normals"}, "Force per-vertex normals"});
@@ -98,6 +99,12 @@ bool BuildParameters::parse(int argc, char* argv[]) {
 	scaling = parser.value("scaling").toFloat();
 	bool valid_ratio = false;
 	texture_error_ratio = parser.value("texture-error-ratio").toFloat(&valid_ratio);
+	const QString sizing = parser.value("texture-sizing");
+	if(sizing != "fine" && sizing != "halving") {
+		std::cerr << "Error: texture-sizing must be fine or halving\n";
+		return false;
+	}
+	halve_textures = sizing == "halving";
 	if(!valid_ratio) {
 		std::cerr << "Error: texture-error-ratio must be a number\n";
 		return false;
@@ -266,6 +273,7 @@ void BuildParameters::printUsage() {
 	std::cout << "  -T, --texture-format <format>  Texture format: jpeg|png|webp|basis|bc7|astc|etc2 [jpeg]\n";
 	std::cout << "  -Q, --texture-quality <n>      Quality for lossy formats 0-100 [95]\n\n";
 	std::cout << "      --texture-error-ratio <f> Target texel/geometric error ratio [1]; 0 keeps baked sizes\n";
+	std::cout << "      --texture-sizing <mode>   fine (multiples of 4) or halving [fine]\n";
 
 	std::cout << "Format options:\n";
 	std::cout << "  -n, --normals             Force per-vertex normals\n";
@@ -301,6 +309,7 @@ void BuildParameters::print() const {
 	nx::log << "  Texel weight: " << texel_weight << "\n";
 	nx::log << "  Triangle/texel ratio: " << triangle_texel_ratio << "\n";
 	nx::log << "  Texture error ratio: " << texture_error_ratio << "\n";
+	nx::log << "  Texture sizing: " << (halve_textures ? "halving" : "fine") << "\n";
 
 	// Print texture format
 	nx::log << "  Texture format: ";
