@@ -1,0 +1,204 @@
+{
+  "selection": "doc/measurements/isti-quality-2px-10/selection.json",
+  "inputs": [
+    {
+      "model_id": "RWT14",
+      "variant": "upstream",
+      "file": "/tmp/nexus-quality-sweep-10/RWT14/upstream/test.nxs",
+      "sha256": "81186101d09e9793ed3cf8c8e682de94d4b55480394d948e4cfdcdf1eac79648"
+    },
+    {
+      "model_id": "RWT14",
+      "variant": "factor1_5",
+      "file": "/tmp/nexus-quality-sweep-10/RWT14/sweep/model.factor1_5.nxs",
+      "sha256": "d64628d1c39bea6aaf80b64b6a8b43732b9950e03a7452b7e58e49a444320b44"
+    },
+    {
+      "model_id": "RWT14",
+      "variant": "factor2",
+      "file": "/tmp/nexus-quality-sweep-10/RWT14/sweep/model.factor2.nxs",
+      "sha256": "5161c40b866a3a79bbb9df5fca1ed9cc6bbf66cb9f6a376eeb14a40bad676229"
+    },
+    {
+      "model_id": "RWT76",
+      "variant": "upstream",
+      "file": "/tmp/nexus-quality-sweep-10/RWT76/upstream/test.nxs",
+      "sha256": "3e59175c7773e3c339279ed50c7da4a3c933454c6f4373f2a43b7c047d4c7f1b"
+    },
+    {
+      "model_id": "RWT76",
+      "variant": "factor1_5",
+      "file": "/tmp/nexus-quality-sweep-10/RWT76/sweep/model.factor1_5.nxs",
+      "sha256": "401216b48c170a2001c045478b88f8f909ab4ef4dca138316ce3ac2a19c654c7"
+    },
+    {
+      "model_id": "RWT76",
+      "variant": "factor2",
+      "file": "/tmp/nexus-quality-sweep-10/RWT76/sweep/model.factor2.nxs",
+      "sha256": "7428d123c556614db65ade9f9f4eb2765492a05b3028121e69375aff0369101a"
+    },
+    {
+      "model_id": "RWT139",
+      "variant": "upstream",
+      "file": "/tmp/nexus-quality-sweep-10/RWT139/upstream/test.nxs",
+      "sha256": "157c145c39c15f2b9814fd9a35a51bff5e167fb3e2bad78f6ef9726303372d3c"
+    },
+    {
+      "model_id": "RWT139",
+      "variant": "factor1_5",
+      "file": "/tmp/nexus-quality-sweep-10/RWT139/sweep/model.factor1_5.nxs",
+      "sha256": "0e6e1e5686357883e5b52b9581eb14235bd8fdb19b8a82bbd6c720834e733302"
+    },
+    {
+      "model_id": "RWT139",
+      "variant": "factor2",
+      "file": "/tmp/nexus-quality-sweep-10/RWT139/sweep/model.factor2.nxs",
+      "sha256": "75fe5cedfce96ae3bab06c9341ee904dc5a89e43d5f4f899711d3efcedd81c23"
+    },
+    {
+      "model_id": "RWT256",
+      "variant": "upstream",
+      "file": "/tmp/nexus-quality-sweep-10/RWT256/upstream/test.nxs",
+      "sha256": "ba2d937500ed010cca33595cc0ccad6a690348018f2574d91d63d742360a0c5e"
+    },
+    {
+      "model_id": "RWT256",
+      "variant": "factor1_5",
+      "file": "/tmp/nexus-quality-sweep-10/RWT256/sweep/model.factor1_5.nxs",
+      "sha256": "f18ab257c388b150cccd33a876fa08c04e123fd65104b791ed9d58e995a94322"
+    },
+    {
+      "model_id": "RWT256",
+      "variant": "factor2",
+      "file": "/tmp/nexus-quality-sweep-10/RWT256/sweep/model.factor2.nxs",
+      "sha256": "8fdc6e38782f02c3c3f92d577dd5a8a2c5a67bb6c8d6342e9faac213288a3f16"
+    },
+    {
+      "model_id": "RWT292",
+      "variant": "upstream",
+      "file": "/tmp/nexus-quality-sweep-10/RWT292/upstream/test.nxs",
+      "sha256": "9b71181546968d841c972d11bd64b86e3e8f2812fe0fdf325a3e661acbe06950"
+    },
+    {
+      "model_id": "RWT292",
+      "variant": "factor1_5",
+      "file": "/tmp/nexus-quality-sweep-10/RWT292/sweep/model.factor1_5.nxs",
+      "sha256": "fc02db55e744f55a042c865676dc0e3d9ba34e25243214045e5afeebf703c907"
+    },
+    {
+      "model_id": "RWT292",
+      "variant": "factor2",
+      "file": "/tmp/nexus-quality-sweep-10/RWT292/sweep/model.factor2.nxs",
+      "sha256": "afb6bfeff63218a09d342e0b8c2e64acaa070e887742203f5f0735ae17b4d488"
+    },
+    {
+      "model_id": "RWT319",
+      "variant": "upstream",
+      "file": "/tmp/nexus-quality-sweep-10/RWT319/upstream/test.nxs",
+      "sha256": "f96c9784db941e119e7034a97cb082e4970ff193f37d46123c5f5a54bc780f2f"
+    },
+    {
+      "model_id": "RWT319",
+      "variant": "factor1_5",
+      "file": "/tmp/nexus-quality-sweep-10/RWT319/sweep/model.factor1_5.nxs",
+      "sha256": "a7cbdf6f38fa951f6720e7c4480260897ea40fa9c4774b7b970b1793d26c8524"
+    },
+    {
+      "model_id": "RWT319",
+      "variant": "factor2",
+      "file": "/tmp/nexus-quality-sweep-10/RWT319/sweep/model.factor2.nxs",
+      "sha256": "bc185cd7ee4687f6a6abf25363e739112574c6daf5694e2da282aabe144ef4d9"
+    },
+    {
+      "model_id": "RWT408",
+      "variant": "upstream",
+      "file": "/tmp/nexus-quality-sweep-10/RWT408/upstream/test.nxs",
+      "sha256": "1f65fc64d3060411cab08c0364872a284c0ab68b41f32a21010adb88236e1be2"
+    },
+    {
+      "model_id": "RWT408",
+      "variant": "factor1_5",
+      "file": "/tmp/nexus-quality-sweep-10/RWT408/sweep/model.factor1_5.nxs",
+      "sha256": "8f3e32d5081857d608db6af8bcdd27ef0cb5a41d0c8d199186f72c1131ccb3c9"
+    },
+    {
+      "model_id": "RWT408",
+      "variant": "factor2",
+      "file": "/tmp/nexus-quality-sweep-10/RWT408/sweep/model.factor2.nxs",
+      "sha256": "e340773980545061d2dee5cba970428061661ed2fc074d6d85b08c003ab6e637"
+    },
+    {
+      "model_id": "RWT471",
+      "variant": "upstream",
+      "file": "/tmp/nexus-quality-sweep-10/RWT471/upstream/test.nxs",
+      "sha256": "9c99d870abe54d5565870e15cd6d7e55277963dfac7ee58ea95a627336eda362"
+    },
+    {
+      "model_id": "RWT471",
+      "variant": "factor1_5",
+      "file": "/tmp/nexus-quality-sweep-10/RWT471/sweep/model.factor1_5.nxs",
+      "sha256": "3bbb751a06dfcbfb3f607afa9aba7e91fc5e8d1e8d757d13c2dcdc656b81effd"
+    },
+    {
+      "model_id": "RWT471",
+      "variant": "factor2",
+      "file": "/tmp/nexus-quality-sweep-10/RWT471/sweep/model.factor2.nxs",
+      "sha256": "1854a820b7b3e951ce6e4801a0afa49686831652cdd8951dca385aa170c0d99d"
+    },
+    {
+      "model_id": "RWT500",
+      "variant": "upstream",
+      "file": "/tmp/nexus-quality-sweep-10/RWT500/upstream/test.nxs",
+      "sha256": "3dbc5beb6264b067e0163ac99e731a0883df4a8a131924d565ada1c27a13e57d"
+    },
+    {
+      "model_id": "RWT500",
+      "variant": "factor1_5",
+      "file": "/tmp/nexus-quality-sweep-10/RWT500/sweep/model.factor1_5.nxs",
+      "sha256": "50fbf3a386f550104f15283c2d061c731bfb8ce3c0d4fe2382fec91f75dee82d"
+    },
+    {
+      "model_id": "RWT500",
+      "variant": "factor2",
+      "file": "/tmp/nexus-quality-sweep-10/RWT500/sweep/model.factor2.nxs",
+      "sha256": "eea00ef5a7acdaf68e66bfc8a42b4324bdbea9d7923ec2d85362908161b0137f"
+    },
+    {
+      "model_id": "RWT514",
+      "variant": "upstream",
+      "file": "/tmp/nexus-quality-sweep-10/RWT514/upstream/test.nxs",
+      "sha256": "7c838f31c21cdd59a12b0a8b06ae9a81ea530375d30f24ee578028728887477c"
+    },
+    {
+      "model_id": "RWT514",
+      "variant": "factor1_5",
+      "file": "/tmp/nexus-quality-sweep-10/RWT514/sweep/model.factor1_5.nxs",
+      "sha256": "446962b1c1a026d996609bc22de3afe7b7fa44a032db2eef1c39c06e5cca24df"
+    },
+    {
+      "model_id": "RWT514",
+      "variant": "factor2",
+      "file": "/tmp/nexus-quality-sweep-10/RWT514/sweep/model.factor2.nxs",
+      "sha256": "6090f89d7639829fbd8a7d5d994d3d7251486148eb8ec6ae08ec829aa6791941"
+    }
+  ],
+  "metric": "Pixel-center UV triangle union / actual atlas texels; no padding dilation",
+  "reference_resolution": [
+    512,
+    512
+  ],
+  "source_obj_sha256": {
+    "RWT14": "559cef59df196a55994492d9d96eaf0152eb11c82fdb70a71a7225a9edae42e0",
+    "RWT76": "7ae1e692b49930d72e901166ee856e8c2ac0a23d4b32c1aede3af3c9a2253a82",
+    "RWT139": "8c3f0d454cc34d259e8a83feb4364f8188707ea39a5e6c4ab071a460f318421f",
+    "RWT256": "a322af37d92372df7a785a42093d96277a954a8ebdd444a44e3d1e5db1f01cc9",
+    "RWT292": "e91819744765ab7f393ba16203a03129db8639f36f06557fe4022fd93c4559fa",
+    "RWT319": "c921ec423915a5cf369203dba6d396971232ef9d11c1b10549fe9240939c32e1",
+    "RWT408": "a92c267acfdd0f49f8c23423250ec8216294856ac6ac32fc75fbbaec603783b8",
+    "RWT471": "5ac50e8470c14d9e9eab56b7eac8c3aa9739bf2ded9fe487aa679009f92e07c5",
+    "RWT500": "41d147a5d160dd2b6eb433ea7441d4175fe5afbc8a8e3e170b79a15d1cf4a335",
+    "RWT514": "14b4d3a55345bf0c046fc65374cfad0f71a62c4086c62df20cd12622240d755c"
+  },
+  "extractor_sha256": "410efd35d3287a58ecc7bcffc27f0858716440177b29531346de866391994fcd",
+  "source_selection_sha256": "880096787b8dafc5c12f221a417414c37bb822aeb4c556cdc267656c2eef92a7"
+}

@@ -1,0 +1,55 @@
+[
+  {
+    "model_id": "RWT14",
+    "kind": "source",
+    "width": 4096,
+    "height": 2048,
+    "ours": 1293784,
+    "texmetro": 1293781,
+    "delta_texels": 3
+  },
+  {
+    "model_id": "RWT14",
+    "kind": "node",
+    "node_id": 76,
+    "height_from_leaves": 0,
+    "width": 256,
+    "height": 256,
+    "ours": 40826,
+    "texmetro": 40824,
+    "delta_texels": 2
+  },
+  {
+    "model_id": "RWT14",
+    "kind": "node",
+    "node_id": 54,
+    "height_from_leaves": 1,
+    "width": 128,
+    "height": 128,
+    "ours": 9272,
+    "texmetro": 9272,
+    "delta_texels": 0
+  },
+  {
+    "model_id": "RWT256",
+    "kind": "node",
+    "node_id": 167,
+    "height_from_leaves": 0,
+    "width": 256,
+    "height": 256,
+    "ours": 32812,
+    "texmetro": 32812,
+    "delta_texels": 0
+  },
+  {
+    "model_id": "RWT256",
+    "kind": "node",
+    "node_id": 130,
+    "height_from_leaves": 1,
+    "width": 128,
+    "height": 128,
+    "ours": 7483,
+    "texmetro": 7486,
+    "delta_texels": -3
+  }
+]
