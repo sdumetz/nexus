@@ -147,3 +147,42 @@ round1 control. The driver exports `divisor1` and `divisor2` in addition to the
 regular reconstruction variants. It validates factor 1 against the old round 4
 semantic payloads before rendering. `texture-rounds-summary.py` can also check
 allocations and PNGs with `--divisor-baseline BASELINE_REPORT`.
+
+### Node atlas occupancy
+
+`texture-occupancy.py` reads uncompressed inline v2 NXS files and measures the
+union of UV triangles at pixel centers, divided by actual atlas area. It counts
+overlap once, clips to the atlas, and excludes padding/dilation. This is the same
+quantity as TexMetro's `(totalTexels - lostTexels) / (rw * rh)`; tiny differences
+at triangle edges are possible because TexMetro uses OpenGL rasterization.
+
+For any compatible model:
+
+```sh
+python3 tools/benchmark/texture-occupancy.py \
+  --nxs upstream=/path/upstream.nxs --nxs candidate=/path/candidate.nxs \
+  --model-id my-model --out /tmp/my-model-occupancy
+```
+
+For the existing ten-model study, omit `--nxs` and supply `--out`; `--selection`,
+`--scratch`, and `--sources` can override the saved input locations. This also
+measures source OBJ occupancy at original texture dimensions and writes a
+`finest-comparison.csv`, checking that finest nodes sum to the source triangle
+count. `nodes.csv` has one row per node and `summary.csv` groups by model,
+variant, and height from leaves (0 = full-detail leaves, 1 = their immediate
+parents). An `all` row sums every level; it is storage across the hierarchy,
+not occupancy of a single render cut. Root depth min/max are also retained.
+
+Prefer texel-weighted occupancy (`sum covered / sum allocated`) for the complete
+finest cut and for memory use. Mean/population standard deviation and
+median/p10/p90 describe node variability; neither weights large atlases more.
+A reference 512×512 raster per atlas separates UV packing from dimension
+rounding. Occupancy is independent of texture sharpness and UV density: retain
+total allocated texels and the existing quality measurements alongside it.
+Unused atlas texels include useful seam padding, so they are not all safely
+removable. Shared/multiple atlases and compressed geometry are explicitly
+rejected by this initial reader.
+
+```sh
+python3 -B tools/benchmark/texture-occupancy.test.py
+```
