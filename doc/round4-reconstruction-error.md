@@ -1,8 +1,12 @@
 # Round 4: loss-weighted texture refinement experiment
 
-The CLI exposes `--texture-error-metric reconstruction`. The default remains
-`footprint`: this approximation has not been established as a quality-preserving
-replacement for round 1.
+Reconstruction error is now the only texture refinement metric. There is no
+footprint-mode opt-out. The CLI exposes `--texture-error-divisor`, default **2**,
+and rejects zero, negative, nonnumeric and non-finite values.
+
+The original round 4 measurements used the unscaled contribution (equivalent to
+divisor **1**). Their captures and CSV values are historical evidence, not
+measurements of the new default. Quality calibration remains future work.
 
 For each node:
 
@@ -18,22 +22,29 @@ For each node:
    measure linear-light or perceptual color difference.
 5. Compute the experimental world-space heuristic:
 
-   `texture_error = texel_footprint * min(1, reconstruction_rms / 8)`
+   `texture_error = texel_footprint * min(1, reconstruction_rms / 8) / divisor`
 
 6. Store `max(geometric_error, texture_error)` and enforce the existing ancestor
-   monotonicity. Nodes with no occupied raster samples retain the footprint
-   fallback. Untextured nodes retain the geometric error.
+   monotonicity. Nodes with no occupied raster samples use the footprint
+   fallback divided by the same divisor. Untextured nodes retain the geometric error.
 
 The calibration of **8 RGB code values RMS** is a hypothesis, not a derived
 conversion between color and geometric error. Low-loss textures drive less
-refinement, while RMS >=8 keeps the round 1 footprint. An exactly reconstructed
+refinement, while RMS >=8 reaches the round 1 footprint before division. An exactly reconstructed
 constant texture has zero texture contribution. The aggregate node RMS can hide
 small high-detail features; the maximum footprint remains conservative about
 chart distortion.
 
-Use `--texture-error-ratio 0 --texture-error-metric reconstruction` to revisit
-round 1 without changing any texture sizes. Use ratio 1 to combine it with round
-3's finer sizing. Texture sizing still uses the original footprint constraint,
+Use `--texture-error-ratio 0` to keep baked texture dimensions while still
+computing reconstruction error. Use ratio 1 to combine it with round 3's finer
+sizing. `--texture-error-divisor 1` reproduces the initial round 4 contribution;
+2 halves it, and 0.5 doubles it.
+
+Larger divisors make traversal accept coarser texture detail. Halving the stored
+error does **not** retain twice the precision: a larger stored error drives more
+refinement at the same requested screen-space tolerance. The divisor is applied
+only to the texture term before `max(...)`; geometry still supplies a floor.
+It does not change texture dimensions, JPEG payloads or the sizing target. Texture sizing still uses the original footprint constraint,
 so changing the error metric alone cannot change JPEG dimensions or payloads.
 This separation isolates refinement from sizing.
 
@@ -53,9 +64,12 @@ maximum is an image-quality bound.
 ## Validation and reproducibility
 
 `python3 tests/run_round1.py BUILD_DIR` verifies exact/constant reconstruction,
-known RMS and calibration, clamping, occupied-region exclusion, empty-mask
-fallback, and rectangular sizing plus all earlier export checks. Actual binary
-exports verify that enabling reconstruction changes only node errors, preserving
+known RMS, calibration and divisors, clamping before division, occupied-region
+exclusion, scaled empty-mask fallback, and rectangular sizing plus earlier export
+checks. CLI checks cover default/explicit divisors, invalid values and rejection
+of the removed metric option. Actual binary
+exports verify that the default divisor halves texture-only node errors and
+ancestor errors, preserving
 headers, node metadata, geometry, patches and JPEG bytes.
 
 The exporter previously wrote uninitialized bytes in padded geometry buffers.

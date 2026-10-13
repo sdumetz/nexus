@@ -11,6 +11,7 @@ import json
 from pathlib import Path
 import shutil
 import threading
+import math
 
 HERE = Path(__file__).resolve().parent
 spec = importlib.util.spec_from_file_location('isti_batch', HERE / 'isti-batch.py')
@@ -59,14 +60,20 @@ def main():
     parser.add_argument('--node', required=True)
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--scratch', type=Path, required=True)
-    parser.add_argument('--variants', default='round1,round2,fine')
+    parser.add_argument('--variants', default='reconstruction,reconstructionFine')
+    parser.add_argument('--texture-error-divisor', type=float, default=2)
     parser.add_argument('--reuse-builds', action='store_true', help='Reuse completed scratch exports under the frozen source/binary manifest')
     args = parser.parse_args()
     args.out = args.out.resolve(); args.scratch = args.scratch.resolve(); args.pair = args.pair.resolve()
     variants = args.variants.split(',')
+    if not math.isfinite(args.texture_error_divisor) or args.texture_error_divisor <= 0:
+        parser.error('--texture-error-divisor must be finite and positive')
+    if any(v not in ('reconstruction','reconstructionFine') for v in variants):
+        parser.error('Current exports use reconstruction error; reproduce footprint comparisons with their recorded historical driver and runner')
     _, eligible, _ = batch.select_models(args.dataset, 1, 20261012)
     models = [next(m for m in eligible if m['model_id'] == mid) for mid in IDS]
     manifest = {'models': models, 'binary_sha256': batch.sha(args.pair), 'variants': variants,
+                'texture_error_metric': 'reconstruction', 'texture_error_divisor': args.texture_error_divisor,
                 'taus': [2, 0.5, 0.1], 'distance_radii': 2.5, 'viewport': [1280,800],
                 'selection': 'Purposive: prior quality outliers, savings, no-savings and original two lion cases; not representative of collection.'}
     args.out.mkdir(parents=True, exist_ok=True); args.scratch.mkdir(parents=True, exist_ok=True)
@@ -85,11 +92,17 @@ def main():
             obj = scratch/'source'/'model.obj'
             build = scratch/'build'; build.mkdir(exist_ok=True)
             filenames = {label:build/f'model.{label}.nxs' for label in variants}
-            if not (args.reuse_builds and all(f.exists() for f in filenames.values())):
+            stamp = build/'build-config.json'
+            config = {'binary_sha256':manifest['binary_sha256'], 'source_sha256':model['source_sha256'],
+                      'texture_error_divisor':args.texture_error_divisor}
+            reuse = args.reuse_builds and stamp.exists() and json.loads(stamp.read_text()) == config
+            if not (reuse and all(f.exists() for f in filenames.values())):
                 conversion = batch.execute([args.node,str(HERE/'gltf-to-obj.mjs'),model['source'],str(obj)],scratch,logs/'conversion.log',120)
                 if conversion['status'] != 'ok': raise RuntimeError('Conversion failed')
-                built = batch.execute([str(args.pair),str(obj),'-o',str(build/'model.nxs')],build,logs/'build.log',600)
+                built = batch.execute([str(args.pair),str(obj),'-o',str(build/'model.nxs'),
+                                       '--texture-error-divisor',str(args.texture_error_divisor)],build,logs/'build.log',600)
                 if built['status'] != 'ok': raise RuntimeError('Build failed')
+                batch.atomic_json(stamp,config)
             state['artifacts'] = {label:batch.artifact(file) for label,file in filenames.items()}
             if len({a['geometry_sha256'] for a in state['artifacts'].values()}) != 1:
                 raise RuntimeError('Export variants changed geometry')

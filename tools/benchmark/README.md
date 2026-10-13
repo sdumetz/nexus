@@ -122,3 +122,20 @@ python3 tests/run_round1.py /absolute/path/build
 
 Also run a model twice under two labels: identical captures and cache allocations
 across fresh contexts check benchmark reproducibility.
+
+## Current reconstruction exports
+
+The current builder always uses reconstruction error and exposes
+`--texture-error-divisor` (default 2). The paired driver now exports only
+`reconstruction` (full baked sizes) and `reconstructionFine` (fine dimensions,
+ratio 1), with the requested divisor on both. Run the targeted runner with
+`--texture-error-divisor 1` to test the original round 4 contribution, or 2 for
+the current default. The divisor is frozen in the manifest and scratch build
+stamp, so resumed builds cannot silently reuse exports at another setting.
+
+For historical round1/round2/fine controls, use the source and driver revisions
+recorded in the reports: `e3d884c` for round 3, `322f90c` for round 4. The CSVs and
+screenshots are preserved as historical measurements.
+
+The PR-ready branch `decoupled_textures-code` excludes this benchmark tooling and
+all measurement artifacts; see [commit separation](../../doc/texture-pr-preparation.md).

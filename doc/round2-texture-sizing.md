@@ -1,5 +1,9 @@
 # Round 2: size textures from geometric error
 
+This describes a historical experiment. The current builder always uses
+[round 4 reconstruction error](round4-reconstruction-error.md), divided by 2
+by default; ratio 0 now preserves sizes without reverting the error metric.
+
 The default texture error ratio is **1**. At export, choose the coarsest
 successive halving of the baked image whose world-space texel error does not
 exceed the node's geometric error. Recompute texel error at every candidate

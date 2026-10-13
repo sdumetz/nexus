@@ -1,5 +1,9 @@
 # Round 1: combined geometry and texture error
 
+This describes a historical experiment. The current builder always uses
+[round 4 reconstruction error](round4-reconstruction-error.md), divided by 2
+by default; ratio 0 now preserves sizes without reverting the error metric.
+
 Round 2 now enables export-time texture sizing by default. Use
 `--texture-error-ratio 0` to reproduce the round 1 behavior described here;
 see [round 2](round2-texture-sizing.md) for the new default.

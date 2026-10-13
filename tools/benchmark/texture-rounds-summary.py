@@ -11,6 +11,8 @@ def summarize(directory, comparisons, previous_directory=None):
     rows = list(csv.DictReader((directory/'results.csv').open()))
     models = json.loads((directory/'selection.json').read_text())['models']
     variants = json.loads((directory/'selection.json').read_text())['variants']
+    if previous_directory and not {'round1','fine'}.issubset(variants):
+        raise ValueError('--previous validation requires the historical round1/fine variants')
     assert len(rows) == len(models)*len(variants)*3
     indexed = {(r['model_id'],r['variant'],r['requested_error_pixels']):r for r in rows}
     assert len(indexed) == len(rows)
@@ -28,6 +30,7 @@ def summarize(directory, comparisons, previous_directory=None):
                 assert all(w%4==0 and h%4==0 for w,h in state['artifacts'][variant]['texture_sizes'])
         if 'reconstruction' in variants:
             for a,b in [('round1','reconstruction'),('fine','reconstructionFine')]:
+                if a not in state['artifacts'] or b not in state['artifacts']: continue
                 assert state['artifacts'][a]['texture_sha256']==state['artifacts'][b]['texture_sha256']
                 assert state['artifacts'][a]['texture_sizes']==state['artifacts'][b]['texture_sizes']
         if previous_directory:

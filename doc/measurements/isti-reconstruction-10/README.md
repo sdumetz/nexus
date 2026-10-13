@@ -1,5 +1,11 @@
 # Round 4: reconstruction-loss approximation on ten ISTI models
 
+**Historical benchmark:** all reconstruction variants below used divisor **1**.
+The current builder always uses reconstruction error with default divisor **2**;
+these CSVs and screenshots have not been rerun for that default. To reproduce
+this exact comparison, use the builder, paired-export driver and runner from
+commit `322f90c`. Current tooling exports only reconstruction variants.
+
 Same deliberately selected models, fixed camera, source renders, viewport and
 requested errors as [round 3](../isti-fine-10/README.md). This sample emphasizes
 previous gains and outliers; its aggregates are not collection-wide estimates.
@@ -21,8 +27,9 @@ JPEG and smoothly reconstructing its full dimensions. The experimental term is
 Changing only the metric leaves all geometry and JPEG payloads unchanged.
 The resizing rule itself retains the original footprint criterion. Thus this
 experiment separately evaluates traversal and texture dimensions, with no file
-format or viewer changes. The reconstruction metric is opt-in; the default
-remains the footprint metric.
+format or viewer changes. At the time of this benchmark, reconstruction was
+opt-in and footprint was the default. That historical mode switch has since
+been removed.
 
 `graph.csv` contains MiB, savings percentages and image metrics per model,
 variant and requested error; `results.csv` retains raw byte counts and audit
@@ -79,12 +86,14 @@ The rock RWT14 at 2 px drops from 40 to 27 resident nodes, saving 38.56% cache;
 
 The inexpensive reference cannot detect detail already missing in a coarse
 baked atlas. Low JPEG reconstruction loss therefore does not imply fidelity to
-the original textured surface. Keep this mode opt-in; the next error experiment
+the original textured surface. The benchmark originally recommended keeping
+this mode opt-in. It has since been adopted as the only metric, with a divisor
+of 2 for subsequent tuning; these quality limitations remain. The next error experiment
 should include loss from baking/simplification relative to finer or original
 source samples, rather than only loss added at export. That measurement could
 still be computed by the builder and stored in the existing error field.
 
-Reproduce:
+Reproduce the historical comparison with commit `322f90c`:
 
 ```sh
 python3 tools/benchmark/build-pair.py BUILD_DIR --compile-only /tmp/nexus-reconstruction-pair
