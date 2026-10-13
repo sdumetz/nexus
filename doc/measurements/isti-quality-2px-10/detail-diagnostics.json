@@ -1,0 +1,722 @@
+[
+  {
+    "model_id": "RWT14",
+    "factor": 0.25,
+    "reference_gradient_rms": 10.042803854887426,
+    "candidate_gradient_rms": 8.355538381680619,
+    "retained_gradient_fraction": 0.8319925891626686,
+    "foreground_interior_edges": 31874
+  },
+  {
+    "model_id": "RWT14",
+    "factor": 0.375,
+    "reference_gradient_rms": 10.042686045461986,
+    "candidate_gradient_rms": 8.912392267552855,
+    "retained_gradient_fraction": 0.88745104917226,
+    "foreground_interior_edges": 31878
+  },
+  {
+    "model_id": "RWT14",
+    "factor": 0.5,
+    "reference_gradient_rms": 10.047520329097996,
+    "candidate_gradient_rms": 9.835087382368034,
+    "retained_gradient_fraction": 0.9788571767190409,
+    "foreground_interior_edges": 31879
+  },
+  {
+    "model_id": "RWT14",
+    "factor": 0.75,
+    "reference_gradient_rms": 10.026400220426853,
+    "candidate_gradient_rms": 10.078954308350237,
+    "retained_gradient_fraction": 1.0052415709295461,
+    "foreground_interior_edges": 31880
+  },
+  {
+    "model_id": "RWT14",
+    "factor": 1.0,
+    "reference_gradient_rms": 10.026400220426853,
+    "candidate_gradient_rms": 10.069605619885275,
+    "retained_gradient_fraction": 1.0043091636587973,
+    "foreground_interior_edges": 31880
+  },
+  {
+    "model_id": "RWT14",
+    "factor": 1.5,
+    "reference_gradient_rms": 9.985502759987767,
+    "candidate_gradient_rms": 11.363654930630414,
+    "retained_gradient_fraction": 1.1380153011588907,
+    "foreground_interior_edges": 31767
+  },
+  {
+    "model_id": "RWT14",
+    "factor": 2.0,
+    "reference_gradient_rms": 9.987537497061188,
+    "candidate_gradient_rms": 11.545720503896314,
+    "retained_gradient_fraction": 1.1560127315961135,
+    "foreground_interior_edges": 31759
+  },
+  {
+    "model_id": "RWT14",
+    "factor": 3.0,
+    "reference_gradient_rms": 9.989821537020813,
+    "candidate_gradient_rms": 11.935516463275336,
+    "retained_gradient_fraction": 1.1947677362447429,
+    "foreground_interior_edges": 31740
+  },
+  {
+    "model_id": "RWT14",
+    "factor": 4.0,
+    "reference_gradient_rms": 9.989546163302922,
+    "candidate_gradient_rms": 11.886895951636463,
+    "retained_gradient_fraction": 1.1899335322462945,
+    "foreground_interior_edges": 31737
+  },
+  {
+    "model_id": "RWT76",
+    "factor": 0.25,
+    "reference_gradient_rms": 8.775530963556823,
+    "candidate_gradient_rms": 6.866061091139604,
+    "retained_gradient_fraction": 0.7824097618312899,
+    "foreground_interior_edges": 91817
+  },
+  {
+    "model_id": "RWT76",
+    "factor": 0.375,
+    "reference_gradient_rms": 8.775530963556823,
+    "candidate_gradient_rms": 8.735379807731984,
+    "retained_gradient_fraction": 0.9954246465551111,
+    "foreground_interior_edges": 91817
+  },
+  {
+    "model_id": "RWT76",
+    "factor": 0.5,
+    "reference_gradient_rms": 8.771701735369101,
+    "candidate_gradient_rms": 9.370807634668196,
+    "retained_gradient_fraction": 1.0682998484642257,
+    "foreground_interior_edges": 91810
+  },
+  {
+    "model_id": "RWT76",
+    "factor": 0.75,
+    "reference_gradient_rms": 8.752197241977363,
+    "candidate_gradient_rms": 11.176104083884384,
+    "retained_gradient_fraction": 1.2769483793488403,
+    "foreground_interior_edges": 91787
+  },
+  {
+    "model_id": "RWT76",
+    "factor": 1.0,
+    "reference_gradient_rms": 8.727967391386741,
+    "candidate_gradient_rms": 11.681000655143631,
+    "retained_gradient_fraction": 1.338341463863753,
+    "foreground_interior_edges": 91768
+  },
+  {
+    "model_id": "RWT76",
+    "factor": 1.5,
+    "reference_gradient_rms": 8.727882196802243,
+    "candidate_gradient_rms": 13.79605876328019,
+    "retained_gradient_fraction": 1.5806880125323926,
+    "foreground_interior_edges": 91765
+  },
+  {
+    "model_id": "RWT76",
+    "factor": 2.0,
+    "reference_gradient_rms": 8.726685550807918,
+    "candidate_gradient_rms": 14.4805723723978,
+    "retained_gradient_fraction": 1.6593438927173427,
+    "foreground_interior_edges": 91763
+  },
+  {
+    "model_id": "RWT76",
+    "factor": 3.0,
+    "reference_gradient_rms": 8.7291746223401,
+    "candidate_gradient_rms": 14.478202336792108,
+    "retained_gradient_fraction": 1.6585992333958854,
+    "foreground_interior_edges": 91763
+  },
+  {
+    "model_id": "RWT76",
+    "factor": 4.0,
+    "reference_gradient_rms": 8.734936160107162,
+    "candidate_gradient_rms": 14.311505417225003,
+    "retained_gradient_fraction": 1.6384212952335333,
+    "foreground_interior_edges": 91769
+  },
+  {
+    "model_id": "RWT139",
+    "factor": 0.25,
+    "reference_gradient_rms": 5.701737688766141,
+    "candidate_gradient_rms": 5.344906367590688,
+    "retained_gradient_fraction": 0.9374170927086841,
+    "foreground_interior_edges": 105323
+  },
+  {
+    "model_id": "RWT139",
+    "factor": 0.375,
+    "reference_gradient_rms": 5.704510949249669,
+    "candidate_gradient_rms": 5.51421121182154,
+    "retained_gradient_fraction": 0.9666404816957781,
+    "foreground_interior_edges": 105344
+  },
+  {
+    "model_id": "RWT139",
+    "factor": 0.5,
+    "reference_gradient_rms": 5.705992223524044,
+    "candidate_gradient_rms": 5.705992223524044,
+    "retained_gradient_fraction": 1.0,
+    "foreground_interior_edges": 105352
+  },
+  {
+    "model_id": "RWT139",
+    "factor": 0.75,
+    "reference_gradient_rms": 5.702044263144389,
+    "candidate_gradient_rms": 5.857115983121104,
+    "retained_gradient_fraction": 1.0271958113301631,
+    "foreground_interior_edges": 105344
+  },
+  {
+    "model_id": "RWT139",
+    "factor": 1.0,
+    "reference_gradient_rms": 5.660642228489748,
+    "candidate_gradient_rms": 6.058281529187921,
+    "retained_gradient_fraction": 1.07024632270467,
+    "foreground_interior_edges": 105294
+  },
+  {
+    "model_id": "RWT139",
+    "factor": 1.5,
+    "reference_gradient_rms": 5.650185948449333,
+    "candidate_gradient_rms": 6.549371638499883,
+    "retained_gradient_fraction": 1.1591426721623785,
+    "foreground_interior_edges": 105267
+  },
+  {
+    "model_id": "RWT139",
+    "factor": 2.0,
+    "reference_gradient_rms": 5.658261275574356,
+    "candidate_gradient_rms": 6.708396513546455,
+    "retained_gradient_fraction": 1.1855932744755593,
+    "foreground_interior_edges": 105272
+  },
+  {
+    "model_id": "RWT139",
+    "factor": 3.0,
+    "reference_gradient_rms": 5.660991992029667,
+    "candidate_gradient_rms": 7.1442697822315475,
+    "retained_gradient_fraction": 1.2620172917202932,
+    "foreground_interior_edges": 105295
+  },
+  {
+    "model_id": "RWT139",
+    "factor": 4.0,
+    "reference_gradient_rms": 5.659830961357568,
+    "candidate_gradient_rms": 7.339352163448959,
+    "retained_gradient_fraction": 1.2967440571208404,
+    "foreground_interior_edges": 105235
+  },
+  {
+    "model_id": "RWT256",
+    "factor": 0.25,
+    "reference_gradient_rms": 12.171725858914423,
+    "candidate_gradient_rms": 9.114711988988084,
+    "retained_gradient_fraction": 0.748843023137313,
+    "foreground_interior_edges": 85733
+  },
+  {
+    "model_id": "RWT256",
+    "factor": 0.375,
+    "reference_gradient_rms": 12.171725858914423,
+    "candidate_gradient_rms": 9.458455954597374,
+    "retained_gradient_fraction": 0.7770842084543103,
+    "foreground_interior_edges": 85733
+  },
+  {
+    "model_id": "RWT256",
+    "factor": 0.5,
+    "reference_gradient_rms": 12.171725858914423,
+    "candidate_gradient_rms": 9.948339727504221,
+    "retained_gradient_fraction": 0.8173318921916221,
+    "foreground_interior_edges": 85733
+  },
+  {
+    "model_id": "RWT256",
+    "factor": 0.75,
+    "reference_gradient_rms": 12.173784870879862,
+    "candidate_gradient_rms": 10.688678906579042,
+    "retained_gradient_fraction": 0.8780078685427367,
+    "foreground_interior_edges": 85735
+  },
+  {
+    "model_id": "RWT256",
+    "factor": 1.0,
+    "reference_gradient_rms": 12.175578089794513,
+    "candidate_gradient_rms": 11.296355045298741,
+    "retained_gradient_fraction": 0.9277879836167507,
+    "foreground_interior_edges": 85737
+  },
+  {
+    "model_id": "RWT256",
+    "factor": 1.5,
+    "reference_gradient_rms": 12.174048348795495,
+    "candidate_gradient_rms": 11.842321500738612,
+    "retained_gradient_fraction": 0.9727513117614895,
+    "foreground_interior_edges": 85735
+  },
+  {
+    "model_id": "RWT256",
+    "factor": 2.0,
+    "reference_gradient_rms": 12.175578089794513,
+    "candidate_gradient_rms": 12.33451854787332,
+    "retained_gradient_fraction": 1.0130540379197297,
+    "foreground_interior_edges": 85737
+  },
+  {
+    "model_id": "RWT256",
+    "factor": 3.0,
+    "reference_gradient_rms": 12.174048348795495,
+    "candidate_gradient_rms": 12.589996315789204,
+    "retained_gradient_fraction": 1.0341667746896095,
+    "foreground_interior_edges": 85735
+  },
+  {
+    "model_id": "RWT256",
+    "factor": 4.0,
+    "reference_gradient_rms": 12.17024317418355,
+    "candidate_gradient_rms": 12.762557409835766,
+    "retained_gradient_fraction": 1.0486690551022577,
+    "foreground_interior_edges": 85735
+  },
+  {
+    "model_id": "RWT292",
+    "factor": 0.25,
+    "reference_gradient_rms": 7.021698935941228,
+    "candidate_gradient_rms": 5.377581617582697,
+    "retained_gradient_fraction": 0.7658519208303048,
+    "foreground_interior_edges": 105053
+  },
+  {
+    "model_id": "RWT292",
+    "factor": 0.375,
+    "reference_gradient_rms": 7.023423825282129,
+    "candidate_gradient_rms": 5.64674376092621,
+    "retained_gradient_fraction": 0.8039873288864754,
+    "foreground_interior_edges": 105062
+  },
+  {
+    "model_id": "RWT292",
+    "factor": 0.5,
+    "reference_gradient_rms": 7.023806433395803,
+    "candidate_gradient_rms": 5.835425928127566,
+    "retained_gradient_fraction": 0.8308067688742257,
+    "foreground_interior_edges": 105066
+  },
+  {
+    "model_id": "RWT292",
+    "factor": 0.75,
+    "reference_gradient_rms": 7.0233529103775085,
+    "candidate_gradient_rms": 6.135233119746995,
+    "retained_gradient_fraction": 0.8735476058282288,
+    "foreground_interior_edges": 105064
+  },
+  {
+    "model_id": "RWT292",
+    "factor": 1.0,
+    "reference_gradient_rms": 6.99296569809937,
+    "candidate_gradient_rms": 6.37937037153349,
+    "retained_gradient_fraction": 0.9122553501538481,
+    "foreground_interior_edges": 105018
+  },
+  {
+    "model_id": "RWT292",
+    "factor": 1.5,
+    "reference_gradient_rms": 6.98132836385948,
+    "candidate_gradient_rms": 6.69172055904247,
+    "retained_gradient_fraction": 0.9585168051518342,
+    "foreground_interior_edges": 104982
+  },
+  {
+    "model_id": "RWT292",
+    "factor": 2.0,
+    "reference_gradient_rms": 6.981584187342453,
+    "candidate_gradient_rms": 7.122890825879558,
+    "retained_gradient_fraction": 1.0202399104193705,
+    "foreground_interior_edges": 104982
+  },
+  {
+    "model_id": "RWT292",
+    "factor": 3.0,
+    "reference_gradient_rms": 6.980842748602434,
+    "candidate_gradient_rms": 7.505846668664993,
+    "retained_gradient_fraction": 1.075206381087393,
+    "foreground_interior_edges": 104979
+  },
+  {
+    "model_id": "RWT292",
+    "factor": 4.0,
+    "reference_gradient_rms": 6.978793876971149,
+    "candidate_gradient_rms": 7.56392945873296,
+    "retained_gradient_fraction": 1.0838448007029784,
+    "foreground_interior_edges": 104967
+  },
+  {
+    "model_id": "RWT319",
+    "factor": 0.25,
+    "reference_gradient_rms": 11.176687827496883,
+    "candidate_gradient_rms": 4.445026721672429,
+    "retained_gradient_fraction": 0.3977051869281681,
+    "foreground_interior_edges": 233009
+  },
+  {
+    "model_id": "RWT319",
+    "factor": 0.375,
+    "reference_gradient_rms": 11.176603990618037,
+    "candidate_gradient_rms": 5.543656422769426,
+    "retained_gradient_fraction": 0.49600544382022754,
+    "foreground_interior_edges": 233013
+  },
+  {
+    "model_id": "RWT319",
+    "factor": 0.5,
+    "reference_gradient_rms": 11.176651764516658,
+    "candidate_gradient_rms": 6.7505157125878865,
+    "retained_gradient_fraction": 0.6039837202425191,
+    "foreground_interior_edges": 233011
+  },
+  {
+    "model_id": "RWT319",
+    "factor": 0.75,
+    "reference_gradient_rms": 11.17676264288852,
+    "candidate_gradient_rms": 8.371075693348565,
+    "retained_gradient_fraction": 0.7489714115629772,
+    "foreground_interior_edges": 233005
+  },
+  {
+    "model_id": "RWT319",
+    "factor": 1.0,
+    "reference_gradient_rms": 11.176651764516658,
+    "candidate_gradient_rms": 9.170282982470317,
+    "retained_gradient_fraction": 0.8204857032035204,
+    "foreground_interior_edges": 233011
+  },
+  {
+    "model_id": "RWT319",
+    "factor": 1.5,
+    "reference_gradient_rms": 11.176742130346945,
+    "candidate_gradient_rms": 10.781910468922293,
+    "retained_gradient_fraction": 0.9646738148898855,
+    "foreground_interior_edges": 233007
+  },
+  {
+    "model_id": "RWT319",
+    "factor": 2.0,
+    "reference_gradient_rms": 11.176603990618037,
+    "candidate_gradient_rms": 11.176603990618037,
+    "retained_gradient_fraction": 1.0,
+    "foreground_interior_edges": 233013
+  },
+  {
+    "model_id": "RWT319",
+    "factor": 3.0,
+    "reference_gradient_rms": 11.173546965405764,
+    "candidate_gradient_rms": 11.544998065449462,
+    "retained_gradient_fraction": 1.0332437945796211,
+    "foreground_interior_edges": 233009
+  },
+  {
+    "model_id": "RWT319",
+    "factor": 4.0,
+    "reference_gradient_rms": 11.173546965405764,
+    "candidate_gradient_rms": 11.544998065449462,
+    "retained_gradient_fraction": 1.0332437945796211,
+    "foreground_interior_edges": 233009
+  },
+  {
+    "model_id": "RWT408",
+    "factor": 0.25,
+    "reference_gradient_rms": 9.064405168577801,
+    "candidate_gradient_rms": 7.938071902625547,
+    "retained_gradient_fraction": 0.8757410723588633,
+    "foreground_interior_edges": 236648
+  },
+  {
+    "model_id": "RWT408",
+    "factor": 0.375,
+    "reference_gradient_rms": 9.064405168577801,
+    "candidate_gradient_rms": 8.370401286305809,
+    "retained_gradient_fraction": 0.9234363568965572,
+    "foreground_interior_edges": 236648
+  },
+  {
+    "model_id": "RWT408",
+    "factor": 0.5,
+    "reference_gradient_rms": 9.055794863905938,
+    "candidate_gradient_rms": 8.644479759728064,
+    "retained_gradient_fraction": 0.9545799004549816,
+    "foreground_interior_edges": 236638
+  },
+  {
+    "model_id": "RWT408",
+    "factor": 0.75,
+    "reference_gradient_rms": 9.048910556380966,
+    "candidate_gradient_rms": 8.995014236584142,
+    "retained_gradient_fraction": 0.9940438885475757,
+    "foreground_interior_edges": 236628
+  },
+  {
+    "model_id": "RWT408",
+    "factor": 1.0,
+    "reference_gradient_rms": 9.015629576852573,
+    "candidate_gradient_rms": 9.120047581314946,
+    "retained_gradient_fraction": 1.0115818871629845,
+    "foreground_interior_edges": 236575
+  },
+  {
+    "model_id": "RWT408",
+    "factor": 1.5,
+    "reference_gradient_rms": 8.978247531956313,
+    "candidate_gradient_rms": 9.487390723945586,
+    "retained_gradient_fraction": 1.0567085269343575,
+    "foreground_interior_edges": 236517
+  },
+  {
+    "model_id": "RWT408",
+    "factor": 2.0,
+    "reference_gradient_rms": 8.964438447685355,
+    "candidate_gradient_rms": 9.792622977024688,
+    "retained_gradient_fraction": 1.0923855447468853,
+    "foreground_interior_edges": 236504
+  },
+  {
+    "model_id": "RWT408",
+    "factor": 3.0,
+    "reference_gradient_rms": 8.94804405260797,
+    "candidate_gradient_rms": 10.162472494232322,
+    "retained_gradient_fraction": 1.1357199891377825,
+    "foreground_interior_edges": 236486
+  },
+  {
+    "model_id": "RWT408",
+    "factor": 4.0,
+    "reference_gradient_rms": 8.94804405260797,
+    "candidate_gradient_rms": 10.705038107684949,
+    "retained_gradient_fraction": 1.1963550966833798,
+    "foreground_interior_edges": 236486
+  },
+  {
+    "model_id": "RWT471",
+    "factor": 0.25,
+    "reference_gradient_rms": 6.89709876759941,
+    "candidate_gradient_rms": 4.6813038726494165,
+    "retained_gradient_fraction": 0.6787352233725922,
+    "foreground_interior_edges": 175586
+  },
+  {
+    "model_id": "RWT471",
+    "factor": 0.375,
+    "reference_gradient_rms": 6.89709876759941,
+    "candidate_gradient_rms": 5.184611408753282,
+    "retained_gradient_fraction": 0.7517090277304855,
+    "foreground_interior_edges": 175586
+  },
+  {
+    "model_id": "RWT471",
+    "factor": 0.5,
+    "reference_gradient_rms": 6.896359739476942,
+    "candidate_gradient_rms": 5.482040383552787,
+    "retained_gradient_fraction": 0.7949179843638167,
+    "foreground_interior_edges": 175584
+  },
+  {
+    "model_id": "RWT471",
+    "factor": 0.75,
+    "reference_gradient_rms": 6.89709876759941,
+    "candidate_gradient_rms": 5.896980444879888,
+    "retained_gradient_fraction": 0.8549943452429896,
+    "foreground_interior_edges": 175586
+  },
+  {
+    "model_id": "RWT471",
+    "factor": 1.0,
+    "reference_gradient_rms": 6.896359739476942,
+    "candidate_gradient_rms": 6.241252763504709,
+    "retained_gradient_fraction": 0.9050068440858451,
+    "foreground_interior_edges": 175584
+  },
+  {
+    "model_id": "RWT471",
+    "factor": 1.5,
+    "reference_gradient_rms": 6.896359739476942,
+    "candidate_gradient_rms": 6.624220882900059,
+    "retained_gradient_fraction": 0.960538767283401,
+    "foreground_interior_edges": 175584
+  },
+  {
+    "model_id": "RWT471",
+    "factor": 2.0,
+    "reference_gradient_rms": 6.895802318943244,
+    "candidate_gradient_rms": 6.7637460088487185,
+    "retained_gradient_fraction": 0.9808497540986988,
+    "foreground_interior_edges": 175582
+  },
+  {
+    "model_id": "RWT471",
+    "factor": 3.0,
+    "reference_gradient_rms": 6.89709876759941,
+    "candidate_gradient_rms": 6.885974501478322,
+    "retained_gradient_fraction": 0.9983871093490285,
+    "foreground_interior_edges": 175586
+  },
+  {
+    "model_id": "RWT471",
+    "factor": 4.0,
+    "reference_gradient_rms": 6.89709876759941,
+    "candidate_gradient_rms": 6.872568632315804,
+    "retained_gradient_fraction": 0.9964434124970283,
+    "foreground_interior_edges": 175586
+  },
+  {
+    "model_id": "RWT500",
+    "factor": 0.25,
+    "reference_gradient_rms": 10.719180627890049,
+    "candidate_gradient_rms": 8.769264507357502,
+    "retained_gradient_fraction": 0.818090935471402,
+    "foreground_interior_edges": 8400
+  },
+  {
+    "model_id": "RWT500",
+    "factor": 0.375,
+    "reference_gradient_rms": 10.716336451967623,
+    "candidate_gradient_rms": 9.389008501259907,
+    "retained_gradient_fraction": 0.8761397650533821,
+    "foreground_interior_edges": 8418
+  },
+  {
+    "model_id": "RWT500",
+    "factor": 0.5,
+    "reference_gradient_rms": 10.682931705567402,
+    "candidate_gradient_rms": 10.91697698736199,
+    "retained_gradient_fraction": 1.021908338295621,
+    "foreground_interior_edges": 8382
+  },
+  {
+    "model_id": "RWT500",
+    "factor": 0.75,
+    "reference_gradient_rms": 10.671142637906962,
+    "candidate_gradient_rms": 13.790376665196291,
+    "retained_gradient_fraction": 1.292305532137572,
+    "foreground_interior_edges": 8310
+  },
+  {
+    "model_id": "RWT500",
+    "factor": 1.0,
+    "reference_gradient_rms": 10.670972748792115,
+    "candidate_gradient_rms": 14.555929211824347,
+    "retained_gradient_fraction": 1.3640676960281792,
+    "foreground_interior_edges": 8309
+  },
+  {
+    "model_id": "RWT500",
+    "factor": 1.5,
+    "reference_gradient_rms": 10.708940090521349,
+    "candidate_gradient_rms": 17.58598085718448,
+    "retained_gradient_fraction": 1.6421775365752682,
+    "foreground_interior_edges": 8327
+  },
+  {
+    "model_id": "RWT500",
+    "factor": 2.0,
+    "reference_gradient_rms": 10.714237448923981,
+    "candidate_gradient_rms": 17.46368188385699,
+    "retained_gradient_fraction": 1.629950985042883,
+    "foreground_interior_edges": 8327
+  },
+  {
+    "model_id": "RWT500",
+    "factor": 3.0,
+    "reference_gradient_rms": 10.67319339928882,
+    "candidate_gradient_rms": 15.187180079088348,
+    "retained_gradient_fraction": 1.4229274698704801,
+    "foreground_interior_edges": 8319
+  },
+  {
+    "model_id": "RWT500",
+    "factor": 4.0,
+    "reference_gradient_rms": 10.670834397120464,
+    "candidate_gradient_rms": 14.746935796449899,
+    "retained_gradient_fraction": 1.3819852551014544,
+    "foreground_interior_edges": 8320
+  },
+  {
+    "model_id": "RWT514",
+    "factor": 0.25,
+    "reference_gradient_rms": 9.217029210630656,
+    "candidate_gradient_rms": 5.630456208476631,
+    "retained_gradient_fraction": 0.6108753785853933,
+    "foreground_interior_edges": 68381
+  },
+  {
+    "model_id": "RWT514",
+    "factor": 0.375,
+    "reference_gradient_rms": 9.216693884037076,
+    "candidate_gradient_rms": 7.895243731962,
+    "retained_gradient_fraction": 0.8566242766982017,
+    "foreground_interior_edges": 68387
+  },
+  {
+    "model_id": "RWT514",
+    "factor": 0.5,
+    "reference_gradient_rms": 9.214827164035128,
+    "candidate_gradient_rms": 9.770917956918773,
+    "retained_gradient_fraction": 1.0603473926297862,
+    "foreground_interior_edges": 68376
+  },
+  {
+    "model_id": "RWT514",
+    "factor": 0.75,
+    "reference_gradient_rms": 9.209815741880268,
+    "candidate_gradient_rms": 11.125743705635879,
+    "retained_gradient_fraction": 1.2080310852521416,
+    "foreground_interior_edges": 68357
+  },
+  {
+    "model_id": "RWT514",
+    "factor": 1.0,
+    "reference_gradient_rms": 9.210372847358505,
+    "candidate_gradient_rms": 12.214695717818847,
+    "retained_gradient_fraction": 1.3261890609913767,
+    "foreground_interior_edges": 68348
+  },
+  {
+    "model_id": "RWT514",
+    "factor": 1.5,
+    "reference_gradient_rms": 9.215036599671832,
+    "candidate_gradient_rms": 13.363308587893503,
+    "retained_gradient_fraction": 1.4501633762767043,
+    "foreground_interior_edges": 68351
+  },
+  {
+    "model_id": "RWT514",
+    "factor": 2.0,
+    "reference_gradient_rms": 9.215167837046723,
+    "candidate_gradient_rms": 13.46377601472362,
+    "retained_gradient_fraction": 1.4610451217824474,
+    "foreground_interior_edges": 68355
+  },
+  {
+    "model_id": "RWT514",
+    "factor": 3.0,
+    "reference_gradient_rms": 9.215192316615655,
+    "candidate_gradient_rms": 13.552367746755987,
+    "retained_gradient_fraction": 1.4706549012894818,
+    "foreground_interior_edges": 68353
+  },
+  {
+    "model_id": "RWT514",
+    "factor": 4.0,
+    "reference_gradient_rms": 9.215576292549143,
+    "candidate_gradient_rms": 14.21600664739162,
+    "retained_gradient_fraction": 1.5426063651478161,
+    "foreground_interior_edges": 68322
+  }
+]

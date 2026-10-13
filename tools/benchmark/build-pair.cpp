@@ -7,6 +7,8 @@
 #include <QLocale>
 #include <filesystem>
 #include <iostream>
+#include <cstdlib>
+#include <sstream>
 
 int main(int argc, char **argv) {
   QCoreApplication app(argc, argv);
@@ -23,6 +25,20 @@ int main(int argc, char **argv) {
     hierarchy.build_hierarchy(params);
     nx::ExportNxs reconstruction, reconstructionFine, divisor1, divisor2;
     const auto prefix = std::filesystem::path(params.output.toStdString()).replace_extension().string();
+    // Experiment-only sweep; production CLI and its default remain unchanged.
+    if (const char *sweep = std::getenv("NEXUS_BENCH_FACTORS")) {
+      std::istringstream input(sweep);
+      std::string value;
+      while (std::getline(input, value, ',')) {
+        const double factor = std::stod(value);
+        if (!(factor > 0) || !std::isfinite(factor)) throw std::runtime_error("Invalid sweep factor");
+        auto label = value;
+        std::replace(label.begin(), label.end(), '.', '_');
+        nx::ExportNxs exporter;
+        exporter.export_nxs(hierarchy, prefix + ".factor" + label + ".nxs", params.texture_error_ratio, false, factor);
+      }
+      return 0;
+    }
     reconstruction.export_nxs(hierarchy, prefix + ".reconstruction.nxs", 0, false, params.texture_error_divisor);
     reconstructionFine.export_nxs(hierarchy, prefix + ".reconstructionFine.nxs", params.texture_error_ratio, false, params.texture_error_divisor);
     divisor1.export_nxs(hierarchy, prefix + ".divisor1.nxs", params.texture_error_ratio, false, 1);

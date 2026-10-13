@@ -1,0 +1,113 @@
+{
+  "criteria": {
+    "psnr_loss_db": 0.15,
+    "block_ssim_loss": 0.005,
+    "gradient_rmse_growth_pct": null,
+    "minimum_upstream_gradient_retention": 0.95
+  },
+  "checks": [
+    {
+      "model_id": "RWT14",
+      "geometry_match": true,
+      "all_allocation_audits_passed": true,
+      "historical_upstream_payloads_camera_allocations_and_metrics_match": true,
+      "prior_factor1_factor2_payloads_allocations_and_metrics_match": true
+    },
+    {
+      "model_id": "RWT76",
+      "geometry_match": true,
+      "all_allocation_audits_passed": true,
+      "historical_upstream_payloads_camera_allocations_and_metrics_match": true,
+      "prior_factor1_factor2_payloads_allocations_and_metrics_match": true
+    },
+    {
+      "model_id": "RWT139",
+      "geometry_match": true,
+      "all_allocation_audits_passed": true,
+      "historical_upstream_payloads_camera_allocations_and_metrics_match": null,
+      "prior_factor1_factor2_payloads_allocations_and_metrics_match": true
+    },
+    {
+      "model_id": "RWT256",
+      "geometry_match": true,
+      "all_allocation_audits_passed": true,
+      "historical_upstream_payloads_camera_allocations_and_metrics_match": true,
+      "prior_factor1_factor2_payloads_allocations_and_metrics_match": true
+    },
+    {
+      "model_id": "RWT292",
+      "geometry_match": true,
+      "all_allocation_audits_passed": true,
+      "historical_upstream_payloads_camera_allocations_and_metrics_match": true,
+      "prior_factor1_factor2_payloads_allocations_and_metrics_match": true
+    },
+    {
+      "model_id": "RWT319",
+      "geometry_match": true,
+      "all_allocation_audits_passed": true,
+      "historical_upstream_payloads_camera_allocations_and_metrics_match": true,
+      "prior_factor1_factor2_payloads_allocations_and_metrics_match": true
+    },
+    {
+      "model_id": "RWT408",
+      "geometry_match": true,
+      "all_allocation_audits_passed": true,
+      "historical_upstream_payloads_camera_allocations_and_metrics_match": true,
+      "prior_factor1_factor2_payloads_allocations_and_metrics_match": true
+    },
+    {
+      "model_id": "RWT471",
+      "geometry_match": true,
+      "all_allocation_audits_passed": true,
+      "historical_upstream_payloads_camera_allocations_and_metrics_match": true,
+      "prior_factor1_factor2_payloads_allocations_and_metrics_match": true
+    },
+    {
+      "model_id": "RWT500",
+      "geometry_match": true,
+      "all_allocation_audits_passed": true,
+      "historical_upstream_payloads_camera_allocations_and_metrics_match": true,
+      "prior_factor1_factor2_payloads_allocations_and_metrics_match": true
+    },
+    {
+      "model_id": "RWT514",
+      "geometry_match": true,
+      "all_allocation_audits_passed": true,
+      "historical_upstream_payloads_camera_allocations_and_metrics_match": true,
+      "prior_factor1_factor2_payloads_allocations_and_metrics_match": true
+    }
+  ],
+  "global_choices": [
+    {
+      "requested_error_pixels": 2.0,
+      "factor": 1.5,
+      "models": 10,
+      "quality_accepted": 10,
+      "median_gpu_saving_pct": -71.26836843506548,
+      "weighted_gpu_saving_pct": 34.57525964650421,
+      "median_source_psnr_change_db": 1.0943602751148234,
+      "worst_source_psnr_change_db": -0.13357583543689344,
+      "worst_source_block_ssim_change": 0.0038196987981606867,
+      "worst_source_gradient_change_pct": 24.285099318134762,
+      "worst_retained_upstream_gradient_fraction": 0.9585168051518342,
+      "median_file_saving_pct": 7.770325168607001,
+      "weighted_file_saving_pct": 9.353444678681711
+    }
+  ],
+  "matched_summary": [
+    {
+      "requested_error_pixels": 2.0,
+      "models": 10,
+      "quality_accepted": 10,
+      "median_gpu_saving_pct": 4.602223289947204,
+      "weighted_gpu_saving_pct": 58.71980716220793,
+      "median_source_psnr_change_db": 0.06300303927796591,
+      "worst_source_psnr_change_db": -0.13357583543689344,
+      "worst_source_block_ssim_change": 0.00036833101559041737,
+      "worst_source_gradient_change_pct": 2.354105468786183,
+      "worst_retained_upstream_gradient_fraction": 0.9545799004549816,
+      "median_file_saving_pct": 21.13193295421426,
+      "weighted_file_saving_pct": 19.808127025134347
+    }
+  ]
+}

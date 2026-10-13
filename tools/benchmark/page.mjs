@@ -185,7 +185,7 @@ window.bench = {
     const canvas = document.createElement('canvas'); canvas.width = innerWidth; canvas.height = innerHeight;
     const ctx = canvas.getContext('2d'); ctx.drawImage(image, 0, 0);
     const previous = ctx.getImageData(0, 0, innerWidth, innerHeight).data;
-    const { metrics, heat } = imageDiff(previous, current);
+    const { metrics, heat } = imageDiff(previous, current, [32, 35, 38], innerWidth);
     ctx.putImageData(new ImageData(new Uint8ClampedArray(heat), innerWidth, innerHeight), 0, 0);
     return { ...metrics, heatPng: canvas.toDataURL('image/png').split(',')[1] };
   },

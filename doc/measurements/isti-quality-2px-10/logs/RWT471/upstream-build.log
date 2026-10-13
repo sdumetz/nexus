@@ -1,0 +1,66 @@
+QCommandLineOption: Option names cannot be empty
+
+Build Parameters:
+  Input files: 1 file(s)
+  Output: model.nxs
+  Faces per cluster: 128
+  Clusters per node: 8
+  Faces per macro-node: 32768
+  Scaling: 0.5
+  Texel weight: 0.05
+  Triangle/texel ratio: 6
+  Texture format: JPEG (quality: 95)
+  Threads: 4
+  Translate: (0, 0, 0)
+  Scale: (1, 1, 1)
+
+Mapped normals check initial: checked=12546 opposite=19
+Building mesh hierarchy...
+Building initial clusters and micronodes...
+Saved post-initialization state to "/tmp/nexus-quality-sweep-10/RWT471/upstream/nxs_cache_fa2ed0a3/state.json"
+
+--- Level 1 ---
+Micronodes: 13
+Triangles: 12546
+Tex res: 512
+Saved state for level 1 to "/tmp/nexus-quality-sweep-10/RWT471/upstream/nxs_cache_ac2444d5/state.json"
+
+--- Level 2 ---
+Micronodes: 10
+Triangles: 11290
+Tex res: 256
+Saved state for level 2 to "/tmp/nexus-quality-sweep-10/RWT471/upstream/nxs_cache_410df3c1/state.json"
+
+--- Level 3 ---
+Micronodes: 10
+Triangles: 10160
+Tex res: 128
+Saved state for level 3 to "/tmp/nexus-quality-sweep-10/RWT471/upstream/nxs_cache_21bf8c64/state.json"
+
+--- Level 4 ---
+Micronodes: 9
+Triangles: 9144
+Tex res: 64
+Saved state for level 4 to "/tmp/nexus-quality-sweep-10/RWT471/upstream/nxs_cache_17a0e1be/state.json"
+
+--- Level 5 ---
+Micronodes: 8
+Triangles: 8230
+Tex res: 64
+Saved state for level 5 to "/tmp/nexus-quality-sweep-10/RWT471/upstream/nxs_cache_52d6ee86/state.json"
+
+--- Level 6 ---
+Micronodes: 4
+Triangles: 4112
+Tex res: 64
+Saved state for level 6 to "/tmp/nexus-quality-sweep-10/RWT471/upstream/nxs_cache_5cfcc987/state.json"
+
+--- Level 7 ---
+Micronodes: 2
+Triangles: 2054
+Tex res: 64
+Saved state for level 7 to "/tmp/nexus-quality-sweep-10/RWT471/upstream/nxs_cache_069cf9f3/state.json"
+
+--- Level 8 ---
+Micronodes: 1
+Triangles: 1026

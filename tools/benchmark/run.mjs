@@ -12,6 +12,7 @@ const repo = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
 const args = process.argv.slice(2), models = [];
 let out = 'benchmark-results', three, source, poses;
 let loadingMode = 'traverse';
+let baselineOnly = false;
 let views = [6, 2.5, 1.2, 0.6], taus = [2], width = 1280, height = 800, chrome = '/usr/bin/chromium', timeoutMs = 120000;
 for (let i = 0; i < args.length; ++i) {
   const key = args[i], value = args[++i];
@@ -33,6 +34,10 @@ for (let i = 0; i < args.length; ++i) {
   else if (key === '--chrome') chrome = value;
   else if (key === '--timeout-ms') timeoutMs = Number(value);
   else if (key === '--loading-mode') loadingMode = value;
+  else if (key === '--comparison-mode') {
+    if (!['all', 'baseline'].includes(value)) throw new Error('Comparison mode must be all or baseline');
+    baselineOnly = value === 'baseline';
+  }
   else throw new Error(`Unknown option ${key}`);
 }
 if (!models.length) throw new Error('Supply at least one --model label=file.nxs (the first is the comparison baseline)');
@@ -104,7 +109,7 @@ try {
       images.set(`${job.label}/${job.view}/${job.tau}/${mode}`, png);
       const references = [];
       if (job.kind !== 'source') {
-        for (let id = 0; id < job.id; ++id) references.push({ label: models[id].label, tau: job.tau });
+        for (let id = 0; id < job.id; ++id) if (!baselineOnly || id === 0) references.push({ label: models[id].label, tau: job.tau });
         if (source) references.push({ label: 'source', tau: 0 });
       }
       for (const reference of references) {

@@ -1,0 +1,56 @@
+QCommandLineOption: Option names cannot be empty
+Mapped normals check initial: checked=110188 opposite=4
+Building initial clusters and micronodes...
+Saved post-initialization state to "/tmp/nexus-quality-sweep-10/RWT408/sweep/nxs_cache_4b55ea1f/state.json"
+
+--- Level 1 ---
+Micronodes: 108
+Triangles: 110188
+Tex res: 64
+Saved state for level 1 to "/tmp/nexus-quality-sweep-10/RWT408/sweep/nxs_cache_e8290c1d/state.json"
+
+--- Level 2 ---
+Micronodes: 93
+Triangles: 99140
+Tex res: 64
+Saved state for level 2 to "/tmp/nexus-quality-sweep-10/RWT408/sweep/nxs_cache_58a80b2c/state.json"
+
+--- Level 3 ---
+Micronodes: 46
+Triangles: 49548
+Tex res: 64
+Saved state for level 3 to "/tmp/nexus-quality-sweep-10/RWT408/sweep/nxs_cache_4e8c2a79/state.json"
+
+--- Level 4 ---
+Micronodes: 23
+Triangles: 24768
+Tex res: 64
+Saved state for level 4 to "/tmp/nexus-quality-sweep-10/RWT408/sweep/nxs_cache_4a294407/state.json"
+
+--- Level 5 ---
+Micronodes: 12
+Triangles: 12374
+Tex res: 64
+Saved state for level 5 to "/tmp/nexus-quality-sweep-10/RWT408/sweep/nxs_cache_1f8f3c1d/state.json"
+
+--- Level 6 ---
+Micronodes: 6
+Triangles: 6182
+Tex res: 64
+Saved state for level 6 to "/tmp/nexus-quality-sweep-10/RWT408/sweep/nxs_cache_1e2c00ab/state.json"
+
+--- Level 7 ---
+Micronodes: 3
+Triangles: 3088
+Tex res: 64
+Saved state for level 7 to "/tmp/nexus-quality-sweep-10/RWT408/sweep/nxs_cache_9a23084b/state.json"
+
+--- Level 8 ---
+Micronodes: 2
+Triangles: 1542
+Tex res: 64
+Saved state for level 8 to "/tmp/nexus-quality-sweep-10/RWT408/sweep/nxs_cache_985787cb/state.json"
+
+--- Level 9 ---
+Micronodes: 1
+Triangles: 770

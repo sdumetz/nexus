@@ -42,3 +42,18 @@ test('image differences use model pixels instead of diluting errors with backgro
   const almostBackground = backgroundChange.slice(); almostBackground[0]++;
   assert.equal(imageDiff(backgroundChange, almostBackground).metrics.identical, false);
 });
+
+test('structural diagnostics detect detail loss even when mean luminance is preserved', () => {
+  const sharp = new Uint8Array(8*8*4), soft = new Uint8Array(sharp.length);
+  for (let i=0; i<64; i++) {
+    const value = i%2 ? 200 : 56;
+    sharp.set([value,value,value,255],i*4);
+    soft.set([128,128,128,255],i*4);
+  }
+  const same=imageDiff(sharp,sharp,[32,35,38],8).metrics;
+  const blur=imageDiff(sharp,soft,[32,35,38],8).metrics;
+  assert.equal(same.blockSsim,1);
+  assert.equal(same.luminanceGradientRmse,0);
+  assert.ok(blur.blockSsim<0.02);
+  assert.ok(blur.luminanceGradientRmse>90);
+});

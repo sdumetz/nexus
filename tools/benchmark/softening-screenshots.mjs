@@ -6,9 +6,20 @@ import { fileURLToPath } from 'node:url';
 import { launch } from './chrome.mjs';
 const repo = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const precision = process.argv.includes('--precision');
-const out = path.join(repo, precision ? 'doc/measurements/isti-precision-10/comparisons' : 'doc/measurements/softening-comparisons');
+const qualityIndex = process.argv.indexOf('--quality-factor');
+const qualityFactor = qualityIndex >= 0 ? process.argv[qualityIndex+1] : undefined;
+if (qualityIndex >= 0 && !(Number(qualityFactor)>0)) throw new Error('Supply a positive --quality-factor');
+const out = path.join(repo, qualityFactor ? 'doc/measurements/isti-quality-2px-10/comparisons' : precision ? 'doc/measurements/isti-precision-10/comparisons' : 'doc/measurements/softening-comparisons');
 await fs.mkdir(out, { recursive: true });
-const cases = precision ? [
+const cases = qualityFactor ? [
+  {id:'rock-upstream',model:'RWT76',title:'Mossy rock',x:520,y:300},
+  {id:'lion-upstream',model:'RWT139',title:'Lion sculpture',x:520,y:255},
+  {id:'cake-upstream',model:'RWT319',title:'Cake',x:555,y:350},
+  {id:'tart-upstream',model:'RWT471',title:'Lemon meringue tart',x:560,y:420},
+].map(c=>({...c,title:`${c.title} — upstream vs factor ${qualityFactor}, 2 px`,
+  root:`isti-quality-2px-10/screenshots/${c.model}`,left:'upstream',right:`factor${qualityFactor.replace('.', '_')}`,tau:'2',
+  leftLabel:'Upstream v4-fixes',rightLabel:`Texture changes: factor ${qualityFactor}`,
+  note:'Same requested screen-space error, camera and source. Compare detail and silhouette.'})) : precision ? [
   { id:'lion-precision', title:'Lion sculpture — precision factor 1 vs 2, 0.5 px',
     root:'isti-precision-10/screenshots/RWT139',left:'divisor1',right:'divisor2',tau:'0.5',
     leftLabel:'Factor 1: original round 4',rightLabel:'Factor 2: tighter texture tolerance',x:520,y:255,

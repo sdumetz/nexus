@@ -41,3 +41,11 @@ Measurements and tooling stay on the experiment branch in separate commits.
 Current benchmark tooling records the tuning semantics and factor in its
 manifest and scratch configuration. Historical footprint comparisons use the
 historical revisions identified in their reports.
+
+The subsequent upstream quality calibration is in
+`doc/measurements/isti-quality-2px-10`. At requested screen-space error 2 px,
+factor 1.5 is the lowest tested common value that passes the source-quality and
+detail-retention checks across ten fixed views. Its total audited cache saving
+is 34.58%, while the median model uses 71.27% more cache because quality
+overshoots upstream on several models. Per-model calibration gives 58.72% total
+saving. These are benchmark settings; the production default remains 2.

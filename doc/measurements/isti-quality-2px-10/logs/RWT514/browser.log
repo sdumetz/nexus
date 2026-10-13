@@ -1,0 +1,10 @@
+source view 0 tau 0: reference captured
+upstream view 0 tau 2: 11/119 nodes, 0.540 MiB audited GPU cache
+factor0_5 view 0 tau 2: 15/119 nodes, 0.734 MiB audited GPU cache
+factor0_75 view 0 tau 2: 22/119 nodes, 1.082 MiB audited GPU cache
+factor1 view 0 tau 2: 28/119 nodes, 1.362 MiB audited GPU cache
+factor1_5 view 0 tau 2: 47/119 nodes, 2.767 MiB audited GPU cache
+factor2 view 0 tau 2: 50/119 nodes, 3.228 MiB audited GPU cache
+factor3 view 0 tau 2: 61/119 nodes, 6.438 MiB audited GPU cache
+factor4 view 0 tau 2: 69/119 nodes, 8.056 MiB audited GPU cache
+Results: /home/sebastien/repositories/nexus-decoupled/doc/measurements/isti-quality-2px-10/screenshots/RWT514/results.json

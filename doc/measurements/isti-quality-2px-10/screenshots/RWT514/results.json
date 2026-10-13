@@ -1,0 +1,3686 @@
+{
+  "created": "2026-10-13T13:13:43.242Z",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "poses": [
+    {
+      "distanceRadii": 2.5,
+      "position": [
+        342.85454874987136,
+        230.27392163272938,
+        914.2654386518892
+      ],
+      "target": [
+        12.977557182312012,
+        -5.352500915527344,
+        -28.240251541137695
+      ],
+      "near": 0.4103960266113281,
+      "far": 41039.60266113281
+    }
+  ],
+  "taus": [
+    2
+  ],
+  "accounting": "Logical live Nexus WebGL buffers and RGBA8 textures including every generated mip; excludes driver overhead, CPU heap, and renderer shell allocations.",
+  "models": [
+    {
+      "label": "upstream",
+      "path": "/tmp/nexus-quality-sweep-10/RWT514/upstream/test.nxs",
+      "fileBytes": 6436608,
+      "sha256": "7c838f31c21cdd59a12b0a8b06ae9a81ea530375d30f24ee578028728887477c"
+    },
+    {
+      "label": "factor0_5",
+      "path": "/tmp/nexus-quality-sweep-10/RWT514/sweep/model.factor0_5.nxs",
+      "fileBytes": 4743680,
+      "sha256": "aa1791e5fbf44cd8724a6d78047fe3c36c5adf468d37b346e9840ae30c183b5d"
+    },
+    {
+      "label": "factor0_75",
+      "path": "/tmp/nexus-quality-sweep-10/RWT514/sweep/model.factor0_75.nxs",
+      "fileBytes": 5225728,
+      "sha256": "563f81d98c46796b86754171ba3270518a7fd52a47d54dbda6ce7a528e61466a"
+    },
+    {
+      "label": "factor1",
+      "path": "/tmp/nexus-quality-sweep-10/RWT514/sweep/model.factor1.nxs",
+      "fileBytes": 5529600,
+      "sha256": "3f14bbb8925ff31418e3b30a0d871f0ab6a388859ddb16668010808d1e7b5701"
+    },
+    {
+      "label": "factor1_5",
+      "path": "/tmp/nexus-quality-sweep-10/RWT514/sweep/model.factor1_5.nxs",
+      "fileBytes": 5957376,
+      "sha256": "446962b1c1a026d996609bc22de3afe7b7fa44a032db2eef1c39c06e5cca24df"
+    },
+    {
+      "label": "factor2",
+      "path": "/tmp/nexus-quality-sweep-10/RWT514/sweep/model.factor2.nxs",
+      "fileBytes": 6316544,
+      "sha256": "6090f89d7639829fbd8a7d5d994d3d7251486148eb8ec6ae08ec829aa6791941"
+    },
+    {
+      "label": "factor3",
+      "path": "/tmp/nexus-quality-sweep-10/RWT514/sweep/model.factor3.nxs",
+      "fileBytes": 6436608,
+      "sha256": "40e05b328630526b31df5dfdd4a2e9d9f8b4f541d862af6c3e9fe22b822bb1a7"
+    },
+    {
+      "label": "factor4",
+      "path": "/tmp/nexus-quality-sweep-10/RWT514/sweep/model.factor4.nxs",
+      "fileBytes": 6436608,
+      "sha256": "e6cfb041e78afc3f1d66d3e7b8ffbf4c1ec440ba437b09db500de01b5b325dee"
+    },
+    {
+      "label": "factor0_25",
+      "path": "/tmp/nexus-quality-sweep-10/RWT514/sweep-low/model.factor0_25.nxs",
+      "fileBytes": 3983616,
+      "sha256": "454ea655ff4433601d75e43496870da5914639cfddaee01c4d8fc16500663f19"
+    },
+    {
+      "label": "factor0_375",
+      "path": "/tmp/nexus-quality-sweep-10/RWT514/sweep-low/model.factor0_375.nxs",
+      "fileBytes": 4426752,
+      "sha256": "421e4c3deccd2ae465b0d3f210641780188e36cc794401130ad01e1fcf390836"
+    }
+  ],
+  "runs": [
+    {
+      "label": "source",
+      "view": 0,
+      "tau": 0,
+      "source": true,
+      "threeRevision": "186",
+      "fetchedHttpBytes": 0,
+      "modelRequests": 0,
+      "logs": []
+    },
+    {
+      "label": "upstream",
+      "view": 0,
+      "tau": 2,
+      "residentNodes": 11,
+      "totalNodes": 119,
+      "residentNodeIds": [
+        0,
+        2,
+        1,
+        3,
+        4,
+        5,
+        9,
+        8,
+        6,
+        7,
+        15
+      ],
+      "requestedNodes": 11,
+      "liveTextures": 11,
+      "baseTexels": 45056,
+      "mipTexels": 60071,
+      "geometryBytes": 326158,
+      "textureBytes": 240284,
+      "gpuBytes": 566442,
+      "legacyEstimatedCacheBytes": 582158,
+      "allocationAuditPassed": true,
+      "residentEncodedRangeBytes": 376652,
+      "indexBytes": 23116,
+      "drawCalls": 8,
+      "drawnTriangles": 5458,
+      "suppressedCandidates": 48,
+      "textures": [
+        {
+          "id": 0,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 2,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 1,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 3,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 4,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 5,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 9,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 8,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 6,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 7,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 15,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        }
+      ],
+      "threeRevision": "186",
+      "unboundedCache": true,
+      "prefetchBelowTarget": false,
+      "loadingMode": "traverse",
+      "fetchedHttpBytes": 383121,
+      "modelRequests": 24,
+      "logs": []
+    },
+    {
+      "label": "factor0_5",
+      "view": 0,
+      "tau": 2,
+      "residentNodes": 15,
+      "totalNodes": 119,
+      "residentNodeIds": [
+        0,
+        2,
+        1,
+        3,
+        5,
+        4,
+        7,
+        9,
+        6,
+        10,
+        8,
+        19,
+        20,
+        13,
+        15
+      ],
+      "requestedNodes": 15,
+      "liveTextures": 15,
+      "baseTexels": 60048,
+      "mipTexels": 80049,
+      "geometryBytes": 449174,
+      "textureBytes": 320196,
+      "gpuBytes": 769370,
+      "legacyEstimatedCacheBytes": 805014,
+      "allocationAuditPassed": true,
+      "residentEncodedRangeBytes": 510284,
+      "indexBytes": 23116,
+      "drawCalls": 12,
+      "drawnTriangles": 7658,
+      "suppressedCandidates": 45,
+      "textures": [
+        {
+          "id": 0,
+          "width": 52,
+          "height": 52,
+          "levels": 6,
+          "bytes": 14380
+        },
+        {
+          "id": 2,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 1,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 3,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 5,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 4,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 7,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 9,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 6,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 10,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 8,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 19,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 20,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 13,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 15,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        }
+      ],
+      "threeRevision": "186",
+      "unboundedCache": true,
+      "prefetchBelowTarget": false,
+      "loadingMode": "traverse",
+      "fetchedHttpBytes": 518917,
+      "modelRequests": 32,
+      "logs": []
+    },
+    {
+      "label": "factor0_75",
+      "view": 0,
+      "tau": 2,
+      "residentNodes": 22,
+      "totalNodes": 119,
+      "residentNodeIds": [
+        0,
+        2,
+        1,
+        3,
+        5,
+        4,
+        7,
+        9,
+        6,
+        10,
+        19,
+        20,
+        13,
+        8,
+        16,
+        12,
+        15,
+        14,
+        24,
+        17,
+        11,
+        25
+      ],
+      "requestedNodes": 22,
+      "liveTextures": 22,
+      "baseTexels": 90112,
+      "mipTexels": 120142,
+      "geometryBytes": 654288,
+      "textureBytes": 480568,
+      "gpuBytes": 1134856,
+      "legacyEstimatedCacheBytes": 1181648,
+      "allocationAuditPassed": true,
+      "residentEncodedRangeBytes": 733260,
+      "indexBytes": 23116,
+      "drawCalls": 14,
+      "drawnTriangles": 11532,
+      "suppressedCandidates": 45,
+      "textures": [
+        {
+          "id": 0,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 2,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 1,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 3,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 5,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 4,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 7,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 9,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 6,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 10,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 19,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 20,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 13,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 8,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 16,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 12,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 15,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 14,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 24,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 17,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 11,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 25,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        }
+      ],
+      "threeRevision": "186",
+      "unboundedCache": true,
+      "prefetchBelowTarget": false,
+      "loadingMode": "traverse",
+      "fetchedHttpBytes": 745680,
+      "modelRequests": 46,
+      "logs": []
+    },
+    {
+      "label": "factor1",
+      "view": 0,
+      "tau": 2,
+      "residentNodes": 28,
+      "totalNodes": 119,
+      "residentNodeIds": [
+        0,
+        2,
+        1,
+        3,
+        5,
+        4,
+        7,
+        9,
+        6,
+        10,
+        19,
+        20,
+        13,
+        8,
+        16,
+        12,
+        15,
+        14,
+        24,
+        17,
+        11,
+        25,
+        31,
+        18,
+        29,
+        37,
+        26,
+        23
+      ],
+      "requestedNodes": 28,
+      "liveTextures": 28,
+      "baseTexels": 114688,
+      "mipTexels": 152908,
+      "geometryBytes": 816864,
+      "textureBytes": 611632,
+      "gpuBytes": 1428496,
+      "legacyEstimatedCacheBytes": 1490144,
+      "allocationAuditPassed": true,
+      "residentEncodedRangeBytes": 911180,
+      "indexBytes": 23116,
+      "drawCalls": 18,
+      "drawnTriangles": 14820,
+      "suppressedCandidates": 45,
+      "textures": [
+        {
+          "id": 0,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 2,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 1,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 3,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 5,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 4,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 7,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 9,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 6,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 10,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 19,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 20,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 13,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 8,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 16,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 12,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 15,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 14,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 24,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 17,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 11,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 25,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 31,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 18,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 29,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 37,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 26,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 23,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        }
+      ],
+      "threeRevision": "186",
+      "unboundedCache": true,
+      "prefetchBelowTarget": false,
+      "loadingMode": "traverse",
+      "fetchedHttpBytes": 926848,
+      "modelRequests": 58,
+      "logs": []
+    },
+    {
+      "label": "factor1_5",
+      "view": 0,
+      "tau": 2,
+      "residentNodes": 47,
+      "totalNodes": 119,
+      "residentNodeIds": [
+        0,
+        2,
+        1,
+        3,
+        5,
+        4,
+        7,
+        9,
+        6,
+        10,
+        19,
+        20,
+        13,
+        8,
+        16,
+        12,
+        15,
+        14,
+        24,
+        17,
+        11,
+        25,
+        31,
+        18,
+        29,
+        37,
+        26,
+        23,
+        27,
+        32,
+        50,
+        45,
+        38,
+        51,
+        21,
+        59,
+        22,
+        30,
+        42,
+        48,
+        39,
+        40,
+        35,
+        36,
+        49,
+        43,
+        34
+      ],
+      "requestedNodes": 47,
+      "liveTextures": 47,
+      "baseTexels": 290816,
+      "mipTexels": 387739,
+      "geometryBytes": 1350202,
+      "textureBytes": 1550956,
+      "gpuBytes": 2901158,
+      "legacyEstimatedCacheBytes": 2906682,
+      "allocationAuditPassed": true,
+      "residentEncodedRangeBytes": 1535564,
+      "indexBytes": 23116,
+      "drawCalls": 26,
+      "drawnTriangles": 21592,
+      "suppressedCandidates": 45,
+      "textures": [
+        {
+          "id": 0,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 2,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 1,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 3,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 5,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 4,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 7,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 9,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 6,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 10,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 19,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 20,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 13,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 8,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 16,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 12,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 15,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 14,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 24,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 17,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 11,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 25,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 31,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 18,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 29,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 37,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 26,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 23,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 27,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 32,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 50,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 45,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 38,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 51,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 21,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 59,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 22,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 30,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 42,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 48,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 39,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 40,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 35,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 36,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 49,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 43,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 34,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        }
+      ],
+      "threeRevision": "186",
+      "unboundedCache": true,
+      "prefetchBelowTarget": false,
+      "loadingMode": "traverse",
+      "fetchedHttpBytes": 1561539,
+      "modelRequests": 96,
+      "logs": []
+    },
+    {
+      "label": "factor2",
+      "view": 0,
+      "tau": 2,
+      "residentNodes": 50,
+      "totalNodes": 119,
+      "residentNodeIds": [
+        0,
+        2,
+        1,
+        3,
+        5,
+        4,
+        7,
+        9,
+        6,
+        10,
+        19,
+        20,
+        13,
+        8,
+        16,
+        12,
+        15,
+        14,
+        24,
+        17,
+        11,
+        25,
+        31,
+        18,
+        29,
+        37,
+        26,
+        23,
+        27,
+        32,
+        50,
+        45,
+        38,
+        51,
+        21,
+        59,
+        22,
+        30,
+        42,
+        48,
+        39,
+        40,
+        35,
+        36,
+        49,
+        43,
+        34,
+        66,
+        28,
+        33
+      ],
+      "requestedNodes": 50,
+      "liveTextures": 50,
+      "baseTexels": 364544,
+      "mipTexels": 486042,
+      "geometryBytes": 1440550,
+      "textureBytes": 1944168,
+      "gpuBytes": 3384718,
+      "legacyEstimatedCacheBytes": 3309350,
+      "allocationAuditPassed": true,
+      "residentEncodedRangeBytes": 1657420,
+      "indexBytes": 23116,
+      "drawCalls": 28,
+      "drawnTriangles": 22858,
+      "suppressedCandidates": 45,
+      "textures": [
+        {
+          "id": 0,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 2,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 1,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 3,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 5,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 4,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 7,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 9,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 6,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 10,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 19,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 20,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 13,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 8,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 16,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 12,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 15,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 14,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 24,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 17,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 11,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 25,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 31,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 18,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 29,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 37,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 26,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 23,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 27,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 32,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 50,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 45,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 38,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 51,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 21,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 59,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 22,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 30,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 42,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 48,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 39,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 40,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 35,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 36,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 49,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 43,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 34,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 66,
+          "width": 256,
+          "height": 256,
+          "levels": 9,
+          "bytes": 349524
+        },
+        {
+          "id": 28,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 33,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        }
+      ],
+      "threeRevision": "186",
+      "unboundedCache": true,
+      "prefetchBelowTarget": false,
+      "loadingMode": "traverse",
+      "fetchedHttpBytes": 1685022,
+      "modelRequests": 102,
+      "logs": []
+    },
+    {
+      "label": "factor3",
+      "view": 0,
+      "tau": 2,
+      "residentNodes": 61,
+      "totalNodes": 119,
+      "residentNodeIds": [
+        0,
+        2,
+        1,
+        3,
+        5,
+        4,
+        7,
+        9,
+        6,
+        10,
+        19,
+        20,
+        13,
+        8,
+        16,
+        12,
+        15,
+        14,
+        24,
+        17,
+        11,
+        25,
+        31,
+        18,
+        29,
+        37,
+        26,
+        23,
+        27,
+        32,
+        50,
+        45,
+        38,
+        51,
+        21,
+        59,
+        22,
+        30,
+        42,
+        48,
+        39,
+        40,
+        35,
+        36,
+        49,
+        43,
+        34,
+        66,
+        28,
+        33,
+        60,
+        58,
+        54,
+        57,
+        62,
+        80,
+        86,
+        84,
+        56,
+        113,
+        44
+      ],
+      "requestedNodes": 61,
+      "liveTextures": 61,
+      "baseTexels": 937984,
+      "mipTexels": 1250625,
+      "geometryBytes": 1748294,
+      "textureBytes": 5002500,
+      "gpuBytes": 6750794,
+      "legacyEstimatedCacheBytes": 5675334,
+      "allocationAuditPassed": true,
+      "residentEncodedRangeBytes": 2172236,
+      "indexBytes": 23116,
+      "drawCalls": 34,
+      "drawnTriangles": 24046,
+      "suppressedCandidates": 45,
+      "textures": [
+        {
+          "id": 0,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 2,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 1,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 3,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 5,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 4,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 7,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 9,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 6,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 10,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 19,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 20,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 13,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 8,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 16,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 12,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 15,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 14,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 24,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 17,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 11,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 25,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 31,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 18,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 29,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 37,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 26,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 23,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 27,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 32,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 50,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 45,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 38,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 51,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 21,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 59,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 22,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 30,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 42,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 48,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 39,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 40,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 35,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 36,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 49,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 43,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 34,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 66,
+          "width": 256,
+          "height": 256,
+          "levels": 9,
+          "bytes": 349524
+        },
+        {
+          "id": 28,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 33,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 60,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 58,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 54,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 57,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 62,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 80,
+          "width": 256,
+          "height": 256,
+          "levels": 9,
+          "bytes": 349524
+        },
+        {
+          "id": 86,
+          "width": 256,
+          "height": 256,
+          "levels": 9,
+          "bytes": 349524
+        },
+        {
+          "id": 84,
+          "width": 256,
+          "height": 256,
+          "levels": 9,
+          "bytes": 349524
+        },
+        {
+          "id": 56,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 113,
+          "width": 512,
+          "height": 512,
+          "levels": 10,
+          "bytes": 1398100
+        },
+        {
+          "id": 44,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        }
+      ],
+      "threeRevision": "186",
+      "unboundedCache": true,
+      "prefetchBelowTarget": false,
+      "loadingMode": "traverse",
+      "fetchedHttpBytes": 2205815,
+      "modelRequests": 124,
+      "logs": []
+    },
+    {
+      "label": "factor4",
+      "view": 0,
+      "tau": 2,
+      "residentNodes": 69,
+      "totalNodes": 119,
+      "residentNodeIds": [
+        0,
+        2,
+        1,
+        3,
+        5,
+        4,
+        7,
+        9,
+        6,
+        10,
+        19,
+        20,
+        13,
+        8,
+        16,
+        12,
+        15,
+        14,
+        24,
+        17,
+        11,
+        25,
+        31,
+        18,
+        29,
+        37,
+        26,
+        23,
+        27,
+        32,
+        50,
+        45,
+        38,
+        51,
+        21,
+        59,
+        22,
+        30,
+        42,
+        48,
+        39,
+        40,
+        35,
+        36,
+        49,
+        43,
+        34,
+        66,
+        28,
+        33,
+        60,
+        58,
+        54,
+        57,
+        62,
+        80,
+        86,
+        84,
+        56,
+        113,
+        44,
+        52,
+        70,
+        72,
+        63,
+        41,
+        65,
+        46,
+        53
+      ],
+      "requestedNodes": 69,
+      "liveTextures": 69,
+      "baseTexels": 1216512,
+      "mipTexels": 1621993,
+      "geometryBytes": 1959312,
+      "textureBytes": 6487972,
+      "gpuBytes": 8447284,
+      "legacyEstimatedCacheBytes": 6923152,
+      "allocationAuditPassed": true,
+      "residentEncodedRangeBytes": 2487884,
+      "indexBytes": 23116,
+      "drawCalls": 35,
+      "drawnTriangles": 24858,
+      "suppressedCandidates": 45,
+      "textures": [
+        {
+          "id": 0,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 2,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 1,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 3,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 5,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 4,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 7,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 9,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 6,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 10,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 19,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 20,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 13,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 8,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 16,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 12,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 15,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 14,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 24,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 17,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 11,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 25,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 31,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 18,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 29,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 37,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 26,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 23,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 27,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 32,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 50,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 45,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 38,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 51,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 21,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 59,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 22,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 30,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 42,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 48,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 39,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 40,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 35,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 36,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 49,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 43,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 34,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 66,
+          "width": 256,
+          "height": 256,
+          "levels": 9,
+          "bytes": 349524
+        },
+        {
+          "id": 28,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 33,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 60,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 58,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 54,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 57,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 62,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 80,
+          "width": 256,
+          "height": 256,
+          "levels": 9,
+          "bytes": 349524
+        },
+        {
+          "id": 86,
+          "width": 256,
+          "height": 256,
+          "levels": 9,
+          "bytes": 349524
+        },
+        {
+          "id": 84,
+          "width": 256,
+          "height": 256,
+          "levels": 9,
+          "bytes": 349524
+        },
+        {
+          "id": 56,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 113,
+          "width": 512,
+          "height": 512,
+          "levels": 10,
+          "bytes": 1398100
+        },
+        {
+          "id": 44,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 52,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 70,
+          "width": 256,
+          "height": 256,
+          "levels": 9,
+          "bytes": 349524
+        },
+        {
+          "id": 72,
+          "width": 256,
+          "height": 256,
+          "levels": 9,
+          "bytes": 349524
+        },
+        {
+          "id": 63,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 41,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 65,
+          "width": 256,
+          "height": 256,
+          "levels": 9,
+          "bytes": 349524
+        },
+        {
+          "id": 46,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        },
+        {
+          "id": 53,
+          "width": 128,
+          "height": 128,
+          "levels": 8,
+          "bytes": 87380
+        }
+      ],
+      "threeRevision": "186",
+      "unboundedCache": true,
+      "prefetchBelowTarget": false,
+      "loadingMode": "traverse",
+      "fetchedHttpBytes": 2525810,
+      "modelRequests": 140,
+      "logs": []
+    },
+    {
+      "label": "factor0_25",
+      "view": 0,
+      "tau": 2,
+      "residentNodes": 11,
+      "totalNodes": 119,
+      "residentNodeIds": [
+        0,
+        2,
+        1,
+        3,
+        4,
+        5,
+        9,
+        8,
+        6,
+        7,
+        15
+      ],
+      "requestedNodes": 11,
+      "liveTextures": 11,
+      "baseTexels": 16576,
+      "mipTexels": 22046,
+      "geometryBytes": 326158,
+      "textureBytes": 88184,
+      "gpuBytes": 414342,
+      "legacyEstimatedCacheBytes": 472078,
+      "allocationAuditPassed": true,
+      "residentEncodedRangeBytes": 365644,
+      "indexBytes": 23116,
+      "drawCalls": 8,
+      "drawnTriangles": 5458,
+      "suppressedCandidates": 48,
+      "textures": [
+        {
+          "id": 0,
+          "width": 28,
+          "height": 28,
+          "levels": 5,
+          "bytes": 4156
+        },
+        {
+          "id": 2,
+          "width": 24,
+          "height": 24,
+          "levels": 5,
+          "bytes": 3064
+        },
+        {
+          "id": 1,
+          "width": 12,
+          "height": 12,
+          "levels": 4,
+          "bytes": 760
+        },
+        {
+          "id": 3,
+          "width": 60,
+          "height": 60,
+          "levels": 6,
+          "bytes": 19136
+        },
+        {
+          "id": 4,
+          "width": 40,
+          "height": 40,
+          "levels": 6,
+          "bytes": 8520
+        },
+        {
+          "id": 5,
+          "width": 24,
+          "height": 24,
+          "levels": 5,
+          "bytes": 3064
+        },
+        {
+          "id": 9,
+          "width": 40,
+          "height": 40,
+          "levels": 6,
+          "bytes": 8520
+        },
+        {
+          "id": 8,
+          "width": 40,
+          "height": 40,
+          "levels": 6,
+          "bytes": 8520
+        },
+        {
+          "id": 6,
+          "width": 44,
+          "height": 44,
+          "levels": 6,
+          "bytes": 10284
+        },
+        {
+          "id": 7,
+          "width": 56,
+          "height": 56,
+          "levels": 6,
+          "bytes": 16700
+        },
+        {
+          "id": 15,
+          "width": 32,
+          "height": 32,
+          "levels": 6,
+          "bytes": 5460
+        }
+      ],
+      "threeRevision": "186",
+      "unboundedCache": true,
+      "prefetchBelowTarget": false,
+      "loadingMode": "traverse",
+      "fetchedHttpBytes": 372112,
+      "modelRequests": 24,
+      "logs": []
+    },
+    {
+      "label": "factor0_375",
+      "view": 0,
+      "tau": 2,
+      "residentNodes": 12,
+      "totalNodes": 119,
+      "residentNodeIds": [
+        0,
+        2,
+        1,
+        3,
+        4,
+        5,
+        7,
+        9,
+        8,
+        6,
+        10,
+        15
+      ],
+      "requestedNodes": 12,
+      "liveTextures": 12,
+      "baseTexels": 38688,
+      "mipTexels": 51548,
+      "geometryBytes": 356558,
+      "textureBytes": 206192,
+      "gpuBytes": 562750,
+      "legacyEstimatedCacheBytes": 599758,
+      "allocationAuditPassed": true,
+      "residentEncodedRangeBytes": 405836,
+      "indexBytes": 23116,
+      "drawCalls": 8,
+      "drawnTriangles": 6018,
+      "suppressedCandidates": 45,
+      "textures": [
+        {
+          "id": 0,
+          "width": 40,
+          "height": 40,
+          "levels": 6,
+          "bytes": 8520
+        },
+        {
+          "id": 2,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 1,
+          "width": 24,
+          "height": 24,
+          "levels": 5,
+          "bytes": 3064
+        },
+        {
+          "id": 3,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 4,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 5,
+          "width": 44,
+          "height": 44,
+          "levels": 6,
+          "bytes": 10284
+        },
+        {
+          "id": 7,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 9,
+          "width": 60,
+          "height": 60,
+          "levels": 6,
+          "bytes": 19136
+        },
+        {
+          "id": 8,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 6,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 10,
+          "width": 64,
+          "height": 64,
+          "levels": 7,
+          "bytes": 21844
+        },
+        {
+          "id": 15,
+          "width": 48,
+          "height": 48,
+          "levels": 6,
+          "bytes": 12280
+        }
+      ],
+      "threeRevision": "186",
+      "unboundedCache": true,
+      "prefetchBelowTarget": false,
+      "loadingMode": "traverse",
+      "fetchedHttpBytes": 412846,
+      "modelRequests": 26,
+      "logs": []
+    }
+  ],
+  "comparisons": [
+    {
+      "label": "upstream",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.4839038995519212,
+      "luminanceGradientRmse": 11.789921623158268,
+      "modelPixels": 34464,
+      "mse": 253.88718662952647,
+      "psnrDb": 24.084395777433514,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 11.669955122253173,
+      "changedPixelsOver8Fraction": 0.6003365831012071,
+      "silhouetteIoU": 0.9985782265552461,
+      "diff": "upstream-v0-t2-textured-vs-source-diff.png"
+    },
+    {
+      "label": "upstream",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 0.7232000112741174,
+      "luminanceGradientRmse": 9.670360691568446,
+      "modelPixels": 34465,
+      "mse": 112.1578026016732,
+      "psnrDb": 27.63250868869759,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 6.7470960878185595,
+      "changedPixelsOver8Fraction": 0.25710140722472075,
+      "silhouetteIoU": 0.9989554620629624,
+      "diff": "upstream-v0-t2-shaded-vs-source-diff.png"
+    },
+    {
+      "label": "factor0_5",
+      "reference": "upstream",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.9373558520005258,
+      "luminanceGradientRmse": 5.240076788245476,
+      "modelPixels": 34450,
+      "mse": 32.19161103047895,
+      "psnrDb": 33.053376493534806,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 1.5158684083212386,
+      "changedPixelsOver8Fraction": 0.07431059506531204,
+      "silhouetteIoU": 0.9993033381712627,
+      "diff": "factor0_5-v0-t2-textured-vs-upstream-diff.png"
+    },
+    {
+      "label": "factor0_5",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.4943232812930194,
+      "luminanceGradientRmse": 12.067468812854642,
+      "modelPixels": 34464,
+      "mse": 249.3290196533581,
+      "psnrDb": 24.16307531454191,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 11.539693593314762,
+      "changedPixelsOver8Fraction": 0.5923572423398329,
+      "silhouetteIoU": 0.9989844475394615,
+      "diff": "factor0_5-v0-t2-textured-vs-source-diff.png"
+    },
+    {
+      "label": "factor0_5",
+      "reference": "upstream",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 0.9835813491828087,
+      "luminanceGradientRmse": 3.7858025501320802,
+      "modelPixels": 34457,
+      "mse": 16.22246084491782,
+      "psnrDb": 36.029636262637574,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 0.6335045612405801,
+      "changedPixelsOver8Fraction": 0.014191601126041153,
+      "silhouetteIoU": 0.9993905447369185,
+      "diff": "factor0_5-v0-t2-shaded-vs-upstream-diff.png"
+    },
+    {
+      "label": "factor0_5",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 0.7329877972900071,
+      "luminanceGradientRmse": 9.261088972863982,
+      "modelPixels": 34466,
+      "mse": 97.30625350587052,
+      "psnrDb": 28.249396092344906,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 6.521054565852338,
+      "changedPixelsOver8Fraction": 0.24908605582313004,
+      "silhouetteIoU": 0.9993326756803806,
+      "diff": "factor0_5-v0-t2-shaded-vs-source-diff.png"
+    },
+    {
+      "label": "factor0_75",
+      "reference": "upstream",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.6495917512401035,
+      "luminanceGradientRmse": 10.686365276956533,
+      "modelPixels": 34462,
+      "mse": 175.2448397268489,
+      "psnrDb": 25.694351223099545,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 8.123430638577757,
+      "changedPixelsOver8Fraction": 0.39687191689397017,
+      "silhouetteIoU": 0.99875224885381,
+      "diff": "factor0_75-v0-t2-textured-vs-upstream-diff.png"
+    },
+    {
+      "label": "factor0_75",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.5494058996065823,
+      "luminanceGradientRmse": 12.526714172531605,
+      "modelPixels": 34466,
+      "mse": 213.40647788158378,
+      "psnrDb": 24.838727627170073,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 10.589982398112149,
+      "changedPixelsOver8Fraction": 0.5555620031335229,
+      "silhouetteIoU": 0.9990135205709975,
+      "diff": "factor0_75-v0-t2-textured-vs-source-diff.png"
+    },
+    {
+      "label": "factor0_75",
+      "reference": "upstream",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 0.9115585882083986,
+      "luminanceGradientRmse": 6.435108397547994,
+      "modelPixels": 34464,
+      "mse": 42.470171773444754,
+      "psnrDb": 31.849963433406565,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 2.909238625812442,
+      "changedPixelsOver8Fraction": 0.0836525069637883,
+      "silhouetteIoU": 0.9991005106778087,
+      "diff": "factor0_75-v0-t2-shaded-vs-upstream-diff.png"
+    },
+    {
+      "label": "factor0_75",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 0.774320309364513,
+      "luminanceGradientRmse": 8.954073120850177,
+      "modelPixels": 34467,
+      "mse": 78.39554743184301,
+      "psnrDb": 29.187889637535477,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 5.723948511136256,
+      "changedPixelsOver8Fraction": 0.20561696695389794,
+      "silhouetteIoU": 0.9993907215597528,
+      "diff": "factor0_75-v0-t2-shaded-vs-source-diff.png"
+    },
+    {
+      "label": "factor1",
+      "reference": "upstream",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.5303163894584144,
+      "luminanceGradientRmse": 13.09206663867085,
+      "modelPixels": 34463,
+      "mse": 238.94890172068597,
+      "psnrDb": 24.347753221514694,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 10.783835804582692,
+      "changedPixelsOver8Fraction": 0.5184400661579085,
+      "silhouetteIoU": 0.998578185300177,
+      "diff": "factor1-v0-t2-textured-vs-upstream-diff.png"
+    },
+    {
+      "label": "factor1",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.5684188368813521,
+      "luminanceGradientRmse": 13.1812474731594,
+      "modelPixels": 34463,
+      "mse": 202.37999206878874,
+      "psnrDb": 25.069127863149355,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 10.262184565089129,
+      "changedPixelsOver8Fraction": 0.5395931868960915,
+      "silhouetteIoU": 0.999071467951136,
+      "diff": "factor1-v0-t2-textured-vs-source-diff.png"
+    },
+    {
+      "label": "factor1",
+      "reference": "upstream",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 0.880933389939167,
+      "luminanceGradientRmse": 7.273367635215975,
+      "modelPixels": 34465,
+      "mse": 52.93981333720199,
+      "psnrDb": 30.892979551977465,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 3.7123265148218,
+      "changedPixelsOver8Fraction": 0.10494704772958073,
+      "silhouetteIoU": 0.9990134919483534,
+      "diff": "factor1-v0-t2-shaded-vs-upstream-diff.png"
+    },
+    {
+      "label": "factor1",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 0.8013339557047297,
+      "luminanceGradientRmse": 8.742689078107233,
+      "modelPixels": 34465,
+      "mse": 69.77422505923884,
+      "psnrDb": 29.69385339130607,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 5.366971323564969,
+      "changedPixelsOver8Fraction": 0.18543449876686494,
+      "silhouetteIoU": 0.9994777310314812,
+      "diff": "factor1-v0-t2-shaded-vs-source-diff.png"
+    },
+    {
+      "label": "factor1_5",
+      "reference": "upstream",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.4466115040314561,
+      "luminanceGradientRmse": 14.955691217094742,
+      "modelPixels": 34467,
+      "mse": 285.90619046237464,
+      "psnrDb": 23.56856802031279,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 12.204388738987051,
+      "changedPixelsOver8Fraction": 0.590535874894827,
+      "silhouetteIoU": 0.9984622972698524,
+      "diff": "factor1_5-v0-t2-textured-vs-upstream-diff.png"
+    },
+    {
+      "label": "factor1_5",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.6787899875086751,
+      "luminanceGradientRmse": 12.604891140220651,
+      "modelPixels": 34456,
+      "mse": 146.58317854655212,
+      "psnrDb": 26.469962260578267,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 8.593878182803188,
+      "changedPixelsOver8Fraction": 0.4504295333178547,
+      "silhouetteIoU": 0.9995936846993266,
+      "diff": "factor1_5-v0-t2-textured-vs-source-diff.png"
+    },
+    {
+      "label": "factor1_5",
+      "reference": "upstream",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 0.8554260197112246,
+      "luminanceGradientRmse": 8.026452641456265,
+      "modelPixels": 34469,
+      "mse": 68.49040200373283,
+      "psnrDb": 29.774506455633933,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 4.512450801203014,
+      "changedPixelsOver8Fraction": 0.14433258870289245,
+      "silhouetteIoU": 0.9988685485508718,
+      "diff": "factor1_5-v0-t2-shaded-vs-upstream-diff.png"
+    },
+    {
+      "label": "factor1_5",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 0.8400560943746055,
+      "luminanceGradientRmse": 8.126183062185437,
+      "modelPixels": 34460,
+      "mse": 50.393644805571675,
+      "psnrDb": 31.107045902934004,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 4.636399690462372,
+      "changedPixelsOver8Fraction": 0.1491294254207777,
+      "silhouetteIoU": 0.9998549042367962,
+      "diff": "factor1_5-v0-t2-shaded-vs-source-diff.png"
+    },
+    {
+      "label": "factor2",
+      "reference": "upstream",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.44487821792020277,
+      "luminanceGradientRmse": 15.080209144230855,
+      "modelPixels": 34467,
+      "mse": 289.8430576106614,
+      "psnrDb": 23.50917458360496,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 12.2762255684181,
+      "changedPixelsOver8Fraction": 0.5940754925000725,
+      "silhouetteIoU": 0.9985203237879711,
+      "diff": "factor2-v0-t2-textured-vs-upstream-diff.png"
+    },
+    {
+      "label": "factor2",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.6918256065769741,
+      "luminanceGradientRmse": 12.552836717570912,
+      "modelPixels": 34457,
+      "mse": 141.50304243936887,
+      "psnrDb": 26.623145831954133,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 8.40811252672413,
+      "changedPixelsOver8Fraction": 0.4389819194938619,
+      "silhouetteIoU": 0.9995936964912789,
+      "diff": "factor2-v0-t2-textured-vs-source-diff.png"
+    },
+    {
+      "label": "factor2",
+      "reference": "upstream",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 0.8501941402318871,
+      "luminanceGradientRmse": 8.119147895395557,
+      "modelPixels": 34469,
+      "mse": 70.53709129942847,
+      "psnrDb": 29.64662813938098,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 4.629212722542961,
+      "changedPixelsOver8Fraction": 0.1498447880704401,
+      "silhouetteIoU": 0.9988685485508718,
+      "diff": "factor2-v0-t2-shaded-vs-upstream-diff.png"
+    },
+    {
+      "label": "factor2",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 0.8461445324331985,
+      "luminanceGradientRmse": 8.07387353145116,
+      "modelPixels": 34460,
+      "mse": 48.64315147997679,
+      "psnrDb": 31.26058656732626,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 4.5500580383052815,
+      "changedPixelsOver8Fraction": 0.14445734184561812,
+      "silhouetteIoU": 0.9998549042367962,
+      "diff": "factor2-v0-t2-shaded-vs-source-diff.png"
+    },
+    {
+      "label": "factor3",
+      "reference": "upstream",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.4461731027747831,
+      "luminanceGradientRmse": 15.192295636599473,
+      "modelPixels": 34467,
+      "mse": 289.7618591696405,
+      "psnrDb": 23.510391413693327,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 12.276244910590806,
+      "changedPixelsOver8Fraction": 0.5977021498824963,
+      "silhouetteIoU": 0.9985203237879711,
+      "diff": "factor3-v0-t2-textured-vs-upstream-diff.png"
+    },
+    {
+      "label": "factor3",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.7191951415309444,
+      "luminanceGradientRmse": 12.247312901225238,
+      "modelPixels": 34457,
+      "mse": 125.91712375811397,
+      "psnrDb": 27.12995566042297,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 7.84557564500682,
+      "changedPixelsOver8Fraction": 0.4041559044606321,
+      "silhouetteIoU": 0.9995936964912789,
+      "diff": "factor3-v0-t2-textured-vs-source-diff.png"
+    },
+    {
+      "label": "factor3",
+      "reference": "upstream",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 0.8460360454413783,
+      "luminanceGradientRmse": 8.24899782663509,
+      "modelPixels": 34469,
+      "mse": 72.77871904223119,
+      "psnrDb": 29.5107595344548,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 4.703753130832536,
+      "changedPixelsOver8Fraction": 0.1536743160521048,
+      "silhouetteIoU": 0.9988685485508718,
+      "diff": "factor3-v0-t2-shaded-vs-upstream-diff.png"
+    },
+    {
+      "label": "factor3",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 0.8495468377967939,
+      "luminanceGradientRmse": 7.997213958618036,
+      "modelPixels": 34460,
+      "mse": 47.09341265235055,
+      "psnrDb": 31.401201978751196,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 4.483526794350938,
+      "changedPixelsOver8Fraction": 0.1412071967498549,
+      "silhouetteIoU": 0.9998549042367962,
+      "diff": "factor3-v0-t2-shaded-vs-source-diff.png"
+    },
+    {
+      "label": "factor4",
+      "reference": "upstream",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.42881447147150614,
+      "luminanceGradientRmse": 15.803960567378908,
+      "modelPixels": 34466,
+      "mse": 302.2153136424302,
+      "psnrDb": 23.327638940419245,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 12.58191647807501,
+      "changedPixelsOver8Fraction": 0.6128938664190797,
+      "silhouetteIoU": 0.9983171821505251,
+      "diff": "factor4-v0-t2-textured-vs-upstream-diff.png"
+    },
+    {
+      "label": "factor4",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.7807664525024592,
+      "luminanceGradientRmse": 12.078634487925736,
+      "modelPixels": 34455,
+      "mse": 100.98679436946742,
+      "psnrDb": 28.08815774287584,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 6.913829632854448,
+      "changedPixelsOver8Fraction": 0.3443331882165143,
+      "silhouetteIoU": 0.9994485560876506,
+      "diff": "factor4-v0-t2-textured-vs-source-diff.png"
+    },
+    {
+      "label": "factor4",
+      "reference": "upstream",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 0.843300064853906,
+      "luminanceGradientRmse": 8.278909312563561,
+      "modelPixels": 34467,
+      "mse": 73.81858976218798,
+      "psnrDb": 29.449146167347706,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 4.761830156381467,
+      "changedPixelsOver8Fraction": 0.15606232048045957,
+      "silhouetteIoU": 0.9988974961557432,
+      "diff": "factor4-v0-t2-shaded-vs-upstream-diff.png"
+    },
+    {
+      "label": "factor4",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 0.8532420874983699,
+      "luminanceGradientRmse": 7.945521094669999,
+      "modelPixels": 34457,
+      "mse": 45.83167426067272,
+      "psnrDb": 31.51914638275313,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 4.42234282342243,
+      "changedPixelsOver8Fraction": 0.13854949647386597,
+      "silhouetteIoU": 0.9999419566416112,
+      "diff": "factor4-v0-t2-shaded-vs-source-diff.png"
+    },
+    {
+      "label": "factor0_25",
+      "reference": "upstream",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.7756088823668962,
+      "luminanceGradientRmse": 7.031937987039946,
+      "modelPixels": 34435,
+      "mse": 80.10382846909637,
+      "psnrDb": 29.094270876891777,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 5.979458883887517,
+      "changedPixelsOver8Fraction": 0.2768404239872223,
+      "silhouetteIoU": 0.999825758675766,
+      "diff": "factor0_25-v0-t2-textured-vs-upstream-diff.png"
+    },
+    {
+      "label": "factor0_25",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.533610528506311,
+      "luminanceGradientRmse": 9.758148547576269,
+      "modelPixels": 34464,
+      "mse": 205.29946224079234,
+      "psnrDb": 25.006925490821324,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 10.375,
+      "changedPixelsOver8Fraction": 0.5575673166202414,
+      "silhouetteIoU": 0.9986362581244197,
+      "diff": "factor0_25-v0-t2-textured-vs-source-diff.png"
+    },
+    {
+      "label": "factor0_25",
+      "reference": "upstream",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 1,
+      "luminanceGradientRmse": 0,
+      "modelPixels": 34439,
+      "mse": 0,
+      "psnrDb": null,
+      "identical": true,
+      "meanAbsoluteChannelDifference": 0,
+      "changedPixelsOver8Fraction": 0,
+      "silhouetteIoU": 1,
+      "diff": "factor0_25-v0-t2-shaded-vs-upstream-diff.png"
+    },
+    {
+      "label": "factor0_25",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 0.7232000112741174,
+      "luminanceGradientRmse": 9.670360691568446,
+      "modelPixels": 34465,
+      "mse": 112.1578026016732,
+      "psnrDb": 27.63250868869759,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 6.7470960878185595,
+      "changedPixelsOver8Fraction": 0.25710140722472075,
+      "silhouetteIoU": 0.9989554620629624,
+      "diff": "factor0_25-v0-t2-shaded-vs-source-diff.png"
+    },
+    {
+      "label": "factor0_375",
+      "reference": "upstream",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.9270882425314918,
+      "luminanceGradientRmse": 5.215242615560724,
+      "modelPixels": 34441,
+      "mse": 30.103897486522847,
+      "psnrDb": 33.344576344663224,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 2.220154273491865,
+      "changedPixelsOver8Fraction": 0.10214569844081182,
+      "silhouetteIoU": 0.9997096483841933,
+      "diff": "factor0_375-v0-t2-textured-vs-upstream-diff.png"
+    },
+    {
+      "label": "factor0_375",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "textured",
+      "blockSsim": 0.5143846281069251,
+      "luminanceGradientRmse": 10.843403224329265,
+      "modelPixels": 34466,
+      "mse": 229.87012321321495,
+      "psnrDb": 24.515978322555195,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 11.041035609973113,
+      "changedPixelsOver8Fraction": 0.5801659606568792,
+      "silhouetteIoU": 0.9987523936633204,
+      "diff": "factor0_375-v0-t2-textured-vs-source-diff.png"
+    },
+    {
+      "label": "factor0_375",
+      "reference": "upstream",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 0.9987102550039515,
+      "luminanceGradientRmse": 2.1430366151401574,
+      "modelPixels": 34449,
+      "mse": 5.652229866372512,
+      "psnrDb": 40.60860545329892,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 0.13702381297957367,
+      "changedPixelsOver8Fraction": 0.003686609190397399,
+      "silhouetteIoU": 0.9997097158117797,
+      "diff": "factor0_375-v0-t2-shaded-vs-upstream-diff.png"
+    },
+    {
+      "label": "factor0_375",
+      "reference": "source",
+      "view": 0,
+      "tau": 2,
+      "mode": "shaded",
+      "blockSsim": 0.7243313553686058,
+      "luminanceGradientRmse": 9.576415772107493,
+      "modelPixels": 34467,
+      "mse": 107.29415576251681,
+      "psnrDb": 27.82504293973846,
+      "identical": false,
+      "meanAbsoluteChannelDifference": 6.695921702884885,
+      "changedPixelsOver8Fraction": 0.2563321437897119,
+      "silhouetteIoU": 0.9991296022282183,
+      "diff": "factor0_375-v0-t2-shaded-vs-source-diff.png"
+    }
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/150.0.7871.181",
+    "revision": "@24b04c927b23c39cf9c5227cc8dc6f64a744c8e9",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36",
+    "jsVersion": "15.0.245.21"
+  },
+  "threePackageVersion": "0.186.1"
+}

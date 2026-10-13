@@ -1,0 +1,2 @@
+requested_error_pixels,factor,models,quality_accepted,median_gpu_saving_pct,weighted_gpu_saving_pct,median_source_psnr_change_db,worst_source_psnr_change_db,worst_source_block_ssim_change,worst_source_gradient_change_pct,worst_retained_upstream_gradient_fraction,median_file_saving_pct,weighted_file_saving_pct
+2.0,1.5,10,10,-71.26836843506548,34.57525964650421,1.0943602751148234,-0.13357583543689344,0.0038196987981606867,24.285099318134762,0.9585168051518342,7.770325168607001,9.353444678681711
