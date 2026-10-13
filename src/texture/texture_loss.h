@@ -15,8 +15,9 @@ struct TextureLoss {
 
 // Experimental conversion of reconstruction loss to a world-space refinement
 // heuristic. The calibration is explicit: an RMS of 8 restores the original
-// footprint before division; smaller losses reduce it. Divisors above one
-// relax refinement. This is not a surface-deviation bound.
+// footprint before precision weighting; smaller losses reduce it. The divisor
+// applies to the allowed error: values above one tighten texture precision.
+// This is not a surface-deviation bound.
 inline TextureLoss texture_reconstruction_loss(const QImage &reference, const QImage &decoded,
 		const QImage &occupied, float footprint, double error_divisor = 2.0) {
 	if(reference.isNull() || decoded.isNull() || occupied.size() != reference.size() ||
@@ -48,7 +49,7 @@ inline TextureLoss texture_reconstruction_loss(const QImage &reference, const QI
 		loss.rms = std::sqrt(squared/(3.0*loss.pixels));
 		error *= std::min(1.0, loss.rms/8.0);
 	}
-	loss.error = error/error_divisor;
+	loss.error = error*error_divisor;
 	if(!std::isfinite(loss.error))
 		throw std::overflow_error("Texture error divisor produces non-finite error");
 	return loss;

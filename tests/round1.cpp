@@ -94,19 +94,23 @@ static void export_checks(bool textured, float ratio = 0) {
 	if(!file) throw std::runtime_error("Truncated nodes");
 	near(nodes[0].error, 0.101f); // Saturated above its geometry-dominated child.
 	near(nodes[1].error, 0.1f);   // Geometry dominates.
-	near(nodes[2].error, 0.001f); // Low reconstruction loss leaves geometry dominant.
+	if(textured) {
+		if(!std::isfinite(nodes[2].error) || nodes[2].error < 0.001f || nodes[2].error > 2*2.0f/256)
+			throw std::runtime_error("Invalid weighted texture/geometric maximum");
+	} else near(nodes[2].error,0.001f);
 	near(nodes[3].error, 0);      // Sink remains zero.
 	std::cout << name << ": geometry/texture maximum and ancestor saturation passed\n";
 }
 
-static void sizing_checks(bool halving) {
+static void sizing_checks(bool halving, float precision = 2) {
 	nx::MeshHierarchy hierarchy;
 	hierarchy.levels = {level(true, false), level(true, true)};
 	std::vector<std::vector<char>> baseline_geometry;
 	for(float ratio: {0.0f, 1.0f, 0.5f}) {
 		nx::ExportNxs exporter;
 		// Exercise the API default as well as explicitly configured ratios.
-		exporter.export_nxs(hierarchy, "sizing.nxs", ratio, halving);
+		if(precision == 2) exporter.export_nxs(hierarchy, "sizing.nxs", ratio, halving);
+		else exporter.export_nxs(hierarchy, "sizing.nxs", ratio, halving, precision);
 		std::ifstream file("sizing.nxs", std::ios::binary);
 		nx::Header header;
 		file.read(reinterpret_cast<char*>(&header), sizeof(header));
@@ -116,7 +120,8 @@ static void sizing_checks(bool halving) {
 			throw std::runtime_error("Sizing changed container layout");
 		near(nodes[0].error, 0.101f);
 		near(nodes[1].error, 0.1f);
-		near(nodes[2].error, 0.001f);
+		if(!std::isfinite(nodes[2].error) || nodes[2].error < 0.001f || nodes[2].error > std::max(0.001f,precision*2.0f/256))
+			throw std::runtime_error("Invalid weighted texture/geometric maximum");
 		near(nodes[3].error, 0);
 		std::vector<nx::Texture> textures(header.n_textures);
 		file.seekg(sizeof(nx::Header) + nodes.size()*sizeof(nx::Node) + header.n_patches*sizeof(nx::Patch));
@@ -128,18 +133,25 @@ static void sizing_checks(bool halving) {
 			QImage image;
 			if(!image.loadFromData(reinterpret_cast<const uchar*>(blob.data()), blob.size(), "JPEG"))
 				throw std::runtime_error("Exported texture cannot be decoded");
-			const int expected = i == 2 || ratio == 0 ? 256 : (halving ? (ratio == 1 ? 32 : 64) : (ratio == 1 ? 20 : 40));
+			int expected = 256;
+			if(i < 2 && ratio > 0) {
+				if(halving) expected = int(32*precision/ratio);
+				else expected = 4*int(std::ceil(5*precision/ratio));
+			}
 			if(image.width() != expected || image.height() != expected)
 				throw std::runtime_error("Unexpected texture dimensions");
 			if(i < 2 && ratio > 0) {
 				// This resolution meets the target, but one step coarser would not.
-				const float target = ratio*(i == 0 ? 0.101f : 0.1f);
+				const float target = ratio*(i == 0 ? 0.101f : 0.1f)/precision;
 				if(2.0f/expected > target || 2.0f/(halving ? expected/2 : expected-4) <= target)
 					throw std::runtime_error("Texture was not sized to the coarsest allowed resolution");
 			}
-			const auto top = image.pixelColor(0,0), bottom = image.pixelColor(expected-1,expected-1);
-			// Small non-power-of-two JPEGs have stronger endpoint ringing.
-			if(top.red() > 24 || top.green() < 230 || bottom.red() < 230 || bottom.green() > 24)
+			// Interior samples test both gradient directions without depending on
+			// JPEG endpoint ringing in small images (e.g. the 12px loose target).
+			const auto top = image.pixelColor(expected/4,expected/4);
+			const auto bottom = image.pixelColor(3*expected/4,3*expected/4);
+			if(bottom.red()-top.red() < 80 || top.green()-bottom.green() < 80 ||
+			   std::abs(top.blue()-128) > 20 || std::abs(bottom.blue()-128) > 20)
 				throw std::runtime_error("Downsampled texture gradient/orientation changed");
 			const size_t geometry_size = nodes[i].nvert*header.signature.vertex.size()
 				+ nodes[i].nface*header.signature.face.size();
@@ -184,22 +196,23 @@ static void loss_checks() {
 	QImage source(16,16,QImage::Format_RGB32), decoded(16,16,QImage::Format_RGB32), mask(16,16,QImage::Format_RGB32);
 	source.fill(qRgb(128,128,128)); decoded.fill(qRgb(120,120,120)); mask.fill(Qt::white);
 	auto loss = nx::texture_reconstruction_loss(source,decoded,mask,2);
-	near(loss.rms,8); near(loss.error,1);
+	near(loss.rms,8); near(loss.error,4);
 	near(nx::texture_reconstruction_loss(source,decoded,mask,2,1).error,2);
-	near(nx::texture_reconstruction_loss(source,decoded,mask,2,4).error,0.5f);
+	near(nx::texture_reconstruction_loss(source,decoded,mask,2,4).error,8);
+	near(nx::texture_reconstruction_loss(source,decoded,mask,2,0.5).error,1);
 	decoded.fill(qRgb(124,124,124));
 	loss = nx::texture_reconstruction_loss(source,decoded,mask,2);
-	near(loss.rms,4); near(loss.error,0.5f);
+	near(loss.rms,4); near(loss.error,2);
 	near(nx::texture_reconstruction_loss(source,source,mask,2).error,0);
 	decoded.fill(qRgb(0,0,0));
-	near(nx::texture_reconstruction_loss(source,decoded,mask,2).error,1);
+	near(nx::texture_reconstruction_loss(source,decoded,mask,2).error,4);
 	// Only one occupied pixel: arbitrary differences in atlas padding are ignored.
 	mask.fill(Qt::black); mask.setPixel(3,7,qRgb(255,255,255)); decoded.setPixel(3,7,source.pixel(3,7));
 	loss = nx::texture_reconstruction_loss(source,decoded,mask,2);
 	if(loss.pixels != 1) throw std::runtime_error("Incorrect occupied-pixel count");
 	near(loss.error,0);
 	mask.fill(Qt::black);
-	near(nx::texture_reconstruction_loss(source,decoded,mask,2).error,1);
+	near(nx::texture_reconstruction_loss(source,decoded,mask,2).error,4);
 	QImage small(4,4,QImage::Format_RGB32); small.fill(qRgb(128,128,128)); mask.fill(Qt::white);
 	near(nx::texture_reconstruction_loss(source,small,mask,2).error,0);
 	for(double divisor: {0.0,-1.0,std::numeric_limits<double>::infinity(),std::numeric_limits<double>::quiet_NaN()}) {
@@ -208,7 +221,7 @@ static void loss_checks() {
 		catch(const std::invalid_argument &) { rejected = true; }
 		if(!rejected) throw std::runtime_error("Invalid texture error divisor accepted");
 	}
-	// Real exporter: division by two halves the texture contribution, including
+	// Real exporter: a tolerance divisor of two doubles the contribution, including
 	// ancestor saturation, while preserving all geometry and JPEG bytes.
 	nx::MeshHierarchy hierarchy;
 	hierarchy.levels = {level(true,false),level(true,true)};
@@ -229,8 +242,8 @@ static void loss_checks() {
 			throw std::runtime_error("Reconstruction metric broke ancestor monotonicity or sink");
 		bool reduced = false;
 		for(size_t i=0;i<na.size();++i) {
-			near(nb[i].error,na[i].error/2);
-			reduced |= nb[i].error < na[i].error;
+			near(nb[i].error,na[i].error*2);
+			reduced |= nb[i].error > na[i].error;
 			nb[i].error = na[i].error;
 			if(std::memcmp(&na[i],&nb[i],sizeof(nx::Node))) throw std::runtime_error("Metric changed node geometry metadata");
 		}
@@ -286,6 +299,10 @@ int main() {
 	export_checks(false, 1);
 	sizing_checks(true);
 	sizing_checks(false);
+	sizing_checks(false,1);
+	sizing_checks(false,0.5f);
+	sizing_checks(true,1);
+	sizing_checks(true,0.5f);
 	loss_checks();
 	parameter_checks();
 	std::cout << "Texture rounds 1-4 checks passed\n";

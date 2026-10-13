@@ -36,7 +36,7 @@ bool BuildParameters::parse(int argc, char* argv[]) {
 	parser.addOption({{"P", "texture-padding"}, "Padding between charts in pixels", "n", "2"});
 	parser.addOption({"texture-error-ratio", "Target texel/geometric error ratio [1]; 0 keeps baked sizes", "f", "1"});
 	parser.addOption({"texture-sizing", "Texture sizing: fine (multiples of 4) or halving [fine]", "mode", "fine"});
-	parser.addOption({"texture-error-divisor", "Divide reconstruction error by this positive factor [2]; larger values relax refinement", "f", "2"});
+	parser.addOption({"texture-error-divisor", "Divide allowed texture error by this positive factor [2]; larger values retain more detail", "f", "2"});
 
 	// Format options
 	parser.addOption({{"n", "normals"}, "Force per-vertex normals"});
@@ -285,7 +285,7 @@ void BuildParameters::printUsage() {
 	std::cout << "  -Q, --texture-quality <n>      Quality for lossy formats 0-100 [95]\n\n";
 	std::cout << "      --texture-error-ratio <f> Target texel/geometric error ratio [1]; 0 keeps baked sizes\n";
 	std::cout << "      --texture-sizing <mode>   fine (multiples of 4) or halving [fine]\n";
-	std::cout << "      --texture-error-divisor <f> Divide reconstruction error [2]; larger values relax refinement\n";
+	std::cout << "      --texture-error-divisor <f> Divide allowed texture error [2]; larger values retain more detail\n";
 
 	std::cout << "Format options:\n";
 	std::cout << "  -n, --normals             Force per-vertex normals\n";

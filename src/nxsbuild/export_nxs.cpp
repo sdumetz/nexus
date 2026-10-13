@@ -317,7 +317,8 @@ void ExportNxs::exportMicronode(int level, std::uint32_t micronode_id, MappedMes
 		const NodeTexture &texture = mesh.node_textures[micronode_id];
 		int width = texture.width, height = texture.height;
 		texel_error = nodeTexelError(mesh, micronode, width, height);
-		const double target = double(texture_error_ratio)*geometric_error;
+		// The divisor halves the allowed footprint at 2, retaining finer images.
+		const double target = double(texture_error_ratio)*geometric_error/texture_error_divisor;
 		// Ratio zero preserves round 1 as a control. Never enlarge baked images.
 		while(halve_textures && texture_error_ratio > 0 && target > 0 && (width > 1 || height > 1)) {
 			const int next_width = std::max(1, width/2), next_height = std::max(1, height/2);
