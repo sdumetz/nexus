@@ -51,7 +51,7 @@ public:
 	int texture_padding = 2;
 	float texture_error_ratio = 1.0f; // Export texel error / saturated geometric error; 0 disables resizing.
 	bool halve_textures = false;
-	bool reconstruction_error = false;
+	float texture_error_divisor = 2.0f;
 
 	// Format options
 	bool normals = false;            // Force per-vertex normals

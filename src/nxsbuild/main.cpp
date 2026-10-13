@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) {
 		hierarchy.build_hierarchy(params);
 
 		nx::ExportNxs exporter;
-		exporter.export_nxs(hierarchy, "test.nxs", params.texture_error_ratio, params.halve_textures, params.reconstruction_error);
+		exporter.export_nxs(hierarchy, "test.nxs", params.texture_error_ratio, params.halve_textures, params.texture_error_divisor);
 
 	} catch (const std::exception &e) {
 		std::cerr << "Error: " << e.what() << std::endl;

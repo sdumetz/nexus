@@ -15,11 +15,12 @@ struct TextureLoss {
 
 // Experimental conversion of reconstruction loss to a world-space refinement
 // heuristic. The calibration is explicit: an RMS of 8 restores the original
-// footprint; smaller losses reduce it. This is not a surface-deviation bound.
+// footprint before division; smaller losses reduce it. Divisors above one
+// relax refinement. This is not a surface-deviation bound.
 inline TextureLoss texture_reconstruction_loss(const QImage &reference, const QImage &decoded,
-		const QImage &occupied, float footprint, double calibration = 8.0) {
+		const QImage &occupied, float footprint, double error_divisor = 2.0) {
 	if(reference.isNull() || decoded.isNull() || occupied.size() != reference.size() ||
-	   !std::isfinite(calibration) || calibration <= 0)
+	   !std::isfinite(error_divisor) || error_divisor <= 0)
 		throw std::invalid_argument("Invalid texture reconstruction inputs");
 	const QImage original = reference.convertToFormat(QImage::Format_RGB32);
 	const QImage reconstructed = decoded.scaled(reference.size(), Qt::IgnoreAspectRatio,
@@ -42,9 +43,14 @@ inline TextureLoss texture_reconstruction_loss(const QImage &reference, const QI
 	}
 	// Subpixel/collapsed charts have no measurable raster samples. Retain the
 	// footprint fallback instead of claiming lossless reconstruction.
-	if(loss.pixels == 0) { loss.error = footprint; return loss; }
-	loss.rms = std::sqrt(squared/(3.0*loss.pixels));
-	loss.error = footprint*std::min(1.0, loss.rms/calibration);
+	double error = footprint;
+	if(loss.pixels != 0) {
+		loss.rms = std::sqrt(squared/(3.0*loss.pixels));
+		error *= std::min(1.0, loss.rms/8.0);
+	}
+	loss.error = error/error_divisor;
+	if(!std::isfinite(loss.error))
+		throw std::overflow_error("Texture error divisor produces non-finite error");
 	return loss;
 }
 }

@@ -36,7 +36,7 @@ bool BuildParameters::parse(int argc, char* argv[]) {
 	parser.addOption({{"P", "texture-padding"}, "Padding between charts in pixels", "n", "2"});
 	parser.addOption({"texture-error-ratio", "Target texel/geometric error ratio [1]; 0 keeps baked sizes", "f", "1"});
 	parser.addOption({"texture-sizing", "Texture sizing: fine (multiples of 4) or halving [fine]", "mode", "fine"});
-	parser.addOption({"texture-error-metric", "Texture error: footprint or experimental reconstruction [footprint]", "metric", "footprint"});
+	parser.addOption({"texture-error-divisor", "Divide reconstruction error by this positive factor [2]; larger values relax refinement", "f", "2"});
 
 	// Format options
 	parser.addOption({{"n", "normals"}, "Force per-vertex normals"});
@@ -106,12 +106,12 @@ bool BuildParameters::parse(int argc, char* argv[]) {
 		return false;
 	}
 	halve_textures = sizing == "halving";
-	const QString metric = parser.value("texture-error-metric");
-	if(metric != "footprint" && metric != "reconstruction") {
-		std::cerr << "Error: texture-error-metric must be footprint or reconstruction\n";
+	bool valid_divisor = false;
+	texture_error_divisor = parser.value("texture-error-divisor").toFloat(&valid_divisor);
+	if(!valid_divisor) {
+		std::cerr << "Error: texture-error-divisor must be a number\n";
 		return false;
 	}
-	reconstruction_error = metric == "reconstruction";
 	if(!valid_ratio) {
 		std::cerr << "Error: texture-error-ratio must be a number\n";
 		return false;
@@ -224,6 +224,10 @@ bool BuildParameters::parse(int argc, char* argv[]) {
 }
 
 bool BuildParameters::validate() const {
+	if(!std::isfinite(texture_error_divisor) || texture_error_divisor <= 0) {
+		std::cerr << "Error: texture-error-divisor must be finite and positive\n";
+		return false;
+	}
 	if(!std::isfinite(texture_error_ratio) || texture_error_ratio < 0) {
 		std::cerr << "Error: texture-error-ratio must be finite and nonnegative\n";
 		return false;
@@ -281,7 +285,7 @@ void BuildParameters::printUsage() {
 	std::cout << "  -Q, --texture-quality <n>      Quality for lossy formats 0-100 [95]\n\n";
 	std::cout << "      --texture-error-ratio <f> Target texel/geometric error ratio [1]; 0 keeps baked sizes\n";
 	std::cout << "      --texture-sizing <mode>   fine (multiples of 4) or halving [fine]\n";
-	std::cout << "      --texture-error-metric <metric> footprint or reconstruction [footprint]\n";
+	std::cout << "      --texture-error-divisor <f> Divide reconstruction error [2]; larger values relax refinement\n";
 
 	std::cout << "Format options:\n";
 	std::cout << "  -n, --normals             Force per-vertex normals\n";
@@ -318,7 +322,7 @@ void BuildParameters::print() const {
 	nx::log << "  Triangle/texel ratio: " << triangle_texel_ratio << "\n";
 	nx::log << "  Texture error ratio: " << texture_error_ratio << "\n";
 	nx::log << "  Texture sizing: " << (halve_textures ? "halving" : "fine") << "\n";
-	nx::log << "  Texture error metric: " << (reconstruction_error ? "reconstruction" : "footprint") << "\n";
+	nx::log << "  Texture error divisor: " << texture_error_divisor << "\n";
 
 	// Print texture format
 	nx::log << "  Texture format: ";

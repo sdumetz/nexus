@@ -88,12 +88,14 @@ float nodeTexelError(const MappedMesh &mesh, const MicroNode &node, int width, i
 }
 }
 
-void ExportNxs::export_nxs(MeshHierarchy& hierarchy, const std::string& path, float ratio, bool halve, bool reconstruction) {
+void ExportNxs::export_nxs(MeshHierarchy& hierarchy, const std::string& path, float ratio, bool halve, float divisor) {
 	if(!std::isfinite(ratio) || ratio < 0)
 		throw std::invalid_argument("Texture error ratio must be finite and nonnegative");
 	texture_error_ratio = ratio;
 	halve_textures = halve;
-	reconstruction_error = reconstruction;
+	if(!std::isfinite(divisor) || divisor <= 0)
+		throw std::invalid_argument("Texture error divisor must be finite and positive");
+	texture_error_divisor = divisor;
 
 	out = fopen(path.c_str(), "wb");
 	if (!out) {
@@ -336,15 +338,16 @@ void ExportNxs::exportMicronode(int level, std::uint32_t micronode_id, MappedMes
 		texture_index = static_cast<Index>(textures.size());
 		textures.push_back(Texture());
 		texture_payloads.push_back(encodeBaseColorJpeg(mesh, micronode_id, width, height));
-		if(reconstruction_error) {
+		{
 			const auto &payload = texture_payloads.back();
 			QImage decoded;
 			if(!decoded.loadFromData(payload.data(), payload.size(), "JPEG"))
 				throw std::runtime_error("Cannot decode exported texture for reconstruction metric");
 			const auto loss = texture_reconstruction_loss(bakedBaseColor(mesh, micronode_id), decoded,
-				occupiedTexels(mesh, micronode, texture.width, texture.height), texel_error);
+				occupiedTexels(mesh, micronode, texture.width, texture.height), texel_error, texture_error_divisor);
 			nx::debug << "Node " << nodes.size() << " reconstruction_rms=" << loss.rms
-				<< " occupied_pixels=" << loss.pixels << " footprint=" << texel_error << std::endl;
+				<< " occupied_pixels=" << loss.pixels << " footprint=" << texel_error
+				<< " texture_error_divisor=" << texture_error_divisor << std::endl;
 			texel_error = loss.error;
 		}
 		nx::debug << "Node " << nodes.size() << " texture_size=" << texture.width << "x" << texture.height

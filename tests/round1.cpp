@@ -3,6 +3,7 @@
 #include "../src/texture/texture_loss.h"
 #include "../src/core/mesh_hierarchy.h"
 #include "../src/nxsbuild/export_nxs.h"
+#include "../src/nxsbuild/build_parameters.h"
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
@@ -93,7 +94,7 @@ static void export_checks(bool textured, float ratio = 0) {
 	if(!file) throw std::runtime_error("Truncated nodes");
 	near(nodes[0].error, 0.101f); // Saturated above its geometry-dominated child.
 	near(nodes[1].error, 0.1f);   // Geometry dominates.
-	near(nodes[2].error, textured ? 2.0f/256 : 0.001f); // Texture dominates, or absent.
+	near(nodes[2].error, 0.001f); // Low reconstruction loss leaves geometry dominant.
 	near(nodes[3].error, 0);      // Sink remains zero.
 	std::cout << name << ": geometry/texture maximum and ancestor saturation passed\n";
 }
@@ -115,7 +116,7 @@ static void sizing_checks(bool halving) {
 			throw std::runtime_error("Sizing changed container layout");
 		near(nodes[0].error, 0.101f);
 		near(nodes[1].error, 0.1f);
-		near(nodes[2].error, 2.0f/256);
+		near(nodes[2].error, 0.001f);
 		near(nodes[3].error, 0);
 		std::vector<nx::Texture> textures(header.n_textures);
 		file.seekg(sizeof(nx::Header) + nodes.size()*sizeof(nx::Node) + header.n_patches*sizeof(nx::Patch));
@@ -183,29 +184,40 @@ static void loss_checks() {
 	QImage source(16,16,QImage::Format_RGB32), decoded(16,16,QImage::Format_RGB32), mask(16,16,QImage::Format_RGB32);
 	source.fill(qRgb(128,128,128)); decoded.fill(qRgb(120,120,120)); mask.fill(Qt::white);
 	auto loss = nx::texture_reconstruction_loss(source,decoded,mask,2);
-	near(loss.rms,8); near(loss.error,2);
+	near(loss.rms,8); near(loss.error,1);
+	near(nx::texture_reconstruction_loss(source,decoded,mask,2,1).error,2);
+	near(nx::texture_reconstruction_loss(source,decoded,mask,2,4).error,0.5f);
 	decoded.fill(qRgb(124,124,124));
 	loss = nx::texture_reconstruction_loss(source,decoded,mask,2);
-	near(loss.rms,4); near(loss.error,1);
+	near(loss.rms,4); near(loss.error,0.5f);
 	near(nx::texture_reconstruction_loss(source,source,mask,2).error,0);
 	decoded.fill(qRgb(0,0,0));
-	near(nx::texture_reconstruction_loss(source,decoded,mask,2).error,2);
+	near(nx::texture_reconstruction_loss(source,decoded,mask,2).error,1);
 	// Only one occupied pixel: arbitrary differences in atlas padding are ignored.
 	mask.fill(Qt::black); mask.setPixel(3,7,qRgb(255,255,255)); decoded.setPixel(3,7,source.pixel(3,7));
 	loss = nx::texture_reconstruction_loss(source,decoded,mask,2);
 	if(loss.pixels != 1) throw std::runtime_error("Incorrect occupied-pixel count");
 	near(loss.error,0);
 	mask.fill(Qt::black);
-	near(nx::texture_reconstruction_loss(source,decoded,mask,2).error,2);
+	near(nx::texture_reconstruction_loss(source,decoded,mask,2).error,1);
 	QImage small(4,4,QImage::Format_RGB32); small.fill(qRgb(128,128,128)); mask.fill(Qt::white);
 	near(nx::texture_reconstruction_loss(source,small,mask,2).error,0);
-	// Real exporter: only node errors change when enabling the metric.
+	for(double divisor: {0.0,-1.0,std::numeric_limits<double>::infinity(),std::numeric_limits<double>::quiet_NaN()}) {
+		bool rejected = false;
+		try { nx::texture_reconstruction_loss(source,decoded,mask,2,divisor); }
+		catch(const std::invalid_argument &) { rejected = true; }
+		if(!rejected) throw std::runtime_error("Invalid texture error divisor accepted");
+	}
+	// Real exporter: division by two halves the texture contribution, including
+	// ancestor saturation, while preserving all geometry and JPEG bytes.
 	nx::MeshHierarchy hierarchy;
 	hierarchy.levels = {level(true,false),level(true,true)};
+	for(auto *mesh: hierarchy.levels)
+		for(auto &node: mesh->micronodes) node.error = 0;
 	for(float ratio: {0.0f,1.0f}) {
 		nx::ExportNxs footprint, reconstruction;
-		footprint.export_nxs(hierarchy,"loss-footprint.nxs",ratio);
-		reconstruction.export_nxs(hierarchy,"loss-reconstruction.nxs",ratio,false,true);
+		footprint.export_nxs(hierarchy,"loss-footprint.nxs",ratio,false,1);
+		reconstruction.export_nxs(hierarchy,"loss-reconstruction.nxs",ratio); // Default divisor 2.
 		std::ifstream a("loss-footprint.nxs",std::ios::binary), b("loss-reconstruction.nxs",std::ios::binary);
 		nx::Header headerA,headerB;
 		a.read(reinterpret_cast<char*>(&headerA),sizeof(headerA)); b.read(reinterpret_cast<char*>(&headerB),sizeof(headerB));
@@ -217,16 +229,42 @@ static void loss_checks() {
 			throw std::runtime_error("Reconstruction metric broke ancestor monotonicity or sink");
 		bool reduced = false;
 		for(size_t i=0;i<na.size();++i) {
-			if(nb[i].error > na[i].error) throw std::runtime_error("Loss weighting increased footprint");
+			near(nb[i].error,na[i].error/2);
 			reduced |= nb[i].error < na[i].error;
 			nb[i].error = na[i].error;
 			if(std::memcmp(&na[i],&nb[i],sizeof(nx::Node))) throw std::runtime_error("Metric changed node geometry metadata");
 		}
-		if(!reduced) throw std::runtime_error("Reconstruction metric had no effect");
+		if(!reduced) throw std::runtime_error("Default divisor had no effect");
 		const std::vector<char> restA((std::istreambuf_iterator<char>(a)),{}), restB((std::istreambuf_iterator<char>(b)),{});
 		if(restA != restB) throw std::runtime_error("Metric changed geometry, patches or texture bytes");
 	}
 	std::cout << "Reconstruction loss, occupied pixels, calibration, fallback and binary export passed\n";
+}
+
+static void parameter_checks() {
+	auto parse = [](std::vector<std::string> args, nx::BuildParameters &parameters) {
+		std::vector<char*> argv;
+		for(auto &arg: args) argv.push_back(arg.data());
+		return parameters.parse(argv.size(),argv.data());
+	};
+	nx::BuildParameters defaults;
+	if(!parse({"nxsbuild","model.obj"},defaults)) throw std::runtime_error("Default arguments rejected");
+	near(defaults.texture_error_divisor,2);
+	for(const auto &value: {"0.5","1","4"}) {
+		nx::BuildParameters parameters;
+		if(!parse({"nxsbuild","--texture-error-divisor",value,"model.obj"},parameters))
+			throw std::runtime_error("Valid texture error divisor rejected");
+		near(parameters.texture_error_divisor,std::stof(value));
+	}
+	for(const auto &value: {"0","-1","nan","inf","not-a-number"}) {
+		nx::BuildParameters parameters;
+		if(parse({"nxsbuild","--texture-error-divisor",value,"model.obj"},parameters))
+			throw std::runtime_error("Invalid texture error divisor accepted by CLI");
+	}
+	nx::BuildParameters obsolete;
+	if(parse({"nxsbuild","--texture-error-metric","footprint","model.obj"},obsolete))
+		throw std::runtime_error("Removed texture metric opt-out accepted");
+	std::cout << "Default divisor, tuning arguments, validation and removed opt-out passed\n";
 }
 
 int main() {
@@ -249,5 +287,6 @@ int main() {
 	sizing_checks(true);
 	sizing_checks(false);
 	loss_checks();
+	parameter_checks();
 	std::cout << "Texture rounds 1-4 checks passed\n";
 }
