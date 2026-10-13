@@ -1,0 +1,43 @@
+{
+  "models": 10,
+  "saving_models": [
+    "RWT256",
+    "RWT292",
+    "RWT319",
+    "RWT471"
+  ],
+  "largest_texture_burden_models": [
+    "RWT256",
+    "RWT292",
+    "RWT319",
+    "RWT471"
+  ],
+  "saving_models_exactly_top_texture_burden": true,
+  "correlations": {
+    "upstream_texture_geometry_ratio": {
+      "models": 10,
+      "spearman": 0.9151515151515152
+    },
+    "upstream_texture_bytes_per_drawn_triangle": {
+      "models": 10,
+      "spearman": 0.6363636363636364
+    },
+    "upstream_resident_node_fraction": {
+      "models": 10,
+      "spearman": 0.8424242424242424
+    },
+    "upstream_2px_to_0_1px_cache_fraction": {
+      "models": 9,
+      "spearman": 0.65
+    },
+    "historical_round2_vs_round1_2px_gpu_saving_pct": {
+      "models": 9,
+      "spearman": 0.8218224606706397
+    }
+  },
+  "upstream_2px_to_0_1px_cache_fraction_range": [
+    0.00884437091388894,
+    0.23274548823047508
+  ],
+  "note": "Small purposive sample; descriptive correlations, not significance tests. No finite-budget stall measurements exist in these runs."
+}

@@ -138,3 +138,6 @@ The experiment-only `NEXUS_BENCH_FACTORS` exporter builds one hierarchy per mode
 and exports the sweep from that hierarchy. Production builder options/defaults
 remain unchanged. Measurements, notes and benchmark tools belong to a separate
 experiment commit; `decoupled_textures-code` stays source-only.
+
+[Cache savings versus prior texture burden and refinement](cache-correlation.md)
+examines whether the improvements target earlier problem cases.
