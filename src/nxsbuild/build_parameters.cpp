@@ -36,6 +36,7 @@ bool BuildParameters::parse(int argc, char* argv[]) {
 	parser.addOption({{"P", "texture-padding"}, "Padding between charts in pixels", "n", "2"});
 	parser.addOption({"texture-error-ratio", "Target texel/geometric error ratio [1]; 0 keeps baked sizes", "f", "1"});
 	parser.addOption({"texture-sizing", "Texture sizing: fine (multiples of 4) or halving [fine]", "mode", "fine"});
+	parser.addOption({"texture-error-metric", "Texture error: footprint or experimental reconstruction [footprint]", "metric", "footprint"});
 
 	// Format options
 	parser.addOption({{"n", "normals"}, "Force per-vertex normals"});
@@ -105,6 +106,12 @@ bool BuildParameters::parse(int argc, char* argv[]) {
 		return false;
 	}
 	halve_textures = sizing == "halving";
+	const QString metric = parser.value("texture-error-metric");
+	if(metric != "footprint" && metric != "reconstruction") {
+		std::cerr << "Error: texture-error-metric must be footprint or reconstruction\n";
+		return false;
+	}
+	reconstruction_error = metric == "reconstruction";
 	if(!valid_ratio) {
 		std::cerr << "Error: texture-error-ratio must be a number\n";
 		return false;
@@ -274,6 +281,7 @@ void BuildParameters::printUsage() {
 	std::cout << "  -Q, --texture-quality <n>      Quality for lossy formats 0-100 [95]\n\n";
 	std::cout << "      --texture-error-ratio <f> Target texel/geometric error ratio [1]; 0 keeps baked sizes\n";
 	std::cout << "      --texture-sizing <mode>   fine (multiples of 4) or halving [fine]\n";
+	std::cout << "      --texture-error-metric <metric> footprint or reconstruction [footprint]\n";
 
 	std::cout << "Format options:\n";
 	std::cout << "  -n, --normals             Force per-vertex normals\n";
@@ -310,6 +318,7 @@ void BuildParameters::print() const {
 	nx::log << "  Triangle/texel ratio: " << triangle_texel_ratio << "\n";
 	nx::log << "  Texture error ratio: " << texture_error_ratio << "\n";
 	nx::log << "  Texture sizing: " << (halve_textures ? "halving" : "fine") << "\n";
+	nx::log << "  Texture error metric: " << (reconstruction_error ? "reconstruction" : "footprint") << "\n";
 
 	// Print texture format
 	nx::log << "  Texture format: ";

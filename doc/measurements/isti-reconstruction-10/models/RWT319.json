@@ -1,0 +1,2103 @@
+{
+  "status": "ok",
+  "artifacts": {
+    "round1": {
+      "file_bytes": 1969408,
+      "sha256": "1d1dc15a32c0e18c589401692e976a700cc99442665813a78de6a3ac05438f3d",
+      "geometry_sha256": "258ae27ba0db11f8ae3b77af6f14fc7619c15be516886d5f66e36a424dde2e02",
+      "texture_sha256": "c19e54a5ed44e7eae2d03a5387d1b86729385b0a990eb75ef3b187bc2715b858",
+      "export_nodes": 46,
+      "export_textures": 46,
+      "export_base_texels": 4009984,
+      "export_mip_texels": 5346630,
+      "texture_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ]
+    },
+    "fine": {
+      "file_bytes": 1396736,
+      "sha256": "dd3894c69d1d5c4b071dd2ac073de1263c8717d5d41a74f3969b66953ced8123",
+      "geometry_sha256": "258ae27ba0db11f8ae3b77af6f14fc7619c15be516886d5f66e36a424dde2e02",
+      "texture_sha256": "124fc4bc9a88e21ef3a4d76568c79d43753da32fd364d926c755a2c750e868cd",
+      "export_nodes": 46,
+      "export_textures": 46,
+      "export_base_texels": 977632,
+      "export_mip_texels": 1302842,
+      "texture_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          124,
+          124
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          100,
+          100
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          124,
+          124
+        ],
+        [
+          156,
+          156
+        ],
+        [
+          156,
+          156
+        ],
+        [
+          172,
+          172
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          144,
+          144
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          168,
+          168
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          140,
+          140
+        ],
+        [
+          168,
+          168
+        ],
+        [
+          168,
+          168
+        ],
+        [
+          252,
+          252
+        ],
+        [
+          172,
+          172
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          160,
+          160
+        ],
+        [
+          164,
+          164
+        ],
+        [
+          168,
+          168
+        ],
+        [
+          220,
+          220
+        ],
+        [
+          164,
+          164
+        ],
+        [
+          156,
+          156
+        ],
+        [
+          148,
+          148
+        ]
+      ]
+    },
+    "reconstruction": {
+      "file_bytes": 1969408,
+      "sha256": "b41b890bf7e3faa2dda3b24e1fbb03b5b615ae7029aa8ce59865f2ec301654b5",
+      "geometry_sha256": "258ae27ba0db11f8ae3b77af6f14fc7619c15be516886d5f66e36a424dde2e02",
+      "texture_sha256": "c19e54a5ed44e7eae2d03a5387d1b86729385b0a990eb75ef3b187bc2715b858",
+      "export_nodes": 46,
+      "export_textures": 46,
+      "export_base_texels": 4009984,
+      "export_mip_texels": 5346630,
+      "texture_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ]
+    },
+    "reconstructionFine": {
+      "file_bytes": 1396736,
+      "sha256": "10dc23bc2baf461da28021d52704c3e75eb969d3ba8dea5951845dd1132e8c3c",
+      "geometry_sha256": "258ae27ba0db11f8ae3b77af6f14fc7619c15be516886d5f66e36a424dde2e02",
+      "texture_sha256": "124fc4bc9a88e21ef3a4d76568c79d43753da32fd364d926c755a2c750e868cd",
+      "export_nodes": 46,
+      "export_textures": 46,
+      "export_base_texels": 977632,
+      "export_mip_texels": 1302842,
+      "texture_sizes": [
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          124,
+          124
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          100,
+          100
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          124,
+          124
+        ],
+        [
+          156,
+          156
+        ],
+        [
+          156,
+          156
+        ],
+        [
+          172,
+          172
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          144,
+          144
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          168,
+          168
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          140,
+          140
+        ],
+        [
+          168,
+          168
+        ],
+        [
+          168,
+          168
+        ],
+        [
+          252,
+          252
+        ],
+        [
+          172,
+          172
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          160,
+          160
+        ],
+        [
+          164,
+          164
+        ],
+        [
+          168,
+          168
+        ],
+        [
+          220,
+          220
+        ],
+        [
+          164,
+          164
+        ],
+        [
+          156,
+          156
+        ],
+        [
+          148,
+          148
+        ]
+      ]
+    }
+  },
+  "measurement": {
+    "created": "2026-10-13T07:46:36.713Z",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "poses": [
+      {
+        "distanceRadii": 2.5,
+        "position": [
+          19.58796179985294,
+          16.21864802990137,
+          58.88639321342224
+        ],
+        "target": [
+          -1.1953390836715698,
+          1.3734331130981445,
+          -0.4944664537906647
+        ],
+        "near": 0.02585625648498535,
+        "far": 2585.625648498535
+      }
+    ],
+    "taus": [
+      2,
+      0.5,
+      0.1
+    ],
+    "accounting": "Logical live Nexus WebGL buffers and RGBA8 textures including every generated mip; excludes driver overhead, CPU heap, and renderer shell allocations.",
+    "models": [
+      {
+        "label": "round1",
+        "path": "/tmp/nexus-texture-reconstruction-10/RWT319/build/model.round1.nxs",
+        "fileBytes": 1969408,
+        "sha256": "1d1dc15a32c0e18c589401692e976a700cc99442665813a78de6a3ac05438f3d"
+      },
+      {
+        "label": "fine",
+        "path": "/tmp/nexus-texture-reconstruction-10/RWT319/build/model.fine.nxs",
+        "fileBytes": 1396736,
+        "sha256": "dd3894c69d1d5c4b071dd2ac073de1263c8717d5d41a74f3969b66953ced8123"
+      },
+      {
+        "label": "reconstruction",
+        "path": "/tmp/nexus-texture-reconstruction-10/RWT319/build/model.reconstruction.nxs",
+        "fileBytes": 1969408,
+        "sha256": "b41b890bf7e3faa2dda3b24e1fbb03b5b615ae7029aa8ce59865f2ec301654b5"
+      },
+      {
+        "label": "reconstructionFine",
+        "path": "/tmp/nexus-texture-reconstruction-10/RWT319/build/model.reconstructionFine.nxs",
+        "fileBytes": 1396736,
+        "sha256": "10dc23bc2baf461da28021d52704c3e75eb969d3ba8dea5951845dd1132e8c3c"
+      }
+    ],
+    "runs": [
+      {
+        "label": "source",
+        "view": 0,
+        "tau": 0,
+        "source": true,
+        "threeRevision": "186",
+        "fetchedHttpBytes": 0,
+        "modelRequests": 0,
+        "logs": []
+      },
+      {
+        "label": "round1",
+        "view": 0,
+        "tau": 2,
+        "residentNodes": 28,
+        "totalNodes": 46,
+        "requestedNodes": 28,
+        "liveTextures": 28,
+        "baseTexels": 471040,
+        "mipTexels": 628044,
+        "geometryBytes": 662352,
+        "textureBytes": 2512176,
+        "gpuBytes": 3174528,
+        "legacyEstimatedCacheBytes": 2308432,
+        "allocationAuditPassed": true,
+        "residentEncodedRangeBytes": 839572,
+        "indexBytes": 9108,
+        "drawCalls": 14,
+        "drawnTriangles": 10048,
+        "suppressedCandidates": 45,
+        "threeRevision": "186",
+        "unboundedCache": true,
+        "prefetchBelowTarget": false,
+        "loadingMode": "traverse",
+        "fetchedHttpBytes": 855237,
+        "modelRequests": 58,
+        "logs": []
+      },
+      {
+        "label": "fine",
+        "view": 0,
+        "tau": 2,
+        "residentNodes": 28,
+        "totalNodes": 46,
+        "requestedNodes": 28,
+        "liveTextures": 28,
+        "baseTexels": 307984,
+        "mipTexels": 410433,
+        "geometryBytes": 662352,
+        "textureBytes": 1641732,
+        "gpuBytes": 2304084,
+        "legacyEstimatedCacheBytes": 1906512,
+        "allocationAuditPassed": true,
+        "residentEncodedRangeBytes": 799380,
+        "indexBytes": 9108,
+        "drawCalls": 14,
+        "drawnTriangles": 10048,
+        "suppressedCandidates": 48,
+        "threeRevision": "186",
+        "unboundedCache": true,
+        "prefetchBelowTarget": false,
+        "loadingMode": "traverse",
+        "fetchedHttpBytes": 815042,
+        "modelRequests": 58,
+        "logs": []
+      },
+      {
+        "label": "reconstruction",
+        "view": 0,
+        "tau": 2,
+        "residentNodes": 28,
+        "totalNodes": 46,
+        "requestedNodes": 28,
+        "liveTextures": 28,
+        "baseTexels": 471040,
+        "mipTexels": 628044,
+        "geometryBytes": 662352,
+        "textureBytes": 2512176,
+        "gpuBytes": 3174528,
+        "legacyEstimatedCacheBytes": 2308432,
+        "allocationAuditPassed": true,
+        "residentEncodedRangeBytes": 839572,
+        "indexBytes": 9108,
+        "drawCalls": 14,
+        "drawnTriangles": 10048,
+        "suppressedCandidates": 48,
+        "threeRevision": "186",
+        "unboundedCache": true,
+        "prefetchBelowTarget": false,
+        "loadingMode": "traverse",
+        "fetchedHttpBytes": 855237,
+        "modelRequests": 58,
+        "logs": []
+      },
+      {
+        "label": "reconstructionFine",
+        "view": 0,
+        "tau": 2,
+        "residentNodes": 28,
+        "totalNodes": 46,
+        "requestedNodes": 28,
+        "liveTextures": 28,
+        "baseTexels": 307984,
+        "mipTexels": 410433,
+        "geometryBytes": 662352,
+        "textureBytes": 1641732,
+        "gpuBytes": 2304084,
+        "legacyEstimatedCacheBytes": 1906512,
+        "allocationAuditPassed": true,
+        "residentEncodedRangeBytes": 799380,
+        "indexBytes": 9108,
+        "drawCalls": 14,
+        "drawnTriangles": 10048,
+        "suppressedCandidates": 48,
+        "threeRevision": "186",
+        "unboundedCache": true,
+        "prefetchBelowTarget": false,
+        "loadingMode": "traverse",
+        "fetchedHttpBytes": 815042,
+        "modelRequests": 58,
+        "logs": []
+      },
+      {
+        "label": "round1",
+        "view": 0,
+        "tau": 0.5,
+        "residentNodes": 46,
+        "totalNodes": 46,
+        "requestedNodes": 46,
+        "liveTextures": 46,
+        "baseTexels": 4009984,
+        "mipTexels": 5346630,
+        "geometryBytes": 1056604,
+        "textureBytes": 21386520,
+        "gpuBytes": 22443124,
+        "legacyEstimatedCacheBytes": 10034524,
+        "allocationAuditPassed": true,
+        "residentEncodedRangeBytes": 1969300,
+        "indexBytes": 9108,
+        "drawCalls": 12,
+        "drawnTriangles": 11884,
+        "suppressedCandidates": 0,
+        "threeRevision": "186",
+        "unboundedCache": true,
+        "prefetchBelowTarget": false,
+        "loadingMode": "traverse",
+        "fetchedHttpBytes": 2892521,
+        "modelRequests": 94,
+        "logs": []
+      },
+      {
+        "label": "fine",
+        "view": 0,
+        "tau": 0.5,
+        "residentNodes": 46,
+        "totalNodes": 46,
+        "requestedNodes": 46,
+        "liveTextures": 46,
+        "baseTexels": 977632,
+        "mipTexels": 1302842,
+        "geometryBytes": 1056604,
+        "textureBytes": 5211368,
+        "gpuBytes": 6267972,
+        "legacyEstimatedCacheBytes": 4307804,
+        "allocationAuditPassed": true,
+        "residentEncodedRangeBytes": 1396628,
+        "indexBytes": 9108,
+        "drawCalls": 12,
+        "drawnTriangles": 11884,
+        "suppressedCandidates": 0,
+        "threeRevision": "186",
+        "unboundedCache": true,
+        "prefetchBelowTarget": false,
+        "loadingMode": "traverse",
+        "fetchedHttpBytes": 1747164,
+        "modelRequests": 94,
+        "logs": []
+      },
+      {
+        "label": "reconstruction",
+        "view": 0,
+        "tau": 0.5,
+        "residentNodes": 46,
+        "totalNodes": 46,
+        "requestedNodes": 46,
+        "liveTextures": 46,
+        "baseTexels": 4009984,
+        "mipTexels": 5346630,
+        "geometryBytes": 1056604,
+        "textureBytes": 21386520,
+        "gpuBytes": 22443124,
+        "legacyEstimatedCacheBytes": 10034524,
+        "allocationAuditPassed": true,
+        "residentEncodedRangeBytes": 1969300,
+        "indexBytes": 9108,
+        "drawCalls": 12,
+        "drawnTriangles": 11884,
+        "suppressedCandidates": 0,
+        "threeRevision": "186",
+        "unboundedCache": true,
+        "prefetchBelowTarget": false,
+        "loadingMode": "traverse",
+        "fetchedHttpBytes": 2892521,
+        "modelRequests": 94,
+        "logs": []
+      },
+      {
+        "label": "reconstructionFine",
+        "view": 0,
+        "tau": 0.5,
+        "residentNodes": 46,
+        "totalNodes": 46,
+        "requestedNodes": 46,
+        "liveTextures": 46,
+        "baseTexels": 977632,
+        "mipTexels": 1302842,
+        "geometryBytes": 1056604,
+        "textureBytes": 5211368,
+        "gpuBytes": 6267972,
+        "legacyEstimatedCacheBytes": 4307804,
+        "allocationAuditPassed": true,
+        "residentEncodedRangeBytes": 1396628,
+        "indexBytes": 9108,
+        "drawCalls": 12,
+        "drawnTriangles": 11884,
+        "suppressedCandidates": 0,
+        "threeRevision": "186",
+        "unboundedCache": true,
+        "prefetchBelowTarget": false,
+        "loadingMode": "traverse",
+        "fetchedHttpBytes": 1747164,
+        "modelRequests": 94,
+        "logs": []
+      },
+      {
+        "label": "round1",
+        "view": 0,
+        "tau": 0.1,
+        "residentNodes": 46,
+        "totalNodes": 46,
+        "requestedNodes": 46,
+        "liveTextures": 46,
+        "baseTexels": 4009984,
+        "mipTexels": 5346630,
+        "geometryBytes": 1056604,
+        "textureBytes": 21386520,
+        "gpuBytes": 22443124,
+        "legacyEstimatedCacheBytes": 10034524,
+        "allocationAuditPassed": true,
+        "residentEncodedRangeBytes": 1969300,
+        "indexBytes": 9108,
+        "drawCalls": 12,
+        "drawnTriangles": 11884,
+        "suppressedCandidates": 0,
+        "threeRevision": "186",
+        "unboundedCache": true,
+        "prefetchBelowTarget": false,
+        "loadingMode": "traverse",
+        "fetchedHttpBytes": 2892521,
+        "modelRequests": 94,
+        "logs": []
+      },
+      {
+        "label": "fine",
+        "view": 0,
+        "tau": 0.1,
+        "residentNodes": 46,
+        "totalNodes": 46,
+        "requestedNodes": 46,
+        "liveTextures": 46,
+        "baseTexels": 977632,
+        "mipTexels": 1302842,
+        "geometryBytes": 1056604,
+        "textureBytes": 5211368,
+        "gpuBytes": 6267972,
+        "legacyEstimatedCacheBytes": 4307804,
+        "allocationAuditPassed": true,
+        "residentEncodedRangeBytes": 1396628,
+        "indexBytes": 9108,
+        "drawCalls": 12,
+        "drawnTriangles": 11884,
+        "suppressedCandidates": 0,
+        "threeRevision": "186",
+        "unboundedCache": true,
+        "prefetchBelowTarget": false,
+        "loadingMode": "traverse",
+        "fetchedHttpBytes": 1747164,
+        "modelRequests": 94,
+        "logs": []
+      },
+      {
+        "label": "reconstruction",
+        "view": 0,
+        "tau": 0.1,
+        "residentNodes": 46,
+        "totalNodes": 46,
+        "requestedNodes": 46,
+        "liveTextures": 46,
+        "baseTexels": 4009984,
+        "mipTexels": 5346630,
+        "geometryBytes": 1056604,
+        "textureBytes": 21386520,
+        "gpuBytes": 22443124,
+        "legacyEstimatedCacheBytes": 10034524,
+        "allocationAuditPassed": true,
+        "residentEncodedRangeBytes": 1969300,
+        "indexBytes": 9108,
+        "drawCalls": 12,
+        "drawnTriangles": 11884,
+        "suppressedCandidates": 0,
+        "threeRevision": "186",
+        "unboundedCache": true,
+        "prefetchBelowTarget": false,
+        "loadingMode": "traverse",
+        "fetchedHttpBytes": 2892521,
+        "modelRequests": 94,
+        "logs": []
+      },
+      {
+        "label": "reconstructionFine",
+        "view": 0,
+        "tau": 0.1,
+        "residentNodes": 46,
+        "totalNodes": 46,
+        "requestedNodes": 46,
+        "liveTextures": 46,
+        "baseTexels": 977632,
+        "mipTexels": 1302842,
+        "geometryBytes": 1056604,
+        "textureBytes": 5211368,
+        "gpuBytes": 6267972,
+        "legacyEstimatedCacheBytes": 4307804,
+        "allocationAuditPassed": true,
+        "residentEncodedRangeBytes": 1396628,
+        "indexBytes": 9108,
+        "drawCalls": 12,
+        "drawnTriangles": 11884,
+        "suppressedCandidates": 0,
+        "threeRevision": "186",
+        "unboundedCache": true,
+        "prefetchBelowTarget": false,
+        "loadingMode": "traverse",
+        "fetchedHttpBytes": 1747164,
+        "modelRequests": 94,
+        "logs": []
+      }
+    ],
+    "comparisons": [
+      {
+        "label": "round1",
+        "reference": "source",
+        "view": 0,
+        "tau": 2,
+        "mode": "textured",
+        "modelPixels": 116902,
+        "mse": 122.78871476393333,
+        "psnrDb": 27.23921907262836,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 6.574609501976014,
+        "changedPixelsOver8Fraction": 0.3115601101777557,
+        "silhouetteIoU": 0.9999315666113496,
+        "diff": "round1-v0-t2-textured-vs-source-diff.png"
+      },
+      {
+        "label": "round1",
+        "reference": "source",
+        "view": 0,
+        "tau": 2,
+        "mode": "shaded",
+        "modelPixels": 116902,
+        "mse": 19.632062183139155,
+        "psnrDb": 35.20114439886396,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.0718094358237384,
+        "changedPixelsOver8Fraction": 0.06449846880292895,
+        "silhouetteIoU": 0.9999572291320935,
+        "diff": "round1-v0-t2-shaded-vs-source-diff.png"
+      },
+      {
+        "label": "fine",
+        "reference": "round1",
+        "view": 0,
+        "tau": 2,
+        "mode": "textured",
+        "modelPixels": 116898,
+        "mse": 34.8534762499501,
+        "psnrDb": 32.70834260187691,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.2644955431230644,
+        "changedPixelsOver8Fraction": 0.11160156717822375,
+        "silhouetteIoU": 0.9999828910674263,
+        "diff": "fine-v0-t2-textured-vs-round1-diff.png"
+      },
+      {
+        "label": "fine",
+        "reference": "source",
+        "view": 0,
+        "tau": 2,
+        "mode": "textured",
+        "modelPixels": 116902,
+        "mse": 105.57494881752807,
+        "psnrDb": 27.89519481315796,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 6.278837544838127,
+        "changedPixelsOver8Fraction": 0.3143658791124189,
+        "silhouetteIoU": 0.9999315666113496,
+        "diff": "fine-v0-t2-textured-vs-source-diff.png"
+      },
+      {
+        "label": "fine",
+        "reference": "round1",
+        "view": 0,
+        "tau": 2,
+        "mode": "shaded",
+        "modelPixels": 116900,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "fine-v0-t2-shaded-vs-round1-diff.png"
+      },
+      {
+        "label": "fine",
+        "reference": "source",
+        "view": 0,
+        "tau": 2,
+        "mode": "shaded",
+        "modelPixels": 116902,
+        "mse": 19.632062183139155,
+        "psnrDb": 35.20114439886396,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.0718094358237384,
+        "changedPixelsOver8Fraction": 0.06449846880292895,
+        "silhouetteIoU": 0.9999572291320935,
+        "diff": "fine-v0-t2-shaded-vs-source-diff.png"
+      },
+      {
+        "label": "reconstruction",
+        "reference": "round1",
+        "view": 0,
+        "tau": 2,
+        "mode": "textured",
+        "modelPixels": 116897,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstruction-v0-t2-textured-vs-round1-diff.png"
+      },
+      {
+        "label": "reconstruction",
+        "reference": "fine",
+        "view": 0,
+        "tau": 2,
+        "mode": "textured",
+        "modelPixels": 116898,
+        "mse": 34.8534762499501,
+        "psnrDb": 32.70834260187691,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.2644955431230644,
+        "changedPixelsOver8Fraction": 0.11160156717822375,
+        "silhouetteIoU": 0.9999828910674263,
+        "diff": "reconstruction-v0-t2-textured-vs-fine-diff.png"
+      },
+      {
+        "label": "reconstruction",
+        "reference": "source",
+        "view": 0,
+        "tau": 2,
+        "mode": "textured",
+        "modelPixels": 116902,
+        "mse": 122.78871476393333,
+        "psnrDb": 27.23921907262836,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 6.574609501976014,
+        "changedPixelsOver8Fraction": 0.3115601101777557,
+        "silhouetteIoU": 0.9999315666113496,
+        "diff": "reconstruction-v0-t2-textured-vs-source-diff.png"
+      },
+      {
+        "label": "reconstruction",
+        "reference": "round1",
+        "view": 0,
+        "tau": 2,
+        "mode": "shaded",
+        "modelPixels": 116900,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstruction-v0-t2-shaded-vs-round1-diff.png"
+      },
+      {
+        "label": "reconstruction",
+        "reference": "fine",
+        "view": 0,
+        "tau": 2,
+        "mode": "shaded",
+        "modelPixels": 116900,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstruction-v0-t2-shaded-vs-fine-diff.png"
+      },
+      {
+        "label": "reconstruction",
+        "reference": "source",
+        "view": 0,
+        "tau": 2,
+        "mode": "shaded",
+        "modelPixels": 116902,
+        "mse": 19.632062183139155,
+        "psnrDb": 35.20114439886396,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.0718094358237384,
+        "changedPixelsOver8Fraction": 0.06449846880292895,
+        "silhouetteIoU": 0.9999572291320935,
+        "diff": "reconstruction-v0-t2-shaded-vs-source-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "round1",
+        "view": 0,
+        "tau": 2,
+        "mode": "textured",
+        "modelPixels": 116898,
+        "mse": 34.8534762499501,
+        "psnrDb": 32.70834260187691,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.2644955431230644,
+        "changedPixelsOver8Fraction": 0.11160156717822375,
+        "silhouetteIoU": 0.9999828910674263,
+        "diff": "reconstructionFine-v0-t2-textured-vs-round1-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "fine",
+        "view": 0,
+        "tau": 2,
+        "mode": "textured",
+        "modelPixels": 116897,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstructionFine-v0-t2-textured-vs-fine-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "reconstruction",
+        "view": 0,
+        "tau": 2,
+        "mode": "textured",
+        "modelPixels": 116898,
+        "mse": 34.8534762499501,
+        "psnrDb": 32.70834260187691,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.2644955431230644,
+        "changedPixelsOver8Fraction": 0.11160156717822375,
+        "silhouetteIoU": 0.9999828910674263,
+        "diff": "reconstructionFine-v0-t2-textured-vs-reconstruction-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "source",
+        "view": 0,
+        "tau": 2,
+        "mode": "textured",
+        "modelPixels": 116902,
+        "mse": 105.57494881752807,
+        "psnrDb": 27.89519481315796,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 6.278837544838127,
+        "changedPixelsOver8Fraction": 0.3143658791124189,
+        "silhouetteIoU": 0.9999315666113496,
+        "diff": "reconstructionFine-v0-t2-textured-vs-source-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "round1",
+        "view": 0,
+        "tau": 2,
+        "mode": "shaded",
+        "modelPixels": 116900,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstructionFine-v0-t2-shaded-vs-round1-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "fine",
+        "view": 0,
+        "tau": 2,
+        "mode": "shaded",
+        "modelPixels": 116900,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstructionFine-v0-t2-shaded-vs-fine-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "reconstruction",
+        "view": 0,
+        "tau": 2,
+        "mode": "shaded",
+        "modelPixels": 116900,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstructionFine-v0-t2-shaded-vs-reconstruction-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "source",
+        "view": 0,
+        "tau": 2,
+        "mode": "shaded",
+        "modelPixels": 116902,
+        "mse": 19.632062183139155,
+        "psnrDb": 35.20114439886396,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.0718094358237384,
+        "changedPixelsOver8Fraction": 0.06449846880292895,
+        "silhouetteIoU": 0.9999572291320935,
+        "diff": "reconstructionFine-v0-t2-shaded-vs-source-diff.png"
+      },
+      {
+        "label": "round1",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "textured",
+        "modelPixels": 116899,
+        "mse": 41.94054411643099,
+        "psnrDb": 31.904463003744787,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.8856933478187723,
+        "changedPixelsOver8Fraction": 0.15035201327641812,
+        "silhouetteIoU": 0.9999572280344571,
+        "diff": "round1-v0-t0.5-textured-vs-source-diff.png"
+      },
+      {
+        "label": "round1",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 18.859431360975428,
+        "psnrDb": 35.375517668734716,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.01127183865274,
+        "changedPixelsOver8Fraction": 0.06317419310687003,
+        "silhouetteIoU": 1,
+        "diff": "round1-v0-t0.5-shaded-vs-source-diff.png"
+      },
+      {
+        "label": "fine",
+        "reference": "round1",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "textured",
+        "modelPixels": 116897,
+        "mse": 45.68155726836446,
+        "psnrDb": 31.533394604302558,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 4.112455124311716,
+        "changedPixelsOver8Fraction": 0.1737426965619306,
+        "silhouetteIoU": 0.9999572273026681,
+        "diff": "fine-v0-t0.5-textured-vs-round1-diff.png"
+      },
+      {
+        "label": "fine",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "textured",
+        "modelPixels": 116899,
+        "mse": 36.12301787583013,
+        "psnrDb": 32.55296334839123,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.8864204712330017,
+        "changedPixelsOver8Fraction": 0.16373963849134723,
+        "silhouetteIoU": 0.9999657824275657,
+        "diff": "fine-v0-t0.5-textured-vs-source-diff.png"
+      },
+      {
+        "label": "fine",
+        "reference": "round1",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "fine-v0-t0.5-shaded-vs-round1-diff.png"
+      },
+      {
+        "label": "fine",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 18.859431360975428,
+        "psnrDb": 35.375517668734716,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.01127183865274,
+        "changedPixelsOver8Fraction": 0.06317419310687003,
+        "silhouetteIoU": 1,
+        "diff": "fine-v0-t0.5-shaded-vs-source-diff.png"
+      },
+      {
+        "label": "reconstruction",
+        "reference": "round1",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "textured",
+        "modelPixels": 116894,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstruction-v0-t0.5-textured-vs-round1-diff.png"
+      },
+      {
+        "label": "reconstruction",
+        "reference": "fine",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "textured",
+        "modelPixels": 116897,
+        "mse": 45.68155726836446,
+        "psnrDb": 31.533394604302558,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 4.112455124311716,
+        "changedPixelsOver8Fraction": 0.1737426965619306,
+        "silhouetteIoU": 0.9999572273026681,
+        "diff": "reconstruction-v0-t0.5-textured-vs-fine-diff.png"
+      },
+      {
+        "label": "reconstruction",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "textured",
+        "modelPixels": 116899,
+        "mse": 41.94054411643099,
+        "psnrDb": 31.904463003744787,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.8856933478187723,
+        "changedPixelsOver8Fraction": 0.15035201327641812,
+        "silhouetteIoU": 0.9999572280344571,
+        "diff": "reconstruction-v0-t0.5-textured-vs-source-diff.png"
+      },
+      {
+        "label": "reconstruction",
+        "reference": "round1",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstruction-v0-t0.5-shaded-vs-round1-diff.png"
+      },
+      {
+        "label": "reconstruction",
+        "reference": "fine",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstruction-v0-t0.5-shaded-vs-fine-diff.png"
+      },
+      {
+        "label": "reconstruction",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 18.859431360975428,
+        "psnrDb": 35.375517668734716,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.01127183865274,
+        "changedPixelsOver8Fraction": 0.06317419310687003,
+        "silhouetteIoU": 1,
+        "diff": "reconstruction-v0-t0.5-shaded-vs-source-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "round1",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "textured",
+        "modelPixels": 116897,
+        "mse": 45.68155726836446,
+        "psnrDb": 31.533394604302558,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 4.112455124311716,
+        "changedPixelsOver8Fraction": 0.1737426965619306,
+        "silhouetteIoU": 0.9999572273026681,
+        "diff": "reconstructionFine-v0-t0.5-textured-vs-round1-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "fine",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "textured",
+        "modelPixels": 116895,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstructionFine-v0-t0.5-textured-vs-fine-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "reconstruction",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "textured",
+        "modelPixels": 116897,
+        "mse": 45.68155726836446,
+        "psnrDb": 31.533394604302558,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 4.112455124311716,
+        "changedPixelsOver8Fraction": 0.1737426965619306,
+        "silhouetteIoU": 0.9999572273026681,
+        "diff": "reconstructionFine-v0-t0.5-textured-vs-reconstruction-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "textured",
+        "modelPixels": 116899,
+        "mse": 36.12301787583013,
+        "psnrDb": 32.55296334839123,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.8864204712330017,
+        "changedPixelsOver8Fraction": 0.16373963849134723,
+        "silhouetteIoU": 0.9999657824275657,
+        "diff": "reconstructionFine-v0-t0.5-textured-vs-source-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "round1",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstructionFine-v0-t0.5-shaded-vs-round1-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "fine",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstructionFine-v0-t0.5-shaded-vs-fine-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "reconstruction",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstructionFine-v0-t0.5-shaded-vs-reconstruction-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.5,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 18.859431360975428,
+        "psnrDb": 35.375517668734716,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.01127183865274,
+        "changedPixelsOver8Fraction": 0.06317419310687003,
+        "silhouetteIoU": 1,
+        "diff": "reconstructionFine-v0-t0.5-shaded-vs-source-diff.png"
+      },
+      {
+        "label": "round1",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "textured",
+        "modelPixels": 116899,
+        "mse": 41.94054411643099,
+        "psnrDb": 31.904463003744787,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.8856933478187723,
+        "changedPixelsOver8Fraction": 0.15035201327641812,
+        "silhouetteIoU": 0.9999572280344571,
+        "diff": "round1-v0-t0.1-textured-vs-source-diff.png"
+      },
+      {
+        "label": "round1",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 18.859431360975428,
+        "psnrDb": 35.375517668734716,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.01127183865274,
+        "changedPixelsOver8Fraction": 0.06317419310687003,
+        "silhouetteIoU": 1,
+        "diff": "round1-v0-t0.1-shaded-vs-source-diff.png"
+      },
+      {
+        "label": "fine",
+        "reference": "round1",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "textured",
+        "modelPixels": 116897,
+        "mse": 45.68155726836446,
+        "psnrDb": 31.533394604302558,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 4.112455124311716,
+        "changedPixelsOver8Fraction": 0.1737426965619306,
+        "silhouetteIoU": 0.9999572273026681,
+        "diff": "fine-v0-t0.1-textured-vs-round1-diff.png"
+      },
+      {
+        "label": "fine",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "textured",
+        "modelPixels": 116899,
+        "mse": 36.12301787583013,
+        "psnrDb": 32.55296334839123,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.8864204712330017,
+        "changedPixelsOver8Fraction": 0.16373963849134723,
+        "silhouetteIoU": 0.9999657824275657,
+        "diff": "fine-v0-t0.1-textured-vs-source-diff.png"
+      },
+      {
+        "label": "fine",
+        "reference": "round1",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "fine-v0-t0.1-shaded-vs-round1-diff.png"
+      },
+      {
+        "label": "fine",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 18.859431360975428,
+        "psnrDb": 35.375517668734716,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.01127183865274,
+        "changedPixelsOver8Fraction": 0.06317419310687003,
+        "silhouetteIoU": 1,
+        "diff": "fine-v0-t0.1-shaded-vs-source-diff.png"
+      },
+      {
+        "label": "reconstruction",
+        "reference": "round1",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "textured",
+        "modelPixels": 116894,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstruction-v0-t0.1-textured-vs-round1-diff.png"
+      },
+      {
+        "label": "reconstruction",
+        "reference": "fine",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "textured",
+        "modelPixels": 116897,
+        "mse": 45.68155726836446,
+        "psnrDb": 31.533394604302558,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 4.112455124311716,
+        "changedPixelsOver8Fraction": 0.1737426965619306,
+        "silhouetteIoU": 0.9999572273026681,
+        "diff": "reconstruction-v0-t0.1-textured-vs-fine-diff.png"
+      },
+      {
+        "label": "reconstruction",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "textured",
+        "modelPixels": 116899,
+        "mse": 41.94054411643099,
+        "psnrDb": 31.904463003744787,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.8856933478187723,
+        "changedPixelsOver8Fraction": 0.15035201327641812,
+        "silhouetteIoU": 0.9999572280344571,
+        "diff": "reconstruction-v0-t0.1-textured-vs-source-diff.png"
+      },
+      {
+        "label": "reconstruction",
+        "reference": "round1",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstruction-v0-t0.1-shaded-vs-round1-diff.png"
+      },
+      {
+        "label": "reconstruction",
+        "reference": "fine",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstruction-v0-t0.1-shaded-vs-fine-diff.png"
+      },
+      {
+        "label": "reconstruction",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 18.859431360975428,
+        "psnrDb": 35.375517668734716,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.01127183865274,
+        "changedPixelsOver8Fraction": 0.06317419310687003,
+        "silhouetteIoU": 1,
+        "diff": "reconstruction-v0-t0.1-shaded-vs-source-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "round1",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "textured",
+        "modelPixels": 116897,
+        "mse": 45.68155726836446,
+        "psnrDb": 31.533394604302558,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 4.112455124311716,
+        "changedPixelsOver8Fraction": 0.1737426965619306,
+        "silhouetteIoU": 0.9999572273026681,
+        "diff": "reconstructionFine-v0-t0.1-textured-vs-round1-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "fine",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "textured",
+        "modelPixels": 116895,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstructionFine-v0-t0.1-textured-vs-fine-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "reconstruction",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "textured",
+        "modelPixels": 116897,
+        "mse": 45.68155726836446,
+        "psnrDb": 31.533394604302558,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 4.112455124311716,
+        "changedPixelsOver8Fraction": 0.1737426965619306,
+        "silhouetteIoU": 0.9999572273026681,
+        "diff": "reconstructionFine-v0-t0.1-textured-vs-reconstruction-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "textured",
+        "modelPixels": 116899,
+        "mse": 36.12301787583013,
+        "psnrDb": 32.55296334839123,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.8864204712330017,
+        "changedPixelsOver8Fraction": 0.16373963849134723,
+        "silhouetteIoU": 0.9999657824275657,
+        "diff": "reconstructionFine-v0-t0.1-textured-vs-source-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "round1",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstructionFine-v0-t0.1-shaded-vs-round1-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "fine",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstructionFine-v0-t0.1-shaded-vs-fine-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "reconstruction",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 0,
+        "psnrDb": null,
+        "identical": true,
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixelsOver8Fraction": 0,
+        "silhouetteIoU": 1,
+        "diff": "reconstructionFine-v0-t0.1-shaded-vs-reconstruction-diff.png"
+      },
+      {
+        "label": "reconstructionFine",
+        "reference": "source",
+        "view": 0,
+        "tau": 0.1,
+        "mode": "shaded",
+        "modelPixels": 116899,
+        "mse": 18.859431360975428,
+        "psnrDb": 35.375517668734716,
+        "identical": false,
+        "meanAbsoluteChannelDifference": 3.01127183865274,
+        "changedPixelsOver8Fraction": 0.06317419310687003,
+        "silhouetteIoU": 1,
+        "diff": "reconstructionFine-v0-t0.1-shaded-vs-source-diff.png"
+      }
+    ],
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/150.0.7871.181",
+      "revision": "@24b04c927b23c39cf9c5227cc8dc6f64a744c8e9",
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36",
+      "jsVersion": "15.0.245.21"
+    },
+    "threePackageVersion": "0.186.1"
+  }
+}

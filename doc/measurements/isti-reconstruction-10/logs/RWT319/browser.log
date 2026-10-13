@@ -1,0 +1,14 @@
+source view 0 tau 0: reference captured
+round1 view 0 tau 2: 28/46 nodes, 3.027 MiB audited GPU cache
+fine view 0 tau 2: 28/46 nodes, 2.197 MiB audited GPU cache
+reconstruction view 0 tau 2: 28/46 nodes, 3.027 MiB audited GPU cache
+reconstructionFine view 0 tau 2: 28/46 nodes, 2.197 MiB audited GPU cache
+round1 view 0 tau 0.5: 46/46 nodes, 21.403 MiB audited GPU cache
+fine view 0 tau 0.5: 46/46 nodes, 5.978 MiB audited GPU cache
+reconstruction view 0 tau 0.5: 46/46 nodes, 21.403 MiB audited GPU cache
+reconstructionFine view 0 tau 0.5: 46/46 nodes, 5.978 MiB audited GPU cache
+round1 view 0 tau 0.1: 46/46 nodes, 21.403 MiB audited GPU cache
+fine view 0 tau 0.1: 46/46 nodes, 5.978 MiB audited GPU cache
+reconstruction view 0 tau 0.1: 46/46 nodes, 21.403 MiB audited GPU cache
+reconstructionFine view 0 tau 0.1: 46/46 nodes, 5.978 MiB audited GPU cache
+Results: /home/sebastien/repositories/nexus-decoupled/doc/measurements/isti-reconstruction-10/screenshots/RWT319/results.json

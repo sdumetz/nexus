@@ -18,7 +18,7 @@ class ExportNxs {
 public:
 	// Export mesh hierarchy to the given path. Returns true on success.
 	void export_nxs(MeshHierarchy& hierarchy, const std::string& path, float texture_error_ratio = 1.0f,
-		bool halve_textures = false);
+		bool halve_textures = false, bool reconstruction_error = false);
 private:
 
 	FILE *out = nullptr;
@@ -31,6 +31,7 @@ private:
 	std::vector<float> geometric_errors;
 	float texture_error_ratio = 1.0f;
 	bool halve_textures = false;
+	bool reconstruction_error = false;
 
 	//from per level node and cluster ids to global
 	void computeGlobalIndexing(MeshHierarchy &hierarchy);

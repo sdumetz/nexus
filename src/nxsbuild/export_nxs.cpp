@@ -4,6 +4,7 @@
 #include "../core/log.h"
 #include "../texture/texel_error.h"
 #include "../texture/texture_sizing.h"
+#include "../texture/texture_loss.h"
 #include <fstream>
 #include <set>
 #include <map>
@@ -13,6 +14,8 @@
 #include <QImageWriter>
 #include <QBuffer>
 #include <QByteArray>
+#include <QPainter>
+#include <QPolygonF>
 
 /*
 NXS file save logic (legacy reference):
@@ -33,6 +36,38 @@ For our stub/first version:
 namespace nx {
 
 namespace {
+QImage bakedBaseColor(const MappedMesh &mesh, uint32_t micronode_id) {
+	const NodeTexture &texture = mesh.node_textures[micronode_id];
+	assert(texture.components == 3);
+	assert(mesh.texels.size() >= texture.offset + size_t(texture.width)*texture.height*3);
+	QImage image(texture.width, texture.height, QImage::Format_RGB888);
+	for(int y = 0; y < texture.height; ++y)
+		std::memcpy(image.scanLine(texture.height-y-1), mesh.texels.data()+texture.offset+size_t(y)*texture.width*3,
+			size_t(texture.width)*3);
+	return image;
+}
+
+QImage occupiedTexels(const MappedMesh &mesh, const MicroNode &node, int width, int height) {
+	QImage occupied(width,height,QImage::Format_RGB32);
+	occupied.fill(Qt::black);
+	QPainter painter(&occupied);
+	painter.setPen(Qt::NoPen);
+	painter.setBrush(Qt::white);
+	for(Index c: node.cluster_ids) {
+		const Cluster &cluster = mesh.clusters[c];
+		for(size_t t = cluster.triangle_offset; t < cluster.triangle_offset+cluster.triangle_count; ++t) {
+			QPolygonF polygon;
+			for(int k = 0; k < 3; ++k) {
+				const Vector2f &uv = mesh.texcoords[mesh.wedges[mesh.triangles[t].w[k]].t];
+				polygon << QPointF(uv.u*width, (1.0-uv.v)*height);
+			}
+			painter.drawPolygon(polygon);
+		}
+	}
+	painter.end();
+	return occupied;
+}
+
 float nodeTexelError(const MappedMesh &mesh, const MicroNode &node, int width, int height) {
 	float error = 0;
 	for(Index c: node.cluster_ids) {
@@ -53,11 +88,12 @@ float nodeTexelError(const MappedMesh &mesh, const MicroNode &node, int width, i
 }
 }
 
-void ExportNxs::export_nxs(MeshHierarchy& hierarchy, const std::string& path, float ratio, bool halve) {
+void ExportNxs::export_nxs(MeshHierarchy& hierarchy, const std::string& path, float ratio, bool halve, bool reconstruction) {
 	if(!std::isfinite(ratio) || ratio < 0)
 		throw std::invalid_argument("Texture error ratio must be finite and nonnegative");
 	texture_error_ratio = ratio;
 	halve_textures = halve;
+	reconstruction_error = reconstruction;
 
 	out = fopen(path.c_str(), "wb");
 	if (!out) {
@@ -189,23 +225,7 @@ std::vector<uint8_t> ExportNxs::encodeBaseColorJpeg(const MappedMesh& mesh, uint
 		int width, int height, int quality) {
 	assert(mesh.has_textures);
 	assert(micronode_id < mesh.node_textures.size());
-	const NodeTexture& node_texture = mesh.node_textures[micronode_id];
-	assert(node_texture.width > 0 && node_texture.height > 0);
-	assert(node_texture.components == 3);
-
-	const std::size_t pixel_count = static_cast<std::size_t>(node_texture.width) * static_cast<std::size_t>(node_texture.height);
-	const std::size_t base_slot_bytes = pixel_count * 3;
-	assert(mesh.texels.size() >= node_texture.offset + base_slot_bytes);
-
-	const uint8_t* src = mesh.texels.data() + node_texture.offset;
-	assert(node_texture.offset + node_texture.width*node_texture.height*3 <= mesh.texels.size());
-
-	QImage image(node_texture.width, node_texture.height, QImage::Format_RGB888);
-	for(int y = 0; y < node_texture.height; ++y) {
-		uint8_t* dst_row = image.scanLine(node_texture.height - y -1);
-		const std::size_t row_offset = static_cast<std::size_t>(y) * static_cast<std::size_t>(node_texture.width) * 3;
-		std::memcpy(dst_row, src + row_offset, static_cast<std::size_t>(node_texture.width) * 3);
-	}
+	QImage image = bakedBaseColor(mesh, micronode_id);
 	if(width != image.width() || height != image.height())
 		image = image.scaled(width, height, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
 
@@ -316,6 +336,17 @@ void ExportNxs::exportMicronode(int level, std::uint32_t micronode_id, MappedMes
 		texture_index = static_cast<Index>(textures.size());
 		textures.push_back(Texture());
 		texture_payloads.push_back(encodeBaseColorJpeg(mesh, micronode_id, width, height));
+		if(reconstruction_error) {
+			const auto &payload = texture_payloads.back();
+			QImage decoded;
+			if(!decoded.loadFromData(payload.data(), payload.size(), "JPEG"))
+				throw std::runtime_error("Cannot decode exported texture for reconstruction metric");
+			const auto loss = texture_reconstruction_loss(bakedBaseColor(mesh, micronode_id), decoded,
+				occupiedTexels(mesh, micronode, texture.width, texture.height), texel_error);
+			nx::debug << "Node " << nodes.size() << " reconstruction_rms=" << loss.rms
+				<< " occupied_pixels=" << loss.pixels << " footprint=" << texel_error << std::endl;
+			texel_error = loss.error;
+		}
 		nx::debug << "Node " << nodes.size() << " texture_size=" << texture.width << "x" << texture.height
 			<< "->" << width << "x" << height << " texture_error_target=" << target << std::endl;
 	}
@@ -340,7 +371,8 @@ void ExportNxs::exportMicronode(int level, std::uint32_t micronode_id, MappedMes
 	size_t size = n_triangles*header.signature.face.size() +
 				  n_wedges*header.signature.vertex.size();
 	pad(size);
-	char *buffer = new char[size];
+	// Alignment padding is written too; initialize it for reproducible exports.
+	char *buffer = new char[size]();
 
 	Vector3f *vertices = (Vector3f *)buffer;
 	Vector2f *texcoords = nullptr;

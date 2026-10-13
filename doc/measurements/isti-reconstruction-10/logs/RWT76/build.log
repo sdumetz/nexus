@@ -1,0 +1,65 @@
+QCommandLineOption: Option names cannot be empty
+Mapped normals check initial: checked=56356 opposite=72
+Building initial clusters and micronodes...
+Saved post-initialization state to "/tmp/nexus-texture-reconstruction-10/RWT76/build/nxs_cache_f1b2cf23/state.json"
+
+--- Level 1 ---
+Micronodes: 56
+Triangles: 56356
+Tex res: 256
+Saved state for level 1 to "/tmp/nexus-texture-reconstruction-10/RWT76/build/nxs_cache_6f0cd61f/state.json"
+
+--- Level 2 ---
+Micronodes: 46
+Triangles: 50708
+Tex res: 128
+Saved state for level 2 to "/tmp/nexus-texture-reconstruction-10/RWT76/build/nxs_cache_326dc70e/state.json"
+
+--- Level 3 ---
+Micronodes: 43
+Triangles: 45634
+Tex res: 64
+Saved state for level 3 to "/tmp/nexus-texture-reconstruction-10/RWT76/build/nxs_cache_bb7ad3ad/state.json"
+
+--- Level 4 ---
+Micronodes: 37
+Triangles: 41070
+Tex res: 64
+Saved state for level 4 to "/tmp/nexus-texture-reconstruction-10/RWT76/build/nxs_cache_7299b177/state.json"
+
+--- Level 5 ---
+Micronodes: 18
+Triangles: 20524
+Tex res: 64
+Saved state for level 5 to "/tmp/nexus-texture-reconstruction-10/RWT76/build/nxs_cache_5dc08374/state.json"
+
+--- Level 6 ---
+Micronodes: 9
+Triangles: 10256
+Tex res: 64
+Saved state for level 6 to "/tmp/nexus-texture-reconstruction-10/RWT76/build/nxs_cache_37efdfee/state.json"
+
+--- Level 7 ---
+Micronodes: 5
+Triangles: 5126
+Tex res: 64
+Saved state for level 7 to "/tmp/nexus-texture-reconstruction-10/RWT76/build/nxs_cache_e38e0722/state.json"
+
+--- Level 8 ---
+Micronodes: 3
+Triangles: 2672
+Tex res: 64
+Saved state for level 8 to "/tmp/nexus-texture-reconstruction-10/RWT76/build/nxs_cache_a81c0017/state.json"
+
+--- Level 9 ---
+Micronodes: 2
+Triangles: 2022
+Tex res: 64
+Saved state for level 9 to "/tmp/nexus-texture-reconstruction-10/RWT76/build/nxs_cache_508e7e7f/state.json"
+
+--- Level 10 ---
+Micronodes: 2
+Triangles: 1790
+Tex res: 64
+Could not simplify further: keeping 2 root micronodes
+Exported /tmp/nexus-texture-reconstruction-10/RWT76/build/model.round{1,2}.nxs from one hierarchy

@@ -1,0 +1,62 @@
+[
+  {
+    "model_id": "RWT14",
+    "semantic_exports_match": true,
+    "allocations_match": true,
+    "baseline_screenshots_byte_identical": true
+  },
+  {
+    "model_id": "RWT76",
+    "semantic_exports_match": true,
+    "allocations_match": true,
+    "baseline_screenshots_byte_identical": true
+  },
+  {
+    "model_id": "RWT139",
+    "semantic_exports_match": true,
+    "allocations_match": true,
+    "baseline_screenshots_byte_identical": true
+  },
+  {
+    "model_id": "RWT256",
+    "semantic_exports_match": true,
+    "allocations_match": true,
+    "baseline_screenshots_byte_identical": true
+  },
+  {
+    "model_id": "RWT292",
+    "semantic_exports_match": true,
+    "allocations_match": true,
+    "baseline_screenshots_byte_identical": true
+  },
+  {
+    "model_id": "RWT319",
+    "semantic_exports_match": true,
+    "allocations_match": true,
+    "baseline_screenshots_byte_identical": true
+  },
+  {
+    "model_id": "RWT408",
+    "semantic_exports_match": true,
+    "allocations_match": true,
+    "baseline_screenshots_byte_identical": true
+  },
+  {
+    "model_id": "RWT471",
+    "semantic_exports_match": true,
+    "allocations_match": true,
+    "baseline_screenshots_byte_identical": true
+  },
+  {
+    "model_id": "RWT500",
+    "semantic_exports_match": true,
+    "allocations_match": true,
+    "baseline_screenshots_byte_identical": true
+  },
+  {
+    "model_id": "RWT514",
+    "semantic_exports_match": true,
+    "allocations_match": true,
+    "baseline_screenshots_byte_identical": true
+  }
+]

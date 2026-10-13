@@ -1,4 +1,4 @@
-"""Link the paired-export driver against a completed Unix Makefiles builder.
+"""Link the shared-hierarchy experiment driver against a completed Makefiles builder.
 
 python3 tools/benchmark/build-pair.py BUILD_DIR model.gltf -o /path/to/prefix.nxs
 Builder options after BUILD_DIR are forwarded unchanged. Run in a scratch

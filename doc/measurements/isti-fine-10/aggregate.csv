@@ -1,0 +1,4 @@
+candidate,reference,requested_error_pixels,models,median_gpu_saving_pct,weighted_gpu_saving_pct,models_saving,models_identical,models_changed_over_1pct,models_shaded_identical,median_source_psnr_change_db,worst_source_psnr_change_db
+fine,round2,2.0,10,0.0,6.730754928281524,4,6,3,10,0.0,-0.03245468871429935
+fine,round2,0.5,10,7.562685980929556,9.671581173058797,7,3,6,10,-0.0010669289235956114,-0.25996665185407153
+fine,round2,0.1,10,22.924837701315667,21.693534552783113,9,1,9,10,-0.04896671207164083,-0.2635140754766745

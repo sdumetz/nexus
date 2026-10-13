@@ -60,6 +60,7 @@ def main():
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--scratch', type=Path, required=True)
     parser.add_argument('--variants', default='round1,round2,fine')
+    parser.add_argument('--reuse-builds', action='store_true', help='Reuse completed scratch exports under the frozen source/binary manifest')
     args = parser.parse_args()
     args.out = args.out.resolve(); args.scratch = args.scratch.resolve(); args.pair = args.pair.resolve()
     variants = args.variants.split(',')
@@ -82,12 +83,13 @@ def main():
         state = {'status':'running'}
         try:
             obj = scratch/'source'/'model.obj'
-            conversion = batch.execute([args.node,str(HERE/'gltf-to-obj.mjs'),model['source'],str(obj)],scratch,logs/'conversion.log',120)
-            if conversion['status'] != 'ok': raise RuntimeError('Conversion failed')
             build = scratch/'build'; build.mkdir(exist_ok=True)
             filenames = {label:build/f'model.{label}.nxs' for label in variants}
-            built = batch.execute([str(args.pair),str(obj),'-o',str(build/'model.nxs')],build,logs/'build.log',600)
-            if built['status'] != 'ok': raise RuntimeError('Build failed')
+            if not (args.reuse_builds and all(f.exists() for f in filenames.values())):
+                conversion = batch.execute([args.node,str(HERE/'gltf-to-obj.mjs'),model['source'],str(obj)],scratch,logs/'conversion.log',120)
+                if conversion['status'] != 'ok': raise RuntimeError('Conversion failed')
+                built = batch.execute([str(args.pair),str(obj),'-o',str(build/'model.nxs')],build,logs/'build.log',600)
+                if built['status'] != 'ok': raise RuntimeError('Build failed')
             state['artifacts'] = {label:batch.artifact(file) for label,file in filenames.items()}
             if len({a['geometry_sha256'] for a in state['artifacts'].values()}) != 1:
                 raise RuntimeError('Export variants changed geometry')

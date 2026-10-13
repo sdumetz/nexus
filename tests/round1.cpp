@@ -1,10 +1,12 @@
 #include "../src/texture/texel_error.h"
 #include "../src/texture/texture_sizing.h"
+#include "../src/texture/texture_loss.h"
 #include "../src/core/mesh_hierarchy.h"
 #include "../src/nxsbuild/export_nxs.h"
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
+#include <cstring>
 #include <QImage>
 
 static void near(float actual, float expected) {
@@ -177,6 +179,56 @@ static void sizing_checks(bool halving) {
 	std::cout << "Round 2 sizing, zero-error root, JPEG decode, and geometry preservation passed\n";
 }
 
+static void loss_checks() {
+	QImage source(16,16,QImage::Format_RGB32), decoded(16,16,QImage::Format_RGB32), mask(16,16,QImage::Format_RGB32);
+	source.fill(qRgb(128,128,128)); decoded.fill(qRgb(120,120,120)); mask.fill(Qt::white);
+	auto loss = nx::texture_reconstruction_loss(source,decoded,mask,2);
+	near(loss.rms,8); near(loss.error,2);
+	decoded.fill(qRgb(124,124,124));
+	loss = nx::texture_reconstruction_loss(source,decoded,mask,2);
+	near(loss.rms,4); near(loss.error,1);
+	near(nx::texture_reconstruction_loss(source,source,mask,2).error,0);
+	decoded.fill(qRgb(0,0,0));
+	near(nx::texture_reconstruction_loss(source,decoded,mask,2).error,2);
+	// Only one occupied pixel: arbitrary differences in atlas padding are ignored.
+	mask.fill(Qt::black); mask.setPixel(3,7,qRgb(255,255,255)); decoded.setPixel(3,7,source.pixel(3,7));
+	loss = nx::texture_reconstruction_loss(source,decoded,mask,2);
+	if(loss.pixels != 1) throw std::runtime_error("Incorrect occupied-pixel count");
+	near(loss.error,0);
+	mask.fill(Qt::black);
+	near(nx::texture_reconstruction_loss(source,decoded,mask,2).error,2);
+	QImage small(4,4,QImage::Format_RGB32); small.fill(qRgb(128,128,128)); mask.fill(Qt::white);
+	near(nx::texture_reconstruction_loss(source,small,mask,2).error,0);
+	// Real exporter: only node errors change when enabling the metric.
+	nx::MeshHierarchy hierarchy;
+	hierarchy.levels = {level(true,false),level(true,true)};
+	for(float ratio: {0.0f,1.0f}) {
+		nx::ExportNxs footprint, reconstruction;
+		footprint.export_nxs(hierarchy,"loss-footprint.nxs",ratio);
+		reconstruction.export_nxs(hierarchy,"loss-reconstruction.nxs",ratio,false,true);
+		std::ifstream a("loss-footprint.nxs",std::ios::binary), b("loss-reconstruction.nxs",std::ios::binary);
+		nx::Header headerA,headerB;
+		a.read(reinterpret_cast<char*>(&headerA),sizeof(headerA)); b.read(reinterpret_cast<char*>(&headerB),sizeof(headerB));
+		if(std::memcmp(&headerA,&headerB,sizeof(headerA))) throw std::runtime_error("Metric changed header");
+		std::vector<nx::Node> na(headerA.n_nodes),nb(headerB.n_nodes);
+		a.read(reinterpret_cast<char*>(na.data()),na.size()*sizeof(nx::Node));
+		b.read(reinterpret_cast<char*>(nb.data()),nb.size()*sizeof(nx::Node));
+		if(nb[0].error < nb[1].error || nb[0].error < nb[2].error || nb.back().error != 0)
+			throw std::runtime_error("Reconstruction metric broke ancestor monotonicity or sink");
+		bool reduced = false;
+		for(size_t i=0;i<na.size();++i) {
+			if(nb[i].error > na[i].error) throw std::runtime_error("Loss weighting increased footprint");
+			reduced |= nb[i].error < na[i].error;
+			nb[i].error = na[i].error;
+			if(std::memcmp(&na[i],&nb[i],sizeof(nx::Node))) throw std::runtime_error("Metric changed node geometry metadata");
+		}
+		if(!reduced) throw std::runtime_error("Reconstruction metric had no effect");
+		const std::vector<char> restA((std::istreambuf_iterator<char>(a)),{}), restB((std::istreambuf_iterator<char>(b)),{});
+		if(restA != restB) throw std::runtime_error("Metric changed geometry, patches or texture bytes");
+	}
+	std::cout << "Reconstruction loss, occupied pixels, calibration, fallback and binary export passed\n";
+}
+
 int main() {
 	for(const auto dims: {std::make_pair(256,256), std::make_pair(256,128)}) {
 		auto footprint = [](int w, int h) { return std::max(2.0/w, 1.0/h); };
@@ -196,5 +248,6 @@ int main() {
 	export_checks(false, 1);
 	sizing_checks(true);
 	sizing_checks(false);
-	std::cout << "Round 1 and round 2 checks passed\n";
+	loss_checks();
+	std::cout << "Texture rounds 1-4 checks passed\n";
 }
