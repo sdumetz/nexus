@@ -130,7 +130,8 @@ The current builder always uses reconstruction error and exposes
 `reconstruction` (full baked sizes) and `reconstructionFine` (fine dimensions,
 ratio 1), with the requested divisor on both. Run the targeted runner with
 `--texture-error-divisor 1` to test the original round 4 contribution, or 2 for
-the current default. The divisor is frozen in the manifest and scratch build
+the current default. Larger factors tighten texture sizing and refinement; values below 1 relax
+quality. The factor is frozen in the manifest and scratch build
 stamp, so resumed builds cannot silently reuse exports at another setting.
 
 For historical round1/round2/fine controls, use the source and driver revisions
@@ -139,3 +140,10 @@ screenshots are preserved as historical measurements.
 
 The PR-ready branch `decoupled_textures-code` excludes this benchmark tooling and
 all measurement artifacts; see [commit separation](../../doc/texture-pr-preparation.md).
+
+Use `--divisor-comparison --baseline-scratch PATH --baseline-report PATH` for
+paired factor-1/factor-2 exports from one hierarchy and a frozen historical
+round1 control. The driver exports `divisor1` and `divisor2` in addition to the
+regular reconstruction variants. It validates factor 1 against the old round 4
+semantic payloads before rendering. `texture-rounds-summary.py` can also check
+allocations and PNGs with `--divisor-baseline BASELINE_REPORT`.

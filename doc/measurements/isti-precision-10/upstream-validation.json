@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "model_id": "RWT14",
+      "source_and_camera_match": true,
+      "semantic_round1_payloads_match": true,
+      "baseline_allocations_and_source_metrics_match": true
+    },
+    {
+      "model_id": "RWT76",
+      "source_and_camera_match": true,
+      "semantic_round1_payloads_match": true,
+      "baseline_allocations_and_source_metrics_match": true
+    },
+    {
+      "model_id": "RWT256",
+      "source_and_camera_match": true,
+      "semantic_round1_payloads_match": true,
+      "baseline_allocations_and_source_metrics_match": true
+    },
+    {
+      "model_id": "RWT292",
+      "source_and_camera_match": true,
+      "semantic_round1_payloads_match": true,
+      "baseline_allocations_and_source_metrics_match": true
+    },
+    {
+      "model_id": "RWT319",
+      "source_and_camera_match": true,
+      "semantic_round1_payloads_match": true,
+      "baseline_allocations_and_source_metrics_match": true
+    },
+    {
+      "model_id": "RWT408",
+      "source_and_camera_match": true,
+      "semantic_round1_payloads_match": true,
+      "baseline_allocations_and_source_metrics_match": true
+    },
+    {
+      "model_id": "RWT471",
+      "source_and_camera_match": true,
+      "semantic_round1_payloads_match": true,
+      "baseline_allocations_and_source_metrics_match": true
+    },
+    {
+      "model_id": "RWT500",
+      "source_and_camera_match": true,
+      "semantic_round1_payloads_match": true,
+      "baseline_allocations_and_source_metrics_match": true
+    },
+    {
+      "model_id": "RWT514",
+      "source_and_camera_match": true,
+      "semantic_round1_payloads_match": true,
+      "baseline_allocations_and_source_metrics_match": true
+    }
+  ],
+  "excluded": [
+    {
+      "model_id": "RWT139",
+      "reason": "Not in historical 100-model control sample"
+    }
+  ],
+  "summary": [
+    {
+      "variant": "divisor1",
+      "requested_error_pixels": 2,
+      "models": 9,
+      "median_gpu_saving_pct": -8.136252365492446,
+      "weighted_gpu_saving_pct": 59.28115389294486,
+      "median_source_psnr_change_db": 0.4625943592868538,
+      "worst_source_psnr_change_db": -0.1115605662455934
+    },
+    {
+      "variant": "divisor1",
+      "requested_error_pixels": 0.1,
+      "models": 9,
+      "median_gpu_saving_pct": 32.59527269266596,
+      "weighted_gpu_saving_pct": 55.788401175339196,
+      "median_source_psnr_change_db": -0.0521534099005585,
+      "worst_source_psnr_change_db": -0.9585268425411044
+    },
+    {
+      "variant": "divisor2",
+      "requested_error_pixels": 2,
+      "models": 9,
+      "median_gpu_saving_pct": -66.82181982326082,
+      "weighted_gpu_saving_pct": 22.034468480084268,
+      "median_source_psnr_change_db": 1.3860806798443903,
+      "worst_source_psnr_change_db": -0.147130252280121
+    },
+    {
+      "variant": "divisor2",
+      "requested_error_pixels": 0.1,
+      "models": 9,
+      "median_gpu_saving_pct": 6.903784516115885,
+      "weighted_gpu_saving_pct": 31.044801824711065,
+      "median_source_psnr_change_db": -0.03459341186286302,
+      "worst_source_psnr_change_db": -0.35544979915505337
+    }
+  ]
+}

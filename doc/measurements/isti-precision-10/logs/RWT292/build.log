@@ -1,0 +1,69 @@
+QCommandLineOption: Option names cannot be empty
+Mapped normals check initial: checked=33360 opposite=15
+Building initial clusters and micronodes...
+Saved post-initialization state to "/tmp/nexus-texture-precision-10/RWT292/build/nxs_cache_3dbc1831/state.json"
+
+--- Level 1 ---
+Micronodes: 33
+Triangles: 33360
+Tex res: 512
+Saved state for level 1 to "/tmp/nexus-texture-precision-10/RWT292/build/nxs_cache_fef323ec/state.json"
+
+--- Level 2 ---
+Micronodes: 28
+Triangles: 30024
+Tex res: 256
+Saved state for level 2 to "/tmp/nexus-texture-precision-10/RWT292/build/nxs_cache_14989d4f/state.json"
+
+--- Level 3 ---
+Micronodes: 25
+Triangles: 27018
+Tex res: 128
+Saved state for level 3 to "/tmp/nexus-texture-precision-10/RWT292/build/nxs_cache_90bbb85b/state.json"
+
+--- Level 4 ---
+Micronodes: 22
+Triangles: 24314
+Tex res: 64
+Saved state for level 4 to "/tmp/nexus-texture-precision-10/RWT292/build/nxs_cache_9e62012f/state.json"
+
+--- Level 5 ---
+Micronodes: 20
+Triangles: 21878
+Tex res: 64
+Saved state for level 5 to "/tmp/nexus-texture-precision-10/RWT292/build/nxs_cache_ce725094/state.json"
+
+--- Level 6 ---
+Micronodes: 10
+Triangles: 10930
+Tex res: 64
+Saved state for level 6 to "/tmp/nexus-texture-precision-10/RWT292/build/nxs_cache_113a77b6/state.json"
+
+--- Level 7 ---
+Micronodes: 5
+Triangles: 5462
+Tex res: 64
+Saved state for level 7 to "/tmp/nexus-texture-precision-10/RWT292/build/nxs_cache_18c75590/state.json"
+
+--- Level 8 ---
+Micronodes: 3
+Triangles: 2730
+Tex res: 64
+Saved state for level 8 to "/tmp/nexus-texture-precision-10/RWT292/build/nxs_cache_2e1fd0b7/state.json"
+
+--- Level 9 ---
+Micronodes: 2
+Triangles: 1364
+Tex res: 32
+Saved state for level 9 to "/tmp/nexus-texture-precision-10/RWT292/build/nxs_cache_246a27ed/state.json"
+
+--- Level 10 ---
+Micronodes: 2
+Triangles: 1228
+Tex res: 32
+Saved state for level 10 to "/tmp/nexus-texture-precision-10/RWT292/build/nxs_cache_19562509/state.json"
+
+--- Level 11 ---
+Micronodes: 1
+Triangles: 614
+Exported /tmp/nexus-texture-precision-10/RWT292/build/model.{reconstruction,reconstructionFine}.nxs from one hierarchy

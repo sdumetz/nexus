@@ -1,7 +1,7 @@
 # Round 2: size textures from geometric error
 
 This describes a historical experiment. The current builder always uses
-[round 4 reconstruction error](round4-reconstruction-error.md), divided by 2
+[round 4 reconstruction error](round4-reconstruction-error.md), at precision factor 2
 by default; ratio 0 now preserves sizes without reverting the error metric.
 
 The default texture error ratio is **1**. At export, choose the coarsest

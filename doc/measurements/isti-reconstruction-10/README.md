@@ -4,7 +4,9 @@
 The current builder always uses reconstruction error with default divisor **2**;
 these CSVs and screenshots have not been rerun for that default. To reproduce
 this exact comparison, use the builder, paired-export driver and runner from
-commit `322f90c`. Current tooling exports only reconstruction variants.
+commit `322f90c`. Current tooling exports only reconstruction variants. See the
+[corrected factor-2 comparison](../isti-precision-10/README.md) for current
+precision semantics and new measurements.
 
 Same deliberately selected models, fixed camera, source renders, viewport and
 requested errors as [round 3](../isti-fine-10/README.md). This sample emphasizes

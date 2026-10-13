@@ -1,0 +1,220 @@
+{
+  "models": [
+    {
+      "model_id": "RWT14",
+      "name": "3D Scan - Real Rock 001",
+      "category": "Nature",
+      "author": "MGD Films",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/08e021c9407048dfb1022dfb6c13834a",
+      "input_triangles": 31152,
+      "input_texture_width": 4096,
+      "input_texture_height": 2048,
+      "input_texels": 8388608,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT14/mesh.gltf",
+      "source_sha256": "8d47c199ca928c4e8647871cd0f3497281e89a4b6cefd241b96795598a500165",
+      "texture_sha256": "9c7a35776276af94a155410b5a8c4082a98d5a69594126200f464dd2067cfbdc",
+      "buffer_sha256": {
+        "mesh.bin": "3f0a17f8be165900d2592f3d736187528b235ce5dbbeccb5b87e7673c7d15c00"
+      }
+    },
+    {
+      "model_id": "RWT76",
+      "name": "Mossy wet stone 1",
+      "category": "Nature",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/2a8274b2560c4c679891ff6db496877e",
+      "input_triangles": 56356,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT76/sutr21.gltf",
+      "source_sha256": "252d4374132979e729d335d0a21730a8f2f97d7a94fe659f34eb9f61042ecd9e",
+      "texture_sha256": "80bcaba5be1b69eeda657d96d91a06dacff4ce9194a6f5057da0b75836db556b",
+      "buffer_sha256": {
+        "sutr21.bin": "88b10baec90bd0eae4b96b3b64cba7eecb908dd8687c164e6bcaa330a3d3f7ff"
+      }
+    },
+    {
+      "model_id": "RWT139",
+      "name": "Lion Sculpture",
+      "category": "Sculptures",
+      "author": "GSXNet",
+      "license": "CC Attribution-NonCommercial",
+      "source_url": "https://api.sketchfab.com/v3/models/49d8d9cf3a0848418cc22754499be281",
+      "input_triangles": 75901,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT139/LionSculpture.gltf",
+      "source_sha256": "b369967258a53ab88f4e0d8765a05b816eae1184d4dba65fa2b8d174af2e55ea",
+      "texture_sha256": "36e0f7762eeb3f1c4da449425e0968980c31f791c81b7b33c8e1e927fa89e9aa",
+      "buffer_sha256": {
+        "LionSculpture.bin": "6d310142607632707c34834105e0227a7002426894a76389b7b8bf1eba9810a5"
+      }
+    },
+    {
+      "model_id": "RWT256",
+      "name": "Architectural Ornament, Shaftsbury Av., London",
+      "category": "Sculptures",
+      "author": "Thomas Flynn",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/810cab0dbe70487e8d94791c7f4ff0e6",
+      "input_triangles": 65834,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT256/plant-head.gltf",
+      "source_sha256": "a0f735af8d0952f1fe570f3fbeda70e22cbf1d086546a8aceac0a6d445b28d39",
+      "texture_sha256": "94aa302c5cdcf5bab0ccac6f68c24c6c245a18d2e105a4999b6f9d1c41d853c4",
+      "buffer_sha256": {
+        "plant-head.bin": "75b68970f43afb5ee9c99caf057b645c154db5987a0684448e01010ebf44af31"
+      }
+    },
+    {
+      "model_id": "RWT292",
+      "name": "Old Cherub Vase",
+      "category": "Sculptures",
+      "author": "Marcelo Rivera",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/8c1daf56753d46a0844f7f6385cab7a6",
+      "input_triangles": 33360,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT292/Cherub_Vase.gltf",
+      "source_sha256": "5a5dfc57d5681512c8efccd1ed54c9936f61df255f542b2b44310a172e0f9b91",
+      "texture_sha256": "1216d90d8cba5db8180de6a56ed368efc0c13291e7fd174cc41feb1a1da38df6",
+      "buffer_sha256": {
+        "Cherub_Vase.bin": "643661c38632129d7bf573414c3b93bfe50a8768e6f3dfb84355d08ed28476d7"
+      }
+    },
+    {
+      "model_id": "RWT319",
+      "name": "Kake Low Resolution",
+      "category": "Other",
+      "author": "Francesco Coldesina",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/97707a40e6974bc0b30418b7ca9ad8ac",
+      "input_triangles": 11884,
+      "input_texture_width": 2048,
+      "input_texture_height": 2048,
+      "input_texels": 4194304,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT319/Kake.gltf",
+      "source_sha256": "94003913bfb2ec948ad818772500fbd7348adaf5837695a7de8b9c71c5e7823d",
+      "texture_sha256": "5b3d9ed918df75d085b473cfdac709b36c5618cd7de75da7650085b68e458556",
+      "buffer_sha256": {
+        "Kake.bin": "a6dc2cf0ec621df9b8154d0f8a0a12d5e7c0f9f05527addf950c2c758079d37e"
+      }
+    },
+    {
+      "model_id": "RWT408",
+      "name": "Lion Skull",
+      "category": "Other",
+      "author": "Auckland Museum",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/c2016a3161954a00be97929750d55174",
+      "input_triangles": 110188,
+      "input_texture_width": 2048,
+      "input_texture_height": 2048,
+      "input_texels": 4194304,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT408/Scull.gltf",
+      "source_sha256": "89f50ed4426727545dabc28355ab4c25d37ffd84453bc02acdff9dd308c90771",
+      "texture_sha256": "18d95b616353fb4a81ac3645832dd7ddfdccb7696a9552e2cdb58e29bd114b90",
+      "buffer_sha256": {
+        "Scull.bin": "96116cc702cbc70f578654d26aecfb7d4b330da830f712920ee7fa5c76361ea8"
+      }
+    },
+    {
+      "model_id": "RWT471",
+      "name": "#3DST6 Tarte au citron meringu\u00e9e",
+      "category": "Other",
+      "author": "Maurice Svay",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/e20c3851d52c4261891b692a1dfc18c6",
+      "input_triangles": 12546,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT471/tarte-03.gltf",
+      "source_sha256": "f443cb3fead0f2e81e9fcd4c118e59f4a8d2fabf3ebbbeb387d95f75371e950d",
+      "texture_sha256": "bd4938b65458072b3d3431512f85909566a2724f1ecf10540a2ff8bcde8f819f",
+      "buffer_sha256": {
+        "tarte-03.bin": "427f64bc8bf247721c145625725e96f1874f2a4b5bab92f184e2b4d892a37507"
+      }
+    },
+    {
+      "model_id": "RWT500",
+      "name": "Graffiti Wall Mendlak Brno",
+      "category": "Other",
+      "author": "3dhdscan",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/ecdce375f02e48ffbb4db3ce2720e526",
+      "input_triangles": 49651,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT500/grafiti_mendlak.gltf",
+      "source_sha256": "adf9226400c713682913ca252b53c2778ccec2595b8801c8d5f5623e2c4b34fd",
+      "texture_sha256": "0fa7dbf1afec6111f0d597d585205b1e44f3cf61983e419736dbb99ea1dc6650",
+      "buffer_sha256": {
+        "grafiti_mendlak.bin": "953b8e43021215a042b1b2dadb160ecca1461b36e68f1894f0744eb852791dd6"
+      }
+    },
+    {
+      "model_id": "RWT514",
+      "name": "Scanned Tree Trunk",
+      "category": "Nature",
+      "author": "NNihad",
+      "license": "CC Attribution",
+      "source_url": "https://api.sketchfab.com/v3/models/f26e87592c724abd92fffa6e3615ba9e",
+      "input_triangles": 30052,
+      "input_texture_width": 4096,
+      "input_texture_height": 4096,
+      "input_texels": 16777216,
+      "source": "/home/sebastien/Documents/3DModels/ISTI_dataset/RWT514/trunk_section_2_export.gltf",
+      "source_sha256": "439184065bef757ed5496d99bd6eb0015f51ab5847db423acdfdccabc76a8944",
+      "texture_sha256": "84b7bd63db406b3e9a907e2b498c9c10043ccbe756534fe6d221f88420b87277",
+      "buffer_sha256": {
+        "trunk_section_2_export.bin": "62499a759e921107fcf4b057bc88f1761ae3953f8e4488e1554a21617712d9c6"
+      }
+    }
+  ],
+  "binary_sha256": "36032304c9719d35d6d4933db0a71287f98cf909a19b69bc7dc16493ea2ce9ea",
+  "variants": [
+    "round1",
+    "divisor1",
+    "divisor2"
+  ],
+  "texture_error_metric": "reconstruction",
+  "texture_error_divisor": 2,
+  "divisor_semantics": "Allowed texture error divided by factor; reported texture contribution multiplied by factor",
+  "taus": [
+    2,
+    0.5,
+    0.1
+  ],
+  "distance_radii": 2.5,
+  "viewport": [
+    1280,
+    800
+  ],
+  "selection": "Purposive: prior quality outliers, savings, no-savings and original two lion cases; not representative of collection.",
+  "divisors": {
+    "divisor1": 1,
+    "divisor2": 2
+  },
+  "baseline_sha256": {
+    "RWT14": "5db8995f1f9e836e1ae987696d0a11a82af5d1f54ac11b2fb33a746fb411c67a",
+    "RWT76": "e508756fcf15d032a79be937d96d2b62da349138eef31dcf39787c8debab5356",
+    "RWT139": "ad7ccbda6eb30a9306a319a2065307f41a19d5e22a19a921584e506092a251ef",
+    "RWT256": "1e5590b4f2c915d11945cb30c013adcc763c89667b759659c75d7e2cbbeb2410",
+    "RWT292": "541ced30df5ed4726735abf36e1617fe89521aedac7ecac73b9a35d6c5d2e3cc",
+    "RWT319": "1d1dc15a32c0e18c589401692e976a700cc99442665813a78de6a3ac05438f3d",
+    "RWT408": "ea727adb1efe904b11436ef1378e75cc9f8d7df40ef0e60ec8a34f87a34d5272",
+    "RWT471": "f1287fc9e51823c2e3322337d8b1f607f79c2c76ba9486622e71fef475a66409",
+    "RWT500": "385ab85a5558c9760a46edbafd4756af472d6b2004528d2d40b183bf6586ea78",
+    "RWT514": "22d41aac89559516c0ef84096dba957895a731505f242d2a67a1dd7006890c9d"
+  }
+}

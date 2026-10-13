@@ -1,0 +1,11 @@
+source view 0 tau 0: reference captured
+round1 view 0 tau 2: 24/196 nodes, 1.377 MiB audited GPU cache
+divisor1 view 0 tau 2: 24/196 nodes, 1.377 MiB audited GPU cache
+divisor2 view 0 tau 2: 55/196 nodes, 3.121 MiB audited GPU cache
+round1 view 0 tau 0.5: 127/196 nodes, 22.748 MiB audited GPU cache
+divisor1 view 0 tau 0.5: 104/196 nodes, 11.433 MiB audited GPU cache
+divisor2 view 0 tau 0.5: 136/196 nodes, 23.974 MiB audited GPU cache
+round1 view 0 tau 0.1: 194/196 nodes, 86.799 MiB audited GPU cache
+divisor1 view 0 tau 0.1: 186/196 nodes, 57.151 MiB audited GPU cache
+divisor2 view 0 tau 0.1: 194/196 nodes, 80.000 MiB audited GPU cache
+Results: /home/sebastien/repositories/nexus-decoupled/doc/measurements/isti-precision-10/screenshots/RWT500/results.json

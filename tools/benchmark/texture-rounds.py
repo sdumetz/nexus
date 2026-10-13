@@ -60,22 +60,33 @@ def main():
     parser.add_argument('--node', required=True)
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--scratch', type=Path, required=True)
-    parser.add_argument('--variants', default='reconstruction,reconstructionFine')
+    parser.add_argument('--variants')
+    parser.add_argument('--divisor-comparison', action='store_true', help='Compare fine sizing at divisors 1/2 against a frozen historical round1 control')
+    parser.add_argument('--baseline-scratch', type=Path)
+    parser.add_argument('--baseline-report', type=Path)
     parser.add_argument('--texture-error-divisor', type=float, default=2)
     parser.add_argument('--reuse-builds', action='store_true', help='Reuse completed scratch exports under the frozen source/binary manifest')
     args = parser.parse_args()
     args.out = args.out.resolve(); args.scratch = args.scratch.resolve(); args.pair = args.pair.resolve()
-    variants = args.variants.split(',')
+    variants = args.variants.split(',') if args.variants else (['round1','divisor1','divisor2'] if args.divisor_comparison else ['reconstruction','reconstructionFine'])
     if not math.isfinite(args.texture_error_divisor) or args.texture_error_divisor <= 0:
         parser.error('--texture-error-divisor must be finite and positive')
-    if any(v not in ('reconstruction','reconstructionFine') for v in variants):
+    allowed = ('round1','divisor1','divisor2') if args.divisor_comparison else ('reconstruction','reconstructionFine')
+    if any(v not in allowed for v in variants):
         parser.error('Current exports use reconstruction error; reproduce footprint comparisons with their recorded historical driver and runner')
+    if args.divisor_comparison and (not args.baseline_scratch or not args.baseline_report):
+        parser.error('--divisor-comparison requires --baseline-scratch and --baseline-report')
     _, eligible, _ = batch.select_models(args.dataset, 1, 20261012)
     models = [next(m for m in eligible if m['model_id'] == mid) for mid in IDS]
+    baseline_files = {m['model_id']:args.baseline_scratch.resolve()/m['model_id']/'build'/'model.round1.nxs' for m in models} if args.divisor_comparison else {}
     manifest = {'models': models, 'binary_sha256': batch.sha(args.pair), 'variants': variants,
                 'texture_error_metric': 'reconstruction', 'texture_error_divisor': args.texture_error_divisor,
+                'divisor_semantics': 'Allowed texture error divided by factor; reported texture contribution multiplied by factor',
                 'taus': [2, 0.5, 0.1], 'distance_radii': 2.5, 'viewport': [1280,800],
                 'selection': 'Purposive: prior quality outliers, savings, no-savings and original two lion cases; not representative of collection.'}
+    if args.divisor_comparison:
+        manifest['divisors'] = {'divisor1':1,'divisor2':2}
+        manifest['baseline_sha256'] = {mid:batch.sha(file) for mid,file in baseline_files.items()}
     args.out.mkdir(parents=True, exist_ok=True); args.scratch.mkdir(parents=True, exist_ok=True)
     selection = args.out/'selection.json'
     if selection.exists() and json.loads(selection.read_text()) != manifest:
@@ -92,6 +103,7 @@ def main():
             obj = scratch/'source'/'model.obj'
             build = scratch/'build'; build.mkdir(exist_ok=True)
             filenames = {label:build/f'model.{label}.nxs' for label in variants}
+            if args.divisor_comparison: filenames['round1'] = baseline_files[mid]
             stamp = build/'build-config.json'
             config = {'binary_sha256':manifest['binary_sha256'], 'source_sha256':model['source_sha256'],
                       'texture_error_divisor':args.texture_error_divisor}
@@ -106,6 +118,11 @@ def main():
             state['artifacts'] = {label:batch.artifact(file) for label,file in filenames.items()}
             if len({a['geometry_sha256'] for a in state['artifacts'].values()}) != 1:
                 raise RuntimeError('Export variants changed geometry')
+            if args.divisor_comparison:
+                old = json.loads((args.baseline_report/'models'/f'{mid}.json').read_text())
+                for key in ('geometry_sha256','texture_sha256','texture_sizes','file_bytes'):
+                    if state['artifacts']['divisor1'][key] != old['artifacts']['reconstructionFine'][key]:
+                        raise RuntimeError(f'Divisor 1 export differs from historical baseline: {key}')
             command = [args.node,str(HERE/'run.mjs')]
             for label,file in filenames.items(): command += ['--model',f'{label}={file}']
             command += ['--source',model['source'],'--out',str(args.out/'screenshots'/mid),'--views','2.5','--taus','2,0.5,0.1']

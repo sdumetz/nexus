@@ -1,0 +1,59 @@
+QCommandLineOption: Option names cannot be empty
+Mapped normals check initial: checked=49651 opposite=90
+Building initial clusters and micronodes...
+Saved post-initialization state to "/tmp/nexus-texture-precision-10/RWT500/build/nxs_cache_26377fb0/state.json"
+
+--- Level 1 ---
+Micronodes: 49
+Triangles: 49651
+Tex res: 256
+Saved state for level 1 to "/tmp/nexus-texture-precision-10/RWT500/build/nxs_cache_0c3a8f81/state.json"
+
+--- Level 2 ---
+Micronodes: 42
+Triangles: 44691
+Tex res: 128
+Saved state for level 2 to "/tmp/nexus-texture-precision-10/RWT500/build/nxs_cache_1365ec49/state.json"
+
+--- Level 3 ---
+Micronodes: 38
+Triangles: 40217
+Tex res: 64
+Saved state for level 3 to "/tmp/nexus-texture-precision-10/RWT500/build/nxs_cache_cb24bafa/state.json"
+
+--- Level 4 ---
+Micronodes: 33
+Triangles: 36191
+Tex res: 64
+Saved state for level 4 to "/tmp/nexus-texture-precision-10/RWT500/build/nxs_cache_903442ec/state.json"
+
+--- Level 5 ---
+Micronodes: 16
+Triangles: 18085
+Tex res: 64
+Saved state for level 5 to "/tmp/nexus-texture-precision-10/RWT500/build/nxs_cache_a10531c4/state.json"
+
+--- Level 6 ---
+Micronodes: 8
+Triangles: 9037
+Tex res: 64
+Saved state for level 6 to "/tmp/nexus-texture-precision-10/RWT500/build/nxs_cache_a2046121/state.json"
+
+--- Level 7 ---
+Micronodes: 4
+Triangles: 4515
+Tex res: 64
+Saved state for level 7 to "/tmp/nexus-texture-precision-10/RWT500/build/nxs_cache_34c10550/state.json"
+
+--- Level 8 ---
+Micronodes: 3
+Triangles: 3225
+Tex res: 64
+Saved state for level 8 to "/tmp/nexus-texture-precision-10/RWT500/build/nxs_cache_a6fc3b00/state.json"
+
+--- Level 9 ---
+Micronodes: 3
+Triangles: 3027
+Tex res: 64
+Could not simplify further: keeping 3 root micronodes
+Exported /tmp/nexus-texture-precision-10/RWT500/build/model.{reconstruction,reconstructionFine}.nxs from one hierarchy

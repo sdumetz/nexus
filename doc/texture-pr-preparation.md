@@ -1,7 +1,7 @@
 # Implementation and experiment commit separation
 
 `decoupled_textures-code` is a PR-ready branch based on `1fe489d` (`v4-fixes`).
-Its five commits contain only `src/` and `tests/` changes:
+Its six commits contain only `src/` and `tests/` changes:
 
 | Commit | Implementation |
 |---|---|
@@ -9,7 +9,8 @@ Its five commits contain only `src/` and `tests/` changes:
 | `da84e7a` | Round 2: size textures against geometric error |
 | `fd4c483` | Round 3: finer dimensions in multiples of four |
 | `93fe9b7` | Round 4: baked-atlas reconstruction-loss metric |
-| `77e96e9` | Always use reconstruction; expose divisor defaulting to 2 |
+| `77e96e9` | Always use reconstruction; expose factor defaulting to 2 (initial direction) |
+| `fbe7536` | Correct factor semantics: tighten sizing and refinement at 2 |
 
 The branch's final source and tests match this experiment worktree exactly.
 It contains no measurements, screenshots, experiment notes or benchmark tools.
@@ -25,13 +26,18 @@ git log --oneline 1fe489d..decoupled_textures-code
 ```
 
 The tuning parameter is `--texture-error-divisor`, default 2. It divides the
-loss-weighted texture contribution before combining it with geometric error.
-Larger values relax refinement; smaller values tighten it. There is no metric
-mode switch. Ratio 0 still preserves baked dimensions, but continues to compute
-reconstruction error.
+**allowed texture tolerance** for sizing and multiplies the reported texture
+contribution before combining it with geometric error. Larger values tighten
+precision and retain more texture detail; smaller values relax it. Factor 1
+preserves the original round 4 behavior. There is no metric mode switch. Ratio
+0 still preserves baked dimensions but continues to compute weighted error.
 
-Previous benchmark CSVs and screenshots measure the original round 4 metric
-(equivalent to divisor 1), not the new default. They remain frozen, with their
-source and binary hashes. Current benchmark tooling records the divisor in its
-manifest and scratch build configuration. Historical footprint comparisons must
-use the historical builder and driver revisions identified in their reports.
+The initial factor direction in `159d1ea` was corrected separately in
+`c4f83f2`; source-only branch commit `fbe7536` contains that correction.
+
+Previous benchmark CSVs and screenshots measure original round 4 (factor 1).
+The new corrected factor-2 benchmark is in `doc/measurements/isti-precision-10`.
+Measurements and tooling stay on the experiment branch in separate commits.
+Current benchmark tooling records the tuning semantics and factor in its
+manifest and scratch configuration. Historical footprint comparisons use the
+historical revisions identified in their reports.

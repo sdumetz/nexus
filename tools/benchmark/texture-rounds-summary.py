@@ -7,7 +7,7 @@ import statistics
 import hashlib
 
 
-def summarize(directory, comparisons, previous_directory=None):
+def summarize(directory, comparisons, previous_directory=None, divisor_baseline=None):
     rows = list(csv.DictReader((directory/'results.csv').open()))
     models = json.loads((directory/'selection.json').read_text())['models']
     variants = json.loads((directory/'selection.json').read_text())['variants']
@@ -25,7 +25,7 @@ def summarize(directory, comparisons, previous_directory=None):
             if r['label']=='source': continue
             assert r['allocationAuditPassed'] is True
             assert r['gpuBytes']==r['geometryBytes']+r['textureBytes']
-        for variant in ['fine','reconstructionFine']:
+        for variant in ['fine','reconstructionFine','divisor1','divisor2']:
             if variant in state['artifacts']:
                 assert all(w%4==0 and h%4==0 for w,h in state['artifacts'][variant]['texture_sizes'])
         if 'reconstruction' in variants:
@@ -33,6 +33,9 @@ def summarize(directory, comparisons, previous_directory=None):
                 if a not in state['artifacts'] or b not in state['artifacts']: continue
                 assert state['artifacts'][a]['texture_sha256']==state['artifacts'][b]['texture_sha256']
                 assert state['artifacts'][a]['texture_sizes']==state['artifacts'][b]['texture_sizes']
+        if 'divisor1' in variants and 'divisor2' in variants:
+            assert all(w2>=w1 and h2>=h1 for (w1,h1),(w2,h2) in zip(
+                state['artifacts']['divisor1']['texture_sizes'],state['artifacts']['divisor2']['texture_sizes']))
         if previous_directory:
             old = json.loads((previous_directory/'models'/f"{model['model_id']}.json").read_text())
             for variant in ['round1','fine']:
@@ -50,7 +53,23 @@ def summarize(directory, comparisons, previous_directory=None):
                         assert hashlib.sha256(new_png.read_bytes()).digest()==hashlib.sha256(old_png.read_bytes()).digest()
             previous_checks.append(dict(model_id=model['model_id'], semantic_exports_match=True,
                 allocations_match=True, baseline_screenshots_byte_identical=True))
-    if previous_directory:
+        if divisor_baseline:
+            old = json.loads((divisor_baseline/'models'/f"{model['model_id']}.json").read_text())
+            for variant,reference in [('round1','round1'),('divisor1','reconstructionFine')]:
+                for key in ('geometry_sha256','texture_sha256','texture_sizes','file_bytes'):
+                    assert state['artifacts'][variant][key] == old['artifacts'][reference][key]
+                for tau in [2,0.5,0.1]:
+                    new_run = next(r for r in state['measurement']['runs'] if r['label']==variant and r['tau']==tau)
+                    old_run = next(r for r in old['measurement']['runs'] if r['label']==reference and r['tau']==tau)
+                    for key in ('gpuBytes','geometryBytes','textureBytes','residentNodes','drawnTriangles'):
+                        assert new_run[key] == old_run[key]
+                    for mode in ['textured','shaded']:
+                        new_png = directory/'screenshots'/model['model_id']/f'{variant}-v0-t{tau}-{mode}.png'
+                        old_png = divisor_baseline/'screenshots'/model['model_id']/f'{reference}-v0-t{tau}-{mode}.png'
+                        assert hashlib.sha256(new_png.read_bytes()).digest()==hashlib.sha256(old_png.read_bytes()).digest()
+            previous_checks.append(dict(model_id=model['model_id'], semantic_exports_match=True,
+                allocations_match=True, baseline_screenshots_byte_identical=True))
+    if previous_directory or divisor_baseline:
         (directory/'previous-round-validation.json').write_text(json.dumps(previous_checks,indent=2)+'\n')
     graph = []
     for row in rows:
@@ -91,5 +110,6 @@ if __name__=='__main__':
     parser.add_argument('directory',type=Path)
     parser.add_argument('--compare',action='append',required=True,help='candidate=reference')
     parser.add_argument('--previous',type=Path,help='Validate round1/fine exports, allocations and PNGs against round 3')
+    parser.add_argument('--divisor-baseline',type=Path,help='Validate round1/divisor1 against the frozen original round 4 run')
     args=parser.parse_args()
-    summarize(args.directory,[tuple(c.split('=')) for c in args.compare],args.previous)
+    summarize(args.directory,[tuple(c.split('=')) for c in args.compare],args.previous,args.divisor_baseline)
